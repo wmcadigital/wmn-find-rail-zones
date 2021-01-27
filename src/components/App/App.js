@@ -1,23 +1,15 @@
 import React from 'react';
-// Components
-import Icon from 'components/shared/Icon/Icon';
 // Styles
-import s from './App.module.scss';
+// import s from './App.module.scss';
 
 function App() {
   return (
-    <div className="wmnds-container wmnds-p-t-lg wmnds-p-b-lg wmnds-grid">
-      <h2 className="wmnds-col-1">Hello West Midlands!</h2>
+    <div className="wmnds-p-b-lg wmnds-grid">
+      <h1 className="wmnds-col-1">Find my rail zones</h1>
       <div className="wmnds-col-1">
-        {/* Bus */}
-        <Icon className={`${s.icon} wmnds-col-1 wmnds-col-sm-1-3`} iconName="modes-isolated-bus" />
-        {/* Metro */}
-        <Icon
-          className={`${s.icon} wmnds-col-1 wmnds-col-sm-1-3`}
-          iconName="modes-isolated-metro"
-        />
-        {/* Train */}
-        <Icon className={`${s.icon} wmnds-col-1 wmnds-col-sm-1-3`} iconName="modes-isolated-rail" />
+        <p>Train stations across the West Midlands are in five zones..</p>
+        <p>The zones you can travel between is based on your ticket. .</p>
+        <p>You can travel to a station outside the five rail zones with an Out of County ticket.</p>
       </div>
     </div>
   );
