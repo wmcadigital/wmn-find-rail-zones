@@ -6,6 +6,10 @@
 @import '~assets/wmnds/vars';
 @import '~assets/wmnds/mixins';
 
+.finder {
+  width: 100%;
+}
+
 .icon {
   height: 50px;
   // get-color() function taken from mixins (refer to: https://designsystem.wmnetwork.co.uk/styles/colour-palettes/ for usage)
