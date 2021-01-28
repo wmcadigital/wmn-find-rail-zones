@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 
-const Autocomplete = ({ id, label, name, placeholder }) => {
+const Autocomplete = ({ id, label, name, placeholder, results }) => {
   return (
     <div className="wmnds-fe-group">
       <label className="wmnds-fe-label" htmlFor={id}>
@@ -26,6 +26,19 @@ const Autocomplete = ({ id, label, name, placeholder }) => {
           id={id}
         />
       </div>
+      {results && (
+        <ul className="wmnds-autocomplete-suggestions">
+          <li className="wmnds-autocomplete-suggestions__li" title="Search result 1">
+            This is <strong>my query</strong> result 1
+          </li>
+          <li className="wmnds-autocomplete-suggestions__li" title="Search result 2">
+            This is <strong>my query</strong> result 2
+          </li>
+          <li className="wmnds-autocomplete-suggestions__li" title="Search result 3">
+            This is <strong>my query</strong> result 3
+          </li>
+        </ul>
+      )}
     </div>
   );
 };
@@ -36,12 +49,14 @@ Autocomplete.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
+  results: PropTypes.arrayOf(PropTypes.string),
 };
 
 Autocomplete.defaultProps = {
   label: 'label',
   name: 'autocomplete',
   placeholder: 'placeholder',
+  results: null,
 };
 
 export default Autocomplete;
