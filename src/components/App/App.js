@@ -18,8 +18,8 @@ function App() {
           </p>
         </div>
       </div>
-      <div className={`${s.finder} bg-white`}>
-        <div className="wmnds-container wmnds-grid wmnds-grid--spacing-md-2-lg">
+      <div className="bg-white">
+        <div className={`${s.finder} wmnds-grid wmnds-grid--spacing-md-2-lg`}>
           <div className="wmnds-col-1-3">
             <Search />
           </div>
