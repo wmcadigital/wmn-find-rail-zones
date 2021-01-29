@@ -1,17 +1,7 @@
 import React from 'react';
 import Button from '../shared/Button/Button';
+import Result from './Result';
 import Autocomplete from '../shared/Autocomplete/Autocomplete';
-
-const Result = () => {
-  return (
-    <div>
-      Birmingham New Street is in <strong>Zone 1</strong>.<br />
-      Worcester Forgate Street <strong>Out of County</strong>. Full step-free access is available at
-      Birmingham New Street and Worcester Forgate Street. Parking is available at Birmingham New
-      Street.
-    </div>
-  );
-};
 
 const Search = () => {
   return (
@@ -34,7 +24,7 @@ const Search = () => {
           name="from-autocomplete"
         />
         <Button
-          btnClass="wmnds-btn--primary"
+          btnClass="wmnds-btn--primary wmnds-m-b-lg"
           iconRight="general-expand"
           text="Add another station"
         />
