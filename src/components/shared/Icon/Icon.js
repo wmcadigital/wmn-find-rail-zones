@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import s from './Icon.module.scss';
-
 // Due to weird Protocol errors with external SVGs the svg use doesn't work well with production builds
 // So we Ajax the SVG in with a snippet at the bottom of public/index.html
 
@@ -10,7 +8,7 @@ import s from './Icon.module.scss';
 
 const Icon = ({ className, iconName, size }) => {
   return (
-    <svg className={`${s.icon} ${className}`} width={`${size}px`} height={`${size}px`}>
+    <svg className={className} width={`${size}px`} height={`${size}px`}>
       <use xlinkHref={`#wmnds-${iconName}`} href={`#wmnds-${iconName}`} />
     </svg>
   );

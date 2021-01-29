@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../../shared/Button/Button';
 import Icon from '../../shared/Icon/Icon';
+import Accordion from '../../shared/Accordion/Accordion';
 import Search from '../Search';
 
 const ListView = () => {
@@ -15,7 +16,7 @@ const ListView = () => {
         </div>
       </div>
       <h2>Stations by zone</h2>
-      <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
+      <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-m-b-md">
         <div className="wmnds-col-2-3">
           <div className="wmnds-grid wmnds-grid--justify-between wmnds-grid--align-center">
             <div className="wmnds-col-auto">
@@ -29,7 +30,9 @@ const ListView = () => {
         </div>
       </div>
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
-        <div className="wmnds-col-2-3">Accordion</div>
+        <div className="wmnds-col-2-3">
+          <Accordion />
+        </div>
         <div className="wmnds-col-1-3">
           <div className="wmnds-content-card">
             <div className="wmnds-p-md">
