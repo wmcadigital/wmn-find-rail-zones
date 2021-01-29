@@ -7,7 +7,7 @@ import s from './MapView.module.scss';
 
 const MapView = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white wmnds-p-md">
       <div className={`${s.container} wmnds-grid wmnds-grid--spacing-md-2-lg`}>
         <div className="wmnds-col-1-3">
           <Search />

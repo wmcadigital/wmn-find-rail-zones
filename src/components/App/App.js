@@ -5,7 +5,7 @@ import MapView from '../RailZoneFinder/MapView/MapView';
 import ListView from '../RailZoneFinder/ListView/ListView';
 
 function App() {
-  const [mapView, setMapView] = useState(true);
+  const [mapView, setMapView] = useState(false);
   return (
     <div className="wmnds-p-b-lg">
       <div className="wmnds-container">

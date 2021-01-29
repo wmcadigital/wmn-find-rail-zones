@@ -5,7 +5,7 @@ import Autocomplete from '../shared/Autocomplete/Autocomplete';
 
 const Search = () => {
   return (
-    <div className="wmnds-p-t-md">
+    <div className="wmnds-p-md">
       <div className="wmnds-text-align-right">
         <Button btnClass="wmnds-btn--link" text="Clear search" />
       </div>
