@@ -39,7 +39,24 @@ const ListView = () => {
             isOpen={open}
             handleClick={() => setOpen(!open)}
           >
-            Content
+            <ul>
+              <li>
+                Birmingham New Street <AccessIcon className="wmnds-m-l-xsm" />{' '}
+                <Icon iconName="general-parking" className="wmnds-m-l-xsm" color="cta" />
+              </li>
+              <li>
+                Birmingham Moor Street <AccessIcon className="wmnds-m-l-xsm" />
+              </li>
+              <li>
+                Birmingham Snow Hill <AccessIcon className="wmnds-m-l-xsm" />
+              </li>
+              <li>
+                Five Ways <AccessIcon className="wmnds-m-l-xsm" />
+              </li>
+              <li>
+                Jewellery Quarter <AccessIcon className="wmnds-m-l-xsm" />
+              </li>
+            </ul>
           </Accordion>
         </div>
         <div className="wmnds-col-1-3">

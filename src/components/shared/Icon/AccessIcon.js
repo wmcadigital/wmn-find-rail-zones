@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 import s from './Icon.module.scss';
 
-const AccessIcon = ({ type, size, className, color }) => {
+const AccessIcon = ({ type, size, className, iconClassName }) => {
   return (
     <div
-      className={`${s.accessIcon} ${type === 'full' ? s.fullAccess : s.partAccess}`}
+      className={`${s.accessIcon} ${type === 'full' ? s.fullAccess : s.partAccess} ${className}`}
       style={{ fontSize: `${size}px` }}
     >
-      <Icon iconName="general-disabled" className={className} color={color} />
+      <Icon iconName="general-disabled" className={iconClassName} />
     </div>
   );
 };
@@ -17,15 +17,15 @@ const AccessIcon = ({ type, size, className, color }) => {
 AccessIcon.propTypes = {
   type: PropTypes.arrayOf(PropTypes.oneOf(['full', 'part'])),
   className: PropTypes.string,
+  iconClassName: PropTypes.string,
   size: PropTypes.number,
-  color: PropTypes.arrayOf(PropTypes.oneOf(['cta', 'primary'])),
 };
 
 AccessIcon.defaultProps = {
   type: 'full',
   className: null,
+  iconClassName: null,
   size: 20,
-  color: null,
 };
 
 export default AccessIcon;

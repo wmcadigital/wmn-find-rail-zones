@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Icon from '../shared/Icon/Icon';
+import AccessIcon from '../shared/Icon/AccessIcon';
 import s from './RailZoneFinder.module.scss';
 
 const results = [
@@ -18,7 +20,7 @@ const Result = () => {
       ))}
       <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
         <div className="wmnds-col-auto">
-          <Icon iconName="general-info" size={20} color="cta" />
+          <AccessIcon type="full" />
         </div>
         <div className="wmnds-col-auto">
           <p>
