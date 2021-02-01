@@ -1,0 +1,31 @@
+// Vars
+@import '~assets/styles/vars';
+// Mixins
+@import '~assets/styles/mixins';
+
+.closeButton {
+  background: none;
+  cursor: pointer;
+  border: 0;
+  position: absolute;
+  top: 1rem;
+  margin: auto;
+  right: $size-xsm;
+
+  @media all and(min-width: 400px) {
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.closeButtonFloated {
+  position: relative;
+  float: right;
+  margin-top: -$size-md;
+}
+
+.closeIcon {
+  width: 22px;
+  height: 22px;
+  fill: get-color(secondary);
+}
