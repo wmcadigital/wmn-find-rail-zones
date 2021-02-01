@@ -12,8 +12,8 @@ const results = [
 const Result = () => {
   return (
     <div>
-      {results.map(({ station, zone }) => (
-        <p>
+      {results.map(({ station, zone }, i) => (
+        <p key={i}>
           {station} is {zone !== 'Out of County' && 'in '}
           <strong>{zone}</strong>.
         </p>
