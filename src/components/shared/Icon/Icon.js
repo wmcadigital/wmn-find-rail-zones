@@ -19,7 +19,7 @@ Icon.propTypes = {
   iconName: PropTypes.string.isRequired,
   className: PropTypes.string,
   size: PropTypes.number,
-  color: PropTypes.arrayOf(PropTypes.oneOf(['cta', 'primary'])),
+  color: PropTypes.oneOf(['cta', 'primary']),
 };
 
 Icon.defaultProps = {

@@ -15,7 +15,7 @@ const AccessIcon = ({ type, size, className, iconClassName }) => {
 };
 
 AccessIcon.propTypes = {
-  type: PropTypes.arrayOf(PropTypes.oneOf(['full', 'part'])),
+  type: PropTypes.oneOf(['full', 'part']),
   className: PropTypes.string,
   iconClassName: PropTypes.string,
   size: PropTypes.number,
