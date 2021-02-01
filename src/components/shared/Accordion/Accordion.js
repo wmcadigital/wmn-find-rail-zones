@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 
-const Accordion = () => {
-  const [open, setOpen] = useState(false);
+const Accordion = ({ id, children, heading, isOpen, handleClick }) => {
   return (
-    <div className={`wmnds-accordion ${open && 'wmnds-is--open'}`}>
+    <div className={`wmnds-accordion ${isOpen && 'wmnds-is--open'}`}>
       <button
-        aria-controls="accordion-01"
+        aria-controls={id}
         className="wmnds-accordion__summary-wrapper"
-        aria-expanded={open}
+        aria-expanded={isOpen}
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={() => handleClick(!isOpen)}
       >
         <div className="wmnds-accordion__summary">
-          <h4 className="wmnds-m-b-none">Accordion heading</h4>
+          <h4 className="wmnds-m-b-none">{heading}</h4>
         </div>
         <Icon
           iconName="general-minimise"
@@ -21,11 +21,19 @@ const Accordion = () => {
         />
         <Icon iconName="general-expand" className="wmnds-accordion__icon" />
       </button>
-      <div className="wmnds-accordion__content" id="accordion-01">
-        Lorem ipsum dolar sit...
+      <div className="wmnds-accordion__content" id={id}>
+        {children}
       </div>
     </div>
   );
+};
+
+Accordion.propTypes = {
+  id: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default Accordion;

@@ -6,14 +6,7 @@
 @import '~assets/wmnds/vars';
 @import '~assets/wmnds/mixins';
 
-.accessInfo {
+.nowrap {
   align-items: flex-start;
   flex-wrap: nowrap;
-}
-
-.accessInfoIcon {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: $size-md;
-  fill: get-color(cta);
 }
