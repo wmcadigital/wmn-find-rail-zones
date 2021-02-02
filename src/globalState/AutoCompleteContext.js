@@ -18,23 +18,10 @@ export const AutoCompleteProvider = (props) => {
     // // The selected service is used to store details when a user has clicked an autocomplete
     selectedItem: {
       id: getSearchParam('selectedItem') || null,
-      selectedByMap: getSearchParam('selectedByMap') || null,
-      operator: null,
-      severity: null,
-      serviceNumber: null,
-      routeName: null,
-      stopName: null,
-      lines: [],
       to: null,
     },
     selectedItemTo: {
       id: getSearchParam('selectedItemTo') || null,
-      operator: null,
-      severity: null,
-      serviceNumber: null,
-      stopName: null,
-      routeName: null,
-      lines: [],
       to: null,
     },
   };
@@ -67,23 +54,6 @@ export const AutoCompleteProvider = (props) => {
         return {
           ...state,
           [item]: action.payload,
-        };
-      }
-      // Update the state to show item user has selected
-      case 'UDPATE_SELECTED_ITEM_LINES': {
-        // If object contains selectedByMap
-        if (action.payload.selectedByMap) {
-          setSearchParam('selectedByMap', action.payload.selectedByMap); // Update URL
-        } else {
-          delSearchParam('selectedByMap'); // Delete URL
-        }
-
-        return {
-          ...state,
-          selectedItem: {
-            ...state.selectedItem,
-            lines: action.payload,
-          },
         };
       }
 
@@ -121,7 +91,6 @@ export const AutoCompleteProvider = (props) => {
       case 'RESET_SELECTED_SERVICES':
         delSearchParam('selectedItem');
         delSearchParam('selectedItemTo');
-        delSearchParam('selectedByMap');
         delSearchParam('query');
         delSearchParam('queryTo');
         return {

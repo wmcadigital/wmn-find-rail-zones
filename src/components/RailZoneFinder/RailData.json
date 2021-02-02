@@ -1,0 +1,759 @@
+{
+  "railStationAccess": [
+    {
+      "crsCode": "ACG",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "ADD",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "ALB",
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "ALV",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "AST",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "ATH",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "BTG",
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "BER",
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BEH",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "BKW",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BEP",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BSC",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "BBK",
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "BHI",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BMO",
+      "railZone": 1,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "BNS",
+      "railZone": 1,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BSW",
+      "railZone": 1,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BKT",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "BKD",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "BLX",
+      "railZone": 5,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BWN",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BBS",
+      "railZone": 1,
+      "parking": false,
+      "stepFreeAccess": false
+    },
+    {
+      "crsCode": "BRV",
+      "railZone": 3,
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "BMV",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "BUL",
+      "railZone": 5,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "CNL",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CAO",
+      "railZone": 6,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CRD",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CLV",
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CSL",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "CEH",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CWL",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CSY",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "COS",
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "COV",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CAA",
+      "railZone": 5,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "CRA",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "DZY",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "DDG",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "DTW",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "DUD",
+      "railZone": 1,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "DDP",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "EWD",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "ERD",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "FWY",
+      "railZone": 1,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "FOK",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "GVH",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "GMV",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "HAG",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "HLG",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "HIA",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "HSD",
+      "railZone": 3,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "HBY",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "HTN",
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "HNF",
+      "railZone": 6,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "HNL",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "HFD",
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "HNK",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "JEQ",
+      "railZone": 1,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "KNW",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "KID",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "KNN",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "LAW",
+      "railZone": 6,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "LGG",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "LPW",
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "LEH",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "LMS",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "LED",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "LIC",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "LTV",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "LBK",
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "LOB",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "LYE",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "MVL",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "MGN",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "NBR",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "NMP",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "NFD",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "NUN",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "OKN",
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "OHL",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "OLT",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "PKG",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "PRY",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "PSW",
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "RDC",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "ROW",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "RUG",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "RGT",
+      "railZone": 6,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "RGL",
+      "railZone": 6,
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "SAD",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SLY",
+      "railZone": 2,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "SEN",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "SFN",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "SRL",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SHR",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SMA",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "SGB",
+      "railZone": 2,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SMR",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "SOL",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SRI",
+      "railZone": 3,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "STA",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SCF",
+      "railZone": 3,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SBJ",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SBT",
+      "railZone": 5,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SAV",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "STY",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "SUT",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "TAB",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "TAM",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "TFC",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "THW",
+      "railZone": 2,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "TLK",
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "THL",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "TIP",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "TYS",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "UNI",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WSL",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WRW",
+      "parking": true,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "WRP",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WTO",
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "WLN",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WTE",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WMR",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WMC",
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WNE",
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WTT",
+      "railZone": 2,
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WVH",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WDE",
+      "parking": false,
+      "stepFreeAccess": null
+    },
+    {
+      "crsCode": "WWW",
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WOF",
+      "parking": false,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WOS",
+      "parking": true,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WOP",
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WYL",
+      "railZone": 4,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "WYT",
+      "railZone": 5,
+      "parking": false,
+      "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "YRD",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { DebounceInput } from 'react-debounce-input'; // https://www.npmjs.com/package/react-debounce-input
+
 // CustomHooks
 import useResetState from 'customHooks/useResetState';
 // Import components
@@ -12,7 +13,7 @@ import SelectedServiceHeader from '../SelectedServiceHeader/SelectedServiceHeade
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
-const TrainAutoComplete = ({ to }) => {
+const TrainAutoComplete = ({ id, label, to }) => {
   const { updateQuery, autoCompleteState, autoCompleteDispatch } = useResetState();
 
   const resultsList = useRef(null);
@@ -33,7 +34,7 @@ const TrainAutoComplete = ({ to }) => {
 
   return (
     <>
-      {selectedService.id && !autoCompleteState.selectedItem.selectedByMap ? (
+      {selectedService.id ? (
         <SelectedServiceHeader
           autoCompleteState={autoCompleteState}
           autoCompleteDispatch={() =>
@@ -43,13 +44,16 @@ const TrainAutoComplete = ({ to }) => {
           to={to}
         />
       ) : (
-        <>
+        <div className="wmnds-fe-group">
+          <label className="wmnds-fe-label" htmlFor={id}>
+            {label}
+          </label>
           <div
             className={`wmnds-autocomplete wmnds-grid ${loading ? 'wmnds-is--loading' : ''} ${
               !to && !trainQuery && !loading && 'wmnds-m-b-sm'
             }`}
           >
-            <Icon iconName="general-search" iconClass="wmnds-autocomplete__icon" />
+            <Icon iconName="general-search" className="wmnds-autocomplete__icon" />
             <div className="wmnds-loader" role="alert" aria-live="assertive">
               <p className="wmnds-loader__content">Content is loading...</p>
             </div>
@@ -90,7 +94,7 @@ const TrainAutoComplete = ({ to }) => {
               </ul>
             )
           )}
-        </>
+        </div>
       )}
     </>
   );
@@ -98,6 +102,7 @@ const TrainAutoComplete = ({ to }) => {
 
 // PropTypes
 TrainAutoComplete.propTypes = {
+  id: PropTypes.string.isRequired,
   to: PropTypes.bool,
 };
 

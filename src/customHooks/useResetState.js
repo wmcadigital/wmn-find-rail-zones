@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { AutoCompleteContext } from 'globalState';
 
 const useResetState = () => {
-  console.log('got here');
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext); // Get the state of autoComplete from AutoCompleteContext
 
   // Function for checking and resetting any selected service or query
@@ -22,11 +21,6 @@ const useResetState = () => {
     }
     autoCompleteDispatch({ type: 'UPDATE_QUERY', query: query.trim(), to }); // Update query to what user has typed & trim
   };
-
-  // // Function which resets all the trays/applications state and sets "when" to equal "now"
-  // const resetTray = () => {
-  //   updateWhen('now');
-  // };
 
   return {
     updateQuery,
