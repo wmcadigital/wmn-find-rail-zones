@@ -6,8 +6,21 @@ import Icon from '../../shared/Icon/Icon';
 import Accordion from '../../shared/Accordion/Accordion';
 import Search from '../Search';
 
+import railData from '../RailData.json';
+
 const ListView = () => {
-  const [open, setOpen] = useState(false);
+  const [accordions, setAccordions] = useState([
+    { name: 'Zone 1', open: false },
+    { name: 'Zone 2', open: false },
+    { name: 'Zone 3', open: false },
+    { name: 'Zone 4', open: false },
+    { name: 'Zone 5', open: false },
+  ]);
+
+  React.useEffect(() => {
+    console.log(accordions);
+  }, [accordions]);
+
   return (
     <div className="wmnds-container">
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
@@ -33,31 +46,44 @@ const ListView = () => {
       </div>
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
         <div className="wmnds-col-2-3">
-          <Accordion
-            id="zone1Accordion"
-            heading="Zone 1"
-            isOpen={open}
-            handleClick={() => setOpen(!open)}
-          >
-            <ul>
-              <li>
-                Birmingham New Street <AccessIcon className="wmnds-m-l-xsm" />{' '}
-                <Icon iconName="general-parking" className="wmnds-m-l-xsm" color="cta" />
-              </li>
-              <li>
-                Birmingham Moor Street <AccessIcon className="wmnds-m-l-xsm" />
-              </li>
-              <li>
-                Birmingham Snow Hill <AccessIcon className="wmnds-m-l-xsm" />
-              </li>
-              <li>
-                Five Ways <AccessIcon className="wmnds-m-l-xsm" />
-              </li>
-              <li>
-                Jewellery Quarter <AccessIcon className="wmnds-m-l-xsm" />
-              </li>
-            </ul>
-          </Accordion>
+          {accordions.map((accordion, i) => {
+            const accordionId = `${accordion.name.toLowerCase().replace(' ', '')}-${i}`;
+            const handleClick = () => {
+              let newVal = accordions;
+              newVal[i].open = !accordions[i].open;
+              setAccordions([...newVal]);
+            };
+            const zoneStations = railData.railStationAccess.filter(
+              (station) => station.railZone === i + 1
+            );
+            return (
+              <div key={accordionId} className="wmnds-p-b-md">
+                <Accordion
+                  key={accordionId}
+                  id={accordionId}
+                  heading={accordion.name}
+                  isOpen={accordion.open}
+                  handleClick={handleClick}
+                >
+                  <ul>
+                    {zoneStations.map((station) => (
+                      <li key={station.crsCode}>
+                        {station.crsCode}
+                        {station.stepFreeAccess && station.stepFreeAccess === 'full' ? (
+                          <AccessIcon className="wmnds-m-l-xsm" />
+                        ) : (
+                          <AccessIcon type="part" className="wmnds-m-l-xsm" />
+                        )}
+                        {station.parking && (
+                          <Icon iconName="general-parking" className="wmnds-m-l-xsm" color="cta" />
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </Accordion>
+              </div>
+            );
+          })}
         </div>
         <div className="wmnds-col-1-3">
           <div className="wmnds-content-card">
