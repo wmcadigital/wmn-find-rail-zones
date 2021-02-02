@@ -27,7 +27,7 @@ const ListView = () => {
 
   return (
     <div className="wmnds-container">
-      <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
+      <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
         <div className="wmnds-col-md-2-3">
           <div className="bg-white">
             <Search />
@@ -79,7 +79,7 @@ const ListView = () => {
                 >
                   <ul>
                     {zoneStations.map((station) => (
-                      <li key={station.crsCode}>
+                      <li key={station.crsCode} style={{ display: 'flex' }}>
                         {station.crsCode}
                         {station.stepFreeAccess && station.stepFreeAccess === 'full' ? (
                           <AccessIcon className="wmnds-m-l-xsm" />
@@ -97,7 +97,7 @@ const ListView = () => {
             );
           })}
         </div>
-        <div className="wmnds-col-1-3">
+        <div className="wmnds-col-1-3" style={{ alignSelf: 'flex-start' }}>
           <div className="wmnds-content-card">
             <div className="wmnds-p-md">
               <h3 className="h2">Key</h3>
