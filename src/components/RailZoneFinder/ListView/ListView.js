@@ -17,9 +17,13 @@ const ListView = () => {
     { name: 'Zone 5', open: false },
   ]);
 
-  React.useEffect(() => {
-    console.log(accordions);
-  }, [accordions]);
+  const toggleAccordions = (open) => {
+    let newState = accordions.map((accordion) => {
+      open ? (accordion.open = true) : (accordion.open = false);
+      return accordion;
+    });
+    setAccordions([...newState]);
+  };
 
   return (
     <div className="wmnds-container">
@@ -38,8 +42,16 @@ const ListView = () => {
               <p className="wmnds-m-none">View a list of all the train stations in each zone.</p>
             </div>
             <div className="wmnds-col-auto">
-              <Button text="Open all" btnClass="wmnds-m-r-sm wmnds-btn--primary" />
-              <Button text="Close all" btnClass="wmnds-btn--primary" />
+              <Button
+                onClick={() => toggleAccordions(true)}
+                text="Open all"
+                btnClass="wmnds-m-r-sm wmnds-btn--primary"
+              />
+              <Button
+                onClick={() => toggleAccordions(false)}
+                text="Close all"
+                btnClass="wmnds-btn--primary"
+              />
             </div>
           </div>
         </div>
@@ -49,9 +61,9 @@ const ListView = () => {
           {accordions.map((accordion, i) => {
             const accordionId = `${accordion.name.toLowerCase().replace(' ', '')}-${i}`;
             const handleClick = () => {
-              let newVal = accordions;
-              newVal[i].open = !accordions[i].open;
-              setAccordions([...newVal]);
+              let newState = accordions;
+              newState[i].open = !accordions[i].open;
+              setAccordions([...newState]);
             };
             const zoneStations = railData.railStationAccess.filter(
               (station) => station.railZone === i + 1
