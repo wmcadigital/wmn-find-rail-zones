@@ -62,8 +62,6 @@ export const AutoCompleteProvider = (props) => {
         let newState = state.selectedStations;
         newState[queryId] = action.payload;
 
-        console.log(newState[queryId]);
-
         return {
           ...state,
           selectedStations: [...newState],

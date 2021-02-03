@@ -1,6 +1,6 @@
 import React from 'react';
 // Rail zone svg component
-import RailZoneMap from '../RailZoneMap';
+import Map from '../Map/Map';
 import Search from '../Search';
 
 import s from './MapView.module.scss';
@@ -13,7 +13,7 @@ const MapView = () => {
           <Search />
         </div>
         <div className="wmnds-col-2-3">
-          <RailZoneMap />
+          <Map />
         </div>
       </div>
     </div>

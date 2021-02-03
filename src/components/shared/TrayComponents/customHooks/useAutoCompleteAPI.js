@@ -38,7 +38,6 @@ const useAutoCompleteAPI = (apiPath, query, queryId) => {
       if (selectedService.id && response.data?.data.length) {
         const result = response.data.data.filter((service) => service.id === selectedService.id)[0];
 
-        console.log(result);
         payload = {
           id: result.id,
           queryId: queryId,

@@ -6,7 +6,7 @@ import MapView from '../RailZoneFinder/MapView/MapView';
 import ListView from '../RailZoneFinder/ListView/ListView';
 
 function App() {
-  const [mapView, setMapView] = useState(false);
+  const [mapView, setMapView] = useState(true);
   return (
     <ContextProvider>
       <div className="wmnds-p-b-lg">
