@@ -4,28 +4,20 @@ import { AutoCompleteContext } from 'globalState';
 import s from './TrainAutoCompleteResult.module.scss';
 
 const TrainAutoCompleteResult = (props) => {
-  const { result, handleKeyDown, to } = props || {};
+  const { result, handleKeyDown, queryId } = props || {};
 
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
   // Set payload object to pass below
   const payload = {
     id: result.id,
-    severity: result?.disruptionSeverity || 'success',
-    stopName: result.name,
-    lines: result.lines,
-    to,
+    queryId,
   };
 
   const updateSelectedService = () => {
-    // Reset selected disruption ID from map (if any)
-    if (autoCompleteState.selectedStation.selectedByMap) {
-      autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
-    }
-
     //  Update normal selectedStation
     autoCompleteDispatch({
-      type: 'UDPATE_SELECTED_STATION',
+      type: 'UPDATE_SELECTED_STATION',
       payload,
     });
   };

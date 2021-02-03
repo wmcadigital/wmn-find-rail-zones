@@ -1,6 +1,15 @@
 const url = new URL(typeof window !== 'undefined' ? window.location.href : ''); // Set URL to current if browser window is detected
 
 // Function for getting the value of a search param in the URL
+const getAllSearchParams = () => {
+  let params = [];
+  url.searchParams.forEach((value, key) => {
+    params.push({ name: key, id: value });
+  });
+  return params; // Get the search param value for name passed in, and return back
+};
+
+// Function for getting the value of a search param in the URL
 const getSearchParam = (name) => {
   return url.searchParams.get(name); // Get the search param value for name passed in, and return back
 };
@@ -27,4 +36,4 @@ const delSearchParam = (name) => {
   window.history.pushState({}, '', url.href); // Then push the updated search params back to the URL
 };
 
-export { getSearchParam, setSearchParam, delSearchParam }; // Return functions, so they can be called independently
+export { getAllSearchParams, getSearchParam, setSearchParam, delSearchParam }; // Return functions, so they can be called independently

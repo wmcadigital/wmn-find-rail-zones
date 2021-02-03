@@ -3,15 +3,14 @@ import axios from 'axios';
 // Import contexts
 import { AutoCompleteContext } from 'globalState';
 
-const useAutoCompleteAPI = (apiPath, query, to) => {
+const useAutoCompleteAPI = (apiPath, query, queryId) => {
   // State variables
-  const [autoCompleteState] = useContext(AutoCompleteContext); // Get the dispatch of autocomplete
+  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext); // Get the dispatch of autocomplete
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false); // Set loading state for spinner
   const [errorInfo, setErrorInfo] = useState(); // Placeholder to set error messaging
-  const selectedService = to
-    ? autoCompleteState.selectedStationTo
-    : autoCompleteState.selectedStation;
+  const selectedService = autoCompleteState.selectedStations[queryId];
+
   // Reference variables
   const mounted = useRef();
   const source = useRef();
@@ -39,21 +38,21 @@ const useAutoCompleteAPI = (apiPath, query, to) => {
       if (selectedService.id && response.data?.data.length) {
         const result = response.data.data.filter((service) => service.id === selectedService.id)[0];
 
+        console.log(result);
         payload = {
           id: result.id,
-          severity: result?.disruptionSeverity || 'success',
+          queryId: queryId,
           stopName: result.name,
-          lines: result.lines,
         };
       }
 
       // Update selectedStation based on payload set above if item already selected
-      // if (selectedService.id) {
-      //   autoCompleteDispatch({
-      //     type: 'UDPATE_SELECTED_STATION',
-      //     payload,
-      //   });
-      // }
+      if (selectedService.id) {
+        autoCompleteDispatch({
+          type: 'UPDATE_SELECTED_STATION',
+          payload,
+        });
+      }
 
       if ((!response.data.data || !response.data.services) && mounted.current) {
         // If there is no bus data and the component is mounted (must be mounted or we will be creating an event on unmounted error)...
@@ -64,7 +63,7 @@ const useAutoCompleteAPI = (apiPath, query, to) => {
         });
       }
     },
-    [selectedService.id] // [autoCompleteDispatch, selectedService.id, to]
+    [selectedService.id, autoCompleteDispatch] // [autoCompleteDispatch, selectedService.id]
   );
 
   const handleAutoCompleteApiError = (error) => {

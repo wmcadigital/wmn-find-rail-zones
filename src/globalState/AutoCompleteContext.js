@@ -1,29 +1,41 @@
 import React, { useReducer, createContext } from 'react';
 // Import Helper functions
 import {
+  getAllSearchParams,
   setSearchParam,
   getSearchParam,
   delSearchParam,
 } from 'globalState/helpers/URLSearchParams'; // (used to sync state with URL)
 
-export const AutoCompleteContext = createContext(); // Create when context
+export const AutoCompleteContext = createContext(); // Create context
 
 export const AutoCompleteProvider = (props) => {
   const { children } = props || {};
 
-  // Set intial state of when
+  // Get existing params which begin with 'query' and put them in an array
+  let additionalQueries = getAllSearchParams().filter((param) => param.name.match('^query'));
+  // Get existing params which begin with 'selectedStation' and put them in an array
+  let additionalStations = getAllSearchParams().filter((param) =>
+    param.name.match('^selectedStation')
+  );
+
+  // Extract values and remove first 2 items as we already have them
+  additionalQueries = additionalQueries.slice(2).map((value) => value.id);
+  additionalStations = additionalStations.slice(2).map((value) => ({ id: value.id }));
+
+  // Set intial state
   const initialState = {
-    queries: [getSearchParam('query0') || '', getSearchParam('query1') || ''],
+    queries: [getSearchParam('query0') || '', getSearchParam('query1') || '', ...additionalQueries],
     // // The selected service is used to store details when a user has clicked an autocomplete
-    selectedStation: {
-      id: getSearchParam('selectedStation') || null,
-      to: null,
-    },
-    selectedStationTo: {
-      id: getSearchParam('selectedStationTo') || null,
-      to: null,
-    },
-    additionalStations: [],
+    selectedStations: [
+      {
+        id: getSearchParam('selectedStation0') || null,
+      },
+      {
+        id: getSearchParam('selectedStation1') || null,
+      },
+      ...additionalStations,
+    ],
   };
 
   // Set up a reducer so we can change state based on centralised logic here
@@ -31,31 +43,39 @@ export const AutoCompleteProvider = (props) => {
     // Update the query to what the user has typed
     switch (action.type) {
       case 'UPDATE_QUERY': {
-        const query = `query${action.queryId}`; // If 'to' exists then make sure we set the correct field
-        setSearchParam(query, action.query);
+        setSearchParam(`query${action.queryId}`, action.query);
+
+        let newState = state.queries;
+        newState[action.queryId] = action.query;
 
         return {
           ...state,
-          queries: [...state.queries, action.query],
+          queries: [...newState],
         };
       }
       // Update the state to show item user has selected
-      case 'UDPATE_SELECTED_STATION': {
-        const item = action.payload.to ? 'selectedStationTo' : 'selectedStation'; // If 'to' exists in payload then make sure we set the correct field
-        setSearchParam(item, action.payload.id); // Set URL
+      case 'UPDATE_SELECTED_STATION': {
+        const { id, queryId } = action.payload;
+        const item = `selectedStation${queryId}`;
+        setSearchParam(item, id); // Set URL
+
+        let newState = state.selectedStations;
+        newState[queryId] = action.payload;
+
+        console.log(newState[queryId]);
 
         return {
           ...state,
-          [item]: action.payload,
+          selectedStations: [...newState],
         };
       }
       // Add new item for user to select
-      case 'ADD_ITEM': {
+      case 'ADD_STATION': {
         const item = { id: null };
 
         return {
           ...state,
-          additionalStations: [...state.additionalStations, item],
+          selectedStations: [...state.selectedStations, item],
         };
       }
 

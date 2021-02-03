@@ -7,10 +7,10 @@ import { AutoCompleteContext } from 'globalState';
 const Search = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
-  const { additionalStations } = autoCompleteState;
+  const { selectedStations } = autoCompleteState;
 
   const addStation = () => {
-    autoCompleteDispatch({ type: 'ADD_ITEM' });
+    autoCompleteDispatch({ type: 'ADD_STATION' });
   };
 
   return (
@@ -32,13 +32,13 @@ const Search = () => {
           text="Add another station"
           onClick={addStation}
         />
-        {additionalStations.length > 0 && (
+        {selectedStations.length > 2 && (
           <div className="wmnds-m-b-md">
             <div className="wmnds-inset-text" style={{ display: 'block' }}>
               <div className="wmnds-fe-label">
                 Add any additional train station(s) you travel to
               </div>
-              {additionalStations.map((station, i) => (
+              {selectedStations.slice(2).map((station, i) => (
                 <TrainAutoComplete
                   id={`autocomplete_add${i + 2}`}
                   key={`autocomplete_add${i + 2}`}

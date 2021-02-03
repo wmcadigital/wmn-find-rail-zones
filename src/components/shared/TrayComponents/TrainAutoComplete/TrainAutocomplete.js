@@ -13,22 +13,19 @@ import SelectedServiceHeader from '../SelectedServiceHeader/SelectedServiceHeade
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
-const TrainAutoComplete = ({ id, label, to, queryId }) => {
+const TrainAutoComplete = ({ id, label, queryId }) => {
   const { updateQuery, autoCompleteState, autoCompleteDispatch } = useResetState();
 
   const resultsList = useRef(null);
   const debounceInput = useRef(null);
 
   const trainQuery = autoCompleteState.queries[queryId];
-  const selectedService = to
-    ? autoCompleteState.selectedStationTo
-    : autoCompleteState.selectedStation;
+  const selectedService = autoCompleteState.selectedStations[queryId];
 
   const { loading, errorInfo, results, getAutoCompleteResults } = useAutoCompleteAPI(
     `/rail/v2/station?q=${encodeURI(trainQuery)}`,
     'train',
-    trainQuery,
-    to
+    queryId
   );
 
   // Import handleKeyDown function from customHook (used by all modes)
@@ -40,10 +37,9 @@ const TrainAutoComplete = ({ id, label, to, queryId }) => {
         <SelectedServiceHeader
           autoCompleteState={autoCompleteState}
           autoCompleteDispatch={() =>
-            autoCompleteDispatch({ type: 'RESET_SELECTED_ITEM', payload: { to } })
+            autoCompleteDispatch({ type: 'RESET_SELECTED_ITEM', payload: { queryId } })
           }
-          mode="train"
-          to={to}
+          queryId={queryId}
         />
       ) : (
         <>
@@ -88,7 +84,7 @@ const TrainAutoComplete = ({ id, label, to, queryId }) => {
                     key={result.id}
                     result={result}
                     handleKeyDown={handleKeyDown}
-                    to={to}
+                    queryId={queryId}
                   />
                 ))}
               </ul>
@@ -104,14 +100,12 @@ const TrainAutoComplete = ({ id, label, to, queryId }) => {
 TrainAutoComplete.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
-  to: PropTypes.bool,
   queryId: PropTypes.number.isRequired,
 };
 
 // Default props
 TrainAutoComplete.defaultProps = {
   label: null,
-  to: false,
 };
 
 export default TrainAutoComplete;
