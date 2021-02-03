@@ -23,17 +23,26 @@ $duration: 0.75s;
 }
 
 .accessMenu {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   border: 1px solid rgba($black, 0.1);
   border-radius: 5px;
 }
 
 .showKeyBtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
   svg {
     transform: rotate(-90deg);
   }
 }
 
 .hideKeyBtn {
+  margin-left: $size-md;
+
   svg {
     transform: rotate(90deg);
     fill: get-color(secondary);
