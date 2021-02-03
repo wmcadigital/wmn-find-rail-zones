@@ -1,6 +1,9 @@
 import React, { useContext, createRef } from 'react';
 import RailZoneMap from './RailZoneMap';
+import Icon from '../../shared/Icon/Icon';
+import AccessIcon from '../../shared/Icon/AccessIcon';
 import Button from '../../shared/Button/Button';
+import Checkbox from '../../shared/Checkbox/Checkbox';
 
 import s from './Map.module.scss';
 
@@ -57,7 +60,22 @@ const Map = () => {
             />
           </div>
         </div>
-        Checkboxes
+        <Checkbox classes="wmnds-m-b-sm">
+          <div style={{ display: 'flex' }}>
+            <AccessIcon type="full" className="wmnds-m-r-sm" /> Stations with full step-free access
+          </div>
+        </Checkbox>
+        <Checkbox classes="wmnds-m-b-sm">
+          <div style={{ display: 'flex' }}>
+            <AccessIcon type="part" className="wmnds-m-r-sm" /> Stations with part step-free access
+          </div>
+        </Checkbox>
+        <Checkbox classes="wmnds-m-b-sm">
+          <div style={{ display: 'flex' }}>
+            <Icon iconName="general-parking" className="wmnds-m-r-sm" color="cta" /> Stations with
+            parking
+          </div>
+        </Checkbox>
       </div>
     </div>
   );
