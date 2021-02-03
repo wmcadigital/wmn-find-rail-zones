@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { createRef } from 'react';
 
-function RailZoneMap() {
+const RailZoneMap = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -3779,5 +3779,5 @@ function RailZoneMap() {
       </g>
     </svg>
   );
-}
+};
 export default RailZoneMap;
