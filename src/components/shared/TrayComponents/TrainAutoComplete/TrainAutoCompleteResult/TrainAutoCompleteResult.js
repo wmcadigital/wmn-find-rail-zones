@@ -19,13 +19,13 @@ const TrainAutoCompleteResult = (props) => {
 
   const updateSelectedService = () => {
     // Reset selected disruption ID from map (if any)
-    if (autoCompleteState.selectedItem.selectedByMap) {
+    if (autoCompleteState.selectedStation.selectedByMap) {
       autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
     }
 
-    //  Update normal selectedItem
+    //  Update normal selectedStation
     autoCompleteDispatch({
-      type: 'UDPATE_SELECTED_ITEM',
+      type: 'UDPATE_SELECTED_STATION',
       payload,
     });
   };

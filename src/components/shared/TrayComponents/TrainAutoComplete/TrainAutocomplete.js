@@ -13,14 +13,16 @@ import SelectedServiceHeader from '../SelectedServiceHeader/SelectedServiceHeade
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
-const TrainAutoComplete = ({ id, label, to }) => {
+const TrainAutoComplete = ({ id, label, to, queryId }) => {
   const { updateQuery, autoCompleteState, autoCompleteDispatch } = useResetState();
 
   const resultsList = useRef(null);
   const debounceInput = useRef(null);
 
-  const trainQuery = to ? autoCompleteState.queryTo : autoCompleteState.query;
-  const selectedService = to ? autoCompleteState.selectedItemTo : autoCompleteState.selectedItem;
+  const trainQuery = autoCompleteState.queries[queryId];
+  const selectedService = to
+    ? autoCompleteState.selectedStationTo
+    : autoCompleteState.selectedStation;
 
   const { loading, errorInfo, results, getAutoCompleteResults } = useAutoCompleteAPI(
     `/rail/v2/station?q=${encodeURI(trainQuery)}`,
@@ -33,7 +35,7 @@ const TrainAutoComplete = ({ id, label, to }) => {
   const { handleKeyDown } = useHandleAutoCompleteKeys(resultsList, DebounceInput, results);
 
   return (
-    <>
+    <div className="wmnds-m-b-sm">
       {selectedService.id ? (
         <SelectedServiceHeader
           autoCompleteState={autoCompleteState}
@@ -44,15 +46,13 @@ const TrainAutoComplete = ({ id, label, to }) => {
           to={to}
         />
       ) : (
-        <div className="wmnds-fe-group">
-          <label className="wmnds-fe-label" htmlFor={id}>
-            {label}
-          </label>
-          <div
-            className={`wmnds-autocomplete wmnds-grid ${loading ? 'wmnds-is--loading' : ''} ${
-              !to && !trainQuery && !loading && 'wmnds-m-b-sm'
-            }`}
-          >
+        <>
+          {label && (
+            <label className="wmnds-fe-label" htmlFor={id}>
+              {label}
+            </label>
+          )}
+          <div className={`wmnds-autocomplete wmnds-grid ${loading ? 'wmnds-is--loading' : ''}`}>
             <Icon iconName="general-search" className="wmnds-autocomplete__icon" />
             <div className="wmnds-loader" role="alert" aria-live="assertive">
               <p className="wmnds-loader__content">Content is loading...</p>
@@ -63,7 +63,7 @@ const TrainAutoComplete = ({ id, label, to }) => {
               placeholder="Search for a station"
               className="wmnds-fe-input wmnds-autocomplete__input wmnds-col-1"
               value={trainQuery || ''}
-              onChange={(e) => updateQuery(e.target.value, to)}
+              onChange={(e) => updateQuery(e.target.value, queryId)}
               aria-label="Search for a station"
               debounceTimeout={600}
               onKeyDown={(e) => handleKeyDown(e)}
@@ -94,20 +94,23 @@ const TrainAutoComplete = ({ id, label, to }) => {
               </ul>
             )
           )}
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
 
 // PropTypes
 TrainAutoComplete.propTypes = {
   id: PropTypes.string.isRequired,
+  label: PropTypes.string,
   to: PropTypes.bool,
+  queryId: PropTypes.number.isRequired,
 };
 
 // Default props
 TrainAutoComplete.defaultProps = {
+  label: null,
   to: false,
 };
 

@@ -5,17 +5,17 @@ import CloseButton from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
 
 const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, to }) => {
-  const { selectedItem, selectedItemTo } = autoCompleteState;
+  const { selectedStation, selectedStationTo } = autoCompleteState;
   const selectedServiceRef = useRef(null);
 
-  const selectedService = to ? selectedItemTo : selectedItem;
+  const selectedService = to ? selectedStationTo : selectedStation;
 
   return (
     <>
       {/* Close disruption box */}
       {!selectedService.selectedByMap && (
         <div
-          className={`wmnds-grid wmnds-grid--align-center wmnds-m-t-xs wmnds-m-b-md ${s.selectedItemBox}`}
+          className={`wmnds-grid wmnds-grid--align-center wmnds-m-t-xs wmnds-m-b-md ${s.selectedStationBox}`}
           ref={selectedServiceRef}
         >
           <strong className={`wmnds-col-auto ${s.selectedSummary}`}>

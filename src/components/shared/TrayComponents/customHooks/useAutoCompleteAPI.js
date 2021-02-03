@@ -9,7 +9,9 @@ const useAutoCompleteAPI = (apiPath, query, to) => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false); // Set loading state for spinner
   const [errorInfo, setErrorInfo] = useState(); // Placeholder to set error messaging
-  const selectedService = to ? autoCompleteState.selectedItemTo : autoCompleteState.selectedItem;
+  const selectedService = to
+    ? autoCompleteState.selectedStationTo
+    : autoCompleteState.selectedStation;
   // Reference variables
   const mounted = useRef();
   const source = useRef();
@@ -45,10 +47,10 @@ const useAutoCompleteAPI = (apiPath, query, to) => {
         };
       }
 
-      // Update selectedItem based on payload set above if item already selected
+      // Update selectedStation based on payload set above if item already selected
       // if (selectedService.id) {
       //   autoCompleteDispatch({
-      //     type: 'UDPATE_SELECTED_ITEM',
+      //     type: 'UDPATE_SELECTED_STATION',
       //     payload,
       //   });
       // }
