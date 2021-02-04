@@ -37,8 +37,11 @@ const Search = () => {
           onClick={addStation}
         />
         {selectedStations.length > 2 && (
-          <div className="wmnds-m-b-md">
-            <div className="wmnds-inset-text" style={{ display: 'block' }}>
+          <div className="wmnds-p-b-md">
+            <div
+              className="wmnds-inset-text wmnds-m-b-sm wmnds-p-r-none"
+              style={{ display: 'block' }}
+            >
               <div className="wmnds-fe-label">
                 Add any additional train station(s) you travel to
               </div>

@@ -3,36 +3,21 @@ import Icon from '../shared/Icon/Icon';
 import AccessIcon from '../shared/Icon/AccessIcon';
 import s from './RailZoneFinder.module.scss';
 import { AutoCompleteContext } from 'globalState';
-import railData from './RailData.json';
 
 const Result = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
 
-  let stations = selectedStations.map((station) => {
-    if (station.id) {
-      const stationData = railData.railStationAccess.find((item) => station.id === item.crsCode);
-      const zone = stationData.railZone ? `Zone ${stationData.railZone}` : 'Out of County';
-      return {
-        station: station.stopName,
-        zone: zone,
-        stepFreeAccess: stationData.stepFreeAccess,
-        parking: stationData.parking,
-      };
-    } else {
-      return null;
-    }
-  });
+  const stations = selectedStations.filter((item) => item.id !== null);
 
-  stations = stations.filter((item) => item !== null);
-
+  console.log(stations);
   const fullAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'full')
-    .map((item) => item.station);
+    .map((item) => item.stopName);
   const partAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'partial')
-    .map((item) => item.station);
-  const parkingStations = stations.filter((item) => item.parking).map((item) => item.station);
+    .map((item) => item.stopName);
+  const parkingStations = stations.filter((item) => item.parking).map((item) => item.stopName);
   const arrayToSentence = (array) => {
     if (array.length > 2) {
       return `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;
@@ -42,12 +27,20 @@ const Result = () => {
       return array[0];
     }
   };
+
   return (
     <div>
-      {stations.map(({ station, zone }, i) => (
+      {stations.map(({ stopName, railZone }, i) => (
         <p key={i}>
-          {station} is {zone !== 'Out of County' && 'in '}
-          <strong>{zone}</strong>.
+          {stopName} is{' '}
+          {railZone ? (
+            <>
+              in <strong>Zone {railZone}</strong>
+            </>
+          ) : (
+            <strong>Out of County</strong>
+          )}
+          .
         </p>
       ))}
       {fullAccessStations.length > 0 && (

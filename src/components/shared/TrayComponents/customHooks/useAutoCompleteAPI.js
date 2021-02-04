@@ -1,5 +1,6 @@
 import { useEffect, useContext, useState, useRef, useCallback } from 'react';
 import axios from 'axios';
+import railData from '../../../RailZoneFinder/RailData.json';
 // Import contexts
 import { AutoCompleteContext } from 'globalState';
 
@@ -37,11 +38,14 @@ const useAutoCompleteAPI = (apiPath, query, queryId) => {
 
       if (selectedService.id && response.data?.data.length) {
         const result = response.data.data.filter((service) => service.id === selectedService.id)[0];
+        // Grab rail matching rail data from json file
+        const stationData = railData.railStationAccess.find((item) => result.id === item.crsCode);
 
         payload = {
           id: result.id,
           queryId: queryId,
           stopName: result.name,
+          ...stationData,
         };
       }
 
@@ -62,7 +66,7 @@ const useAutoCompleteAPI = (apiPath, query, queryId) => {
         });
       }
     },
-    [selectedService.id, autoCompleteDispatch] // [autoCompleteDispatch, selectedService.id]
+    [selectedService.id, autoCompleteDispatch, queryId] // [autoCompleteDispatch, selectedService.id]
   );
 
   const handleAutoCompleteApiError = (error) => {
