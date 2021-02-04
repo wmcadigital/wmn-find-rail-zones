@@ -79,31 +79,42 @@ export const AutoCompleteProvider = (props) => {
 
       // Used to cancel selected service/station etc. This is mainly used when using from/to stations
       case 'RESET_SELECTED_ITEM': {
+        const { queryId } = action.payload;
         // If action.payload ('to') exists in payload then make sure we set the correct field
-        const item = action.payload.to ? 'selectedStationTo' : 'selectedStation';
-        const query = action.payload.to ? 'queryTo' : 'query';
+        const item = `selectedStation${queryId}`;
+        const query = `query${queryId}`;
         // Delete correct things from URL
         delSearchParam(item);
         delSearchParam(query);
 
-        // Reset the selectedStation.lines if selectedStationTo is reset for trams
-        if (action.payload.mode === 'tram' && action.payload.to) {
-          return {
-            ...state,
-            [query]: '',
-            [item]: {},
-            selectedStation: {
-              ...state.selectedStation,
-              lines: [],
-            },
-          };
-        }
+        // Update queries array in state
+        let newQueries = state.queries;
+        let newSelectedStations = state.selectedStations;
+
+        newQueries[queryId] = '';
+        newSelectedStations[queryId] = { id: null };
+
+        // function to remove the last array value if it's empty (and not our inital 2 default values)
+        const removeLastValues = (array) => {
+          let newArray = array;
+          const lastItem = newArray[newArray.length - 1];
+          const valueToRemove =
+            typeof lastItem === 'object' ? lastItem.id === null : lastItem === '';
+          if (valueToRemove && newArray.length > 2) {
+            newArray.pop();
+            removeLastValues(newArray);
+          }
+          return newArray;
+        };
+
+        newQueries = removeLastValues(newQueries);
+        newSelectedStations = removeLastValues(newSelectedStations);
 
         // Update state with deleted/cancelled service/item
         return {
           ...state,
-          [query]: '',
-          [item]: {},
+          queries: [...newQueries],
+          selectedStations: [...newSelectedStations],
         };
       }
 
