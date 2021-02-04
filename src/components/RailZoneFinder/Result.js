@@ -10,7 +10,6 @@ const Result = () => {
 
   const stations = selectedStations.filter((item) => item.id !== null);
 
-  console.log(stations);
   const fullAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'full')
     .map((item) => item.stopName);

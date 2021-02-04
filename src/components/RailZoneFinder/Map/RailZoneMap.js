@@ -41,7 +41,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           x2={-1289.04}
           y2={233.35}
           gradientTransform="rotate(180 -342.82 265.87)"
-          xlinkHref="#prefix__linear-gradient-2"
+          xlinkHref="#linear-gradient-2"
         />
         <linearGradient
           id="linear-gradient-4"
@@ -49,7 +49,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={68.02}
           x2={137.98}
           y2={43.25}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-5"
@@ -57,7 +57,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={38.07}
           x2={128.26}
           y2={11.33}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-6"
@@ -65,7 +65,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={723.03}
           x2={733.86}
           y2={730.94}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-7"
@@ -74,7 +74,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           x2={-1160.58}
           y2={684.29}
           gradientTransform="rotate(180 -215.1 707.62)"
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-8"
@@ -82,7 +82,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={145.3}
           x2={5.68}
           y2={133.93}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-9"
@@ -90,7 +90,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={116.37}
           x2={17.44}
           y2={88.89}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-10"
@@ -98,7 +98,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={54.92}
           x2={169.42}
           y2={4.24}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-11"
@@ -106,7 +106,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={77.67}
           x2={132.01}
           y2={42.63}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-12"
@@ -114,7 +114,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={45.19}
           x2={132.83}
           y2={9.97}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <linearGradient
           id="linear-gradient-13"
@@ -122,7 +122,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           y1={38.07}
           x2={125.4}
           y2={13.64}
-          xlinkHref="#prefix__linear-gradient"
+          xlinkHref="#linear-gradient"
         />
         <clipPath id="clip-path" transform="translate(0 38.73)">
           <path
@@ -144,14 +144,14 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
             transform="translate(0 38.73)"
           />
         </g>
-        <g id="WMN_nTrain_Zone_5" data-name="WMN nTrain Zone 5">
+        <g id="Zone_6" data-name="Zone 6">
           <path
             d="M317.4 66.56a31.73 31.73 0 00-22.4 9.28L154.23 216.59h0l27.88-26a56.68 56.68 0 0138.7-15.26h140.48a56.73 56.73 0 0140.09 16.6l19.17 19.17-24.06-24.05a68.36 68.36 0 01-20-48.34V81.1a14.55 14.55 0 00-14.55-14.54z"
             fill="#e9e4e3"
             strokeWidth={0.63}
             stroke="#fff"
           />
-          <g clipPath="url(#prefix__clip-path)">
+          <g clipPath="url(#clip-path)">
             <path
               className="prefix__cls-5"
               d="M177.39 137.48l141.74 141.74M190.82 124.04l141.75 141.74M204.26 110.61L346 252.35M217.7 97.17l141.74 141.74M244.57 70.3l141.74 141.74M231.13 83.73l141.75 141.75M258.01 56.86L399.75 198.6M284.88 29.99l141.74 141.74M298.31 16.55l141.75 141.74M311.75 3.12l141.74 141.74M271.44 43.42l141.74 141.75"
@@ -373,7 +373,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           />
           <path
             strokeWidth={4.2}
-            stroke="url(#prefix__linear-gradient)"
+            stroke="url(#linear-gradient)"
             fill="none"
             d="M37.01 164.1L4.96 132.04"
           />
@@ -545,7 +545,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
             transform="translate(0 38.73)"
           />
           <path
-            stroke="url(#prefix__linear-gradient-2)"
+            stroke="url(#linear-gradient-2)"
             strokeWidth={1.4}
             strokeMiterlimit={10}
             fill="none"
@@ -558,7 +558,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           />
           <path className="prefix__cls-14" d="M568.28 396.26h38.03" />
           <path
-            stroke="url(#prefix__linear-gradient-3)"
+            stroke="url(#linear-gradient-3)"
             strokeWidth={1.4}
             strokeMiterlimit={10}
             fill="none"
@@ -589,7 +589,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           />
           <path className="prefix__cls-14" d="M137.98 63.77v14.74" />
           <path
-            stroke="url(#prefix__linear-gradient-4)"
+            stroke="url(#linear-gradient-4)"
             strokeWidth={1.4}
             fill="none"
             d="M137.98 43.25v24.77"
@@ -628,7 +628,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           <path
             d="M121.74 11.83l5.6 5.59a24.56 24.56 0 017.24 17.48v3.17"
             transform="translate(0 38.73)"
-            stroke="url(#prefix__linear-gradient-5)"
+            stroke="url(#linear-gradient-5)"
             strokeWidth={1.4}
             fill="none"
           />
@@ -670,13 +670,13 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
             xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOUlEQVQIW43LsQ3AIBAEwQHhNt0mbT2pHbwTCBCJs9GervTbg6si8LYJDWMhENt0YhzlD/ZXyUzwAYgDFUy3LtUdAAAAAElFTkSuQmCC"
           />
           <path
-            stroke="url(#prefix__linear-gradient-6)"
+            stroke="url(#linear-gradient-6)"
             strokeWidth={1.4}
             fill="none"
             d="M727.01 712.37v29.24"
           />
           <path
-            stroke="url(#prefix__linear-gradient-7)"
+            stroke="url(#linear-gradient-7)"
             strokeWidth={1.4}
             fill="none"
             d="M723.52 741.61v-29.24"
@@ -694,7 +694,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
             xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAYAAAAGos/EAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOUlEQVQYV6XLsQ3AIBAEwQF9nbTp0rBkpCchNCRkp73d8jQfoqJjBF6IRTbj4Fzm/06/y09XyUwwASkFIoGFltnhAAAAAElFTkSuQmCC"
           />
           <path
-            stroke="url(#prefix__linear-gradient-8)"
+            stroke="url(#linear-gradient-8)"
             strokeWidth={1.4}
             fill="none"
             d="M10.87 144.81L.49 134.43"
@@ -718,7 +718,7 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           <path
             d="M14.41 88.89v12.88a18.91 18.91 0 005.53 13.37l.74.74"
             transform="translate(0 38.73)"
-            stroke="url(#prefix__linear-gradient-9)"
+            stroke="url(#linear-gradient-9)"
             strokeWidth={1.4}
             fill="none"
           />
@@ -867,14 +867,14 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           <path
             d="M134.58 4.24a26.11 26.11 0 007.63 18.44l21.64 21.63a33.82 33.82 0 0023.91 9.91H205"
             transform="translate(0 38.73)"
-            stroke="url(#prefix__linear-gradient-10)"
+            stroke="url(#linear-gradient-10)"
             strokeWidth={1.4}
             fill="none"
           />
           <path className="prefix__cls-14" d="M166.65 92.95h33.14" />
           <path className="prefix__cls-25" d="M131.18 69.32V50.97" />
           <path
-            stroke="url(#prefix__linear-gradient-11)"
+            stroke="url(#linear-gradient-11)"
             strokeWidth={1.4}
             fill="none"
             d="M132.01 77.67V42.63"
@@ -887,14 +887,14 @@ const RailZoneMap = ({ mapRef, parking, partial, full }) => {
           <path
             d="M124.07 10.47l7.11 7.1c4.66 4.67 10.2 11.61 10.2 20.51v7.11"
             transform="translate(0 38.73)"
-            stroke="url(#prefix__linear-gradient-12)"
+            stroke="url(#linear-gradient-12)"
             strokeWidth={1.4}
             fill="none"
           />
           <path
             d="M131.18 38.07c0-5.65-2.25-14.45-6.25-18.45l-5.51-5.48"
             transform="translate(0 38.73)"
-            stroke="url(#prefix__linear-gradient-13)"
+            stroke="url(#linear-gradient-13)"
             strokeWidth={1.4}
             fill="none"
           />

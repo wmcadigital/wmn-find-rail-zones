@@ -49,6 +49,12 @@ $duration: 0.75s;
   }
 }
 
+.zoneSelected {
+  path:first-child {
+    fill: get-color(secondary, 50);
+  }
+}
+
 @keyframes fade {
   0% {
     opacity: 0;

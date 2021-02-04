@@ -24,6 +24,13 @@ const Map = () => {
         mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
         mapRef.current.querySelector(`#${station.stopName}`);
 
+      const zone = mapRef.current.querySelector(`#Zone_${station.railZone}`);
+
+      if (zone) {
+        zone.classList.add(s.zoneSelected);
+        console.log(zone);
+      }
+
       if (!group.querySelector(`.${s.textBg}`)) {
         const gCoords = group.getBBox();
 
