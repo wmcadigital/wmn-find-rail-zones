@@ -13,10 +13,14 @@ const Search = () => {
     autoCompleteDispatch({ type: 'ADD_STATION' });
   };
 
+  const resetSearch = () => {
+    autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
+  };
+
   return (
     <div className="wmnds-p-md">
       <div className="wmnds-text-align-right">
-        <Button btnClass="wmnds-btn--link" text="Clear search" />
+        <Button btnClass="wmnds-btn--link" text="Clear search" onClick={resetSearch} />
       </div>
       <h2 className="h3">Find your travel zones</h2>
       <div style={{ maxWidth: '432px' }}>

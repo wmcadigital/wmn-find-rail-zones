@@ -120,15 +120,12 @@ export const AutoCompleteProvider = (props) => {
 
       // Used to reset everything
       case 'RESET_SELECTED_SERVICES':
-        delSearchParam('selectedStation');
-        delSearchParam('selectedStationTo');
-        delSearchParam('query');
-        delSearchParam('queryTo');
+        getAllSearchParams().forEach((param) => {
+          delSearchParam(param.name);
+        });
         return {
-          query: '',
-          queryTo: '',
-          selectedStation: {},
-          selectedStationTo: {},
+          queries: initialState.queries,
+          selectedStations: initialState.selectedStations,
         };
       // Default should return intial state if error
       default:
