@@ -33,6 +33,11 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
 
   return (
     <div className="wmnds-m-b-sm">
+      {label && (
+        <label className="wmnds-fe-label" htmlFor={id}>
+          {label}
+        </label>
+      )}
       {selectedService.id ? (
         <SelectedServiceHeader
           autoCompleteState={autoCompleteState}
@@ -43,17 +48,13 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
         />
       ) : (
         <>
-          {label && (
-            <label className="wmnds-fe-label" htmlFor={id}>
-              {label}
-            </label>
-          )}
           <div className={`wmnds-autocomplete wmnds-grid ${loading ? 'wmnds-is--loading' : ''}`}>
             <Icon iconName="general-search" className="wmnds-autocomplete__icon" />
             <div className="wmnds-loader" role="alert" aria-live="assertive">
               <p className="wmnds-loader__content">Content is loading...</p>
             </div>
             <DebounceInput
+              id={id}
               type="text"
               name="trainSearch"
               placeholder="Search for a station"

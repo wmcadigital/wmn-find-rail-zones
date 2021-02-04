@@ -6,7 +6,7 @@ import s from './TrainAutoCompleteResult.module.scss';
 const TrainAutoCompleteResult = (props) => {
   const { result, handleKeyDown, queryId } = props || {};
 
-  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
+  const [, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
   // Set payload object to pass below
   const payload = {
