@@ -13,7 +13,7 @@ const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryI
     <>
       {/* Close disruption box */}
       <div
-        className={`wmnds-grid wmnds-grid--align-center wmnds-m-t-xs wmnds-m-b-md ${s.selectedStationBox}`}
+        className={`wmnds-grid wmnds-grid--justify-between wmnds-m-t-xs wmnds-m-b-md ${s.selectedStationBox}`}
         ref={selectedServiceRef}
       >
         <strong className={`wmnds-col-auto ${s.selectedSummary}`}>

@@ -4,15 +4,18 @@
 @import '~assets/wmnds/mixins';
 
 .selectedStationBox {
-  position: relative;
   width: 100%;
-  padding: $size-xsm $size-xs;
+  height: 50px;
+  padding-right: 0;
+  padding-left: $size-sm;
   border: 1px solid get-color(primary);
+  align-content: center;
 }
 
 .selectedSummary {
+  display: block;
   width: 100%;
-  margin-top: $size-md;
+  align-self: center;
 
   @media all and (min-width: 360px) {
     max-width: calc(100% - (115px));

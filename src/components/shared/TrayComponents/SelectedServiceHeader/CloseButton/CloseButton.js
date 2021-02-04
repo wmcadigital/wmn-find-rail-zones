@@ -4,14 +4,10 @@ import PropTypes from 'prop-types';
 
 import s from './CloseButton.module.scss';
 
-const CloseButton = ({ onClick, isFloated }) => {
+const CloseButton = ({ onClick }) => {
   return (
-    <button
-      type="button"
-      className={`${s.closeButton} ${isFloated ? s.closeButtonFloated : ''}`}
-      onClick={onClick}
-    >
-      <Icon iconName="general-cross" iconClass={`general-cross ${s.closeIcon}`} />
+    <button type="button" className={s.closeButton} onClick={onClick}>
+      <Icon iconName="general-cross" className={`general-cross ${s.closeIcon}`} />
     </button>
   );
 };

@@ -4,27 +4,14 @@
 @import '~assets/wmnds/mixins';
 
 .closeButton {
-  position: absolute;
-  top: 1rem;
-  right: $size-xsm;
-  margin: auto;
+  padding: $size-sm;
   border: 0;
   background: none;
   cursor: pointer;
-
-  @media all and(min-width: 400px) {
-    top: 0;
-    bottom: 0;
-  }
-}
-
-.closeButtonFloated {
-  position: relative;
-  margin-top: -$size-md;
-  float: right;
 }
 
 .closeIcon {
+  display: block;
   width: 22px;
   height: 22px;
   fill: get-color(secondary);
