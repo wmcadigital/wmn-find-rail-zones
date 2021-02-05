@@ -4,7 +4,7 @@ import Button from '../../shared/Button/Button';
 import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import Accordion from '../../shared/Accordion/Accordion';
-import Search from '../Search';
+import Search from '../../shared/Tray/Tray';
 
 import railData from '../RailData.json';
 

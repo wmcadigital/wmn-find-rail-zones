@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import Button from '../shared/Button/Button';
-import Result from './Result';
-import TrainAutoComplete from '../shared/TrayComponents/TrainAutoComplete/TrainAutocomplete';
+import Button from '../Button/Button';
+import Result from '../../RailZoneFinder/Result';
+import TrainAutoComplete from './TrayComponents/TrainAutoComplete/TrainAutocomplete';
 import { AutoCompleteContext } from 'globalState';
+import s from './Tray.module.scss';
 
 const Search = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
@@ -19,11 +20,11 @@ const Search = () => {
 
   return (
     <div className="wmnds-p-md">
-      <div className="wmnds-text-align-right">
-        <Button btnClass="wmnds-btn--link" text="Clear search" onClick={resetSearch} />
+      <div className={`${s.trayHeader}`}>
+        <Button btnClass="wmnds-btn--link wmnds-m-l-md" text="Clear search" onClick={resetSearch} />
+        <h2 className="h3">Find your travel zones</h2>
       </div>
-      <h2 className="h3">Find your travel zones</h2>
-      <div style={{ maxWidth: '432px' }}>
+      <div className={`${s.traySearchContainer}`}>
         <div className="wmnds-m-b-md">
           <TrainAutoComplete label="From:" id="autocomplete_from" queryId={0} />
         </div>

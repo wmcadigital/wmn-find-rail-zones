@@ -1,6 +1,6 @@
 import { useEffect, useContext, useState, useRef, useCallback } from 'react';
 import axios from 'axios';
-import railData from '../../../RailZoneFinder/RailData.json';
+import railData from '../../../../RailZoneFinder/RailData.json';
 // Import contexts
 import { AutoCompleteContext } from 'globalState';
 

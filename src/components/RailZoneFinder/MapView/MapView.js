@@ -1,7 +1,7 @@
 import React from 'react';
 // Rail zone svg component
 import Map from '../Map/Map';
-import Search from '../Search';
+import Search from '../../shared/Tray/Tray';
 
 import s from './MapView.module.scss';
 
