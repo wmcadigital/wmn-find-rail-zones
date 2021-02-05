@@ -37,7 +37,7 @@ const Map = () => {
           const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
           p.setAttribute('id', `${station.id}_text_bg`);
           p.setAttribute('class', s.textBg);
-          p.setAttribute('y', gCoords.y - 4);
+          p.setAttribute('y', gCoords.y - 4.5);
           p.setAttribute('x', gCoords.x - 4);
           p.setAttribute('rx', 4);
           p.setAttribute('ry', 4);
