@@ -28,7 +28,9 @@ const Map = () => {
     stations.forEach((station) => {
       const group =
         mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
-        mapRef.current.querySelector(`#${station.stopName.replace(/\W/g, '_')}`);
+        mapRef.current.querySelector(
+          `#${station.stopName.replace(' ', '_').replace(/[^\w-]+/g, '')}`
+        );
 
       const zone = mapRef.current.querySelector(`#Zone_${station.railZone}`);
 

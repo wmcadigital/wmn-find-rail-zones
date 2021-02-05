@@ -105,10 +105,12 @@ export const AutoCompleteProvider = (props) => {
 
         if (state.mapView) {
           // Find related group in svg map
-          if (station) {
+          if (station && station.stopName) {
             const svgGroup =
               state.mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
-              state.mapRef.current.querySelector(`#${station.stopName.replace(/\W/g, '_')}`);
+              state.mapRef.current.querySelector(
+                `#${station.stopName.replace(' ', '_').replace(/[^\w-]+/g, '')}`
+              );
 
             // If group found remove text background from svg map
             if (svgGroup) {
@@ -161,8 +163,8 @@ export const AutoCompleteProvider = (props) => {
         // Update state with deleted/cancelled service/item
         return {
           ...state,
-          // queries: [...newQueries],
-          // selectedStations: [...newSelectedStations],
+          queries: [...newQueries],
+          selectedStations: [...newSelectedStations],
         };
       }
 
@@ -183,6 +185,8 @@ export const AutoCompleteProvider = (props) => {
           delSearchParam(param.name);
         });
         return {
+          mapRef: state.mapRef,
+          mapView: state.mapView,
           queries: initialState.queries,
           selectedStations: initialState.selectedStations,
         };
