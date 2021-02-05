@@ -149,6 +149,17 @@ export const AutoCompleteProvider = (props) => {
 
       // Used to reset everything
       case 'RESET_SELECTED_SERVICES':
+        // clear map highlights
+        state.selectedStations.forEach((station) => {
+          const textBg = state.mapRef.current.querySelector(`#${station.id}_text_bg`);
+          const zone = state.mapRef.current.querySelector(`#Zone_${station.railZone}`);
+          if (textBg) {
+            textBg.parentNode.removeChild(textBg);
+          }
+          if (zone) {
+            zone.classList.remove(...zone.classList);
+          }
+        });
         getAllSearchParams().forEach((param) => {
           delSearchParam(param.name);
         });
