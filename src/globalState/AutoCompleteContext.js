@@ -103,27 +103,29 @@ export const AutoCompleteProvider = (props) => {
         const query = `query${queryId}`;
         const station = state.selectedStations[queryId];
 
-        // Find related group in svg map
-        if (station) {
-          const svgGroup =
-            state.mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
-            state.mapRef.current.querySelector(`#${station.stopName.replace(/\W/g, '_')}`);
+        if (state.mapView) {
+          // Find related group in svg map
+          if (station) {
+            const svgGroup =
+              state.mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
+              state.mapRef.current.querySelector(`#${station.stopName.replace(/\W/g, '_')}`);
 
-          // If group found remove text background from svg map
-          if (svgGroup) {
-            svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
+            // If group found remove text background from svg map
+            if (svgGroup) {
+              svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
 
-            // Find related zone in svg map
-            const inThisZone = state.selectedStations.filter(
-              (item) => item.railZone === station.railZone
-            );
+              // Find related zone in svg map
+              const inThisZone = state.selectedStations.filter(
+                (item) => item.railZone === station.railZone
+              );
 
-            // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
-            if (inThisZone.length < 2) {
-              const zone = state.mapRef.current.querySelector(`#Zone_${station.railZone}`);
+              // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
+              if (inThisZone.length < 2) {
+                const zone = state.mapRef.current.querySelector(`#Zone_${station.railZone}`);
 
-              if (zone) {
-                zone.classList.remove(...zone.classList);
+                if (zone) {
+                  zone.classList.remove(...zone.classList);
+                }
               }
             }
           }
