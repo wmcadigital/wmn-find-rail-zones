@@ -1,4 +1,4 @@
-import React, { useReducer, createContext } from 'react';
+import React, { useReducer, createContext, createRef } from 'react';
 // Import Helper functions
 import {
   getAllSearchParams,
@@ -25,6 +25,7 @@ export const AutoCompleteProvider = (props) => {
 
   // Set intial state
   const initialState = {
+    mapRef: createRef(),
     queries: [getSearchParam('query0') || '', getSearchParam('query1') || '', ...additionalQueries],
     // // The selected service is used to store details when a user has clicked an autocomplete
     selectedStations: [
@@ -83,6 +84,34 @@ export const AutoCompleteProvider = (props) => {
         // If action.payload ('to') exists in payload then make sure we set the correct field
         const item = `selectedStation${queryId}`;
         const query = `query${queryId}`;
+        const station = state.selectedStations[queryId];
+
+        // Find related group in svg map
+        if (station) {
+          const svgGroup =
+            state.mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
+            state.mapRef.current.querySelector(`#${station.stopName}`);
+
+          // If group found remove text background from svg map
+          if (svgGroup) {
+            svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
+
+            // Find related zone in svg map
+            const inThisZone = state.selectedStations.filter(
+              (item) => item.railZone === station.railZone
+            );
+
+            // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
+            if (inThisZone.length < 2) {
+              const zone = state.mapRef.current.querySelector(`#Zone_${station.railZone}`);
+
+              if (zone) {
+                zone.classList.remove(...zone.classList);
+              }
+            }
+          }
+        }
+
         // Delete correct things from URL
         delSearchParam(item);
         delSearchParam(query);
@@ -113,8 +142,8 @@ export const AutoCompleteProvider = (props) => {
         // Update state with deleted/cancelled service/item
         return {
           ...state,
-          queries: [...newQueries],
-          selectedStations: [...newSelectedStations],
+          // queries: [...newQueries],
+          // selectedStations: [...newSelectedStations],
         };
       }
 

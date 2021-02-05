@@ -1,4 +1,4 @@
-import React, { useContext, useState, createRef } from 'react';
+import React, { useContext, useState } from 'react';
 import RailZoneMap from './RailZoneMap';
 import Icon from '../../shared/Icon/Icon';
 import AccessIcon from '../../shared/Icon/AccessIcon';
@@ -13,8 +13,7 @@ const Map = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const [showKey, setShowKey] = useState(false);
   const [mapIcons, setMapIcons] = useState({ full: false, partial: false, parking: false });
-  const { selectedStations } = autoCompleteState;
-  const mapRef = createRef();
+  const { selectedStations, mapRef } = autoCompleteState;
 
   React.useEffect(() => {
     const stations = selectedStations.filter((station) => station.stopName);
@@ -28,13 +27,13 @@ const Map = () => {
 
       if (zone) {
         zone.classList.add(s.zoneSelected);
-        console.log(zone);
       }
 
-      if (!group.querySelector(`.${s.textBg}`)) {
+      if (group && !group.querySelector(`.${s.textBg}`)) {
         const gCoords = group.getBBox();
 
         const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        p.setAttribute('id', `${station.id}_text_bg`);
         p.setAttribute('class', s.textBg);
         p.setAttribute('y', gCoords.y - 4);
         p.setAttribute('x', gCoords.x - 4);
