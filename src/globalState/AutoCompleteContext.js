@@ -1,4 +1,4 @@
-import React, { useReducer, createContext, createRef } from 'react';
+import React, { useReducer, createContext } from 'react';
 // Import Helper functions
 import {
   getAllSearchParams,
@@ -25,7 +25,8 @@ export const AutoCompleteProvider = (props) => {
 
   // Set intial state
   const initialState = {
-    mapRef: createRef(),
+    mapRef: null,
+    mapView: true,
     queries: [getSearchParam('query0') || '', getSearchParam('query1') || '', ...additionalQueries],
     // // The selected service is used to store details when a user has clicked an autocomplete
     selectedStations: [
@@ -78,6 +79,22 @@ export const AutoCompleteProvider = (props) => {
         };
       }
 
+      // Update view
+      case 'UPDATE_VIEW': {
+        return {
+          ...state,
+          mapView: action.payload,
+        };
+      }
+
+      // Update view
+      case 'ADD_MAP': {
+        return {
+          ...state,
+          mapRef: action.payload,
+        };
+      }
+
       // Used to cancel selected service/station etc. This is mainly used when using from/to stations
       case 'RESET_SELECTED_ITEM': {
         const { queryId } = action.payload;
@@ -90,7 +107,7 @@ export const AutoCompleteProvider = (props) => {
         if (station) {
           const svgGroup =
             state.mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
-            state.mapRef.current.querySelector(`#${station.stopName}`);
+            state.mapRef.current.querySelector(`#${station.stopName.replace(/\W/g, '_')}`);
 
           // If group found remove text background from svg map
           if (svgGroup) {

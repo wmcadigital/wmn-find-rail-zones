@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect, createRef } from 'react';
 import RailZoneMap from './RailZoneMap';
 import Icon from '../../shared/Icon/Icon';
 import AccessIcon from '../../shared/Icon/AccessIcon';
@@ -10,18 +10,25 @@ import s from './Map.module.scss';
 import { AutoCompleteContext } from 'globalState';
 
 const Map = () => {
-  const [autoCompleteState] = useContext(AutoCompleteContext);
+  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
   const [showKey, setShowKey] = useState(false);
   const [mapIcons, setMapIcons] = useState({ full: false, partial: false, parking: false });
   const { selectedStations, mapRef } = autoCompleteState;
 
-  React.useEffect(() => {
+  useEffect(() => {
+    autoCompleteDispatch({
+      type: 'ADD_MAP',
+      payload: createRef(),
+    });
+  }, [autoCompleteDispatch]);
+
+  useEffect(() => {
     const stations = selectedStations.filter((station) => station.stopName);
 
     stations.forEach((station) => {
       const group =
         mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
-        mapRef.current.querySelector(`#${station.stopName}`);
+        mapRef.current.querySelector(`#${station.stopName.replace(/\W/g, '_')}`);
 
       const zone = mapRef.current.querySelector(`#Zone_${station.railZone}`);
 
