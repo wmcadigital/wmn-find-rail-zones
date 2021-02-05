@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, createRef } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import RailZoneMap from './RailZoneMap';
 import Icon from '../../shared/Icon/Icon';
 import AccessIcon from '../../shared/Icon/AccessIcon';
@@ -10,62 +10,51 @@ import s from './Map.module.scss';
 import { AutoCompleteContext } from 'globalState';
 
 const Map = () => {
-  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
+  const [autoCompleteState] = useContext(AutoCompleteContext);
   const [showKey, setShowKey] = useState(false);
   const [mapIcons, setMapIcons] = useState({ full: false, partial: false, parking: false });
   const { selectedStations, mapRef } = autoCompleteState;
 
   useEffect(() => {
-    autoCompleteDispatch({
-      type: 'ADD_MAP',
-      payload: createRef(),
-    });
-  }, [autoCompleteDispatch]);
-
-  useEffect(() => {
     const stations = selectedStations.filter((station) => station.stopName);
+    if (mapRef) {
+      const svg = mapRef.current.ViewerDOM;
 
-    stations.forEach((station) => {
-      const group =
-        mapRef.current.querySelector(`[data-name="${station.stopName}"]`) ||
-        mapRef.current.querySelector(
-          `#${station.stopName.replace(' ', '_').replace(/[^\w-]+/g, '')}`
-        );
+      stations.forEach((station) => {
+        const group =
+          svg.querySelector(`[data-name="${station.stopName}"]`) ||
+          svg.querySelector(`#${station.stopName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
 
-      const zone = mapRef.current.querySelector(`#Zone_${station.railZone}`);
+        const zone = svg.querySelector(`#Zone_${station.railZone}`);
 
-      if (zone) {
-        zone.classList.add(s.zoneSelected);
-      }
+        if (zone) {
+          zone.classList.add(s.zoneSelected);
+        }
 
-      if (group && !group.querySelector(`.${s.textBg}`)) {
-        const gCoords = group.getBBox();
+        if (group && !group.querySelector(`.${s.textBg}`)) {
+          const gCoords = group.getBBox();
 
-        const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        p.setAttribute('id', `${station.id}_text_bg`);
-        p.setAttribute('class', s.textBg);
-        p.setAttribute('y', gCoords.y - 4);
-        p.setAttribute('x', gCoords.x - 4);
-        p.setAttribute('rx', 4);
-        p.setAttribute('ry', 4);
-        p.setAttribute('width', gCoords.width + 8);
-        p.setAttribute('height', gCoords.height + 8);
-        p.setAttribute('stroke', '#fff');
-        p.setAttribute('stroke-width', '1.5');
-        p.setAttribute('fill', '#3c1053');
-        group.insertBefore(p, group.childNodes[0]);
-      }
-    });
+          const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          p.setAttribute('id', `${station.id}_text_bg`);
+          p.setAttribute('class', s.textBg);
+          p.setAttribute('y', gCoords.y - 4);
+          p.setAttribute('x', gCoords.x - 4);
+          p.setAttribute('rx', 4);
+          p.setAttribute('ry', 4);
+          p.setAttribute('width', gCoords.width + 8);
+          p.setAttribute('height', gCoords.height + 8);
+          p.setAttribute('stroke', '#fff');
+          p.setAttribute('stroke-width', '1.5');
+          p.setAttribute('fill', '#3c1053');
+          group.insertBefore(p, group.childNodes[0]);
+        }
+      });
+    }
   }, [mapRef, selectedStations]);
 
   return (
     <div className={s.mapContainer}>
-      <RailZoneMap
-        mapRef={mapRef}
-        full={mapIcons.full}
-        partial={mapIcons.partial}
-        parking={mapIcons.parking}
-      />
+      <RailZoneMap full={mapIcons.full} partial={mapIcons.partial} parking={mapIcons.parking} />
       {!showKey ? (
         <Button
           btnClass={`wmnds-btn--primary ${s.showKeyBtn}`}
