@@ -17,7 +17,7 @@ const Map = () => {
 
   useEffect(() => {
     const stations = selectedStations.filter((station) => station.stopName);
-    if (mapRef) {
+    if (mapRef && mapRef.current) {
       const svg = mapRef.current.ViewerDOM;
 
       stations.forEach((station) => {
