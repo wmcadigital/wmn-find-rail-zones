@@ -36,12 +36,12 @@ const ListView = () => {
       </div>
       <h2>Stations by zone</h2>
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-m-b-md">
-        <div className="wmnds-col-2-3">
+        <div className="wmnds-col-1-1 wmnds-col-md-2-3">
           <div className="wmnds-grid wmnds-grid--justify-between wmnds-grid--align-center">
-            <div className="wmnds-col-auto">
+            <div className="wmnds-col-1-1 wmnds-col-md-auto">
               <p className="wmnds-m-none">View a list of all the train stations in each zone.</p>
             </div>
-            <div className="wmnds-col-auto">
+            <div className="wmnds-col-1-1 wmnds-col-md-auto">
               <Button
                 onClick={() => toggleAccordions(true)}
                 text="Open all"
@@ -57,7 +57,7 @@ const ListView = () => {
         </div>
       </div>
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
-        <div className="wmnds-col-2-3">
+        <div className="wmnds-col-1-1 wmnds-col-md-2-3">
           {accordions.map((accordion, i) => {
             const accordionId = `${accordion.name.toLowerCase().replace(' ', '')}-${i}`;
             const handleClick = () => {
@@ -80,7 +80,7 @@ const ListView = () => {
                   <ul>
                     {zoneStations.map((station) => (
                       <li key={station.crsCode} style={{ display: 'flex' }}>
-                        {station.crsCode}
+                        {station.stationName}
                         {station.stepFreeAccess && station.stepFreeAccess === 'full' ? (
                           <AccessIcon className="wmnds-m-l-xsm" />
                         ) : (
@@ -97,7 +97,7 @@ const ListView = () => {
             );
           })}
         </div>
-        <div className="wmnds-col-1-3" style={{ alignSelf: 'flex-start' }}>
+        <div className="wmnds-col-1-1 wmnds-col-md-1-3" style={{ alignSelf: 'flex-start' }}>
           <div className="wmnds-content-card">
             <div className="wmnds-p-md">
               <h3 className="h2">Key</h3>
