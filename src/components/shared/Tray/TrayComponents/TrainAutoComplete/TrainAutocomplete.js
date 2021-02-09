@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { DebounceInput } from 'react-debounce-input'; // https://www.npmjs.com/package/react-debounce-input
 
-// CustomHooks
-import useResetState from 'customHooks/useResetState';
+// Import Context
+import { AutoCompleteContext } from 'globalState';
 // Import components
 import Message from 'components/shared/Message/Message';
 import Icon from 'components/shared/Icon/Icon';
@@ -13,10 +13,8 @@ import SelectedServiceHeader from '../SelectedServiceHeader/SelectedServiceHeade
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
-import railData from '../../../../RailZoneFinder/RailData.json';
-
 const TrainAutoComplete = ({ id, label, queryId }) => {
-  const { updateQuery, autoCompleteState, autoCompleteDispatch } = useResetState();
+  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
   const resultsList = useRef(null);
   const debounceInput = useRef(null);
