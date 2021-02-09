@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import Button from '../shared/Button/Button';
 import MapView from '../RailZoneFinder/MapView/MapView';
 import ListView from '../RailZoneFinder/ListView/ListView';
+import s from './RailZoneFinder.module.scss';
 import { AutoCompleteContext } from 'globalState';
 
 function RailZoneFinder() {
@@ -17,7 +18,7 @@ function RailZoneFinder() {
   return (
     <div className="wmnds-p-b-lg">
       <div className="wmnds-container">
-        <div className="wmnds-grid wmnds-grid--justify-between">
+        <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
           <div className="wmnds-col-auto">
             <h1>Find my rail zones</h1>
           </div>

@@ -6,17 +6,7 @@
 @import '~assets/wmnds/vars';
 @import '~assets/wmnds/mixins';
 
-.mainHeading {
+.nowrap {
   align-items: flex-start;
   flex-wrap: nowrap;
-
-  h1 {
-    font-size: $size-lg;
-  }
-
-  button {
-    display: inline-flex;
-    margin-left: $size-sm;
-    white-space: nowrap;
-  }
 }

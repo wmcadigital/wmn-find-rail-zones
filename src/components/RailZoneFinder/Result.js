@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Icon from '../shared/Icon/Icon';
 import AccessIcon from '../shared/Icon/AccessIcon';
-import s from './RailZoneFinder.module.scss';
+import s from './Result.module.scss';
 import { AutoCompleteContext } from 'globalState';
 
 const Result = () => {
