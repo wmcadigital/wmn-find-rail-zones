@@ -12,11 +12,11 @@ const Result = () => {
 
   const fullAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'full')
-    .map((item) => item.stopName);
+    .map((item) => item.stationName);
   const partAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'partial')
-    .map((item) => item.stopName);
-  const parkingStations = stations.filter((item) => item.parking).map((item) => item.stopName);
+    .map((item) => item.stationName);
+  const parkingStations = stations.filter((item) => item.parking).map((item) => item.stationName);
   const arrayToSentence = (array) => {
     if (array.length > 2) {
       return `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;
@@ -29,9 +29,9 @@ const Result = () => {
 
   return (
     <div>
-      {stations.map(({ stopName, railZone }, i) => (
+      {stations.map(({ stationName, railZone }, i) => (
         <p key={i}>
-          {stopName} is{' '}
+          {stationName} is{' '}
           {railZone ? (
             <>
               in <strong>Zone {railZone}</strong>

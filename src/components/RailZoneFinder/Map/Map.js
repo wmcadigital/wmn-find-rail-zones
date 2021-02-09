@@ -16,14 +16,14 @@ const Map = () => {
   const { selectedStations, mapRef } = autoCompleteState;
 
   useEffect(() => {
-    const stations = selectedStations.filter((station) => station.stopName);
-    if (mapRef && mapRef.current) {
+    const stations = selectedStations.filter((station) => station.stationName);
+    if (mapRef?.current) {
       const svg = mapRef.current.ViewerDOM;
 
       stations.forEach((station) => {
         const group =
-          svg.querySelector(`[data-name="${station.stopName}"]`) ||
-          svg.querySelector(`#${station.stopName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
+          svg.querySelector(`[data-name="${station.stationName}"]`) ||
+          svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
 
         const zone = svg.querySelector(`#Zone_${station.railZone}`);
 

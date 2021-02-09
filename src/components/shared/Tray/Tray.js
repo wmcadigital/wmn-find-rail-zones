@@ -29,7 +29,7 @@ const Search = () => {
           <TrainAutoComplete label="From:" id="autocomplete_from" queryId={0} />
         </div>
         <div className="wmnds-m-b-md">
-          <TrainAutoComplete label="To:" id="autocomplete_to" to queryId={1} />
+          <TrainAutoComplete label="To:" id="autocomplete_to" queryId={1} />
         </div>
         <Button
           btnClass="wmnds-btn--primary wmnds-m-b-lg"

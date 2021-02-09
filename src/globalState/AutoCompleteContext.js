@@ -55,6 +55,17 @@ export const AutoCompleteProvider = (props) => {
           queries: [...newState],
         };
       }
+      case 'UPDATE_QUERY_TEST': {
+        setSearchParam(`query${action.queryId}`, action.payload);
+
+        let newState = state.queries;
+        newState[action.queryId] = action.payload;
+
+        return {
+          ...state,
+          queries: [...newState],
+        };
+      }
       // Update the state to show item user has selected
       case 'UPDATE_SELECTED_STATION': {
         const { id, queryId } = action.payload;
@@ -106,10 +117,12 @@ export const AutoCompleteProvider = (props) => {
         if (state.mapView && state.mapRef) {
           const svg = state.mapRef.current.ViewerDOM;
           // Find related group in svg map
-          if (station && station.stopName) {
+          if (station && station.stationName) {
             const svgGroup =
-              svg.querySelector(`[data-name="${station.stopName}"]`) ||
-              svg.querySelector(`#${station.stopName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
+              svg.querySelector(`[data-name="${station.stationName}"]`) ||
+              svg.querySelector(
+                `#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`
+              );
 
             // If group found remove text background from svg map
             if (svgGroup) {

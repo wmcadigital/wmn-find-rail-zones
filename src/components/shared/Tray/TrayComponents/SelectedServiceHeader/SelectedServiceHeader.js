@@ -17,7 +17,7 @@ const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryI
         ref={selectedServiceRef}
       >
         <strong className={`wmnds-col-auto ${s.selectedSummary}`}>
-          {selectedService.routeName || selectedService.stopName}
+          {selectedService.routeName || selectedService.stationName}
         </strong>
 
         <CloseButton onClick={autoCompleteDispatch} />

@@ -10,7 +10,7 @@ const TrainAutoCompleteResult = (props) => {
 
   // Set payload object to pass below
   const payload = {
-    id: result.id,
+    id: result.crsCode,
     queryId,
   };
 
@@ -35,7 +35,7 @@ const TrainAutoCompleteResult = (props) => {
       onClick={() => updateSelectedService()}
     >
       {/* Right section */}
-      <strong className={`wmnds-col-auto ${s.routeName}`}>{result.name}</strong>
+      <strong className={`wmnds-col-auto ${s.routeName}`}>{result.stationName}</strong>
     </li>
   );
 };

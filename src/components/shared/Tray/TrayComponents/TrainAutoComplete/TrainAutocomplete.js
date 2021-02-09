@@ -13,6 +13,8 @@ import SelectedServiceHeader from '../SelectedServiceHeader/SelectedServiceHeade
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
+import railData from '../../../../RailZoneFinder/RailData.json';
+
 const TrainAutoComplete = ({ id, label, queryId }) => {
   const { updateQuery, autoCompleteState, autoCompleteDispatch } = useResetState();
 
@@ -22,11 +24,15 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
   const trainQuery = autoCompleteState.queries[queryId];
   const selectedService = autoCompleteState.selectedStations[queryId];
 
-  const { loading, errorInfo, results, getAutoCompleteResults } = useAutoCompleteAPI(
-    `/rail/v2/station?q=${encodeURI(trainQuery)}`,
-    'train',
-    queryId
-  );
+  const { loading, errorInfo, results, getAutoCompleteResults } = useAutoCompleteAPI(queryId);
+
+  const updateQueryTest = (query, queryId) => {
+    autoCompleteDispatch({
+      type: 'UPDATE_QUERY_TEST',
+      queryId: queryId,
+      payload: query,
+    });
+  };
 
   // Import handleKeyDown function from customHook (used by all modes)
   const { handleKeyDown } = useHandleAutoCompleteKeys(resultsList, DebounceInput, results);
@@ -58,9 +64,10 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
               type="text"
               name="trainSearch"
               placeholder="Search for a station"
+              autoComplete="off"
               className="wmnds-fe-input wmnds-autocomplete__input wmnds-col-1"
               value={trainQuery || ''}
-              onChange={(e) => updateQuery(e.target.value, queryId)}
+              onChange={(e) => updateQueryTest(e.target.value, queryId)}
               aria-label="Search for a station"
               debounceTimeout={600}
               onKeyDown={(e) => handleKeyDown(e)}
@@ -82,7 +89,7 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
               <ul className="wmnds-autocomplete-suggestions" ref={resultsList}>
                 {results.map((result) => (
                   <TrainAutoCompleteResult
-                    key={result.id}
+                    key={result.crsCode}
                     result={result}
                     handleKeyDown={handleKeyDown}
                     queryId={queryId}
