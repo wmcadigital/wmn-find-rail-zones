@@ -4,7 +4,7 @@ import Button from '../../shared/Button/Button';
 import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import Accordion from '../../shared/Accordion/Accordion';
-import Search from '../../shared/Tray/Tray';
+import TrayComponents from '../../shared/Tray/TrayComponents/TrayComponents';
 
 import railData from '../RailData.json';
 
@@ -29,8 +29,8 @@ const ListView = () => {
     <div className="wmnds-container">
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
         <div className="wmnds-col-md-2-3">
-          <div className="bg-white">
-            <Search />
+          <div className="bg-white wmnds-p-md">
+            <TrayComponents />
           </div>
         </div>
       </div>
