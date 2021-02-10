@@ -1,7 +1,14 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { INITIAL_VALUE, ReactSVGPanZoom, TOOL_PAN } from 'react-svg-pan-zoom';
+import {
+  INITIAL_VALUE,
+  ReactSVGPanZoom,
+  TOOL_PAN,
+  ALIGN_COVER,
+  ALIGN_CENTER,
+} from 'react-svg-pan-zoom';
 import { AutoCompleteContext } from 'globalState';
+import MapControls from './MapControls';
 
 const RailZoneMap = ({ parking, partial, full, containerRef }) => {
   const [tool, setTool] = useState(TOOL_PAN);
@@ -11,7 +18,9 @@ const RailZoneMap = ({ parking, partial, full, containerRef }) => {
   const [mapWidth, setMapWidth] = useState(500); // Store windows innerWidth so we can check on it for the render/return of this component
   const [mapHeight, setMapHeight] = useState(500);
 
-  const fitToViewer = () => Viewer.current.fitToViewer();
+  const zoomInCenter = () => Viewer.current.zoomOnViewerCenter(1.2);
+  const zoomOutCenter = () => Viewer.current.zoomOnViewerCenter(0.8);
+  const fitToViewer = () => Viewer.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
 
   useEffect(() => {
     autoCompleteDispatch({
@@ -19,10 +28,6 @@ const RailZoneMap = ({ parking, partial, full, containerRef }) => {
       payload: Viewer,
     });
   }, [autoCompleteDispatch]);
-
-  useEffect(() => {
-    fitToViewer();
-  }, []);
 
   // Check window width on resize, used to determine if we should show the mobile or desktop panel in the return/render at the bottom
   useEffect(() => {
@@ -33,15 +38,16 @@ const RailZoneMap = ({ parking, partial, full, containerRef }) => {
       if (mounted) {
         const containerSize = containerRef.current.getBoundingClientRect();
         setMapWidth(containerSize.width);
-        setMapHeight(
-          containerSize.width < containerSize.height ? containerSize.width : containerSize.height
-        );
+        setMapHeight(containerSize.width);
       }
     };
 
     updateWidthHeight();
     // Add event listener to window resize, if resized then update width with new window.width and window.height
-    window.addEventListener('resize', updateWidthHeight);
+    window.addEventListener('resize', () => {
+      updateWidthHeight();
+      fitToViewer();
+    });
 
     // Cleanup: remove eventListener
     return () => {
@@ -52,19 +58,19 @@ const RailZoneMap = ({ parking, partial, full, containerRef }) => {
 
   return (
     <>
-      <button className="btn" onClick={() => fitToViewer()}>
-        Fit
-      </button>
+      <MapControls zoomIn={zoomInCenter} zoomOut={zoomOutCenter} fitToViewer={fitToViewer} />
       <ReactSVGPanZoom
         ref={Viewer}
         width={mapWidth}
         height={mapHeight}
         tool={tool}
+        toolbarProps={{ position: 'none' }}
+        miniatureProps={{ position: 'none' }}
         detectWheel={false}
         detectAutoPan={false}
         onChangeTool={setTool}
         value={value}
-        background="white"
+        background="#ffffff"
         onChangeValue={setValue}
       >
         <svg

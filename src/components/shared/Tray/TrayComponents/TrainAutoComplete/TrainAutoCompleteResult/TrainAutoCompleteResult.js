@@ -25,7 +25,7 @@ const TrainAutoCompleteResult = (props) => {
   // Return service with the above disruption logic, replace type and iconName with correct icon and class depending on disruption type
   return (
     <li
-      className="wmnds-autocomplete-suggestions__li wmnds-grid"
+      className="wmnds-autocomplete-suggestions__li"
       // title={`${text} on ${result.serviceNumber}`}
       tabIndex="0"
       // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
@@ -35,7 +35,7 @@ const TrainAutoCompleteResult = (props) => {
       onClick={() => updateSelectedService()}
     >
       {/* Right section */}
-      <strong className={`wmnds-col-auto ${s.routeName}`}>{result.stationName}</strong>
+      <strong className={`${s.routeName}`}>{result.stationName}</strong>
     </li>
   );
 };
