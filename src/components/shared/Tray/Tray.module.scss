@@ -7,15 +7,21 @@ $background: #393033;
 // Default tray styling
 .tray {
   position: fixed;
-  z-index: 1;
+  z-index: 12;
   top: calc(100% - 4rem);
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 4rem);
+  padding-top: $size-md;
   overflow: hidden;
-  transition: top $transition-speed ease;
+  transition: transform $transition-speed ease-out;
   border: 1px solid rgba($black, 0.1);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   background-color: $white;
+
+  &.trayIsOpen {
+    transform: translateY(calc(-100% + 4rem));
+  }
 
   // On desktop/bigger displays
   @media only screen and (min-width: 768px) {
@@ -49,17 +55,16 @@ $background: #393033;
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: auto;
   transition: top $transition-speed ease; // add slight delay to account for minor state change delay
-
-  &.trayIsOpen {
-    overflow: auto;
-  }
 }
 
 // The drawer handle/line at top of tray
 .drawerHandle {
-  position: relative;
+  position: absolute;
+  z-index: 20;
   height: 10px;
+  background-color: $white;
 
   &:before {
     content: '';

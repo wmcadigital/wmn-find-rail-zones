@@ -1,21 +1,20 @@
-import React from 'react';
-import Swipe from 'react-easy-swipe';
+import React, { useState } from 'react';
 
 // Import Components
 import TrayComponents from './TrayComponents/TrayComponents';
 // Import styles
-import './MobileTray.scss';
 import s from './Tray.module.scss';
 
 const MobileTray = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className={`${s.tray}`}>
-      <Swipe id="js-disruptions-tray" className={`${s.swipeTrayWrapper} wmnds-p-md`}>
-        <div className={`${s.drawerHandle} wmnds-col-1`}>
-          <p>Swipe tray up</p>
-        </div>
+    <div className={`${s.tray} ${open ? s.trayIsOpen : ''}`}>
+      <div className={`${s.drawerHandle} wmnds-col-1`} onClick={() => setOpen(!open)}>
+        <p>Swipe tray up</p>
+      </div>
+      <div className={`${s.swipeTrayWrapper} wmnds-p-md`}>
         <TrayComponents />
-      </Swipe>
+      </div>
     </div>
   );
 };
