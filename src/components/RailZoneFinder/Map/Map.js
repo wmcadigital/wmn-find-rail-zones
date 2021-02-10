@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, createRef } from 'react';
 import RailZoneMap from './RailZoneMap';
 import Icon from '../../shared/Icon/Icon';
 import AccessIcon from '../../shared/Icon/AccessIcon';
@@ -14,6 +14,7 @@ const Map = () => {
   const [showKey, setShowKey] = useState(false);
   const [mapIcons, setMapIcons] = useState({ full: false, partial: false, parking: false });
   const { selectedStations, mapRef } = autoCompleteState;
+  const mapContainer = createRef();
 
   useEffect(() => {
     const stations = selectedStations.filter((station) => station.stationName);
@@ -53,8 +54,13 @@ const Map = () => {
   }, [mapRef, selectedStations]);
 
   return (
-    <div className={s.mapContainer}>
-      <RailZoneMap full={mapIcons.full} partial={mapIcons.partial} parking={mapIcons.parking} />
+    <div className={s.mapContainer} ref={mapContainer}>
+      <RailZoneMap
+        containerRef={mapContainer}
+        full={mapIcons.full}
+        partial={mapIcons.partial}
+        parking={mapIcons.parking}
+      />
       {!showKey ? (
         <Button
           btnClass={`wmnds-btn--primary ${s.showKeyBtn}`}

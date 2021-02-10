@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Swipe from 'react-easy-swipe';
 
 // Import Components
@@ -6,41 +6,11 @@ import TrayComponents from './TrayComponents/TrayComponents';
 // Import styles
 import './MobileTray.scss';
 import s from './Tray.module.scss';
-import useMobileTrayMethods from './useMobileTrayMethods';
 
 const MobileTray = () => {
-  const draggableTray = useRef(); // Ref used to keep track of Draggable dom element
-  const slideableTray = useRef(); // Ref to track swipe dom element
-  const {
-    onSwipeStart,
-    onSwipeEnd,
-    onSwipeDown,
-    onSwipeUp,
-    trayPosition,
-    appHeight,
-  } = useMobileTrayMethods(slideableTray); // Pull in methods etc. to use for mobile swiper
-
   return (
-    <div
-      className={`${s.tray}`}
-      //  set top position of tray based on logic in useMobileTrayMethods
-      style={{
-        top: typeof appHeight !== 'number' ? '100%' : appHeight - trayPosition,
-      }}
-      ref={draggableTray}
-    >
-      <Swipe
-        id="js-disruptions-tray"
-        className={`${s.swipeTrayWrapper} wmnds-p-md ${
-          trayPosition === appHeight ? s.trayIsOpen : ''
-        }`}
-        allowMouseEvents
-        onSwipeUp={onSwipeUp}
-        onSwipeDown={onSwipeDown}
-        onSwipeStart={onSwipeStart}
-        onSwipeEnd={onSwipeEnd}
-        ref={slideableTray}
-      >
+    <div className={`${s.tray}`}>
+      <Swipe id="js-disruptions-tray" className={`${s.swipeTrayWrapper} wmnds-p-md`}>
         <div className={`${s.drawerHandle} wmnds-col-1`}>
           <p>Swipe tray up</p>
         </div>

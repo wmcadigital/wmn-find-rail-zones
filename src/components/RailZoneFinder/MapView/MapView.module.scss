@@ -10,5 +10,8 @@
   width: 100%;
   max-width: $breakpoint-xl;
   margin: 0 auto;
-  padding: 0 $size-md;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 $size-md;
+  }
 }
