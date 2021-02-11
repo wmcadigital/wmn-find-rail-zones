@@ -31,6 +31,15 @@ $duration: 0.75s;
   border-radius: 5px;
 }
 
+.keyIcon {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: $size-md;
+  }
+}
+
 .showKeyBtn {
   position: absolute;
   right: 0;

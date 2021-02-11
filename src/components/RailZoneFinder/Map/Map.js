@@ -3,7 +3,6 @@ import RailZoneMap from './RailZoneMap';
 import Icon from '../../shared/Icon/Icon';
 import AccessIcon from '../../shared/Icon/AccessIcon';
 import Button from '../../shared/Button/Button';
-import Checkbox from '../../shared/Checkbox/Checkbox';
 
 import s from './Map.module.scss';
 
@@ -12,7 +11,6 @@ import { AutoCompleteContext } from 'globalState';
 const Map = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const [showKey, setShowKey] = useState(false);
-  const [mapIcons, setMapIcons] = useState({ full: false, partial: false, parking: false });
   const { selectedStations, mapRef } = autoCompleteState;
   const mapContainer = createRef();
 
@@ -55,23 +53,18 @@ const Map = () => {
 
   return (
     <div className={s.mapContainer} ref={mapContainer}>
-      <RailZoneMap
-        containerRef={mapContainer}
-        full={mapIcons.full}
-        partial={mapIcons.partial}
-        parking={mapIcons.parking}
-      />
+      <RailZoneMap containerRef={mapContainer} />
       {!showKey ? (
         <Button
           btnClass={`wmnds-btn--primary ${s.showKeyBtn}`}
-          text="Show parking and accessibility"
+          text="Show key"
           iconRight="general-chevron-right"
           onClick={() => setShowKey(true)}
         />
       ) : (
         <div className={`wmnds-p-md bg-white ${s.accessMenu}`}>
           <div className="wmnds-grid wmnds-grid--justify-between">
-            <h3 className="wmnds-col-auto">Show parking and accessibility</h3>
+            <h3 className="wmnds-col-auto">Show key</h3>
             <div className="wmnds-col-auto">
               <Button
                 btnClass={`wmnds-btn--link ${s.hideKeyBtn}`}
@@ -81,41 +74,16 @@ const Map = () => {
               />
             </div>
           </div>
-          <Checkbox
-            classes="wmnds-m-b-sm"
-            checked={mapIcons.full}
-            name="mapIconToggle"
-            handleChange={(e) => {
-              setMapIcons({ ...mapIcons, full: !mapIcons.full });
-            }}
-          >
-            <div style={{ display: 'flex' }}>
-              <AccessIcon type="full" className="wmnds-m-r-sm" /> Stations with full step-free
-              access
-            </div>
-          </Checkbox>
-          <Checkbox
-            classes="wmnds-m-b-sm"
-            checked={mapIcons.partial}
-            name="mapIconToggle"
-            handleChange={(e) => setMapIcons({ ...mapIcons, partial: !mapIcons.partial })}
-          >
-            <div style={{ display: 'flex' }}>
-              <AccessIcon type="part" className="wmnds-m-r-sm" /> Stations with part step-free
-              access
-            </div>
-          </Checkbox>
-          <Checkbox
-            classes="wmnds-m-b-sm"
-            checked={mapIcons.parking}
-            name="mapIconToggle"
-            handleChange={(e) => setMapIcons({ ...mapIcons, parking: !mapIcons.parking })}
-          >
-            <div style={{ display: 'flex' }}>
-              <Icon iconName="general-parking" className="wmnds-m-r-sm" color="cta" /> Stations with
-              parking
-            </div>
-          </Checkbox>
+          <div className={`${s.keyIcon}`}>
+            <AccessIcon type="full" className="wmnds-m-r-sm" /> Stations with full step-free access
+          </div>
+          <div className={`${s.keyIcon}`}>
+            <AccessIcon type="part" className="wmnds-m-r-sm" /> Stations with part step-free access
+          </div>
+          <div className={`${s.keyIcon}`}>
+            <Icon iconName="general-parking" className="wmnds-m-r-sm" color="cta" /> Stations with
+            parking
+          </div>
         </div>
       )}
     </div>
