@@ -6,20 +6,12 @@
 @import '~assets/wmnds/vars';
 @import '~assets/wmnds/mixins';
 
-.finder {
+.container {
   width: 100%;
   max-width: $breakpoint-xl;
   margin: 0 auto;
-  padding: 0 $size-md;
-}
 
-.icon {
-  height: 50px;
-  // get-color() function taken from mixins (refer to: https://designsystem.wmnetwork.co.uk/styles/colour-palettes/ for usage)
-  fill: get-color(secondary);
-
-  // $breakpoint-md var taken from vars
-  @media all and (min-width: $breakpoint-md) {
-    fill: get-color(primary);
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 $size-md;
   }
 }

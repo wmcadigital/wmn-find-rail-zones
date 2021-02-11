@@ -1,0 +1,93 @@
+@import '~assets/wmnds/vars';
+@import '~assets/wmnds/mixins';
+
+$transition-speed: 0.35s;
+$background: #393033;
+
+// Default tray styling
+.tray {
+  position: fixed;
+  z-index: 12;
+  top: calc(100% - 4rem);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  padding-top: $size-md;
+  overflow: hidden;
+  transition: transform $transition-speed ease-out;
+  border: 1px solid rgba($black, 0.1);
+  border-radius: 10px 10px 0 0;
+  background-color: $white;
+
+  &.trayIsOpen {
+    transform: translateY(calc(-100% + 4rem));
+  }
+
+  // On desktop/bigger displays
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    top: 28px;
+    left: 48px;
+    width: 100%;
+    max-width: 414px;
+    height: auto;
+    max-height: 60%;
+    overflow: auto;
+  }
+
+  // The tray on map displays different to the normal as it snaps to the left
+  &.mapTray {
+    @media only screen and (min-width: 768px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100%;
+      max-height: 100%;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+// class used by Swipe component
+.swipeTrayWrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: top $transition-speed ease; // add slight delay to account for minor state change delay
+}
+
+// The drawer handle/line at top of tray
+.drawerHandle {
+  position: absolute;
+  z-index: 20;
+  height: 10px;
+  background-color: $white;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 90px;
+    height: 3px;
+    margin: auto;
+    border-radius: 1.5px; // must be half of the height
+    background: $background;
+  }
+
+  p {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+  }
+}
