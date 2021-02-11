@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 // Import contexts
 import { AutoCompleteContext } from 'globalState';
 // Import customHooks
@@ -15,30 +15,6 @@ const useMobileTrayMethods = (slideableTray) => {
   const { documentElement, body } = document;
   const scrollTopAtZeroRef = useRef(false); // ref to hold whether the inner tray is at the top of the outer tray
   const timeoutRef = useRef(); // ref to hold a timeout that can be cleared when unmounting
-
-  // const scrollToServiceInfo = useCallback(() => {
-  //   const { selectedItem } = autoCompleteState;
-  //   const { swiper } = slideableTray.current;
-
-  //   if (!swiper?.children.length) return;
-
-  //   // Target the content that we'll slide scroll down to
-  //   const childNo = selectedItem.selectedByMap ? swiper.children.length - 1 : 4;
-  //   const offset = swiper.children[childNo]?.offsetTop;
-
-  //   if (!offset) return;
-
-  //   // we have to force a repaint of the CSS to fix overflow of inner tray issue iOS and Safari
-  //   if (swiper.parentNode.offsetTop === 0) {
-  //     swiper.style.visibility = 'hidden'; // force css repaint on iOS
-  //     swiper.style.top = `-${offset}px`;
-  //     timeoutRef.current = setTimeout(() => {
-  //       swiper.style.visibility = 'visible'; // force css repaint on iOS
-  //     }, 360);
-  //   } else {
-  //     swiper.style.top = `-${offset}px`;
-  //   }
-  // }, [autoCompleteState, slideableTray]);
 
   const resetTrayScrollTop = useCallback(() => {
     const { swiper } = slideableTray.current;
@@ -67,47 +43,6 @@ const useMobileTrayMethods = (slideableTray) => {
     }
   }, [slideableTray]);
 
-  // // Open tray if there is a selectedItem (map icon has been clicked) or a selected service
-  // useEffect(() => {
-  //   const { selectedItem, selectedItemTo } = autoCompleteState;
-  //   const innerTray = slideableTray?.current?.swiper;
-  //   const timeout = timeoutRef.current;
-
-  //   if (
-  //     (selectedItem.selectedByMap ||
-  //       (modeState.mode === 'train' && selectedItem.id && selectedItemTo.id) ||
-  //       (modeState.mode !== 'train' && selectedItem.id)) &&
-  //     fetchDisruptionsState.data.length &&
-  //     innerTray
-  //   ) {
-  //     setTrayPosition(half || initialTrayPosition); // set tray to open
-  //     scrollToServiceInfo(); // scroll down to the relevant info in the tray
-  //   }
-
-  //   return () => {
-  //     innerTray.style.visibility = 'visible';
-  //     clearTimeout(timeout);
-  //   };
-  // }, [
-  //   fetchDisruptionsState.data.length,
-  //   half,
-  //   autoCompleteState,
-  //   modeState.mode,
-  //   slideableTray,
-  //   scrollToServiceInfo,
-  // ]);
-
-  // Changes map height based on the tray height
-  // useEffect(() => {
-  //   const mapStyle = document.getElementById('disruptions-map').style;
-  //   mapStyle.height = `${appHeight - trayPosition}px`;
-
-  //   return () => {
-  //     mapStyle.height = '100%';
-  //   };
-  // }, [appHeight, trayPosition]);
-
-  // Apply a class to prevent elastic overscroll on iOS devices
   useEffect(() => {
     documentElement.classList.add('mobile-tray-visible');
 

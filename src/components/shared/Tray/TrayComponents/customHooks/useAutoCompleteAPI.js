@@ -10,9 +10,7 @@ const useAutoCompleteAPI = (queryId) => {
   const [loading, setLoading] = useState(false); // Set loading state for spinner
   const [errorInfo, setErrorInfo] = useState(); // Placeholder to set error messaging
   const selectedService = autoCompleteState.selectedStations[queryId];
-
   const query = autoCompleteState.queries[queryId];
-
   // Reference variables
   const mounted = useRef();
   // Helper functions
@@ -21,12 +19,9 @@ const useAutoCompleteAPI = (queryId) => {
     (response) => {
       setLoading(false); // Set loading state to false after data is received
       let payload;
-      // Filter out results that have been selected already
-      const filteredResults = response.filter(
-        (station) => !autoCompleteState.selectedStations.some((s) => s.id === station.crsCode)
-      );
-      // If station crsCode is already in selectedStations array
-      setResults([...filteredResults]);
+
+      setResults(response || []);
+
       if (selectedService.id && response.length) {
         // Grab info matching rail data from json file
         const result = railData.railStationAccess.filter(
@@ -48,20 +43,16 @@ const useAutoCompleteAPI = (queryId) => {
         });
       }
 
-      if (!filteredResults.length && mounted.current) {
-        // If there is no bus data and the component is mounted (must be mounted or we will be creating an event on unmounted error)...
-        // if no bus data, set error
-
+      if (!response.length && mounted.current) {
+        // If there is no data and the component is mounted (must be mounted or we will be creating an event on unmounted error)...
+        // if no data, set error
         setErrorInfo({
           title: 'No results found',
-          message:
-            response.length > filteredResults.length
-              ? 'You may have added this station already. Make sure you are looking for the right station, and try again.'
-              : 'Make sure you are looking for the right service, and try again.',
+          message: 'Make sure you are looking for the right service, and try again.',
         });
       }
     },
-    [selectedService.id, autoCompleteDispatch, query, queryId] // [autoCompleteDispatch, selectedService.id]
+    [selectedService.id, autoCompleteDispatch, queryId] // [autoCompleteDispatch, selectedService.id]
   );
 
   // Take main function out of useEffect, so it can be called elsewhere to retry the search
@@ -73,7 +64,6 @@ const useAutoCompleteAPI = (queryId) => {
           return station.stationName.toLowerCase().includes(query.trim().toLowerCase());
         })
       : [];
-
     handleAutoCompleteApiResponse(response);
   }, [handleAutoCompleteApiResponse, query]);
 

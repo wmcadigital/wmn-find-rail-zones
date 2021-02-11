@@ -11,3 +11,4 @@
 // Don't forget to add the providers for each context to the ./ContextProvider.js file(more info inside there)
 
 export * from './AutoCompleteContext';
+export * from './MapContext';

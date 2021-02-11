@@ -24,6 +24,9 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
 
   const { loading, errorInfo, results, getAutoCompleteResults } = useAutoCompleteAPI(queryId);
 
+  const filteredResults = results.filter(
+    (station) => !autoCompleteState.selectedStations.some((s) => s.id === station.crsCode)
+  );
   const updateQueryTest = (query, queryId) => {
     autoCompleteDispatch({
       type: 'UPDATE_QUERY_TEST',
@@ -73,7 +76,7 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
             />
           </div>
           {/* If there is no data.length(results) and the user hasn't submitted a query and the state isn't loading then the user should be displayed with no results message, else show results */}
-          {!results.length && trainQuery && !loading && errorInfo ? (
+          {!filteredResults.length && trainQuery && !loading && errorInfo ? (
             <Message
               type="error"
               title={errorInfo.title}
@@ -85,7 +88,7 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
             // Only show autocomplete results if there is a query
             trainQuery && (
               <ul className="wmnds-autocomplete-suggestions" ref={resultsList}>
-                {results.map((result) => (
+                {filteredResults.map((result) => (
                   <TrainAutoCompleteResult
                     key={result.crsCode}
                     result={result}
