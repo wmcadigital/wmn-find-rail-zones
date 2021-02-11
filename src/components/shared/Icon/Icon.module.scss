@@ -1,0 +1,47 @@
+// Refer to https://create-react-app.dev/docs/adding-a-css-modules-stylesheet
+// On how to use scss modules with React
+
+// Import WMN Design System scss for use in this scss file
+// Tilde (~) represents the root folder(src)
+@import '~assets/wmnds/vars';
+@import '~assets/wmnds/mixins';
+
+.cta {
+  fill: get-color(cta);
+}
+
+.primary {
+  fill: get-color(primary);
+}
+
+.accessIcon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding: 0.15em;
+  overflow: hidden;
+  border-radius: 50%;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+}
+
+.fullAccess {
+  background-color: get-color(cta);
+
+  svg {
+    fill: $white;
+  }
+}
+
+.partAccess {
+  background-color: $white;
+  box-shadow: inset 0 0 0 1px get-color(cta);
+
+  svg {
+    fill: get-color(cta);
+  }
+}
