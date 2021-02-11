@@ -32,8 +32,10 @@ function RailZoneFinder() {
           </div>
         </div>
         <div>
-          <p>Train stations across the West Midlands are in five zones.</p>
-          <p>The zones you can travel between is based on your ticket.</p>
+          <p>
+            Train stations across the West Midlands are in five zones. The zones you can travel
+            between is based on your ticket.
+          </p>
           <p>
             You can travel to a station outside the five rail zones with an Out of County ticket.
           </p>

@@ -22,7 +22,7 @@ const TrayComponents = () => {
     <>
       <div className={`${s.trayHeader}`}>
         <Button btnClass="wmnds-btn--link wmnds-m-l-md" text="Clear search" onClick={resetSearch} />
-        <h2 className="h3">Find your travel zones</h2>
+        <h2 className="h3">Enter your stations</h2>
       </div>
       <div className={`${s.traySearchContainer}`}>
         <div className="wmnds-m-b-md">
@@ -43,9 +43,7 @@ const TrayComponents = () => {
               className="wmnds-inset-text wmnds-m-b-sm wmnds-p-r-none"
               style={{ display: 'block' }}
             >
-              <div className="wmnds-fe-label">
-                Add any additional train station(s) you travel to
-              </div>
+              <div className="wmnds-fe-label">Add another train station you travel to</div>
               {selectedStations.slice(2).map((station, i) => (
                 <TrainAutoComplete
                   id={`autocomplete_add${i + 2}`}
