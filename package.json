@@ -22,7 +22,7 @@
     "react-debounce-input": "^3.2.3",
     "react-dom": "^16.14.0",
     "react-easy-swipe": "0.0.21",
-    "react-scripts": "3.4.1",
+    "react-scripts": "4.0.2",
     "react-svg-pan-zoom": "^3.10.0"
   },
   "scripts": {
