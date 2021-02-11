@@ -3870,9 +3870,9 @@ RailZoneMap.propTypes = {
 };
 
 RailZoneMap.defaultProps = {
-  parking: false,
-  full: false,
-  partial: false,
+  parking: true,
+  full: true,
+  partial: true,
 };
 
 export default RailZoneMap;
