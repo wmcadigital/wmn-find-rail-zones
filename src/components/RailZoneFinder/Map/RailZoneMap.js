@@ -1,68 +1,30 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import {
-  INITIAL_VALUE,
-  ReactSVGPanZoom,
-  TOOL_PAN,
-  ALIGN_COVER,
-  ALIGN_CENTER,
-} from 'react-svg-pan-zoom';
-import { AutoCompleteContext } from 'globalState';
+import { INITIAL_VALUE, ReactSVGPanZoom, TOOL_PAN } from 'react-svg-pan-zoom';
 import MapControls from './MapControls';
+import useMapMethods from './useMapMethods';
 
-const RailZoneMap = ({ parking, partial, full, containerRef }) => {
+const RailZoneMap = ({ parking, partial, full }) => {
+  const { mapState, mapDispatch, fitToViewer, zoomInCenter, zoomOutCenter } = useMapMethods();
   const [tool, setTool] = useState(TOOL_PAN);
   const [value, setValue] = useState(INITIAL_VALUE);
-  const [, autoCompleteDispatch] = useContext(AutoCompleteContext);
   const Viewer = useRef(null);
-  const [mapWidth, setMapWidth] = useState(500); // Store windows innerWidth so we can check on it for the render/return of this component
-  const [mapHeight, setMapHeight] = useState(500);
-
-  const zoomInCenter = () => Viewer.current.zoomOnViewerCenter(1.2);
-  const zoomOutCenter = () => Viewer.current.zoomOnViewerCenter(0.8);
-  const fitToViewer = () => Viewer.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
+  const { mapSize } = mapState;
 
   useEffect(() => {
-    autoCompleteDispatch({
+    mapDispatch({
       type: 'ADD_MAP',
       payload: Viewer,
     });
-  }, [autoCompleteDispatch]);
-
-  // Check window width on resize, used to determine if we should show the mobile or desktop panel in the return/render at the bottom
-  useEffect(() => {
-    let mounted = true;
-
-    // Function to update window.width and window.height to state
-    const updateWidthHeight = () => {
-      if (mounted) {
-        const containerSize = containerRef.current.getBoundingClientRect();
-        setMapWidth(containerSize.width);
-        setMapHeight(containerSize.width);
-      }
-    };
-
-    updateWidthHeight();
-    // Add event listener to window resize, if resized then update width with new window.width and window.height
-    window.addEventListener('resize', () => {
-      updateWidthHeight();
-      fitToViewer();
-    });
-
-    // Cleanup: remove eventListener
-    return () => {
-      mounted = false;
-      window.removeEventListener('resize', updateWidthHeight);
-    };
-  }, [mapWidth, mapHeight, setMapWidth, setMapHeight, containerRef]);
+  }, [mapDispatch]);
 
   return (
     <>
       <MapControls zoomIn={zoomInCenter} zoomOut={zoomOutCenter} fitToViewer={fitToViewer} />
       <ReactSVGPanZoom
         ref={Viewer}
-        width={mapWidth}
-        height={mapHeight}
+        width={mapSize.width}
+        height={mapSize.height}
         tool={tool}
         toolbarProps={{ position: 'none' }}
         miniatureProps={{ position: 'none' }}

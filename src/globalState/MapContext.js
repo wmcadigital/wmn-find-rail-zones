@@ -10,6 +10,10 @@ export const MapContextProvider = (props) => {
     mapRef: null,
     mapContainer: null,
     mapView: true,
+    mapSize: {
+      width: 500,
+      height: 500,
+    },
   };
 
   // Set up a reducer so we can change state based on centralised logic here
@@ -24,11 +28,27 @@ export const MapContextProvider = (props) => {
         };
       }
 
+      // Update map size
+      case 'UPDATE_MAP_SIZE': {
+        return {
+          ...state,
+          mapSize: action.payload,
+        };
+      }
+
       // Update view
       case 'ADD_MAP': {
         return {
           ...state,
           mapRef: action.payload,
+        };
+      }
+
+      // Update view
+      case 'ADD_MAP_CONTAINER': {
+        return {
+          ...state,
+          mapContainer: action.payload,
         };
       }
 
