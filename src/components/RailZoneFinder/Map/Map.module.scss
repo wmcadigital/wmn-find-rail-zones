@@ -8,14 +8,18 @@
 
 $duration: 0.75s;
 
-.textBg + path {
-  fill: $white;
-  stroke: $white;
-  stroke-width: 0.25;
-}
-
 .textBg {
   animation: fade $duration ease-out forwards;
+
+  & + path {
+    fill: $white;
+    stroke: $white;
+    stroke-width: 0.25;
+  }
+
+  & ~ [id='Airport'] {
+    fill: $white;
+  }
 }
 
 .mapContainer {

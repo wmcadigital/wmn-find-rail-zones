@@ -53,6 +53,7 @@ const useMapMethods = () => {
         svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
 
       const zone = svg.querySelector(`#Zone_${station.railZone}`);
+      const parkingIcon = group.querySelector(`.parking-icon`);
 
       if (zone) {
         zone.classList.add(s.zoneSelected);
@@ -64,16 +65,30 @@ const useMapMethods = () => {
         const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
         p.setAttribute('id', `${station.id}_text_bg`);
         p.setAttribute('class', s.textBg);
-        p.setAttribute('y', gCoords.y - 4.25);
+        p.setAttribute('y', gCoords.y - 2.25);
         p.setAttribute('x', gCoords.x - 4);
-        p.setAttribute('rx', 4);
-        p.setAttribute('ry', 4);
+        p.setAttribute('rx', 3);
+        p.setAttribute('ry', 3);
         p.setAttribute('width', gCoords.width + 8);
-        p.setAttribute('height', gCoords.height + 8);
+        p.setAttribute('height', gCoords.height + 4);
         p.setAttribute('stroke', '#fff');
-        p.setAttribute('stroke-width', '1.5');
+        p.setAttribute('stroke-width', '1');
         p.setAttribute('fill', '#3c1053');
         group.insertBefore(p, group.childNodes[0]);
+        if (parkingIcon) {
+          const pIconCoords = parkingIcon.getBBox();
+          console.log(pIconCoords);
+          const i = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          i.setAttribute('id', `${station.id}_parking_bg`);
+          i.setAttribute('y', pIconCoords.y - 1 + 38.73); // 38.73 offsets transform translate in svg
+          i.setAttribute('x', pIconCoords.x - 1);
+          i.setAttribute('rx', 1.5);
+          i.setAttribute('ry', 1.5);
+          i.setAttribute('width', pIconCoords.width + 2);
+          i.setAttribute('height', pIconCoords.height + 2);
+          i.setAttribute('fill', '#fff');
+          group.insertBefore(i, group.childNodes[2]);
+        }
       }
     };
 
