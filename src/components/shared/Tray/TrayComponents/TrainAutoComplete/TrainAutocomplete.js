@@ -29,7 +29,7 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
   );
   const updateQueryTest = (query, queryId) => {
     autoCompleteDispatch({
-      type: 'UPDATE_QUERY_TEST',
+      type: 'UPDATE_QUERY',
       queryId: queryId,
       payload: query,
     });

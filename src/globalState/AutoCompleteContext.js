@@ -25,7 +25,6 @@ export const AutoCompleteProvider = (props) => {
 
   // Set intial state
   const initialState = {
-    mapRef: null,
     queries: [getSearchParam('query0') || '', getSearchParam('query1') || '', ...additionalQueries],
     // // The selected service is used to store details when a user has clicked an autocomplete
     selectedStations: [
@@ -44,17 +43,6 @@ export const AutoCompleteProvider = (props) => {
     // Update the query to what the user has typed
     switch (action.type) {
       case 'UPDATE_QUERY': {
-        setSearchParam(`query${action.queryId}`, action.query);
-
-        let newState = state.queries;
-        newState[action.queryId] = action.query;
-
-        return {
-          ...state,
-          queries: [...newState],
-        };
-      }
-      case 'UPDATE_QUERY_TEST': {
         setSearchParam(`query${action.queryId}`, action.payload);
 
         let newState = state.queries;
@@ -86,14 +74,6 @@ export const AutoCompleteProvider = (props) => {
         return {
           ...state,
           selectedStations: [...state.selectedStations, item],
-        };
-      }
-
-      // Update view
-      case 'ADD_MAP': {
-        return {
-          ...state,
-          mapRef: action.payload,
         };
       }
 
