@@ -25,7 +25,10 @@ const useMapMethods = () => {
 
           mapDispatch({
             type: 'UPDATE_MAP_SIZE',
-            payload: { width: containerSize.width, height: containerSize.width },
+            payload: {
+              width: containerSize.width,
+              height: containerSize.height,
+            },
           });
         }
       };
@@ -75,9 +78,9 @@ const useMapMethods = () => {
         p.setAttribute('stroke-width', '1');
         p.setAttribute('fill', '#3c1053');
         group.insertBefore(p, group.childNodes[0]);
+        // Add background to parking icon if present
         if (parkingIcon) {
           const pIconCoords = parkingIcon.getBBox();
-          console.log(pIconCoords);
           const i = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
           i.setAttribute('id', `${station.id}_parking_bg`);
           i.setAttribute('y', pIconCoords.y - 1 + 38.73); // 38.73 offsets transform translate in svg

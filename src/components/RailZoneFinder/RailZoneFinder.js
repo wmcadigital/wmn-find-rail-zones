@@ -16,7 +16,7 @@ function RailZoneFinder() {
     });
   };
   return (
-    <div className="wmnds-p-b-lg">
+    <>
       <div className="wmnds-container">
         <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
           <div className="wmnds-col-auto">
@@ -42,7 +42,7 @@ function RailZoneFinder() {
         </div>
       </div>
       {mapState.mapView ? <MapView /> : <ListView />}
-    </div>
+    </>
   );
 }
 
