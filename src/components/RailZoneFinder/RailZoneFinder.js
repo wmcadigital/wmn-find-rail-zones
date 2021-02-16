@@ -4,13 +4,13 @@ import Button from '../shared/Button/Button';
 import MapView from '../RailZoneFinder/MapView/MapView';
 import ListView from '../RailZoneFinder/ListView/ListView';
 import s from './RailZoneFinder.module.scss';
-import { AutoCompleteContext } from 'globalState';
+import { MapContext } from 'globalState';
 
 function RailZoneFinder() {
-  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
-  const { mapView } = autoCompleteState;
+  const [mapState, mapDispatch] = useContext(MapContext);
+  const { mapView } = mapState;
   const setMapView = () => {
-    autoCompleteDispatch({
+    mapDispatch({
       type: 'UPDATE_VIEW',
       payload: !mapView,
     });
@@ -41,7 +41,7 @@ function RailZoneFinder() {
           </p>
         </div>
       </div>
-      {autoCompleteState.mapView ? <MapView /> : <ListView />}
+      {mapState.mapView ? <MapView /> : <ListView />}
     </div>
   );
 }
