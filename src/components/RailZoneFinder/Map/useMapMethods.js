@@ -9,14 +9,8 @@ const useMapMethods = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { mapRef, mapContainer } = mapState;
 
-  const fitToViewer = () => mapRef.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
-  const zoomInCenter = () => mapRef.current.zoomOnViewerCenter(1.2);
-  const zoomOutCenter = () => mapRef.current.zoomOnViewerCenter(0.8);
-  const zoomSelection = (coords) =>
-    mapRef.current.fitSelection(coords.x, coords.y, coords.width, coords.height);
-
   useLayoutEffect(() => {
-    if (mapRef && mapContainer) {
+    if (mapRef?.current && mapContainer?.current) {
       let mounted = true;
 
       const updateWidthHeight = () => {
@@ -95,7 +89,7 @@ const useMapMethods = () => {
       }
     };
 
-    if (mapRef) {
+    if (mapRef?.current) {
       autoCompleteState.selectedStations.forEach((station) => {
         if (station.stationName) {
           drawMapHighlights(station);
@@ -104,22 +98,9 @@ const useMapMethods = () => {
     }
   }, [mapRef, autoCompleteState]);
 
-  const setMapSize = () => {
-    const payload = {};
-    mapDispatch({
-      type: 'UPDATE_MAP_SIZE',
-      payload,
-    });
-  };
-
   return {
-    setMapSize,
     mapState,
     mapDispatch,
-    fitToViewer,
-    zoomInCenter,
-    zoomOutCenter,
-    zoomSelection,
   };
 };
 

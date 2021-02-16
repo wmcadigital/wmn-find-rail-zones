@@ -103,38 +103,6 @@ export const AutoCompleteProvider = (props) => {
         // If action.payload ('to') exists in payload then make sure we set the correct field
         const item = `selectedStation${queryId}`;
         const query = `query${queryId}`;
-        const station = state.selectedStations[queryId];
-
-        if (state.mapView && state.mapRef) {
-          const svg = state.mapRef.current.ViewerDOM;
-          // Find related group in svg map
-          if (station && station.stationName) {
-            const svgGroup =
-              svg.querySelector(`[data-name="${station.stationName}"]`) ||
-              svg.querySelector(
-                `#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`
-              );
-
-            // If group found remove text background from svg map
-            if (svgGroup) {
-              svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
-
-              // Find related zone in svg map
-              const inThisZone = state.selectedStations.filter(
-                (item) => item.railZone === station.railZone
-              );
-
-              // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
-              if (inThisZone.length < 2) {
-                const zone = svg.querySelector(`#Zone_${station.railZone}`);
-
-                if (zone) {
-                  zone.classList.remove(...zone.classList);
-                }
-              }
-            }
-          }
-        }
 
         // Delete correct things from URL
         delSearchParam(item);
@@ -173,20 +141,6 @@ export const AutoCompleteProvider = (props) => {
 
       // Used to reset everything
       case 'RESET_SELECTED_SERVICES':
-        if (state.mapView && state.mapRef) {
-          const svg = state.mapRef.current.ViewerDOM;
-          // clear map highlights
-          state.selectedStations.forEach((station) => {
-            const textBg = svg.querySelector(`#${station.id}_text_bg`);
-            const zone = svg.querySelector(`#Zone_${station.railZone}`);
-            if (textBg) {
-              textBg.parentNode.removeChild(textBg);
-            }
-            if (zone) {
-              zone.classList.remove(...zone.classList);
-            }
-          });
-        }
         getAllSearchParams().forEach((param) => {
           delSearchParam(param.name);
         });

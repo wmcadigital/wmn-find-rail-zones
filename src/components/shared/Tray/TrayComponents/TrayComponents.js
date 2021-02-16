@@ -2,19 +2,24 @@ import React, { useContext } from 'react';
 import Button from '../../Button/Button';
 import Result from '../../../RailZoneFinder/Result';
 import TrainAutoComplete from '../TrayComponents/TrainAutoComplete/TrainAutocomplete';
-import { AutoCompleteContext } from 'globalState';
+import { AutoCompleteContext, MapContext } from 'globalState';
 import s from './TrayComponents.module.scss';
+import useMapControls from '../../../RailZoneFinder/Map/useMapControls';
 
 const TrayComponents = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
-
+  const [mapState] = useContext(MapContext);
   const { selectedStations } = autoCompleteState;
+  const { resetMap } = useMapControls();
 
   const addStation = () => {
     autoCompleteDispatch({ type: 'ADD_STATION' });
   };
 
   const resetSearch = () => {
+    if (mapState.mapView) {
+      resetMap(selectedStations);
+    }
     autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
   };
 
