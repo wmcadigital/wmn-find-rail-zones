@@ -1,10 +1,11 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 // Import contexts
 import { MapContext } from 'globalState';
 
-const useMapMethods = () => {
+const useMapControls = () => {
   const [mapState, mapDispatch] = useContext(MapContext);
+
   const { mapRef } = mapState;
 
   const fitToViewer = () => mapRef.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
@@ -19,8 +20,15 @@ const useMapMethods = () => {
     if (mapRef?.current) {
       const svg = mapRef.current.ViewerDOM;
       const zoneNode = svg.querySelector(`#Zone_${zone}`);
-      const zoneCoords = zoneNode.getBBox();
+      const element = svg.childNodes[1];
+
+      element.style.transition = 'transform 0.2s ease-out';
+      element.ontransitionend = () => {
+        element.style.transition = 'none';
+      };
       if (zoneNode) {
+        const zoneCoords = zoneNode.getBBox();
+
         zoomSelection({
           x: zoneCoords.x,
           y: zoneCoords.y,
@@ -97,4 +105,4 @@ const useMapMethods = () => {
   };
 };
 
-export default useMapMethods;
+export default useMapControls;

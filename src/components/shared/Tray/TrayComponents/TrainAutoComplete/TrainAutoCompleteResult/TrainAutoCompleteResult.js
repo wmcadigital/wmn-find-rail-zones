@@ -2,15 +2,12 @@ import React, { useContext } from 'react';
 import { AutoCompleteContext, MapContext } from 'globalState';
 // Import styles
 import s from './TrainAutoCompleteResult.module.scss';
-// Import custom hook
-import useMapControls from '../../../../../RailZoneFinder/Map/useMapControls';
 
 const TrainAutoCompleteResult = (props) => {
   const { result, handleKeyDown, queryId } = props || {};
 
-  const [mapState] = useContext(MapContext);
+  const [mapState, mapDispatch] = useContext(MapContext);
   const [, autoCompleteDispatch] = useContext(AutoCompleteContext);
-  const { fitZoneToViewer } = useMapControls();
 
   // Set payload object to pass below
   const payload = {
@@ -18,12 +15,9 @@ const TrainAutoCompleteResult = (props) => {
     queryId,
   };
 
-  const updateSelectedService = () => {
+  const addSelectedStation = () => {
     //  Update normal selectedStation
-    if (mapState.mapView) {
-      fitZoneToViewer(result.railZone);
-    }
-
+    console.log('result');
     autoCompleteDispatch({
       type: 'UPDATE_SELECTED_STATION',
       payload,
@@ -38,7 +32,7 @@ const TrainAutoCompleteResult = (props) => {
       role="button"
       aria-pressed="false"
       onKeyDown={(e) => handleKeyDown(e)}
-      onClick={() => updateSelectedService()}
+      onClick={() => addSelectedStation()}
     >
       {/* Right section */}
       <strong className={`${s.routeName}`}>{result.stationName}</strong>

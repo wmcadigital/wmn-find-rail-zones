@@ -1,11 +1,12 @@
 import { useEffect, useContext, useState, useRef, useCallback } from 'react';
 import railData from '../../../../RailZoneFinder/RailData.json';
 // Import contexts
-import { AutoCompleteContext } from 'globalState';
+import { AutoCompleteContext, MapContext } from 'globalState';
 
 const useAutoCompleteAPI = (queryId) => {
   // State variables
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext); // Get the dispatch of autocomplete
+  const [, mapDispatch] = useContext(MapContext); // Get the dispatch of autocomplete
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false); // Set loading state for spinner
   const [errorInfo, setErrorInfo] = useState(); // Placeholder to set error messaging
@@ -41,6 +42,11 @@ const useAutoCompleteAPI = (queryId) => {
           type: 'UPDATE_SELECTED_STATION',
           payload,
         });
+
+        mapDispatch({
+          type: 'UPDATE_HIGHLIGHTED_ZONES',
+          payload: { [`zone${payload.railZone}`]: true },
+        });
       }
 
       if (!response.length && mounted.current) {
@@ -52,7 +58,7 @@ const useAutoCompleteAPI = (queryId) => {
         });
       }
     },
-    [selectedService.id, autoCompleteDispatch, queryId] // [autoCompleteDispatch, selectedService.id]
+    [selectedService.id, autoCompleteDispatch, mapDispatch, queryId] // [autoCompleteDispatch, selectedService.id]
   );
 
   // Take main function out of useEffect, so it can be called elsewhere to retry the search
@@ -64,6 +70,7 @@ const useAutoCompleteAPI = (queryId) => {
           return station.stationName.toLowerCase().includes(query.trim().toLowerCase());
         })
       : [];
+    console.log('api');
     handleAutoCompleteApiResponse(response);
   }, [handleAutoCompleteApiResponse, query]);
 

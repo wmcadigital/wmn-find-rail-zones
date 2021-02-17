@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { INITIAL_VALUE, ReactSVGPanZoom, TOOL_PAN } from 'react-svg-pan-zoom';
 import MapControls from './MapControls';
 import useMapMethods from './useMapMethods';
+import s from './Map.module.scss';
 
 const RailZoneMap = ({ parking, partial, full }) => {
   const { mapState, mapDispatch } = useMapMethods();
@@ -10,6 +11,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
   const [value, setValue] = useState(INITIAL_VALUE);
   const Viewer = useRef(null);
   const { mapSize } = mapState;
+  const { zone1, zone2, zone3, zone4, zone5, zone6 } = mapState.highlightedZones;
 
   useEffect(() => {
     mapDispatch({
@@ -173,7 +175,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
           </g>
-          <g id="Zone_6" data-name="Zone 6">
+          <g id="Zone_6" data-name="Zone 6" className={zone6 ? s.zoneSelected : ''}>
             <path
               d="M317.4 66.56a31.73 31.73 0 00-22.4 9.28L154.23 216.59h0l27.88-26a56.68 56.68 0 0138.7-15.26h140.48a56.73 56.73 0 0140.09 16.6l19.17 19.17-24.06-24.05a68.36 68.36 0 01-20-48.34V81.1a14.55 14.55 0 00-14.55-14.54z"
               fill="#e9e4e3"
@@ -203,7 +205,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               fill="#392152"
             />
           </g>
-          <g id="Zone_5" data-name="Zone 5">
+          <g id="Zone_5" data-name="Zone 5" className={zone5 ? s.zoneSelected : ''}>
             <path
               className="cls-8"
               d="M716.56 406.24H590.21a28.35 28.35 0 01-28.35-28.35v102.94a22.67 22.67 0 01-22.68 22.68H346.27L369.73 527a28.34 28.34 0 0020 8.3h150.44a34.76 34.76 0 0024.59-10.18l14.44-14.45a28.39 28.39 0 0120-8.3h113.98A28.34 28.34 0 00741.52 474v-42.8a25 25 0 00-24.96-24.96zM553.56 232.25l-24.47-24.47a28.39 28.39 0 00-20.05-8.3h-49.6a28.39 28.39 0 01-20.05-8.3l-38-38a56.73 56.73 0 00-40.09-16.6H220.81a56.68 56.68 0 00-38.7 15.26l-82 76.63a28.3 28.3 0 00-8.3 20v164.6a28.34 28.34 0 008.3 20.05l26.3 26.3a28.35 28.35 0 0020 8.3h38.32a28.34 28.34 0 0120 8.3l-12.11-12.1a28.39 28.39 0 01-8.3-20.05V340.22a17 17 0 00-4.89-11.93l-6.6-6.72a11.34 11.34 0 01.06-16l131.4-131.4a28.39 28.39 0 0120-8.3h55.72a28.38 28.38 0 0120 8.3l62.3 62.3a28.35 28.35 0 0020.05 8.31h56.67a22.67 22.67 0 0122.68 22.67V252.3a28.39 28.39 0 00-8.15-20.05z"
@@ -215,7 +217,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
           </g>
-          <g id="Zone_4" data-name="Zone 4">
+          <g id="Zone_4" data-name="Zone 4" className={zone4 ? s.zoneSelected : ''}>
             <path
               className="cls-9"
               d="M462.46 236.5l-62.3-62.3a28.38 28.38 0 00-20-8.3H324.4a28.39 28.39 0 00-20 8.3L173 305.6a11.34 11.34 0 00-.06 16l6.6 6.72a17 17 0 014.89 11.93v103.64a28.39 28.39 0 008.3 20.05L224 495.21a28.3 28.3 0 0020 8.3h295.18a22.67 22.67 0 0022.68-22.68V267.48a22.67 22.67 0 00-22.68-22.67h-56.67a28.35 28.35 0 01-20.05-8.31z"
@@ -227,7 +229,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
           </g>
-          <g id="Zone_3" data-name="Zone 3">
+          <g id="Zone_3" data-name="Zone 3" className={zone3 ? s.zoneSelected : ''}>
             <path
               className="cls-8"
               d="M543.9 400.31V295.86a22.67 22.67 0 00-22.68-22.68h-38.65a28.39 28.39 0 01-20.05-8.3l-49.66-49.66a28.3 28.3 0 00-20-8.3h-46.7a28.34 28.34 0 00-20.05 8.3l-115.2 115.2a28.35 28.35 0 00-8.3 20v53.36a28.35 28.35 0 008.3 20l40.83 40.83a28.35 28.35 0 0020.05 8.39H483a28.35 28.35 0 0020-8.31l24.29-24.29a56.69 56.69 0 0016.61-40.09z"
@@ -245,7 +247,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
           </g>
-          <g id="Zone_2" data-name="Zone 2">
+          <g id="Zone_2" data-name="Zone 2" className={zone2 ? s.zoneSelected : ''}>
             <path
               className="cls-9"
               d="M524.8 316.9v43.71a28.34 28.34 0 01-8.3 20.05l-44 44a28.35 28.35 0 01-20 8.3H285.24a28.35 28.35 0 01-20-8.3L247.54 407a28.34 28.34 0 01-8.3-20.05v-34.67a28.34 28.34 0 018.3-20l59.68-59.67a28.31 28.31 0 0120-8.31h84.47a28.35 28.35 0 0120 8.31l21.87 21.86a28.31 28.31 0 0020 8.31h36.95a14.16 14.16 0 0114.29 14.12z"
@@ -257,7 +259,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
           </g>
-          <g id="Zone_1" data-name="Zone 1">
+          <g id="Zone_1" data-name="Zone 1" className={zone1 ? s.zoneSelected : ''}>
             <path
               className="cls-8"
               d="M452.91 343.08l-42.73-42.73a33.27 33.27 0 00-47.08 0l-76 76a15.25 15.25 0 000 21.57l6.25 6.25a14.16 14.16 0 0010 4.15H416a28.34 28.34 0 0020-8.3l16.89-16.89a28.35 28.35 0 00.02-40.05z"

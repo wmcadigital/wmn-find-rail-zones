@@ -14,17 +14,41 @@ export const MapContextProvider = (props) => {
       width: 500,
       height: 500,
     },
+    highlightedZones: {
+      zone1: false,
+      zone2: false,
+      zone3: false,
+      zone4: false,
+      zone5: false,
+      zone6: false,
+      zone7: false,
+    },
   };
 
   // Set up a reducer so we can change state based on centralised logic here
   const reducer = (state, action) => {
-    // Update the query to what the user has typed
     switch (action.type) {
       // Update view
       case 'UPDATE_VIEW': {
         return {
           ...state,
           mapView: action.payload,
+        };
+      }
+
+      // Add map ref
+      case 'ADD_MAP': {
+        return {
+          ...state,
+          mapRef: action.payload,
+        };
+      }
+
+      // Add map container ref
+      case 'ADD_MAP_CONTAINER': {
+        return {
+          ...state,
+          mapContainer: action.payload,
         };
       }
 
@@ -36,19 +60,11 @@ export const MapContextProvider = (props) => {
         };
       }
 
-      // Update view
-      case 'ADD_MAP': {
+      // Update highlighted zones on map
+      case 'UPDATE_HIGHLIGHTED_ZONES': {
         return {
           ...state,
-          mapRef: action.payload,
-        };
-      }
-
-      // Update view
-      case 'ADD_MAP_CONTAINER': {
-        return {
-          ...state,
-          mapContainer: action.payload,
+          highlightedZones: { ...state.highlightedZones, ...action.payload },
         };
       }
 

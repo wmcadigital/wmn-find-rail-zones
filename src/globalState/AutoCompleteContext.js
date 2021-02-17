@@ -55,6 +55,7 @@ export const AutoCompleteProvider = (props) => {
       }
       // Update the state to show item user has selected
       case 'UPDATE_SELECTED_STATION': {
+        console.log('updated', action.payload);
         const { id, queryId } = action.payload;
         const item = `selectedStation${queryId}`;
         setSearchParam(item, id); // Set URL

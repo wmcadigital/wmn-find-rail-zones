@@ -48,13 +48,7 @@ const useMapMethods = () => {
       const group =
         svg.querySelector(`[data-name="${station.stationName}"]`) ||
         svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
-
-      const zone = svg.querySelector(`#Zone_${station.railZone}`);
       const parkingIcon = group.querySelector(`.parking-icon`);
-
-      if (zone) {
-        zone.classList.add(s.zoneSelected);
-      }
 
       if (group && !group.querySelector(`.${s.textBg}`)) {
         const gCoords = group.getBBox();
