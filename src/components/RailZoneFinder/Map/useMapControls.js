@@ -10,11 +10,32 @@ const useMapMethods = () => {
   const fitToViewer = () => mapRef.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
   const zoomInCenter = () => mapRef.current.zoomOnViewerCenter(1.2);
   const zoomOutCenter = () => mapRef.current.zoomOnViewerCenter(0.8);
-  const zoomSelection = (coords) =>
-    mapRef.current.fitSelection(coords.x, coords.y, coords.width, coords.height);
+  const zoomSelection = (coords) => {
+    const { x, y, width, height } = coords;
+    mapRef.current.fitSelection(x, y, width, height);
+  };
+
+  const fitZoneToViewer = (zone) => {
+    if (mapRef?.current) {
+      const svg = mapRef.current.ViewerDOM;
+      const zoneNode = svg.querySelector(`#Zone_${zone}`);
+      const zoneCoords = zoneNode.getBBox();
+      if (zoneNode) {
+        zoomSelection({
+          x: zoneCoords.x,
+          y: zoneCoords.y,
+          width: zoneCoords.width,
+          height: zoneCoords.height,
+        });
+        setTimeout(() => {
+          zoomOutCenter();
+        }, 0);
+      }
+    }
+  };
 
   const resetMapStation = (station, selectedStations) => {
-    if (mapRef) {
+    if (mapRef?.current) {
       const svg = mapRef.current.ViewerDOM;
       // Find related group in svg map
       if (station && station.stationName) {
@@ -43,7 +64,7 @@ const useMapMethods = () => {
   };
 
   const resetMap = (selectedStations) => {
-    if (mapRef) {
+    if (mapRef?.current) {
       const svg = mapRef.current.ViewerDOM;
       // clear map highlights
       selectedStations.forEach((station) => {
@@ -69,6 +90,7 @@ const useMapMethods = () => {
     resetMap,
     resetMapStation,
     fitToViewer,
+    fitZoneToViewer,
     zoomInCenter,
     zoomOutCenter,
     zoomSelection,

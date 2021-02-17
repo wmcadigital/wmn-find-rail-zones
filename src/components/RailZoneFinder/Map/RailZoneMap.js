@@ -5,7 +5,7 @@ import MapControls from './MapControls';
 import useMapMethods from './useMapMethods';
 
 const RailZoneMap = ({ parking, partial, full }) => {
-  const { mapState, mapDispatch, fitToViewer, zoomInCenter, zoomOutCenter } = useMapMethods();
+  const { mapState, mapDispatch } = useMapMethods();
   const [tool, setTool] = useState(TOOL_PAN);
   const [value, setValue] = useState(INITIAL_VALUE);
   const Viewer = useRef(null);
@@ -20,7 +20,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
 
   return (
     <>
-      <MapControls zoomIn={zoomInCenter} zoomOut={zoomOutCenter} fitToViewer={fitToViewer} />
+      <MapControls />
       <ReactSVGPanZoom
         ref={Viewer}
         width={mapSize.width}
