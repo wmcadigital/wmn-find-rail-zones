@@ -44,7 +44,7 @@ const useAutoCompleteAPI = (queryId) => {
         });
 
         mapDispatch({
-          type: 'UPDATE_HIGHLIGHTED_ZONES',
+          type: 'UPDATE_ZONE_HIGHLIGHT',
           payload: { [`zone${payload.railZone}`]: true },
         });
       }
@@ -70,7 +70,6 @@ const useAutoCompleteAPI = (queryId) => {
           return station.stationName.toLowerCase().includes(query.trim().toLowerCase());
         })
       : [];
-    console.log('api');
     handleAutoCompleteApiResponse(response);
   }, [handleAutoCompleteApiResponse, query]);
 

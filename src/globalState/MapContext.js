@@ -60,11 +60,19 @@ export const MapContextProvider = (props) => {
         };
       }
 
-      // Update highlighted zones on map
-      case 'UPDATE_HIGHLIGHTED_ZONES': {
+      // Update highlighted zone on map
+      case 'UPDATE_ZONE_HIGHLIGHT': {
         return {
           ...state,
           highlightedZones: { ...state.highlightedZones, ...action.payload },
+        };
+      }
+
+      // Update highlighted zone on map
+      case 'CLEAR_HIGHLIGHTED_ZONES': {
+        return {
+          ...state,
+          highlightedZones: { ...initialState.highlightedZones },
         };
       }
 

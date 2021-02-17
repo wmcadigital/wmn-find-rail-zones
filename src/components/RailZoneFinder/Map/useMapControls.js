@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 // Import contexts
 import { MapContext } from 'globalState';
@@ -60,11 +60,10 @@ const useMapControls = () => {
 
           // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
           if (inThisZone.length < 2) {
-            const zone = svg.querySelector(`#Zone_${station.railZone}`);
-
-            if (zone) {
-              zone.classList.remove(...zone.classList);
-            }
+            mapDispatch({
+              type: 'UPDATE_ZONE_HIGHLIGHT',
+              payload: { [`zone${station.railZone}`]: false },
+            });
           }
         }
       }
@@ -78,17 +77,14 @@ const useMapControls = () => {
       selectedStations.forEach((station) => {
         const textBg = svg.querySelector(`#${station.id}_text_bg`);
         const parkingIconBg = svg.querySelector(`#${station.id}_parking_bg`);
-        const zone = svg.querySelector(`#Zone_${station.railZone}`);
         if (textBg) {
           textBg.parentNode.removeChild(textBg);
         }
         if (parkingIconBg) {
           parkingIconBg.parentNode.removeChild(parkingIconBg);
         }
-        if (zone) {
-          zone.classList.remove(...zone.classList);
-        }
       });
+      mapDispatch({ type: 'CLEAR_HIGHLIGHTED_ZONES' });
     }
   };
 

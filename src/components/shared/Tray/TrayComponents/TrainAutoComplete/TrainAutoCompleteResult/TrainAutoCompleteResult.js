@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
-import { AutoCompleteContext, MapContext } from 'globalState';
+import { AutoCompleteContext } from 'globalState';
 // Import styles
 import s from './TrainAutoCompleteResult.module.scss';
 
 const TrainAutoCompleteResult = (props) => {
   const { result, handleKeyDown, queryId } = props || {};
-
-  const [mapState, mapDispatch] = useContext(MapContext);
   const [, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
   // Set payload object to pass below
