@@ -15,7 +15,6 @@ const TrainAutoCompleteResult = (props) => {
 
   const addSelectedStation = () => {
     //  Update normal selectedStation
-    console.log('result');
     autoCompleteDispatch({
       type: 'UPDATE_SELECTED_STATION',
       payload,
