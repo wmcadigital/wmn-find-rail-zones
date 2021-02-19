@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Icon from '../../shared/Icon/Icon';
 import s from './MapControls.module.scss';
 import useMapControls from './useMapControls';
@@ -19,17 +18,6 @@ const MapControls = () => {
       </button>
     </div>
   );
-};
-
-MapControls.propTypes = {
-  zoomIn: PropTypes.func,
-  zoomOut: PropTypes.func,
-  fitToViewer: PropTypes.func,
-};
-MapControls.defaultProps = {
-  zoomIn: null,
-  zoomOut: null,
-  fitToViewer: null,
 };
 
 export default MapControls;

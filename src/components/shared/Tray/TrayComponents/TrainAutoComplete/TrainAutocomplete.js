@@ -32,7 +32,6 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
       type: 'UPDATE_QUERY',
       queryId: queryId,
       payload: query,
-      touched: true,
     });
   };
 

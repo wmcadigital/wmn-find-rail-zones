@@ -1,5 +1,6 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useCallback } from 'react';
 import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
+import debounce from 'lodash/debounce';
 // Import contexts
 import { MapContext } from 'globalState';
 
@@ -11,13 +12,19 @@ const useMapControls = () => {
   const zoomInCenter = () => mapRef.current.zoomOnViewerCenter(1.2);
   const zoomOutCenter = () => mapRef.current.zoomOnViewerCenter(0.9);
 
-  useEffect(() => {
-    if (mapRef) {
-      const zoomSelection = (coords) => {
-        const { x, y, width, height } = coords;
+  const zoomSelection = useCallback(
+    debounce((coords) => {
+      const { x, y, width, height } = coords;
+      if (mapRef?.current) {
         mapRef.current.fitSelection(x, y, width, height);
-      };
-      const fitZoneToViewer = (zone) => {
+      }
+    }, 100),
+    [mapRef]
+  );
+
+  useEffect(() => {
+    if (mapRef?.current) {
+      const fitZoneToViewer = (zone, offset) => {
         const svg = mapRef.current.ViewerDOM; // Find svg node
         const zoneNode = svg.querySelector(`#Zone_${zone}`); // Find relevant zone node
         const transitionElement = svg.childNodes[1]; // Get the element of the map which is transformed (to add a transition)
@@ -27,21 +34,33 @@ const useMapControls = () => {
         transitionElement.ontransitionend = () => {
           transitionElement.style.transition = 'none';
         };
-
-        if (zoneNode) {
+        if (zone !== 7) {
+          if (zoneNode) {
+            // Get coordinates for zone
+            const zoneCoords = zoneNode.getBBox();
+            // zoom in to fit zone coordinates to map
+            zoomSelection({
+              x: zoneCoords.x - offset / 2,
+              y: zoneCoords.y - offset / 2,
+              width: zoneCoords.width + offset,
+              height: zoneCoords.height + offset,
+            });
+          }
+        } else {
           // Get coordinates for zone
-          const zoneCoords = zoneNode.getBBox();
-          console.log(zoneCoords);
+          const zoneCoords = transitionElement.childNodes[0].getBBox();
           // zoom in to fit zone coordinates to map
-          zoomSelection(zoneCoords);
-          // zoom out slightly afterwards
-          // setTimeout(() => {
-          //   zoomOutCenter();
-          // }, 0);
+          zoomSelection({
+            x: zoneCoords.x - offset / 2,
+            y: zoneCoords.y - offset / 2,
+            width: zoneCoords.width + offset,
+            height: zoneCoords.height + offset,
+          });
         }
       };
 
       const zones = mapState.highlightedZones;
+
       const zoneName =
         Object.keys(zones)
           .reverse()
@@ -49,11 +68,15 @@ const useMapControls = () => {
       if (zoneName) {
         const zoneToHighlight = zoneName.replace('zone', '');
         if (zoneToHighlight && zoneToHighlight <= '5') {
-          fitZoneToViewer(zoneToHighlight);
+          fitZoneToViewer(zoneToHighlight, 50);
+        } else {
+          fitZoneToViewer(7, 0);
         }
+      } else {
+        fitZoneToViewer(7, 0);
       }
     }
-  }, [mapRef, mapState.highlightedZones]);
+  }, [mapRef, zoomSelection, mapState.highlightedZones]);
 
   // Removes a specific station highlight on the map
   const resetMapStation = (station, selectedStations) => {
@@ -86,7 +109,7 @@ const useMapControls = () => {
   };
   // Clear all map highlights
   const resetMap = (selectedStations) => {
-    if (mapRef?.current) {
+    if (mapRef) {
       const svg = mapRef.current.ViewerDOM;
       // clear map highlights
       selectedStations.forEach((station) => {
@@ -101,6 +124,7 @@ const useMapControls = () => {
           parkingIconBg.parentNode.removeChild(parkingIconBg);
         }
       });
+      fitToViewer();
       mapDispatch({ type: 'CLEAR_HIGHLIGHTED_ZONES' });
     }
   };

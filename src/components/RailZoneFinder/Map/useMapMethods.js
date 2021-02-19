@@ -1,5 +1,5 @@
-import { useContext, useLayoutEffect } from 'react';
-import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
+import { useContext, useEffect, useLayoutEffect } from 'react';
+// import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 // Import contexts
 import { AutoCompleteContext, MapContext } from 'globalState';
 import s from './Map.module.scss';
@@ -9,7 +9,7 @@ const useMapMethods = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { mapRef, mapContainer } = mapState;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (mapRef?.current && mapContainer?.current) {
       let mounted = true;
 
@@ -31,7 +31,6 @@ const useMapMethods = () => {
 
       window.addEventListener('resize', () => {
         updateWidthHeight();
-        mapRef.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
       });
       // Cleanup: remove eventListener
       return () => {
@@ -42,42 +41,51 @@ const useMapMethods = () => {
   }, [mapRef, mapContainer, mapDispatch]);
 
   useLayoutEffect(() => {
+    // Function for drawing backgrounds on station text
     const drawMapHighlights = (station) => {
       const svg = mapRef.current.ViewerDOM;
 
+      // Find station element by name or id
       const group =
         svg.querySelector(`[data-name="${station.stationName}"]`) ||
         svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
+      // Find parking icon for that station if there is one
       const parkingIcon = group.querySelector(`.parking-icon`);
 
       if (group && !group.querySelector(`.${s.textBg}`)) {
+        // If the group element exists get its svg coordinates
         const gCoords = group.getBBox();
-
+        // Create a new rectangle element
         const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        p.setAttribute('id', `${station.id}_text_bg`);
-        p.setAttribute('class', s.textBg);
-        p.setAttribute('y', gCoords.y - 2.25);
-        p.setAttribute('x', gCoords.x - 4);
-        p.setAttribute('rx', 3);
-        p.setAttribute('ry', 3);
-        p.setAttribute('width', gCoords.width + 8);
-        p.setAttribute('height', gCoords.height + 4);
-        p.setAttribute('stroke', '#fff');
-        p.setAttribute('stroke-width', '1');
-        p.setAttribute('fill', '#3c1053');
+        // Set attributes and positioning on the new rect element using coordinates
+        p.setAttribute('id', `${station.id}_text_bg`); // set id
+        p.setAttribute('class', s.textBg); // set class
+        p.setAttribute('y', gCoords.y - 2.25); // set y position (offset slightly for better position)
+        p.setAttribute('x', gCoords.x - 4); // set x position (offset slightly for better position)
+        p.setAttribute('rx', 3); // set border radius x
+        p.setAttribute('ry', 3); // set border radius y
+        p.setAttribute('width', gCoords.width + 8); // set width to group width + padding
+        p.setAttribute('height', gCoords.height + 4); // set height to group height + padding
+        p.setAttribute('stroke', '#fff'); // add a white stroke
+        p.setAttribute('stroke-width', '1'); // set stroke width
+        p.setAttribute('fill', '#3c1053'); // set fill colour (WMN primary purple)
+        // Insert the new <rect> inside the group element
         group.insertBefore(p, group.childNodes[0]);
         // Add background to parking icon if present
         if (parkingIcon) {
+          // If the parking icon element exists get its svg coordinates
           const pIconCoords = parkingIcon.getBBox();
+          // Create a new rectangle element
           const i = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-          i.setAttribute('id', `${station.id}_parking_bg`);
-          i.setAttribute('y', pIconCoords.y - 1 + 38.73); // 38.73 offsets transform translate in svg
-          i.setAttribute('x', pIconCoords.x - 1);
-          i.setAttribute('rx', 1.5);
-          i.setAttribute('ry', 1.5);
-          i.setAttribute('width', pIconCoords.width + 2);
-          i.setAttribute('height', pIconCoords.height + 2);
-          i.setAttribute('fill', '#fff');
+          i.setAttribute('id', `${station.id}_parking_bg`); // set id
+          i.setAttribute('x', pIconCoords.x - 1); // set x position
+          i.setAttribute('y', pIconCoords.y - 1 + 38.73); // set y position. 38.73 offsets transform translate in svg
+          i.setAttribute('rx', 1.5); // set border radius x
+          i.setAttribute('ry', 1.5); // set border radius y
+          i.setAttribute('width', pIconCoords.width + 2); // set width to group width + padding
+          i.setAttribute('height', pIconCoords.height + 2); // set height to group height + padding
+          i.setAttribute('fill', '#fff'); // set fill colour to white
+          // Insert the new <rect> inside the group element behind parking icon
           group.insertBefore(i, group.childNodes[2]);
         }
       }
