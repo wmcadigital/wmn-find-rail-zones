@@ -14,11 +14,13 @@ const RailZoneMap = ({ parking, partial, full }) => {
   const { zone1, zone2, zone3, zone4, zone5, zone6 } = mapState.highlightedZones;
 
   useEffect(() => {
-    mapDispatch({
-      type: 'ADD_MAP',
-      payload: Viewer,
-    });
-  }, [mapDispatch]);
+    if (Viewer.current) {
+      mapDispatch({
+        type: 'ADD_MAP',
+        payload: Viewer,
+      });
+    }
+  }, [mapDispatch, Viewer]);
 
   return (
     <>

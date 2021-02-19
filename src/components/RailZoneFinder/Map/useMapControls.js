@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 // Import contexts
 import { MapContext } from 'globalState';
@@ -10,49 +10,50 @@ const useMapControls = () => {
   const fitToViewer = () => mapRef.current.fitToViewer(ALIGN_COVER, ALIGN_CENTER);
   const zoomInCenter = () => mapRef.current.zoomOnViewerCenter(1.2);
   const zoomOutCenter = () => mapRef.current.zoomOnViewerCenter(0.9);
-  const zoomSelection = (coords) => {
-    const { x, y, width, height } = coords;
-    mapRef.current.fitSelection(x, y, width, height);
-  };
-  const fitZoneToViewer = (zone) => {
-    const svg = mapRef.current.ViewerDOM; // Find svg node
-    const zoneNode = svg.querySelector(`#Zone_${zone}`); // Find relevant zone node
-    const transitionElement = svg.childNodes[1]; // Get the element of the map which is transformed (to add a transition)
-    // Add a transition to smooth zoom effect
-    transitionElement.style.transition = 'transform 0.2s ease-out';
-    // Remove transition on end to help performance
-    transitionElement.ontransitionend = () => {
-      transitionElement.style.transition = 'none';
-    };
 
-    if (zoneNode) {
-      // Get coordinates for zone
-      const zoneCoords = zoneNode.getBBox();
-      // zoom in to fit zone coordinates to map
-      zoomSelection(zoneCoords);
-      // zoom out slightly afterwards
-      setTimeout(() => {
-        zoomOutCenter();
-      }, 0);
+  useEffect(() => {
+    if (mapRef) {
+      const zoomSelection = (coords) => {
+        const { x, y, width, height } = coords;
+        mapRef.current.fitSelection(x, y, width, height);
+      };
+      const fitZoneToViewer = (zone) => {
+        const svg = mapRef.current.ViewerDOM; // Find svg node
+        const zoneNode = svg.querySelector(`#Zone_${zone}`); // Find relevant zone node
+        const transitionElement = svg.childNodes[1]; // Get the element of the map which is transformed (to add a transition)
+        // Add a transition to smooth zoom effect
+        transitionElement.style.transition = 'transform 0.2s ease-out';
+        // Remove transition on end to help performance
+        transitionElement.ontransitionend = () => {
+          transitionElement.style.transition = 'none';
+        };
+
+        if (zoneNode) {
+          // Get coordinates for zone
+          const zoneCoords = zoneNode.getBBox();
+          console.log(zoneCoords);
+          // zoom in to fit zone coordinates to map
+          zoomSelection(zoneCoords);
+          // zoom out slightly afterwards
+          // setTimeout(() => {
+          //   zoomOutCenter();
+          // }, 0);
+        }
+      };
+
+      const zones = mapState.highlightedZones;
+      const zoneName =
+        Object.keys(zones)
+          .reverse()
+          .find((item) => zones[item] === true) || null;
+      if (zoneName) {
+        const zoneToHighlight = zoneName.replace('zone', '');
+        if (zoneToHighlight && zoneToHighlight <= '5') {
+          fitZoneToViewer(zoneToHighlight);
+        }
+      }
     }
-  };
-
-  // useEffect(() => {
-  //   if (mapRef?.current) {
-  //
-  //     const zones = mapState.highlightedZones;
-  //     const zoneName =
-  //       Object.keys(zones)
-  //         .reverse()
-  //         .find((item) => zones[item] === true) || null;
-  //     if (zoneName) {
-  //       const zoneToHighlight = zoneName.replace('zone', '');
-  //       if (zoneToHighlight && zoneToHighlight <= '5') {
-  //         fitZoneToViewer(zoneToHighlight);
-  //       }
-  //     }
-  //   }
-  // }, [mapRef, mapState.highlightedZones]);
+  }, [mapRef, mapState.highlightedZones]);
 
   // Removes a specific station highlight on the map
   const resetMapStation = (station, selectedStations) => {
@@ -110,10 +111,8 @@ const useMapControls = () => {
     resetMap,
     resetMapStation,
     fitToViewer,
-    fitZoneToViewer,
     zoomInCenter,
     zoomOutCenter,
-    zoomSelection,
   };
 };
 
