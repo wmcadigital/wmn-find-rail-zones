@@ -45,7 +45,7 @@ const useAutoCompleteAPI = (queryId) => {
 
         mapDispatch({
           type: 'UPDATE_ZONE_HIGHLIGHT',
-          payload: { [`zone${payload.railZone || 7}`]: true }, // if there is no zone assigin zone7 (Out of county)
+          payload: { [`zone${payload.railZone || 7}`]: true }, // if there is no zone assign '7' (Out of county)
         });
       }
 

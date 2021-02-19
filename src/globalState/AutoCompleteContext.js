@@ -80,7 +80,6 @@ export const AutoCompleteProvider = (props) => {
       // Used to cancel selected service/station etc. This is mainly used when using from/to stations
       case 'RESET_SELECTED_ITEM': {
         const { queryId } = action.payload;
-        // If action.payload ('to') exists in payload then make sure we set the correct field
         const item = `selectedStation${queryId}`;
         const query = `query${queryId}`;
 
@@ -95,7 +94,7 @@ export const AutoCompleteProvider = (props) => {
         newQueries[queryId] = '';
         newSelectedStations[queryId] = { id: null };
 
-        // function to remove the last array value if it's empty (and not our inital 2 default values)
+        // function to remove the last array value if it's empty (and not our initial 2 default values)
         const removeLastValues = (array) => {
           let newArray = array;
           const lastItem = newArray[newArray.length - 1];
@@ -109,7 +108,7 @@ export const AutoCompleteProvider = (props) => {
         };
 
         newQueries = removeLastValues(newQueries);
-        newSelectedStations = removeLastValues(newSelectedStations);
+        // newSelectedStations = removeLastValues(newSelectedStations);
 
         // Update state with deleted/cancelled service/item
         return {
