@@ -92,7 +92,11 @@ export const AutoCompleteProvider = (props) => {
         let newSelectedStations = state.selectedStations;
 
         newQueries[queryId] = '';
-        newSelectedStations[queryId] = { id: null };
+        if (queryId + 1 === state.selectedStations.length && queryId > 1) {
+          newSelectedStations.pop();
+        } else {
+          newSelectedStations[queryId] = { id: null };
+        }
 
         // function to remove the last array value if it's empty (and not our initial 2 default values)
         const removeLastValues = (array) => {
@@ -108,8 +112,6 @@ export const AutoCompleteProvider = (props) => {
         };
 
         newQueries = removeLastValues(newQueries);
-        // newSelectedStations = removeLastValues(newSelectedStations);
-
         // Update state with deleted/cancelled service/item
         return {
           ...state,
