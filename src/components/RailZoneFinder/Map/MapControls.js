@@ -8,13 +8,13 @@ const MapControls = () => {
   return (
     <div className={s.mapControls}>
       <button type="button" className={s.mapControlBtn} onClick={() => fitToViewer()}>
-        <Icon iconName="general-sync" size={18} />
+        <Icon title="Fit map to view" iconName="general-sync" size={18} />
       </button>
       <button type="button" className={s.mapControlBtn} onClick={() => zoomInCenter()}>
-        <Icon iconName="general-expand" size={18} />
+        <Icon title="Zoom in" iconName="general-expand" size={18} />
       </button>
       <button type="button" className={s.mapControlBtn} onClick={() => zoomOutCenter()}>
-        <Icon iconName="general-minimise" size={18} />
+        <Icon title="Zoom out" iconName="general-minimise" size={18} />
       </button>
     </div>
   );
