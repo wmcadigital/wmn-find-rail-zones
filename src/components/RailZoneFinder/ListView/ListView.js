@@ -99,13 +99,31 @@ const ListView = () => {
                     {zoneStations.map((station) => (
                       <li key={station.crsCode} style={{ display: 'flex' }}>
                         {station.stationName}
-                        {station.stepFreeAccess && station.stepFreeAccess === 'full' ? (
-                          <AccessIcon className="wmnds-m-l-xsm" />
-                        ) : (
-                          <AccessIcon type="part" className="wmnds-m-l-xsm" />
-                        )}
+                        {station.stepFreeAccess === 'full' ? (
+                          <>
+                            {' '}
+                            <span className={s.srOnly}>which has full step free access</span>
+                            <AccessIcon className="wmnds-m-l-xsm" />
+                          </>
+                        ) : station.stepFreeAccess === 'full' ? (
+                          <>
+                            {' '}
+                            <span className={s.srOnly}>which has partial step free access</span>
+                            <AccessIcon type="part" className="wmnds-m-l-xsm" />
+                          </>
+                        ) : null}
                         {station.parking && (
-                          <Icon iconName="general-parking" className="wmnds-m-l-xsm" color="cta" />
+                          <>
+                            <span className={s.srOnly}>
+                              {station.stepFreeAccess ? 'and parking' : 'which has parking'}
+                            </span>
+
+                            <Icon
+                              iconName="general-parking"
+                              className="wmnds-m-l-xsm"
+                              color="cta"
+                            />
+                          </>
                         )}
                       </li>
                     ))}
