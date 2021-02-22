@@ -1,23 +1,18 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-// Import contexts
-import { MapContext } from 'globalState';
 // Imported components
 import CloseButton from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
 import useMapControls from '../../../../../customHooks/useMapControls';
 
 const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryId }) => {
-  const [mapState] = useContext(MapContext);
   const selectedServiceRef = useRef(null);
   const { resetMapStation } = useMapControls();
 
   const selectedService = autoCompleteState.selectedStations[queryId];
 
   const handleClick = () => {
-    if (mapState.mapView) {
-      resetMapStation(selectedService, autoCompleteState.selectedStations);
-    }
+    resetMapStation(selectedService, autoCompleteState.selectedStations);
     autoCompleteDispatch();
   };
   return (

@@ -92,19 +92,17 @@ const useMapControls = () => {
         // If group is found remove text background from svg map
         if (svgGroup) {
           svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
-
-          // Find related zone in svg map
-          const inThisZone = selectedStations.filter((item) => item.railZone === station.railZone);
-
-          // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
-          if (inThisZone.length < 2) {
-            mapDispatch({
-              type: 'UPDATE_ZONE_HIGHLIGHT',
-              payload: { [`zone${station.railZone}`]: false },
-            });
-          }
         }
       }
+    }
+    // Find related zone in svg map
+    const inThisZone = selectedStations.filter((item) => item.railZone === station.railZone);
+    // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
+    if (inThisZone.length < 2) {
+      mapDispatch({
+        type: 'UPDATE_ZONE_HIGHLIGHT',
+        payload: { [`zone${station.railZone}`]: false },
+      });
     }
   };
   // Clear all map highlights
@@ -125,8 +123,8 @@ const useMapControls = () => {
         }
       });
       fitToViewer();
-      mapDispatch({ type: 'CLEAR_HIGHLIGHTED_ZONES' });
     }
+    mapDispatch({ type: 'CLEAR_HIGHLIGHTED_ZONES' });
   };
 
   return {
