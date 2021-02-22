@@ -65,16 +65,28 @@ const useMapControls = () => {
         Object.keys(zones)
           .reverse()
           .find((item) => zones[item] === true) || null;
-      if (zoneName) {
-        const zoneToHighlight = zoneName.replace('zone', '');
-        if (zoneToHighlight && zoneToHighlight <= '5') {
-          fitZoneToViewer(zoneToHighlight, 50);
+      const resizeMap = () => {
+        if (zoneName) {
+          const zoneToHighlight = zoneName.replace('zone', '');
+          if (zoneToHighlight && zoneToHighlight <= '5') {
+            fitZoneToViewer(zoneToHighlight, 50);
+          } else {
+            fitZoneToViewer(7, 0);
+          }
         } else {
           fitZoneToViewer(7, 0);
         }
-      } else {
-        fitZoneToViewer(7, 0);
-      }
+      };
+
+      resizeMap();
+
+      window.addEventListener('resize', () => {
+        resizeMap();
+      });
+      // Cleanup: remove eventListener
+      return () => {
+        window.removeEventListener('resize', resizeMap);
+      };
     }
   }, [mapRef, zoomSelection, mapState.highlightedZones]);
 
