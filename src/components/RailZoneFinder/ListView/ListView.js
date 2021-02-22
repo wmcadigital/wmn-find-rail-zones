@@ -17,6 +17,7 @@ const ListView = () => {
     { name: 'Zone 3', open: false },
     { name: 'Zone 4', open: false },
     { name: 'Zone 5', open: false },
+    { name: 'nTrain Zone 5', open: false },
   ]);
 
   const toggleAccordions = (open) => {
