@@ -18,6 +18,18 @@
   }
 }
 
+.addStation {
+  display: block;
+}
+
+.addBtn {
+  @media (max-width: $breakpoint-md - 1) {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
 .traySearchContainer {
   max-width: 27rem;
 }

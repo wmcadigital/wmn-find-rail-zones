@@ -5,6 +5,7 @@ import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import Accordion from '../../shared/Accordion/Accordion';
 import TrayComponents from '../../shared/Tray/TrayComponents/TrayComponents';
+import s from './ListView.module.scss';
 
 import railData from '../RailData.json';
 
@@ -28,8 +29,8 @@ const ListView = () => {
   return (
     <div className="wmnds-container">
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
-        <div className="wmnds-col-md-2-3">
-          <div className="bg-white wmnds-p-md">
+        <div className="wmnds-col-1-1 wmnds-col-md-2-3">
+          <div className={`bg-white wmnds-p-md ${s.trayComponents}`}>
             <TrayComponents />
           </div>
         </div>
@@ -39,25 +40,41 @@ const ListView = () => {
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
           <div className="wmnds-grid wmnds-grid--justify-between wmnds-grid--align-center">
             <div className="wmnds-col-1-1 wmnds-col-md-auto">
-              <p className="wmnds-m-none">View a list of all the train stations in each zone.</p>
+              <p className="wmnds-m-b-sm wmnds-m-t-sm">
+                View a list of all the train stations in each zone.
+              </p>
             </div>
             <div className="wmnds-col-1-1 wmnds-col-md-auto">
-              <Button
-                onClick={() => toggleAccordions(true)}
-                text="Open all"
-                btnClass="wmnds-m-r-sm wmnds-btn--primary"
-              />
-              <Button
-                onClick={() => toggleAccordions(false)}
-                text="Close all"
-                btnClass="wmnds-btn--primary"
-              />
+              <div class="wmnds-hide-mobile">
+                <Button
+                  onClick={() => toggleAccordions(true)}
+                  text="Open all"
+                  btnClass="wmnds-m-r-sm wmnds-btn--primary"
+                />
+                <Button
+                  onClick={() => toggleAccordions(false)}
+                  text="Close all"
+                  btnClass="wmnds-btn--primary"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="wmnds-grid wmnds-grid--spacing-md-2-lg">
+      <div className={`wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-lg ${s.reverseXs}`}>
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
+          <div class="wmnds-hide-desktop wmnds-m-b-md">
+            <Button
+              onClick={() => toggleAccordions(true)}
+              text="Open all"
+              btnClass="wmnds-m-r-sm wmnds-btn--primary"
+            />
+            <Button
+              onClick={() => toggleAccordions(false)}
+              text="Close all"
+              btnClass="wmnds-btn--primary"
+            />
+          </div>
           {accordions.map((accordion, i) => {
             const accordionId = `${accordion.name.toLowerCase().replace(' ', '')}-${i}`;
             const handleClick = () => {
@@ -97,7 +114,7 @@ const ListView = () => {
             );
           })}
         </div>
-        <div className="wmnds-col-1-1 wmnds-col-md-1-3" style={{ alignSelf: 'flex-start' }}>
+        <div className={`wmnds-col-1-1 wmnds-col-md-1-3 ${s.keyCol}`}>
           <div className="wmnds-content-card">
             <div className="wmnds-p-md">
               <h3 className="h2">Key</h3>
