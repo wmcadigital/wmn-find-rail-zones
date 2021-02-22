@@ -46,42 +46,6 @@ $duration: 0.75s;
   height: 100%;
 }
 
-.accessMenu {
-  position: absolute;
-  right: $size-xsm;
-  bottom: $size-xsm;
-  border: 1px solid rgba($black, 0.1);
-  border-radius: 5px;
-}
-
-.keyIcon {
-  display: flex;
-  align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: $size-md;
-  }
-}
-
-.showKeyBtn {
-  position: absolute;
-  right: $size-xsm;
-  bottom: $size-xsm;
-
-  svg {
-    transform: rotate(-90deg);
-  }
-}
-
-.hideKeyBtn {
-  margin-left: $size-md;
-
-  svg {
-    transform: rotate(90deg);
-    fill: get-color(secondary);
-  }
-}
-
 .zoneSelected {
   path:first-child {
     fill: get-color(secondary, 70);

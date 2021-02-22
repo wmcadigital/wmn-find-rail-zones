@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from '../../shared/Button/Button';
 import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
+import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 import Accordion from '../../shared/Accordion/Accordion';
 import TrayComponents from '../../shared/Tray/TrayComponents/TrayComponents';
 import s from './ListView.module.scss';
@@ -116,29 +117,7 @@ const ListView = () => {
         </div>
         <div className={`wmnds-col-1-1 wmnds-col-md-1-3 ${s.keyCol}`}>
           <div className="wmnds-content-card">
-            <div className="wmnds-p-md">
-              <h3 className="h2">Key</h3>
-              <ul className="wmnds-content-card__list wmnds-m-b-none">
-                <li className="wmnds-grid wmnds-grid--spacing-2-sm">
-                  <div className="wmnds-col-auto">
-                    <AccessIcon type="full" size={20} />
-                  </div>
-                  <div className="wmnds-col-auto">Station with full step-free access</div>
-                </li>
-                <li className="wmnds-grid wmnds-grid--spacing-2-sm">
-                  <div className="wmnds-col-auto">
-                    <AccessIcon type="part" size={20} />
-                  </div>
-                  <div className="wmnds-col-auto">Station with part step-free access</div>
-                </li>
-                <li className="wmnds-grid wmnds-grid--spacing-2-sm">
-                  <div className="wmnds-col-auto">
-                    <Icon iconName="general-parking" size={20} color="cta" />
-                  </div>
-                  <div className="wmnds-col-auto">Station with parking</div>
-                </li>
-              </ul>
-            </div>
+            <AccessibilityKey />
           </div>
         </div>
       </div>
