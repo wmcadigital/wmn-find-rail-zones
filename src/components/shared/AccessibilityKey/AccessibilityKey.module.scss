@@ -8,6 +8,7 @@
 
 .keyIcon {
   display: flex;
+  text-align: left;
   align-items: center;
 
   &:not(:last-child) {
@@ -15,18 +16,7 @@
   }
 }
 
-.mapKeyContainer {
-  position: sticky;
-  right: $size-xsm;
-  bottom: $size-xsm;
-  text-align: right;
-}
-
 .showKeyBtn {
-  position: absolute;
-  right: $size-sm;
-  bottom: $size-sm;
-
   svg {
     transform: rotate(-90deg);
   }
@@ -34,11 +24,28 @@
 
 .mapKey {
   &.accessMenu {
+    border: 1px solid rgba($black, 0.1);
+    border-radius: 5px;
+  }
+}
+
+.mapKeyContainer {
+  position: absolute;
+  right: $size-md;
+  bottom: $size-md;
+  text-align: right;
+}
+
+@media (min-width: $breakpoint-md) and (min-height: $breakpoint-sm) {
+  .mapKeyContainer {
+    position: sticky;
+  }
+
+  .showKeyBtn,
+  .mapKey.accessMenu {
     position: absolute;
     right: $size-sm;
     bottom: $size-sm;
-    border: 1px solid rgba($black, 0.1);
-    border-radius: 5px;
   }
 }
 

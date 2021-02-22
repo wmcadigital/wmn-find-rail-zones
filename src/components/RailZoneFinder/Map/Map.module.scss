@@ -26,7 +26,10 @@ $duration: 0.75s;
   position: sticky;
   top: 0;
   max-height: 100vh;
-  margin: $size-md;
+
+  @media (min-width: $breakpoint-md) {
+    margin: $size-md;
+  }
 
   &::before {
     content: '';
