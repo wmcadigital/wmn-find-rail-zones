@@ -4,7 +4,7 @@ import Result from '../../../RailZoneFinder/Result';
 import TrainAutoComplete from '../TrayComponents/TrainAutoComplete/TrainAutocomplete';
 import { AutoCompleteContext, MapContext } from 'globalState';
 import s from './TrayComponents.module.scss';
-import useMapControls from '../../../RailZoneFinder/Map/useMapControls';
+import useMapControls from '../../../../customHooks/useMapControls';
 
 const TrayComponents = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);

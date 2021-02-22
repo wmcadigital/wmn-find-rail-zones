@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '../../shared/Icon/Icon';
 import s from './MapControls.module.scss';
-import useMapControls from './useMapControls';
+import useMapControls from '../../../customHooks/useMapControls';
 
 const MapControls = () => {
   const { fitToViewer, zoomInCenter, zoomOutCenter } = useMapControls();

@@ -5,7 +5,7 @@ import { MapContext } from 'globalState';
 // Imported components
 import CloseButton from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
-import useMapControls from '../../../../RailZoneFinder/Map/useMapControls';
+import useMapControls from '../../../../../customHooks/useMapControls';
 
 const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryId }) => {
   const [mapState] = useContext(MapContext);
