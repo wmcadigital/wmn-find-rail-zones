@@ -38,6 +38,7 @@ const TrayComponents = () => {
           iconRight="general-expand"
           text="Add another station"
           onClick={addStation}
+          disabled={selectedStations.length >= 12}
         />
         {selectedStations.length > 2 && (
           <div className="wmnds-p-b-md">
@@ -50,13 +51,16 @@ const TrayComponents = () => {
                   queryId={i + 2}
                 />
               ))}
-              <div className="wmnds-text-align-right">
-                <Button
-                  btnClass="wmnds-btn--link"
-                  text="+ Add another station"
-                  onClick={addStation}
-                />
-              </div>
+              {selectedStations.length < 12 && (
+                <div className="wmnds-text-align-right">
+                  <Button
+                    btnClass="wmnds-btn--link"
+                    text="+ Add another station"
+                    onClick={addStation}
+                    disabled={selectedStations.length >= 12}
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}
