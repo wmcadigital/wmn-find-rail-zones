@@ -8,8 +8,8 @@ import Button from '../Button/Button';
 
 import s from './AccessibilityKey.module.scss';
 
-const AccessibilityKey = ({ mapKey }) => {
-  const [showKey, setShowKey] = useState(mapKey ? false : true);
+const AccessibilityKey = ({ mapView }) => {
+  const [showKey, setShowKey] = useState(mapView ? false : true);
 
   const Key = (
     <>
@@ -26,7 +26,7 @@ const AccessibilityKey = ({ mapKey }) => {
     </>
   );
 
-  return mapKey ? (
+  return mapView ? (
     <div class={s.mapKeyContainer}>
       {!showKey ? (
         <Button
@@ -70,11 +70,11 @@ const AccessibilityKey = ({ mapKey }) => {
 };
 
 AccessibilityKey.propTypes = {
-  mapKey: PropTypes.bool,
+  mapView: PropTypes.bool,
 };
 
 AccessibilityKey.defaultProps = {
-  mapKey: false,
+  mapView: false,
 };
 
 export default AccessibilityKey;

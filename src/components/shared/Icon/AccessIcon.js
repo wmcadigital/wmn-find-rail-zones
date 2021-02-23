@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 import s from './Icon.module.scss';
 
+// Customised icon which includes circular background for accessibility icon
 const AccessIcon = ({ type, size, className, iconClassName }) => {
   return (
     <div

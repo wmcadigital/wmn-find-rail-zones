@@ -17,6 +17,7 @@ $duration: 0.75s;
     stroke-width: 0.25;
   }
 
+  // Change the airport icon to white if it is a child of selected station
   & ~ [id='Airport'] {
     fill: $white;
   }
@@ -31,6 +32,7 @@ $duration: 0.75s;
     margin: $size-md;
   }
 
+  // CSS hack to make the map container square
   &::before {
     content: '';
     display: block;

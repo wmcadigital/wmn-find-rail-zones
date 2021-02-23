@@ -42,7 +42,7 @@ const useAutoCompleteAPI = (queryId) => {
           type: 'UPDATE_SELECTED_STATION',
           payload,
         });
-
+        // Update the map state to highlight zones which have selected stations in them
         mapDispatch({
           type: 'UPDATE_ZONE_HIGHLIGHT',
           payload: { [`zone${payload.railZone || 7}`]: true }, // if there is no zone assign '7' (Out of county)

@@ -8,15 +8,20 @@ const Result = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
 
+  //Get selected stations that have an id
   const stations = selectedStations.filter((item) => item.id !== null);
 
+  // Get stations with full access from selected stations
   const fullAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'full')
     .map((item) => item.stationName);
+  // Get stations with partial access from selected stations
   const partAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'partial')
     .map((item) => item.stationName);
+  // Get stations with parking from selected stations
   const parkingStations = stations.filter((item) => item.parking).map((item) => item.stationName);
+  // Function to change arrays into readable sentence
   const arrayToSentence = (array) => {
     if (array.length > 2) {
       return `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;

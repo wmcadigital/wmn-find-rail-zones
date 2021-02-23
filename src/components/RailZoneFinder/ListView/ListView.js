@@ -22,6 +22,7 @@ const ListView = () => {
 
   const toggleAccordions = (open) => {
     let newState = accordions.map((accordion) => {
+      // make sure all accordions do the right thing
       open ? (accordion.open = true) : (accordion.open = false);
       return accordion;
     });
@@ -78,12 +79,15 @@ const ListView = () => {
             />
           </div>
           {accordions.map((accordion, i) => {
+            // Make id from accordion name
             const accordionId = `${accordion.name.toLowerCase().replace(' ', '')}-${i}`;
+            // Update accordion state on click
             const handleClick = () => {
               let newState = accordions;
               newState[i].open = !accordions[i].open;
               setAccordions([...newState]);
             };
+            // Filter stations with railZones matching the current iteration (i)
             const zoneStations = railData.railStationAccess.filter(
               (station) => station.railZone === i + 1
             );

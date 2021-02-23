@@ -10,13 +10,15 @@ const useMapMethods = () => {
   const { mapRef, mapContainer } = mapState;
 
   useEffect(() => {
+    // Check if map and mapcontainer refs exist
     if (mapRef?.current && mapContainer?.current) {
       let mounted = true;
 
+      // Get map container dimensions and assign them to the svg map whidth/height
       const updateWidthHeight = () => {
         if (mounted) {
           const containerSize = mapContainer.current.getBoundingClientRect();
-
+          // Add map size to context state
           mapDispatch({
             type: 'UPDATE_MAP_SIZE',
             payload: {
@@ -26,9 +28,10 @@ const useMapMethods = () => {
           });
         }
       };
-
+      // Run map resize on initial render
       updateWidthHeight();
 
+      // Run map resize when the window is resized
       window.addEventListener('resize', () => {
         updateWidthHeight();
       });
@@ -41,7 +44,7 @@ const useMapMethods = () => {
   }, [mapRef, mapContainer, mapDispatch]);
 
   useLayoutEffect(() => {
-    // Function for drawing backgrounds on station text
+    // Function for hightlighting stations on the svg map
     const drawMapHighlights = (station) => {
       const svg = mapRef.current.ViewerDOM;
 
@@ -92,6 +95,7 @@ const useMapMethods = () => {
     };
 
     if (mapRef?.current) {
+      // Loop through selected stations and highlight them on the map
       autoCompleteState.selectedStations.forEach((station) => {
         if (station.stationName) {
           drawMapHighlights(station);

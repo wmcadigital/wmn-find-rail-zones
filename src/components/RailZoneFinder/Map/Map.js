@@ -21,7 +21,7 @@ const Map = () => {
     <div className={`${s.mapView}`}>
       <div className={s.mapContainer} ref={mapContainer}>
         <RailZoneMap />
-        <AccessibilityKey mapKey />
+        <AccessibilityKey mapView />
       </div>
     </div>
   );

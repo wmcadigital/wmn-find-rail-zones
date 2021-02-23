@@ -9,6 +9,7 @@ import { MapContext } from 'globalState';
 function RailZoneFinder() {
   const [mapState, mapDispatch] = useContext(MapContext);
   const { mapView } = mapState;
+  // Toggle between map and list view
   const setMapView = () => {
     mapDispatch({
       type: 'UPDATE_VIEW',
