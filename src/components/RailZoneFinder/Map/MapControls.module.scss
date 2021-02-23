@@ -9,8 +9,13 @@
 .mapControls {
   position: absolute;
   z-index: 10;
-  top: $size-xsm;
-  right: $size-xsm;
+  top: $size-md;
+  right: $size-md;
+
+  @media (min-width: $breakpoint-md) {
+    top: $size-xsm;
+    right: $size-xsm;
+  }
 }
 
 .mapControlBtn {

@@ -7,7 +7,7 @@ import s from './CloseButton.module.scss';
 const CloseButton = ({ onClick }) => {
   return (
     <button type="button" className={s.closeButton} onClick={onClick}>
-      <Icon iconName="general-cross" className={`general-cross ${s.closeIcon}`} />
+      <Icon iconName="general-cross" className={`general-cross ${s.closeIcon}`} title="Close" />
     </button>
   );
 };

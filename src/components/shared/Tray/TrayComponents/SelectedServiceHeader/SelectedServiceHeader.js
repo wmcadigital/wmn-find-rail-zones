@@ -3,12 +3,18 @@ import PropTypes from 'prop-types';
 // Imported components
 import CloseButton from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
+import useMapControls from '../../../../../customHooks/useMapControls';
 
 const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryId }) => {
   const selectedServiceRef = useRef(null);
+  const { resetMapStation } = useMapControls();
 
   const selectedService = autoCompleteState.selectedStations[queryId];
 
+  const handleClick = () => {
+    resetMapStation(selectedService, autoCompleteState.selectedStations);
+    autoCompleteDispatch();
+  };
   return (
     <>
       {/* Close disruption box */}
@@ -20,7 +26,7 @@ const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryI
           {selectedService.routeName || selectedService.stationName}
         </strong>
 
-        <CloseButton onClick={autoCompleteDispatch} />
+        <CloseButton onClick={handleClick} />
       </div>
     </>
   );

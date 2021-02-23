@@ -4,19 +4,20 @@ import Button from '../shared/Button/Button';
 import MapView from '../RailZoneFinder/MapView/MapView';
 import ListView from '../RailZoneFinder/ListView/ListView';
 import s from './RailZoneFinder.module.scss';
-import { AutoCompleteContext } from 'globalState';
+import { MapContext } from 'globalState';
 
 function RailZoneFinder() {
-  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
-  const { mapView } = autoCompleteState;
+  const [mapState, mapDispatch] = useContext(MapContext);
+  const { mapView } = mapState;
+  // Toggle between map and list view
   const setMapView = () => {
-    autoCompleteDispatch({
+    mapDispatch({
       type: 'UPDATE_VIEW',
       payload: !mapView,
     });
   };
   return (
-    <div className="wmnds-p-b-lg">
+    <>
       <div className="wmnds-container">
         <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
           <div className="wmnds-col-auto">
@@ -41,8 +42,8 @@ function RailZoneFinder() {
           </p>
         </div>
       </div>
-      {autoCompleteState.mapView ? <MapView /> : <ListView />}
-    </div>
+      {mapState.mapView ? <MapView /> : <ListView />}
+    </>
   );
 }
 

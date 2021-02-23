@@ -6,12 +6,22 @@
 @import '~assets/wmnds/vars';
 @import '~assets/wmnds/mixins';
 
+.mapViewSection {
+  @media screen and (min-width: $breakpoint-md) {
+    background-color: $white;
+  }
+}
+
 .container {
+  position: relative;
   width: 100%;
-  max-width: $breakpoint-xl;
-  margin: 0 auto;
+  max-width: calc((100% - (100% - #{$breakpoint-lg}) / 2));
+  margin-left: auto;
+  padding-bottom: $size-lg;
+  flex-flow: column-reverse;
 
   @media screen and (min-width: $breakpoint-md) {
-    padding: 0 $size-md;
+    padding-left: $size-md;
+    flex-flow: row;
   }
 }

@@ -141,9 +141,9 @@
     {
       "crsCode": "BBS",
       "stationName": "Bordesley",
-      "railZone": 1,
+      "railZone": 2,
       "parking": false,
-      "stepFreeAccess": false
+      "stepFreeAccess": null
     },
     {
       "crsCode": "BRV",

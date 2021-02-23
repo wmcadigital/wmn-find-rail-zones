@@ -8,55 +8,47 @@
 
 $duration: 0.75s;
 
-.textBg + path {
-  fill: $white;
-  stroke: $white;
-  stroke-width: 0.25;
-}
-
 .textBg {
   animation: fade $duration ease-out forwards;
+
+  & + path {
+    fill: $white;
+    stroke: $white;
+    stroke-width: 0.25;
+  }
+
+  // Change the airport icon to white if it is a child of selected station
+  & ~ [id='Airport'] {
+    fill: $white;
+  }
+}
+
+.mapView {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+
+  @media (min-width: $breakpoint-md) {
+    margin: $size-md;
+  }
+
+  // CSS hack to make the map container square
+  &::before {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 100%;
+  }
 }
 
 .mapContainer {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-}
-
-.accessMenu {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border: 1px solid rgba($black, 0.1);
-  border-radius: 5px;
-}
-
-.keyIcon {
-  display: flex;
-  align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: $size-md;
-  }
-}
-
-.showKeyBtn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  svg {
-    transform: rotate(-90deg);
-  }
-}
-
-.hideKeyBtn {
-  margin-left: $size-md;
-
-  svg {
-    transform: rotate(90deg);
-    fill: get-color(secondary);
-  }
 }
 
 .zoneSelected {
