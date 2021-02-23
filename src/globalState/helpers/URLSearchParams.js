@@ -2,7 +2,7 @@ const url = new URL(typeof window !== 'undefined' ? window.location.href : ''); 
 
 // Function for getting the value of a search param in the URL
 const getAllSearchParams = () => {
-  let params = [];
+  const params = [];
   url.searchParams.forEach((value, key) => {
     params.push({ name: key, id: value });
   });

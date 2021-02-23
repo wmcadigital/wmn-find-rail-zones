@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
+// Import context
+import { AutoCompleteContext } from 'globalState';
+// Import components
 import Button from '../../Button/Button';
 import Result from '../../../RailZoneFinder/Result';
-import TrainAutoComplete from '../TrayComponents/TrainAutoComplete/TrainAutocomplete';
-import { AutoCompleteContext } from 'globalState';
+import TrainAutoComplete from './TrainAutoComplete/TrainAutocomplete';
 import s from './TrayComponents.module.scss';
+// Import custom hook
 import useMapControls from '../../../../customHooks/useMapControls';
 
 const TrayComponents = () => {

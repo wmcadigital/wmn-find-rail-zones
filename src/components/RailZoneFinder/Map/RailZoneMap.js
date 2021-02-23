@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { INITIAL_VALUE, ReactSVGPanZoom, TOOL_PAN } from 'react-svg-pan-zoom';
 import MapControls from './MapControls';
 import useMapMethods from './useMapMethods';
 import s from './Map.module.scss';
 
-const RailZoneMap = ({ parking, partial, full }) => {
+const RailZoneMap = () => {
   const { mapState, mapDispatch } = useMapMethods();
   const [tool, setTool] = useState(TOOL_PAN);
   const [value, setValue] = useState(INITIAL_VALUE);
@@ -5147,18 +5146,6 @@ const RailZoneMap = ({ parking, partial, full }) => {
       </ReactSVGPanZoom>
     </>
   );
-};
-
-RailZoneMap.propTypes = {
-  parking: PropTypes.bool,
-  full: PropTypes.bool,
-  partial: PropTypes.bool,
-};
-
-RailZoneMap.defaultProps = {
-  parking: true,
-  full: true,
-  partial: true,
 };
 
 export default RailZoneMap;

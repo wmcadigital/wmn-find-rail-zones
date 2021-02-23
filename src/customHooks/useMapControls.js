@@ -12,6 +12,7 @@ const useMapControls = () => {
   const zoomInCenter = () => mapRef.current.zoomOnViewerCenter(1.2);
   const zoomOutCenter = () => mapRef.current.zoomOnViewerCenter(0.9);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const zoomSelection = useCallback(
     debounce((coords) => {
       const { x, y, width, height } = coords;
@@ -22,7 +23,9 @@ const useMapControls = () => {
     [mapRef]
   );
 
+  // eslint-disable-next-line consistent-return
   useEffect(() => {
+    let mounted = true;
     if (mapRef?.current && mapState.mapView) {
       const fitZoneToViewer = (zone, offset) => {
         const svg = mapRef.current.ViewerDOM; // Find svg node
@@ -60,8 +63,6 @@ const useMapControls = () => {
       };
 
       const zones = mapState.highlightedZones;
-
-      let mounted = true;
 
       const zoneName =
         Object.keys(zones)

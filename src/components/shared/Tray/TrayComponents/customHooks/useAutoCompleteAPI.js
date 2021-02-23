@@ -1,7 +1,8 @@
 import { useEffect, useContext, useState, useRef, useCallback } from 'react';
-import railData from '../../../../RailZoneFinder/RailData.json';
 // Import contexts
 import { AutoCompleteContext, MapContext } from 'globalState';
+// Import json data
+import railData from '../../../../RailZoneFinder/RailData.json';
 
 const useAutoCompleteAPI = (queryId) => {
   // State variables
@@ -31,7 +32,7 @@ const useAutoCompleteAPI = (queryId) => {
         // Set data to add to context state
         payload = {
           id: result.crsCode,
-          queryId: queryId,
+          queryId,
           ...result,
         };
       }

@@ -11,23 +11,23 @@ const useMapMethods = () => {
 
   useEffect(() => {
     // Check if map and mapcontainer refs exist
-    if (mapRef?.current && mapContainer?.current) {
-      let mounted = true;
+    let mounted = true;
 
-      // Get map container dimensions and assign them to the svg map whidth/height
-      const updateWidthHeight = () => {
-        if (mounted) {
-          const containerSize = mapContainer.current.getBoundingClientRect();
-          // Add map size to context state
-          mapDispatch({
-            type: 'UPDATE_MAP_SIZE',
-            payload: {
-              width: containerSize.width,
-              height: containerSize.height,
-            },
-          });
-        }
-      };
+    // Get map container dimensions and assign them to the svg map whidth/height
+    const updateWidthHeight = () => {
+      if (mounted) {
+        const containerSize = mapContainer.current.getBoundingClientRect();
+        // Add map size to context state
+        mapDispatch({
+          type: 'UPDATE_MAP_SIZE',
+          payload: {
+            width: containerSize.width,
+            height: containerSize.height,
+          },
+        });
+      }
+    };
+    if (mapRef?.current && mapContainer?.current) {
       // Run map resize on initial render
       updateWidthHeight();
 
@@ -35,12 +35,12 @@ const useMapMethods = () => {
       window.addEventListener('resize', () => {
         updateWidthHeight();
       });
-      // Cleanup: remove eventListener
-      return () => {
-        mounted = false;
-        window.removeEventListener('resize', updateWidthHeight);
-      };
     }
+    // Cleanup: remove eventListener
+    return () => {
+      mounted = false;
+      window.removeEventListener('resize', updateWidthHeight);
+    };
   }, [mapRef, mapContainer, mapDispatch]);
 
   useLayoutEffect(() => {

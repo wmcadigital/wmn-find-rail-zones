@@ -22,6 +22,10 @@
   }
 }
 
+.accordionListItem {
+  display: flex;
+}
+
 // Hides screen reader only text
 .srOnly {
   position: absolute;

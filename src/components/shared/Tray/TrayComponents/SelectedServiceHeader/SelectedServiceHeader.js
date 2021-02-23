@@ -36,11 +36,7 @@ const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryI
 SelectedServiceHeader.propTypes = {
   autoCompleteState: PropTypes.objectOf(PropTypes.any).isRequired,
   autoCompleteDispatch: PropTypes.func.isRequired,
-  to: PropTypes.bool,
-};
-
-SelectedServiceHeader.defaultProps = {
-  to: false,
+  queryId: PropTypes.number.isRequired,
 };
 
 export default SelectedServiceHeader;

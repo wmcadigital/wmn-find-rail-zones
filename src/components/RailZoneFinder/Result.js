@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
+// Import contexts
+import { AutoCompleteContext } from 'globalState';
+// Import components
 import Icon from '../shared/Icon/Icon';
 import AccessIcon from '../shared/Icon/AccessIcon';
+// Import styles
 import s from './Result.module.scss';
-import { AutoCompleteContext } from 'globalState';
 
 const Result = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
 
-  //Get selected stations that have an id
+  // Get selected stations that have an id
   const stations = selectedStations.filter((item) => item.id !== null);
 
   // Get stations with full access from selected stations
@@ -23,19 +26,21 @@ const Result = () => {
   const parkingStations = stations.filter((item) => item.parking).map((item) => item.stationName);
   // Function to change arrays into readable sentence
   const arrayToSentence = (array) => {
+    let sentence;
     if (array.length > 2) {
-      return `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;
+      sentence = `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;
     } else if (array.length === 2) {
-      return `${array[0]} and ${array[1]}`;
+      sentence = `${array[0]} and ${array[1]}`;
     } else {
-      return array[0];
+      [sentence] = array;
     }
+    return sentence;
   };
 
   return (
     <div>
-      {stations.map(({ stationName, railZone }, i) => (
-        <p key={i}>
+      {stations.map(({ id, stationName, railZone }) => (
+        <p key={id}>
           {stationName} is{' '}
           {railZone ? (
             <>

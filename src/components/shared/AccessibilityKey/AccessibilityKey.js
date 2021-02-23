@@ -9,7 +9,7 @@ import Button from '../Button/Button';
 import s from './AccessibilityKey.module.scss';
 
 const AccessibilityKey = ({ mapView }) => {
-  const [showKey, setShowKey] = useState(mapView ? false : true);
+  const [showKey, setShowKey] = useState(!mapView);
 
   const Key = (
     <>

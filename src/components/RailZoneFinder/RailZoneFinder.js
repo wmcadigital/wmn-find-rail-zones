@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
+import { MapContext } from 'globalState';
 // Rail zone svg component
 import Button from '../shared/Button/Button';
-import MapView from '../RailZoneFinder/MapView/MapView';
-import ListView from '../RailZoneFinder/ListView/ListView';
+import MapView from './MapView/MapView';
+import ListView from './ListView/ListView';
 import s from './RailZoneFinder.module.scss';
-import { MapContext } from 'globalState';
 
 function RailZoneFinder() {
   const [mapState, mapDispatch] = useContext(MapContext);

@@ -23,8 +23,13 @@ const ListView = () => {
   const toggleAccordions = (open) => {
     const newState = accordions.map((accordion) => {
       // make sure all accordions do the right thing
-      open ? (accordion.open = true) : (accordion.open = false);
-      return accordion;
+      const accordionState = accordion;
+      if (open) {
+        accordionState.open = true;
+      } else {
+        accordionState.open = false;
+      }
+      return accordionState;
     });
     setAccordions([...newState]);
   };
@@ -102,21 +107,25 @@ const ListView = () => {
                 >
                   <ul>
                     {zoneStations.map((station) => (
-                      <li key={station.crsCode} style={{ display: 'flex' }}>
+                      <li key={station.crsCode} className={s.accordionListItem}>
                         {station.stationName}
-                        {station.stepFreeAccess === 'full' ? (
+                        {station.stepFreeAccess && (
                           <>
-                            {' '}
-                            <span className={s.srOnly}>which has full step free access</span>
-                            <AccessIcon className="wmnds-m-l-xsm" />
+                            {station.stepFreeAccess === 'full' ? (
+                              <>
+                                {' '}
+                                <span className={s.srOnly}>which has full step free access</span>
+                                <AccessIcon className="wmnds-m-l-xsm" />
+                              </>
+                            ) : (
+                              <>
+                                {' '}
+                                <span className={s.srOnly}>which has partial step free access</span>
+                                <AccessIcon type="part" className="wmnds-m-l-xsm" />
+                              </>
+                            )}
                           </>
-                        ) : station.stepFreeAccess === 'full' ? (
-                          <>
-                            {' '}
-                            <span className={s.srOnly}>which has partial step free access</span>
-                            <AccessIcon type="part" className="wmnds-m-l-xsm" />
-                          </>
-                        ) : null}
+                        )}
                         {station.parking && (
                           <>
                             <span className={s.srOnly}>

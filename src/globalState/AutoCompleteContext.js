@@ -45,7 +45,7 @@ export const AutoCompleteProvider = (props) => {
       case 'UPDATE_QUERY': {
         setSearchParam(`query${action.queryId}`, action.payload);
 
-        let newState = state.queries;
+        const newState = state.queries;
         newState[action.queryId] = action.payload;
 
         return {
@@ -59,7 +59,7 @@ export const AutoCompleteProvider = (props) => {
         const item = `selectedStation${queryId}`;
         setSearchParam(item, id); // Set URL
 
-        let newState = state.selectedStations;
+        const newState = state.selectedStations;
         newState[queryId] = action.payload;
 
         return {
@@ -89,7 +89,7 @@ export const AutoCompleteProvider = (props) => {
 
         // Update queries array in state
         let newQueries = state.queries;
-        let newSelectedStations = state.selectedStations;
+        const newSelectedStations = state.selectedStations;
 
         newQueries[queryId] = '';
         if (queryId + 1 === state.selectedStations.length && queryId > 1) {
@@ -100,7 +100,7 @@ export const AutoCompleteProvider = (props) => {
 
         // function to remove the last array value if it's empty (and not our initial 2 default values)
         const removeLastValues = (array) => {
-          let newArray = array;
+          const newArray = array;
           const lastItem = newArray[newArray.length - 1];
           const valueToRemove =
             typeof lastItem === 'object' ? lastItem.id === null : lastItem === '';
