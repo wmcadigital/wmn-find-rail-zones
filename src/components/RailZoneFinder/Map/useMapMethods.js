@@ -47,15 +47,14 @@ const useMapMethods = () => {
     // Function for hightlighting stations on the svg map
     const drawMapHighlights = (station) => {
       const svg = mapRef.current.ViewerDOM;
-
       // Find station element by name or id
       const group =
         svg.querySelector(`[data-name="${station.stationName}"]`) ||
         svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
-      // Find parking icon for that station if there is one
-      const parkingIcon = group.querySelector(`.parking-icon`);
 
       if (group && !group.querySelector(`.${s.textBg}`)) {
+        // Find parking icon for that station if there is one
+        const parkingIcon = group.querySelector(`.parking-icon`);
         // If the group element exists get its svg coordinates
         const gCoords = group.getBBox();
         // Create a new rectangle element
