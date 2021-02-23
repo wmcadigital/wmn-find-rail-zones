@@ -48,7 +48,7 @@ const ListView = () => {
               </p>
             </div>
             <div className="wmnds-col-1-1 wmnds-col-md-auto">
-              <div class="wmnds-hide-mobile">
+              <div className="wmnds-hide-mobile">
                 <Button
                   onClick={() => toggleAccordions(true)}
                   text="Open all"
@@ -66,7 +66,7 @@ const ListView = () => {
       </div>
       <div className={`wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-lg ${s.reverseXs}`}>
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
-          <div class="wmnds-hide-desktop wmnds-m-b-md">
+          <div className="wmnds-hide-desktop wmnds-m-b-md">
             <Button
               onClick={() => toggleAccordions(true)}
               text="Open all"
