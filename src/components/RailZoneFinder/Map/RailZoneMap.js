@@ -39,12 +39,19 @@ const RailZoneMap = ({ parking, partial, full }) => {
         background="#ffffff"
         onChangeValue={setValue}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 822.46 757.61"
-        >
+        <svg viewBox="0 0 822.46 757.61">
           <defs>
+            <style>
+              {
+                '.cls-1,.cls-11,.cls-12,.cls-14,.cls-15,.cls-31,.cls-32,.cls-33,.cls-35,.cls-36,.cls-43{fill:none}.cls-1,.cls-10,.cls-31,.cls-35,.cls-8,.cls-9{stroke:#fff}.cls-2{fill:#221e20}.cls-5,.cls-6{fill:#fff}.cls-5{stroke:#f4f2f1;stroke-width:8.81px}.cls-8{fill:#eeeaea}.cls-9{fill:#ded7d5}.cls-10{fill:#975ba0;stroke-miterlimit:10}.cls-11,.cls-12,.cls-14{stroke:#b75e00}.cls-11,.cls-12,.cls-32,.cls-35,.cls-36{stroke-width:4.2px}.cls-12{stroke-linecap:round}.cls-14,.cls-15{stroke-width:1.4px}.cls-15{stroke:#1e7bbf}.cls-31{stroke-width:3px}.cls-32,.cls-33{stroke:#eeeaea}.cls-33{stroke-width:7px}.cls-36{stroke:#ded7d5}.cls-41{fill:#b75e00}.cls-43{stroke:#221e20;stroke-width:.35px}.cls-44{fill:#1e7bbf}.cls-45{fill:#0080c8}.cls-46{fill:#221f20}'
+              }
+            </style>
+            <clipPath id="clip-path" transform="translate(0 38.73)">
+              <path
+                className="cls-1"
+                d="M317.4 27.83a31.73 31.73 0 00-22.4 9.28L154.23 177.86l27.88-26a56.68 56.68 0 0138.7-15.26h140.48a56.73 56.73 0 0140.09 16.6l19.17 19.17-24.06-24.05a68.36 68.36 0 01-20-48.34V42.37a14.55 14.55 0 00-14.55-14.54z"
+              />
+            </clipPath>
             <linearGradient
               id="linear-gradient"
               x1={20.99}
@@ -95,23 +102,6 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <linearGradient
               id="linear-gradient-6"
-              x1={720.15}
-              y1={723.03}
-              x2={733.86}
-              y2={730.94}
-              xlinkHref="#linear-gradient"
-            />
-            <linearGradient
-              id="linear-gradient-7"
-              x1={730.38}
-              y1={692.21}
-              x2={716.67}
-              y2={684.29}
-              gradientTransform="rotate(180 723.52 707.62)"
-              xlinkHref="#linear-gradient"
-            />
-            <linearGradient
-              id="linear-gradient-8"
               x1={5.68}
               y1={145.3}
               x2={5.68}
@@ -119,7 +109,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               xlinkHref="#linear-gradient"
             />
             <linearGradient
-              id="linear-gradient-9"
+              id="linear-gradient-7"
               x1={17.44}
               y1={116.37}
               x2={17.44}
@@ -127,7 +117,79 @@ const RailZoneMap = ({ parking, partial, full }) => {
               xlinkHref="#linear-gradient"
             />
             <linearGradient
+              id="linear-gradient-8"
+              x1={537.35}
+              y1={-149.92}
+              x2={522.16}
+              y2={-176.23}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-9"
+              x1={533.95}
+              y1={-149.92}
+              x2={518.76}
+              y2={-176.23}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
               id="linear-gradient-10"
+              x1={500.59}
+              y1={-149.94}
+              x2={485.4}
+              y2={-176.25}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-11"
+              x1={497.1}
+              y1={-149.92}
+              x2={481.92}
+              y2={-176.23}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-12"
+              x1={-200.39}
+              y1={-133.92}
+              x2={-215.57}
+              y2={-160.23}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-13"
+              x1={-64.15}
+              y1={-133.92}
+              x2={-79.34}
+              y2={-160.23}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-14"
+              x1={-60.75}
+              y1={-133.92}
+              x2={-75.94}
+              y2={-160.23}
+              gradientTransform="translate(234.01 887.55)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-15"
+              x1={-2.17}
+              y1={-144.45}
+              x2={-17.36}
+              y2={-170.75}
+              gradientTransform="rotate(-45 1190.703 9.205)"
+              xlinkHref="#linear-gradient-2"
+            />
+            <linearGradient
+              id="linear-gradient-16"
               x1={169.42}
               y1={54.92}
               x2={169.42}
@@ -135,7 +197,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               xlinkHref="#linear-gradient"
             />
             <linearGradient
-              id="linear-gradient-11"
+              id="linear-gradient-17"
               x1={132.01}
               y1={77.67}
               x2={132.01}
@@ -143,7 +205,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               xlinkHref="#linear-gradient"
             />
             <linearGradient
-              id="linear-gradient-12"
+              id="linear-gradient-18"
               x1={132.83}
               y1={45.19}
               x2={132.83}
@@ -151,24 +213,13 @@ const RailZoneMap = ({ parking, partial, full }) => {
               xlinkHref="#linear-gradient"
             />
             <linearGradient
-              id="linear-gradient-13"
+              id="linear-gradient-19"
               x1={125.4}
               y1={38.07}
               x2={125.4}
               y2={13.64}
               xlinkHref="#linear-gradient"
             />
-            <clipPath id="clip-path" transform="translate(0 38.73)">
-              <path
-                className="cls-1"
-                d="M317.4 27.83a31.73 31.73 0 00-22.4 9.28L154.23 177.86l27.88-26a56.68 56.68 0 0138.7-15.26h140.48a56.73 56.73 0 0140.09 16.6l19.17 19.17-24.06-24.05a68.36 68.36 0 01-20-48.34V42.37a14.55 14.55 0 00-14.55-14.54z"
-              />
-            </clipPath>
-            <style>
-              {
-                '.cls-1,.cls-11,.cls-12,.cls-14,.cls-15,.cls-25,.cls-26,.cls-27,.cls-29,.cls-30,.cls-37{fill:none}.cls-1,.cls-10,.cls-25,.cls-29,.cls-8,.cls-9{stroke:#fff}.cls-2{fill:#221e20}.cls-5,.cls-6{fill:#fff}.cls-5{stroke:#f4f2f1;stroke-width:8.81px}.cls-8{fill:#eeeaea}.cls-9{fill:#ded7d5}.cls-10{fill:#975ba0;stroke-miterlimit:10}.cls-11,.cls-12,.cls-14{stroke:#b75e00}.cls-11,.cls-12,.cls-26,.cls-29,.cls-30{stroke-width:4.2px}.cls-12{stroke-linecap:round}.cls-14,.cls-15{stroke-width:1.4px}.cls-15{stroke:#1e7bbf}.cls-25{stroke-width:3px}.cls-26,.cls-27{stroke:#eeeaea}.cls-27{stroke-width:7px}.cls-30{stroke:#ded7d5}.cls-35{fill:#b75e00}.cls-37{stroke:#221e20;stroke-width:.35px}.cls-38{fill:#1e7bbf}.cls-39{fill:#0080c8}.cls-40{fill:#221f20}'
-              }
-            </style>
           </defs>
           <g id="Out_of_County" data-name="Out of County">
             <path
@@ -177,18 +228,25 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
           </g>
-          <g id="Zone_6" data-name="Zone 6" className={zone6 ? s.zoneSelected : ''}>
+          <g id="Zone_6" data-name="WMN nTrain Zone 5" className={zone6 ? s.zoneSelected : ''}>
             <path
               d="M317.4 66.56a31.73 31.73 0 00-22.4 9.28L154.23 216.59h0l27.88-26a56.68 56.68 0 0138.7-15.26h140.48a56.73 56.73 0 0140.09 16.6l19.17 19.17-24.06-24.05a68.36 68.36 0 01-20-48.34V81.1a14.55 14.55 0 00-14.55-14.54z"
               fill="#e9e4e3"
-              strokeWidth={0.63}
+              strokeWidth=".63px"
               stroke="#fff"
             />
             <g clipPath="url(#clip-path)">
-              <path
-                className="cls-5"
-                d="M177.39 137.48l141.74 141.74M190.82 124.04l141.75 141.74M204.26 110.61L346 252.35M217.7 97.17l141.74 141.74M244.57 70.3l141.74 141.74M231.13 83.73l141.75 141.75M258.01 56.86L399.75 198.6M284.88 29.99l141.74 141.74M298.31 16.55l141.75 141.74M311.75 3.12l141.74 141.74M271.44 43.42l141.74 141.75"
-              />
+              <path className="cls-5" d="M177.39 137.48L319.13 279.22" />
+              <path className="cls-5" d="M190.82 124.04L332.57 265.78" />
+              <path className="cls-5" d="M204.26 110.61L346 252.35" />
+              <path className="cls-5" d="M217.7 97.17L359.44 238.91" />
+              <path className="cls-5" d="M244.57 70.3L386.31 212.04" />
+              <path className="cls-5" d="M231.13 83.73L372.88 225.48" />
+              <path className="cls-5" d="M258.01 56.86L399.75 198.6" />
+              <path className="cls-5" d="M284.88 29.99L426.62 171.73" />
+              <path className="cls-5" d="M298.31 16.55L440.06 158.29" />
+              <path className="cls-5" d="M311.75 3.12L453.49 144.86" />
+              <path className="cls-5" d="M271.44 43.42L413.18 185.17" />
             </g>
             <path
               className="cls-1"
@@ -200,7 +258,10 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M249.85 101.62l-2.36 10h-2.63l-1.11-5.25c0-.1-.05-.26-.08-.46s-.08-.43-.12-.67-.08-.48-.11-.69-.06-.39-.08-.52c0 .13-.05.31-.08.52s-.07.44-.11.68-.08.46-.12.67-.07.37-.1.48l-1.1 5.24h-2.64l-2.36-10h2.21l1.11 5.46c0 .22.08.49.15.82s.13.65.18 1 .1.6.13.82c0-.23.08-.51.15-.84s.11-.64.17-1 .1-.55.14-.71l1.22-5.58h2.1l1.19 5.6c0 .17.08.41.15.72l.18.94c.06.32.1.6.13.82 0-.23.07-.51.13-.83s.11-.64.18-1 .12-.59.17-.82l1.1-5.46zM255 111.62l-2.09-7.84h-.05v.84c0 .37 0 .77.06 1.2s0 .82 0 1.15v4.65h-2v-10H254l2.09 7.65 2.14-7.65h3.05v10h-2.1v-4.73-1.09-1.17-.84h-.06l-2.15 7.83zM272 111.62h-2.92l-3.77-7.56h-.06c0 .48.05 1 .07 1.43s.05 1 .06 1.43v4.7h-2v-10h2.92l3.75 7.49c0-.45 0-.91-.05-1.37s0-.92 0-1.38v-4.74h2zM253 128.42h-2.27v-8.23h-2.42v-1.77h7.11v1.77H253zM260 120.64h.39a2.11 2.11 0 01.33 0l-.19 2a2.58 2.58 0 00-.71-.07 1.92 1.92 0 00-.82.19 1.74 1.74 0 00-.69.61 2.1 2.1 0 00-.27 1.15v3.89h-2.24v-7.64h1.68l.34 1.28h.18a3 3 0 01.85-1 2 2 0 011.15-.41zM264.75 120.62a3.24 3.24 0 012.19.67 2.52 2.52 0 01.78 2v5.1h-1.56l-.43-1h-.06a3.12 3.12 0 01-1 .9 2.93 2.93 0 01-1.42.28 2.26 2.26 0 01-1.58-.59 2.39 2.39 0 01-.63-1.83 2.09 2.09 0 01.8-1.8 4.33 4.33 0 012.38-.64h1.23v-.34a1.24 1.24 0 00-.27-.88 1 1 0 00-.73-.28 3.59 3.59 0 00-1 .16 9.47 9.47 0 00-1 .4l-.68-1.41a6.2 6.2 0 011.36-.5 6.43 6.43 0 011.62-.24zm.74 4.26h-.67a1.64 1.64 0 00-1.15.36 1.24 1.24 0 00-.32.88.88.88 0 00.23.68.86.86 0 00.61.2 1.24 1.24 0 00.92-.4 1.57 1.57 0 00.38-1.12zM270.57 117.78a1.5 1.5 0 01.84.22.85.85 0 01.35.8.87.87 0 01-.35.8 1.5 1.5 0 01-.84.22 1.54 1.54 0 01-.85-.22.89.89 0 01-.35-.8.87.87 0 01.35-.8 1.54 1.54 0 01.85-.22zm1.11 3v7.64h-2.24v-7.64zM277.76 120.64a2.6 2.6 0 011.85.66 2.83 2.83 0 01.71 2.14v5h-2.24V124a2.42 2.42 0 00-.25-1.24.83.83 0 00-.77-.41 1.08 1.08 0 00-1.1.65 5.07 5.07 0 00-.28 1.87v3.6h-2.24v-7.64h1.7l.31 1h.09a2.08 2.08 0 01.93-.86 3 3 0 011.29-.33z"
               transform="translate(0 38.73)"
             />
-            <path className="cls-6" d="M245.29 166.93h-6.26l-2-4.64 2-4.64h6.26l2 4.64-2 4.64z" />
+            <path
+              className="cls-6"
+              d="M245.29 166.93L239.03 166.93 237.03 162.29 239.03 157.65 245.29 157.65 247.29 162.29 245.29 166.93z"
+            />
             <path
               d="M245.07 119.21a.3.3 0 01.28.19l1.42 3.81a1 1 0 010 .74l-1.41 3.76a.28.28 0 01-.28.19h-5.66a.28.28 0 01-.28-.19l-1.41-3.71a1 1 0 010-.74l1.43-3.81a.28.28 0 01.28-.19h5.63m0-.72h-5.63a1 1 0 00-.95.66l-1.43 3.8a1.76 1.76 0 000 1.24l1.41 3.76a1 1 0 00.95.66h5.66a1 1 0 00.92-.66l1.41-3.76a1.76 1.76 0 000-1.24l-1.41-3.85a1 1 0 00-.93-.66zm-3.88 7.68h-1.55V121h1.5v.71a1.89 1.89 0 011.65-.86 2 2 0 012.07 2.26v3.07h-1.55v-2.8a1 1 0 00-1.05-1.14 1.07 1.07 0 00-1.07 1.19z"
               transform="translate(0 38.73)"
@@ -279,86 +340,95 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M594.72 596.69V550.3a26.72 26.72 0 00-7.81-18.87l-6.65-6.64"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-11"
-              d="M594.72 660.49v-25.06M594.72 702.97v-42.48M594.72 722.84v-19.87"
-            />
+            <path className="cls-11" d="M594.72 660.49L594.72 635.43" />
+            <path className="cls-11" d="M594.72 702.97L594.72 660.49" />
+            <path className="cls-11" d="M594.72 722.84L594.72 702.97" />
             <path
               className="cls-11"
               d="M357.75 87.41v-13.9a14.17 14.17 0 00-14.17-14.17h-17.94"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-11"
-              d="M357.75 140.31v-14.17M357.75 154.49v-14.18M357.75 168.66v-14.17M357.75 182.83v-14.17M357.75 197.01v-14.18M357.75 211.21v-14.2M357.75 225.35v-14.14M357.75 239.53v-14.18M357.75 253.7v-14.17M357.75 340.5v-86.8"
-            />
+            <path className="cls-11" d="M357.75 140.31L357.75 126.14" />
+            <path className="cls-11" d="M357.75 154.49L357.75 140.31" />
+            <path className="cls-11" d="M357.75 168.66L357.75 154.49" />
+            <path className="cls-11" d="M357.75 182.83L357.75 168.66" />
+            <path className="cls-11" d="M357.75 197.01L357.75 182.83" />
+            <path className="cls-11" d="M357.75 211.21L357.75 197.01" />
+            <path className="cls-11" d="M357.75 225.35L357.75 211.21" />
+            <path className="cls-11" d="M357.75 239.53L357.75 225.35" />
+            <path className="cls-11" d="M357.75 253.7L357.75 239.53" />
+            <path className="cls-11" d="M357.75 340.5L357.75 253.7" />
             <path
               className="cls-11"
               d="M379.72 352.68h-13.46a8.51 8.51 0 01-8.51-8.5v-29.27M445.23 335.4L416.67 364a17.8 17.8 0 01-12.59 5.21h-24.26"
               transform="translate(0 38.73)"
             />
-            <path className="cls-11" d="M453.78 365.59l-8.55 8.54" />
+            <path className="cls-11" d="M453.78 365.59L445.23 374.13" />
             <path
               className="cls-11"
               d="M436.74 298.18l17.46 17.46a7.63 7.63 0 010 10.79l-.42.42"
               transform="translate(0 38.73)"
             />
-            <path className="cls-12" d="M412.93 313.1l23.81 23.81" />
+            <path className="cls-12" d="M412.93 313.1L436.74 336.91" />
             <path
               className="cls-11"
               d="M363.9 215v1a22.44 22.44 0 006.57 15.87l42.46 42.46"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-11"
-              d="M363.9 239.53v14.17M363.9 225.35v14.18M363.9 211.02v14.33"
-            />
+            <path className="cls-11" d="M363.9 239.53L363.9 253.7" />
+            <path className="cls-11" d="M363.9 225.35L363.9 239.53" />
+            <path className="cls-11" d="M363.9 211.02L363.9 225.35" />
             <path
               className="cls-11"
               d="M504 378.37l-5-5a14.15 14.15 0 00-10-4.16H379.82"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-11"
-              d="M526.2 439.35l-3.33-3.34-18.91-18.9M536.05 449.2l-9.85-9.85M551.17 464.31l-15.12-15.11M573.08 486.22l-21.91-21.91M589.66 502.81l-16.58-16.59M604.32 517.46l-14.66-14.65"
-            />
+            <path className="cls-11" d="M526.2 439.35L522.87 436.01 503.96 417.11" />
+            <path className="cls-11" d="M536.05 449.2L526.2 439.35" />
+            <path className="cls-11" d="M551.17 464.31L536.05 449.2" />
+            <path className="cls-11" d="M573.08 486.22L551.17 464.31" />
+            <path className="cls-11" d="M589.66 502.81L573.08 486.22" />
+            <path className="cls-11" d="M604.32 517.46L589.66 502.81" />
             <path
               className="cls-11"
               d="M626.37 487.12h-3a25.66 25.66 0 01-18.25-7.56l-.83-.83"
               transform="translate(0 38.73)"
             />
-            <path className="cls-11" d="M647.21 525.85h-20.84M677.5 525.85h-30.29" />
-            <path className="cls-12" d="M212.12 562.2l25.05 25.05" />
+            <path className="cls-11" d="M647.21 525.85L626.37 525.85" />
+            <path className="cls-11" d="M677.5 525.85L647.21 525.85" />
+            <path className="cls-12" d="M212.12 562.2L237.17 587.25" />
             <path
               className="cls-12"
               d="M197.09 488.38a14.17 14.17 0 000 20.05l15 15"
               transform="translate(0 38.73)"
             />
-            <path className="cls-12" d="M217.41 506.79l-20.32 20.33" />
+            <path className="cls-12" d="M217.41 506.79L197.09 527.12" />
             <path
               className="cls-11"
               d="M131.11 554.36l-7.67 7.64a22.67 22.67 0 000 32.07l4.09 4.1M127.53 598.2l-4.09-4.1a22.69 22.69 0 00-32.07 0l-4.76 4.76"
               transform="translate(0 38.73)"
             />
-            <path className="cls-12" d="M594.72 722.84v20.73" />
+            <path className="cls-12" d="M594.72 722.84L594.72 743.57" />
             <path
               className="cls-12"
               d="M564.85 620.19l22.4 22.4a25.51 25.51 0 017.47 18v3.61"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-12"
-              d="M548.98 643.05l15.87 15.88M531.38 625.45l17.6 17.6M516.34 610.42l15.04 15.03M501.31 595.38l15.03 15.04"
-            />
+            <path className="cls-12" d="M548.98 643.05L564.85 658.93" />
+            <path className="cls-12" d="M531.38 625.45L548.98 643.05" />
+            <path className="cls-12" d="M516.34 610.42L531.38 625.45" />
+            <path className="cls-12" d="M501.31 595.38L516.34 610.42" />
             <path
               className="cls-12"
               d="M478 524a22.68 22.68 0 006.64 16l16.64 16.64"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-12"
-              d="M478.03 549.33v13.38M478.03 532.99v16.34M478.03 518.82v14.17M478.03 504.64v14.18M478.03 490.47v14.17M478.03 476.3v14.17"
-            />
+            <path className="cls-12" d="M478.03 549.33L478.03 562.71" />
+            <path className="cls-12" d="M478.03 532.99L478.03 549.33" />
+            <path className="cls-12" d="M478.03 518.82L478.03 532.99" />
+            <path className="cls-12" d="M478.03 504.64L478.03 518.82" />
+            <path className="cls-12" d="M478.03 490.47L478.03 504.64" />
+            <path className="cls-12" d="M478.03 476.3L478.03 490.47" />
             <path
               className="cls-12"
               d="M472.37 417.14a27.64 27.64 0 015.63 16.75v3.67M462.44 406.78l7.63 7.72a28.79 28.79 0 012.3 2.64M145.22 447.66l-6.81-6.81a11.33 11.33 0 00-8-3.32h-14.34"
@@ -369,91 +439,125 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M693.81 510.21v11.43a6.5 6.5 0 006.49 6.5h4.08M677.5 470.63h5.79a10.52 10.52 0 0110.52 10.51v29.07"
               transform="translate(0 38.73)"
             />
-            <path className="cls-12" d="M78.19 646.01l-11.02 11.02M86.61 637.6l-8.42 8.41" />
+            <path className="cls-12" d="M78.19 646.01L67.17 657.03" />
+            <path className="cls-12" d="M86.61 637.6L78.19 646.01" />
             <path className="cls-11" d="M130.13 594.07L86.61 637.6" />
             <path
               className="cls-12"
               d="M111.83 518.21l19.89 19.89a11.07 11.07 0 010 15.65l-1.59 1.59M105.13 487.74l-3.87 3.87a11.36 11.36 0 000 16l10.57 10.56"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-12"
-              d="M115.15 516.46l-10.02 10.02M125.18 506.43l-10.03 10.03M145.22 486.39l-20.04 20.04M157.76 473.85l-12.54 12.54M170.28 461.33l-12.52 12.52M190.43 441.18l-20.15 20.15M213.35 418.26l-22.92 22.92M226.5 405.11l-13.15 13.15M252.26 379.35l-25.76 25.76"
-            />
+            <path className="cls-12" d="M115.15 516.46L105.13 526.48" />
+            <path className="cls-12" d="M125.18 506.43L115.15 516.46" />
+            <path className="cls-12" d="M145.22 486.39L125.18 506.43" />
+            <path className="cls-12" d="M157.76 473.85L145.22 486.39" />
+            <path className="cls-12" d="M170.28 461.33L157.76 473.85" />
+            <path className="cls-12" d="M190.43 441.18L170.28 461.33" />
+            <path className="cls-12" d="M213.35 418.26L190.43 441.18" />
+            <path className="cls-12" d="M226.5 405.11L213.35 418.26" />
+            <path className="cls-12" d="M252.26 379.35L226.5 405.11" />
             <path
               className="cls-12"
               d="M311.65 311.46l-20.78-.06a22.72 22.72 0 00-16 6.64l-22.57 22.57M374.18 318.27a22.69 22.69 0 00-15.88-6.66l-46.65-.15"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-12"
-              d="M399.57 382.44L374.18 357M440.17 423.13l-40.6-40.69M451.79 434.78l-11.62-11.65M462.6 445.61l-10.81-10.83M472.61 455.64l-10.01-10.03M506.24 489.34l-33.63-33.7M527.2 510.35l-20.96-21.01M538.06 521.23l-10.86-10.88M549.48 532.68l-11.42-11.45M563.38 546.61l-13.9-13.93M580.26 563.52l-16.88-16.91"
-            />
+            <path className="cls-12" d="M399.57 382.44L374.18 357" />
+            <path className="cls-12" d="M440.17 423.13L399.57 382.44" />
+            <path className="cls-12" d="M451.79 434.78L440.17 423.13" />
+            <path className="cls-12" d="M462.6 445.61L451.79 434.78" />
+            <path className="cls-12" d="M472.61 455.64L462.6 445.61" />
+            <path className="cls-12" d="M506.24 489.34L472.61 455.64" />
+            <path className="cls-12" d="M527.2 510.35L506.24 489.34" />
+            <path className="cls-12" d="M538.06 521.23L527.2 510.35" />
+            <path className="cls-12" d="M549.48 532.68L538.06 521.23" />
+            <path className="cls-12" d="M563.38 546.61L549.48 532.68" />
+            <path className="cls-12" d="M580.26 563.52L563.38 546.61" />
             <path
               className="cls-11"
               d="M62.13 614.65l-23.7 23.71a14.14 14.14 0 00-4.15 10v9.93"
               transform="translate(0 38.73)"
             />
             <path
-              strokeWidth={4.2}
+              strokeWidth="4.2px"
               stroke="url(#linear-gradient)"
               fill="none"
               d="M37.01 164.1L4.96 132.04"
             />
-            <path
-              className="cls-11"
-              d="M47.89 174.97L37.01 164.1M62.92 190l-15.03-15.03M73.8 200.88L62.92 190M83.83 210.91L73.8 200.88M93.85 220.93l-10.02-10.02M103.87 230.95l-10.02-10.02M113.89 240.97l-10.02-10.02M136.72 263.8l-22.83-22.83M171.73 298.81l-35.01-35.01M186.76 313.84l-15.03-15.03M206.45 333.53l-19.69-19.69M220.28 347.36l-13.83-13.83"
-            />
-            <path className="cls-12" d="M252.26 379.35l-31.98-31.99" />
-            <path className="cls-11" d="M273.26 400.35l-21-21" />
+            <path className="cls-11" d="M47.89 174.97L37.01 164.1" />
+            <path className="cls-11" d="M62.92 190L47.89 174.97" />
+            <path className="cls-11" d="M73.8 200.88L62.92 190" />
+            <path className="cls-11" d="M83.83 210.91L73.8 200.88" />
+            <path className="cls-11" d="M93.85 220.93L83.83 210.91" />
+            <path className="cls-11" d="M103.87 230.95L93.85 220.93" />
+            <path className="cls-11" d="M113.89 240.97L103.87 230.95" />
+            <path className="cls-11" d="M136.72 263.8L113.89 240.97" />
+            <path className="cls-11" d="M171.73 298.81L136.72 263.8" />
+            <path className="cls-11" d="M186.76 313.84L171.73 298.81" />
+            <path className="cls-11" d="M206.45 333.53L186.76 313.84" />
+            <path className="cls-11" d="M220.28 347.36L206.45 333.53" />
+            <path className="cls-12" d="M252.26 379.35L220.28 347.36" />
+            <path className="cls-11" d="M273.26 400.35L252.26 379.35" />
             <path
               className="cls-11"
               d="M379.82 369.17h-88.3a25.64 25.64 0 01-18.26-7.56M40.38 636.4l-2 2a14.14 14.14 0 00-4.15 10v9.93"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-11"
-              d="M50.65 664.86l-10.27 10.28M62.83 652.69l-12.18 12.17M73.85 641.67l-11.02 11.02M82.26 633.25l-8.41 8.42M125.85 589.67l-43.59 43.58M175.91 539.61l-31.25 31.25-18.81 18.81M192.74 522.77l-16.83 16.84M272.94 442.58l-80.2 80.19"
-            />
+            <path className="cls-11" d="M50.65 664.86L40.38 675.14" />
+            <path className="cls-11" d="M62.83 652.69L50.65 664.86" />
+            <path className="cls-11" d="M73.85 641.67L62.83 652.69" />
+            <path className="cls-11" d="M82.26 633.25L73.85 641.67" />
+            <path className="cls-11" d="M125.85 589.67L82.26 633.25" />
+            <path className="cls-11" d="M175.91 539.61L144.66 570.86 125.85 589.67" />
+            <path className="cls-11" d="M192.74 522.77L175.91 539.61" />
+            <path className="cls-11" d="M272.94 442.58L192.74 522.77" />
             <path
               className="cls-11"
               d="M379.72 378.86h-73.39a20.22 20.22 0 00-14.33 5.95l-19 19M479.59 166.94v-4.51a14.14 14.14 0 00-4.15-10l-7.81-7.82"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-12"
-              d="M479.59 227.08v-21.4M479.59 248.2v-21.12M479.59 262.37V248.2M479.59 276.55v-14.18M479.59 290.72v-14.17M479.59 304.89v-14.17M479.59 319.06v-14.17M479.59 333.24v-14.18"
-            />
+            <path className="cls-12" d="M479.59 227.08L479.59 205.68" />
+            <path className="cls-12" d="M479.59 248.2L479.59 227.08" />
+            <path className="cls-12" d="M479.59 262.37L479.59 248.2" />
+            <path className="cls-12" d="M479.59 276.55L479.59 262.37" />
+            <path className="cls-12" d="M479.59 290.72L479.59 276.55" />
+            <path className="cls-12" d="M479.59 304.89L479.59 290.72" />
+            <path className="cls-12" d="M479.59 319.06L479.59 304.89" />
+            <path className="cls-12" d="M479.59 333.24L479.59 319.06" />
             <path
               className="cls-12"
               d="M472.38 316.94l.57-.57a22.68 22.68 0 006.64-16v-5.87"
               transform="translate(0 38.73)"
             />
-            <path className="cls-12" d="M458.12 369.93l14.26-14.26M449.58 378.48l8.54-8.55" />
+            <path className="cls-12" d="M458.12 369.93L472.38 355.67" />
+            <path className="cls-12" d="M449.58 378.48L458.12 369.93" />
             <path
               className="cls-12"
               d="M379.35 385h16.74a19.81 19.81 0 0014-5.82l39.46-39.45M292.29 393.17l4-4a14.18 14.18 0 0110-4.15h73"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-12"
-              d="M277.28 446.92l15.01-15.01M267.24 456.96l10.04-10.04M252.21 472l15.03-15.04M242.18 482.02L252.21 472M222.14 502.06l20.04-20.04M212.12 512.09l10.02-10.03M197.09 527.12l15.03-15.03M180.25 543.95l16.84-16.83"
-            />
+            <path className="cls-12" d="M277.28 446.92L292.29 431.91" />
+            <path className="cls-12" d="M267.24 456.96L277.28 446.92" />
+            <path className="cls-12" d="M252.21 472L267.24 456.96" />
+            <path className="cls-12" d="M242.18 482.02L252.21 472" />
+            <path className="cls-12" d="M222.14 502.06L242.18 482.02" />
+            <path className="cls-12" d="M212.12 512.09L222.14 502.06" />
+            <path className="cls-12" d="M197.09 527.12L212.12 512.09" />
+            <path className="cls-12" d="M180.25 543.95L197.09 527.12" />
             <path
               className="cls-11"
               d="M613.74 541.23h-4a31.13 31.13 0 01-22.23-9.23l-7.24-7.26"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-11"
-              d="M640.28 579.96h-26.54M671.06 579.96h-30.78M704.49 579.96h-33.43"
-            />
+            <path className="cls-11" d="M640.28 579.96L613.74 579.96" />
+            <path className="cls-11" d="M671.06 579.96L640.28 579.96" />
+            <path className="cls-11" d="M704.49 579.96L671.06 579.96" />
             <path
               className="cls-11"
               d="M669 437.64v25.9a7.09 7.09 0 007.08 7.09h1.42"
               transform="translate(0 38.73)"
             />
-            <path className="cls-11" d="M669 432.49v43.88M669 414.25v18.24" />
+            <path className="cls-11" d="M669 432.49L669 476.37" />
+            <path className="cls-11" d="M669 414.25L669 432.49" />
             <path
               className="cls-11"
               d="M661.33 338.29L664 341a17 17 0 015 12v22.51"
@@ -461,19 +565,23 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <path
               className="cls-14"
-              d="M704.42 530.38h8.18c6.26 0 11.34 5.08 11.34 3.34l-.42 139.91"
+              d="M704.42 530.38h8.18c6.26 0 11.34 4.9 11.34 3.22l-.42 135"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M671.06 575.12h33.36" />
+            <path className="cls-14" d="M671.06 575.12L704.42 575.12" />
             <path
               className="cls-14"
               d="M566.79 504.47l24.15 24.15a26.34 26.34 0 0018.75 7.76h4"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M552.87 529.29l13.92 13.91M541.44 517.85l11.43 11.44M530.57 506.98l10.87 10.87M509.59 486l20.98 20.98M475.91 452.33L509.59 486M443.45 419.86l32.46 32.47M402.8 379.22l40.65 40.64M377.61 353.58l13.16 13.6 12.03 12.04"
-            />
+            <path className="cls-14" d="M552.87 529.29L566.79 543.2" />
+            <path className="cls-14" d="M541.44 517.85L552.87 529.29" />
+            <path className="cls-14" d="M530.57 506.98L541.44 517.85" />
+            <path className="cls-14" d="M509.59 486L530.57 506.98" />
+            <path className="cls-14" d="M475.91 452.33L509.59 486" />
+            <path className="cls-14" d="M443.45 419.86L475.91 452.33" />
+            <path className="cls-14" d="M402.8 379.22L443.45 419.86" />
+            <path className="cls-14" d="M377.61 353.58L390.77 367.18 402.8 379.22" />
             <path
               className="cls-15"
               d="M311.65 306.65l46.67.12a27.32 27.32 0 0119.29 8.08"
@@ -484,81 +592,86 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M256 330l15.39-15.38a27.35 27.35 0 0119.46-8.07l20.78.1"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M209.92 414.84l41.32-41.32M101.71 523.05l108.21-108.21M640.28 575.12h30.78"
-            />
-            <path className="cls-15" d="M613.74 575.12h26.54" />
+            <path className="cls-14" d="M209.92 414.84L251.24 373.52" />
+            <path className="cls-14" d="M101.71 523.05L209.92 414.84" />
+            <path className="cls-14" d="M640.28 575.12L671.06 575.12" />
+            <path className="cls-15" d="M613.74 575.12L640.28 575.12" />
             <path
               className="cls-15"
               d="M599.57 596.69v-46.13a14.17 14.17 0 0114.17-14.18"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-15"
-              d="M599.57 660.49v-25.06M599.57 702.97v-42.48M599.57 722.84v-19.87M599.57 743.52v-20.68"
-            />
-            <path className="cls-14" d="M507.39 413.68l22.24 22.24" />
+            <path className="cls-15" d="M599.57 660.49L599.57 635.43" />
+            <path className="cls-15" d="M599.57 702.97L599.57 660.49" />
+            <path className="cls-15" d="M599.57 722.84L599.57 702.97" />
+            <path className="cls-15" d="M599.57 743.52L599.57 722.84" />
+            <path className="cls-14" d="M507.39 413.68L529.63 435.92" />
             <path
               className="cls-14"
               d="M379.52 364.33h109.37a18.9 18.9 0 0113.45 5.57l5.05 5.05"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M539.48 445.77l-9.85-9.85M554.59 460.88l-15.11-15.11M576.5 482.79l-21.91-21.91M593.09 499.38l-16.59-16.59M607.75 514.04l-14.66-14.66"
-            />
+            <path className="cls-14" d="M539.48 445.77L529.63 435.92" />
+            <path className="cls-14" d="M554.59 460.88L539.48 445.77" />
+            <path className="cls-14" d="M576.5 482.79L554.59 460.88" />
+            <path className="cls-14" d="M593.09 499.38L576.5 482.79" />
+            <path className="cls-14" d="M607.75 514.04L593.09 499.38" />
             <path
               className="cls-14"
               d="M626.37 482.27h-3a20.84 20.84 0 01-14.83-6.14l-.82-.83"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M647.21 521.01h-20.84M677.5 521.01h-30.29M718.89 521.01H677.5"
-            />
+            <path className="cls-14" d="M647.21 521.01L626.37 521.01" />
+            <path className="cls-14" d="M677.5 521.01L647.21 521.01" />
+            <path className="cls-14" d="M718.89 521.01L677.5 521.01" />
             <path
               className="cls-14"
               d="M757 498.14V508a14.19 14.19 0 004.15 10l15.48 15.48M714 482.27h28.83A14.17 14.17 0 01757 496.45v1.69M777.06 560l-5 5a28.3 28.3 0 00-8.3 20v54.89M776.59 533.5l6.35 6.35a10.08 10.08 0 010 14.26l-5.88 5.89"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M763.35 559l13.24 13.23" />
+            <path className="cls-14" d="M763.35 559L776.59 572.23" />
             <path
               className="cls-14"
               d="M352.91 87.41v-13.9a9.33 9.33 0 00-9.33-9.32h-17.94"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M352.91 140.31v-14.17M352.91 154.49v-14.18M352.91 168.66v-14.17M352.91 182.83v-14.17M352.91 197.01v-14.18M352.91 211.21v-14.2M352.91 225.35v-14.14M352.91 239.53v-14.18M352.91 340.5V239.53"
-            />
+            <path className="cls-14" d="M352.91 140.31L352.91 126.14" />
+            <path className="cls-14" d="M352.91 154.49L352.91 140.31" />
+            <path className="cls-14" d="M352.91 168.66L352.91 154.49" />
+            <path className="cls-14" d="M352.91 182.83L352.91 168.66" />
+            <path className="cls-14" d="M352.91 197.01L352.91 182.83" />
+            <path className="cls-14" d="M352.91 211.21L352.91 197.01" />
+            <path className="cls-14" d="M352.91 225.35L352.91 211.21" />
+            <path className="cls-14" d="M352.91 239.53L352.91 225.35" />
+            <path className="cls-14" d="M352.91 340.5L352.91 239.53" />
             <path
               className="cls-14"
               d="M379.52 364.33h-11.78a14.83 14.83 0 01-14.83-14.83v-34.59"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M131.18 143.06V78.51" />
+            <path className="cls-14" d="M131.18 143.06L131.18 78.51" />
             <path
               className="cls-14"
               d="M140.14 221.64l-2.82-2.82a21 21 0 01-6.14-14.82v-99.67"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M175.15 295.38l-35.01-35.01M255.69 375.92l-80.54-80.54" />
+            <path className="cls-14" d="M175.15 295.38L140.14 260.37" />
+            <path className="cls-14" d="M255.69 375.92L175.15 295.38" />
             <path
               className="cls-14"
               d="M379.52 364.33h-88a20.84 20.84 0 01-14.83-6.14l-21-21"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M763.77 507.87v204.5" />
+            <path className="cls-14" d="M763.77 507.87L763.77 707.34" />
             <path
               className="cls-14"
               d="M667.16 332.46l89 89a26 26 0 017.64 18.44v58.27"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M638.53 342.57l28.63 28.63M618.62 322.66l19.91 19.91M595.8 299.84l22.82 22.82M473.77 177.8L595.8 299.84"
-            />
+            <path className="cls-14" d="M638.53 342.57L667.16 371.2" />
+            <path className="cls-14" d="M618.62 322.66L638.53 342.57" />
+            <path className="cls-14" d="M595.8 299.84L618.62 322.66" />
+            <path className="cls-14" d="M473.77 177.8L595.8 299.84" />
             <path
               className="cls-14"
               d="M325.64 50.81h46.72a31.58 31.58 0 0122.45 9.3l9.19 9.15 69.81 69.81M141.38 39.77V45a5.86 5.86 0 005.87 5.86h178.39"
@@ -566,37 +679,37 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <path
               stroke="url(#linear-gradient-2)"
-              strokeWidth={1.4}
+              strokeWidth="1.4px"
               strokeMiterlimit={10}
               fill="none"
-              d="M686.1 352.26l-21.35 21.34"
+              d="M686.1 352.26L664.75 373.6"
             />
             <path
               className="cls-14"
               d="M606.31 357.53h26A23.64 23.64 0 00649 350.6l15.73-15.73"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M568.28 396.26h38.03" />
+            <path className="cls-14" d="M568.28 396.26L606.31 396.26" />
             <path
               stroke="url(#linear-gradient-3)"
-              strokeWidth={1.4}
+              strokeWidth="1.4px"
               strokeMiterlimit={10}
               fill="none"
-              d="M595.8 268.11v34.26"
+              d="M595.8 268.11L595.8 302.37"
             />
-            <path className="cls-14" d="M595.8 347.04v-44.67" />
+            <path className="cls-14" d="M595.8 347.04L595.8 302.37" />
             <path
               className="cls-14"
               d="M568.28 357.53h13.35a14.17 14.17 0 0014.17-14.18v-35"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M488.89 396.26h79.39" />
+            <path className="cls-14" d="M488.89 396.26L568.28 396.26" />
             <path
               className="cls-14"
-              d="M379.72 357.53h109.17a25.64 25.64 0 0118.26 7.56l74.16 74.16M704.42 527h8.18c8.13 0 14.74 6.61 14.74 6.74L727 673.63M677.5 475.47h5.79a5.67 5.67 0 015.67 5.67v40.5A11.34 11.34 0 00700.3 533h4.12M581.31 439.25l32.07 32.07a14.16 14.16 0 0010 4.15h54.1"
+              d="M379.72 357.53h109.17a25.64 25.64 0 0118.26 7.56l74.16 74.16M704.42 527h8.18c8.13 0 14.74 6.39 14.74 6.51l-.34 135.1M677.5 475.47h5.79a5.67 5.67 0 015.67 5.67v40.5A11.34 11.34 0 00700.3 533h4.12M581.31 439.25l32.07 32.07a14.16 14.16 0 0010 4.15h54.1"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M165.67 700.36v41.12" />
+            <path className="cls-14" d="M165.67 700.36L165.67 723.34" />
             <path
               className="cls-14"
               d="M269.5 400.43l-90 90-5.73 5.73a27.79 27.79 0 00-8.14 19.65v145.82M352.49 357.53h-28.32a28.37 28.37 0 00-20.08 8.32l-34.59 34.58"
@@ -607,136 +720,156 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M145 216.83l46.26 46.26 7.56 7.55 82.73 82.74a14.2 14.2 0 0010 4.15h88.2M138 39.77V204a14.18 14.18 0 004.15 10l2.82 2.82"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M137.98 63.77v14.74" />
+            <path className="cls-14" d="M137.98 63.77L137.98 78.51" />
             <path
               stroke="url(#linear-gradient-4)"
-              strokeWidth={1.4}
+              strokeWidth="1.4px"
               fill="none"
-              d="M137.98 43.25v24.77"
-            />
-            <path className="cls-14" d="M26.03 727.48v14.27" />
-            <image
-              width={2}
-              height={17}
-              transform="translate(25.19 740.77)"
-              xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAACXBIWXMAAAsSAAALEgHS3X78AAAANElEQVQIW5XLoRHAIBAAwYWBNtMmbX0siMckLoK4FXdlXCZ6RWC1BxruF3GA7zh+XSUzwQZVYxVMQeWJwQAAAABJRU5ErkJggg=="
+              d="M137.98 43.25L137.98 68.02"
             />
             <path
               className="cls-14"
               d="M760.36 439.87a22.64 22.64 0 00-6.64-16L403.12 73.23M142.55 219.23l-2.82-2.82a17.46 17.46 0 01-5.15-12.41V39.53"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M226.11 341.53l-15.62-15.63-21.68-21.67-46.26-46.26" />
+            <path className="cls-14" d="M226.11 341.53L210.49 325.9 188.81 304.23 142.55 257.97" />
             <path
               className="cls-14"
               d="M379.86 360.93h-88.34a17.43 17.43 0 01-12.42-5.15l-53-53M578.91 441.66l-74.17-74.17a22.27 22.27 0 00-15.85-6.56h-109M677.5 478.87h-54.1a17.48 17.48 0 01-12.4-5.14l-32.07-32.07M760.36 498.14v-1.69a17.6 17.6 0 00-17.57-17.58H677.5M325.64 54.22H147c-9 0-12.39-10-12.39-14.69v-1.46M471.36 141.48l-79-79a28.3 28.3 0 00-20-8.3h-46.72"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M595.8 304.65L471.36 180.21M664.75 373.6l-68.95-68.95" />
+            <path className="cls-14" d="M595.8 304.65L471.36 180.21" />
+            <path className="cls-14" d="M664.75 373.6L595.8 304.65" />
             <path
               className="cls-14"
               d="M760.36 498.14v-58.27a22.64 22.64 0 00-6.64-16l-89-89"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M760.36 712.37v-204.5M173.75 92.95h36.88" />
+            <path className="cls-14" d="M760.36 707.34L760.36 507.87" />
+            <path className="cls-14" d="M173.75 92.95L210.63 92.95" />
             <path
               d="M121.74 11.83l5.6 5.59a24.56 24.56 0 017.24 17.48v3.17"
               transform="translate(0 38.73)"
               stroke="url(#linear-gradient-5)"
-              strokeWidth={1.4}
+              strokeWidth="1.4px"
               fill="none"
             />
-            <path className="cls-14" d="M165.67 681.92l42.14 42.14M124.48 640.72l41.19 41.2" />
+            <path className="cls-14" d="M165.67 681.92L211.78 728" />
+            <path className="cls-14" d="M124.48 640.72L165.67 681.92" />
             <path
               className="cls-14"
               d="M70.43 599.51l11.89-11.9a19.63 19.63 0 0127.77 0L124.48 602"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M59.4 649.26l11.03-11.02M47.23 661.44l12.17-12.18M36.95 671.71l10.28-10.27"
-            />
+            <path className="cls-14" d="M59.4 649.26L70.43 638.24" />
+            <path className="cls-14" d="M47.23 661.44L59.4 649.26" />
+            <path className="cls-14" d="M36.95 671.71L47.23 661.44" />
             <path
               className="cls-14"
               d="M29.43 658.44v-10.06A18.9 18.9 0 0135 634.93l2-1.93M162.27 661.65v-8.26a32.83 32.83 0 00-9.63-23.23L124.48 602"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M162.27 741.48v-41.1" />
-            <image
-              width={30}
-              height={31}
-              transform="translate(207.19 722.77)"
-              xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAfCAYAAADwbH0HAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0ElEQVRIS72UIWwUURCGv10SDAmKpIqkigRFgiJBkVSMqEURuoYECYakyMqmrhLUJK0skq4DCQ4kSCwWUnp73CB2hmzb3bd3vXf9zP2b/V++vHdvtjjewoCZqF3jCin9t6mr4leymZkSaIAJrfznSD8bpahd9zwBpnVV/EgtyEUJIGo3/fmUVv5teEke4j9G1NY8hvxL/5I8lHQQtXWPIf90YUUmzogBRO2ux1PaC/fhfCcHF8QAonbfY8jf9/WWoVcMIGoPPcaoHQ11L8OgGEDUNjyG/CDVX4SkGEDUNj3GnL9N9edlVAwgao89xm3fT/XnYS4xgKhteQz5bqo/xtxiAFF77jHkO6l+ioXEAKL20mOM2naqP8TCYgBRe+0x5C9S/T4KMxvrDFJXxSvgD/AXmIram5El/7nUjgNR2/MYo/Y01e+y1I6DuiqeASfADJiI2uhXLosYoK6KJ7TyKe2xJ7/vSx11F1E79NjQXrhHqX42MYCovfMY8gdD3axiAFE79tjQXrh7fb3sYgBR++gx5HfOd1YiBhC1zx5Dfrv7fmViAFH76jHkt+LdSsUAovbdY8hvQMY5HsN3G3PeXJkYwHd7ImqzlR91F1H7HfkfXAG+DM2wxSYAAAAASUVORK5CYII="
-            />
-            <image
-              width={3}
-              height={17}
-              transform="translate(164.19 740.77)"
-              xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAARCAYAAAAYNhYvAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOElEQVQIW2PcHsfwnwEKWBgYGH4jcz7g5HzEKfOAgYFBAFnmAwMDgwBOPR/w20OqCxj//4d7hwEAEzsVXtBgnw4AAAAASUVORK5CYII="
-            />
-            <image
-              width={2}
-              height={17}
-              transform="translate(161.19 740.77)"
-              xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOUlEQVQIW4XLMQqAMBBE0RdJruk1vdam1WJtFBKE2D0+M+XYnWgbAld9oKK/iBHxKYvxH+ZXyUxwA3+TFUyweBzaAAAAAElFTkSuQmCC"
-            />
+            <path className="cls-14" d="M162.27 723.34L162.27 700.38" />
             <path
               stroke="url(#linear-gradient-6)"
-              strokeWidth={1.4}
+              strokeWidth="1.4px"
               fill="none"
-              d="M727.01 712.37v29.24"
+              d="M10.87 144.81L0.49 134.43"
             />
-            <path
-              stroke="url(#linear-gradient-7)"
-              strokeWidth={1.4}
-              fill="none"
-              d="M723.52 741.61v-29.24"
-            />
-            <image
-              width={2}
-              height={30}
-              transform="translate(759.19 711.77)"
-              xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAYAAAAGos/EAAAACXBIWXMAAAsSAAALEgHS3X78AAAAO0lEQVQYV7XNMQqAMBBE0RfZc3pNj7aBCGtjk0KbkG6YP59p12kgDiTuQId4m4/ws1nUE7n3YkatqsADOmMigaJfKzIAAAAASUVORK5CYII="
-            />
-            <image
-              width={3}
-              height={30}
-              transform="translate(762.19 711.77)"
-              xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAeCAYAAADpYKT6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAQUlEQVQYV2PcHsfwnwEKWBgYGP4gc74jc37glMHNIVIPkcqoq+cdAwMDJ7LMDwYGBg4yTPtBnDJUGcb//+HhzgAAQPwijQoXV2sAAAAASUVORK5CYII="
-            />
-            <path
-              stroke="url(#linear-gradient-8)"
-              strokeWidth={1.4}
-              fill="none"
-              d="M10.87 144.81L.49 134.43"
-            />
-            <path stroke="#8c8b95" strokeWidth={1.4} fill="none" d="M19.34 153.27l-8.47-8.46" />
+            <path stroke="#8c8b95" strokeWidth="1.4px" fill="none" d="M19.34 153.27L10.87 144.81" />
             <path
               className="cls-14"
               d="M26 304.64V130.69a22.88 22.88 0 00-6.69-16.16"
               transform="translate(0 38.73)"
             />
-            <path
-              className="cls-14"
-              d="M26.03 449.92V343.38M26.03 546.64v-96.72M26.03 584.05v-37.41M26.03 697.05v-113M26.03 727.48v-30.43M33.59 167.52l-11.33-11.33M44.46 178.39l-10.87-10.87M59.49 193.43l-15.03-15.04M70.38 204.31l-10.89-10.88M80.4 214.33l-10.02-10.02M90.42 224.35L80.4 214.33M100.44 234.38l-10.02-10.03M110.47 244.4l-10.03-10.02M133.29 267.22l-22.82-22.82M248.84 382.77L133.29 267.22"
-            />
+            <path className="cls-14" d="M26.03 449.92L26.03 343.38" />
+            <path className="cls-14" d="M26.03 546.64L26.03 449.92" />
+            <path className="cls-14" d="M26.03 584.05L26.03 546.64" />
+            <path className="cls-14" d="M26.03 697.05L26.03 584.05" />
+            <path className="cls-14" d="M26.03 723.34L26.03 697.05" />
+            <path className="cls-14" d="M33.59 167.52L22.26 156.19" />
+            <path className="cls-14" d="M44.46 178.39L33.59 167.52" />
+            <path className="cls-14" d="M59.49 193.43L44.46 178.39" />
+            <path className="cls-14" d="M70.38 204.31L59.49 193.43" />
+            <path className="cls-14" d="M80.4 214.33L70.38 204.31" />
+            <path className="cls-14" d="M90.42 224.35L80.4 214.33" />
+            <path className="cls-14" d="M100.44 234.38L90.42 224.35" />
+            <path className="cls-14" d="M110.47 244.4L100.44 234.38" />
+            <path className="cls-14" d="M133.29 267.22L110.47 244.4" />
+            <path className="cls-14" d="M248.84 382.77L133.29 267.22" />
             <path
               className="cls-14"
               d="M379.72 374h-88.2a30.46 30.46 0 01-21.68-9l-21-21M568.92 450.19l-73.43-73.44a9.28 9.28 0 00-6.6-2.73H379.72"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M20.68 154.61l9.98 9.98" />
+            <path className="cls-14" d="M20.68 154.61L30.66 164.59" />
             <path
               d="M14.41 88.89v12.88a18.91 18.91 0 005.53 13.37l.74.74"
               transform="translate(0 38.73)"
-              stroke="url(#linear-gradient-9)"
-              strokeWidth={1.4}
+              stroke="url(#linear-gradient-7)"
+              strokeWidth="1.4px"
               fill="none"
+            />
+            <path
+              stroke="url(#linear-gradient-8)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M763.77 741.61L763.77 707.34"
+            />
+            <path
+              stroke="url(#linear-gradient-9)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M760.36 741.61L760.36 707.34"
+            />
+            <path
+              stroke="url(#linear-gradient-10)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M727.01 741.59L727.01 707.32"
+            />
+            <path
+              stroke="url(#linear-gradient-11)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M723.52 741.61L723.52 707.34"
+            />
+            <path
+              stroke="url(#linear-gradient-12)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M26.03 757.61L26.03 723.34"
+            />
+            <path
+              stroke="url(#linear-gradient-13)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M162.27 757.61L162.27 723.34"
+            />
+            <path
+              stroke="url(#linear-gradient-14)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M165.67 757.61L165.67 723.34"
+            />
+            <path
+              stroke="url(#linear-gradient-15)"
+              strokeWidth="1.4px"
+              strokeMiterlimit={10}
+              fill="none"
+              d="M236 752.22L211.78 728"
             />
           </g>
           <g id="Bridges">
             <path
-              className="cls-25"
+              className="cls-31"
               d="M757 503v5a14.19 14.19 0 004.15 10l6.58 6.58"
               transform="translate(0 38.73)"
             />
@@ -746,7 +879,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-26"
+              className="cls-32"
               d="M673.65 475.47h9.64a5.67 5.67 0 015.67 5.67V491"
               transform="translate(0 38.73)"
             />
@@ -755,13 +888,12 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M660 475.47h23.29a5.67 5.67 0 015.67 5.67v40.5"
               transform="translate(0 38.73)"
             />
-            <path className="cls-27" d="M397.9 380.77l32.49 32.55" />
-            <path className="cls-11" d="M431.29 414.23l-34.98-35.06" />
-            <path className="cls-26" d="M399.56 375.97l40.09 40.1" />
-            <path
-              className="cls-14"
-              d="M438.19 414.6l-44.94-44.94M306.64 403.06h42.96M314.48 396.26h79.89"
-            />
+            <path className="cls-33" d="M397.9 380.77L430.39 413.32" />
+            <path className="cls-11" d="M431.29 414.23L396.31 379.17" />
+            <path className="cls-32" d="M399.56 375.97L439.65 416.07" />
+            <path className="cls-14" d="M438.19 414.6L393.25 369.66" />
+            <path className="cls-14" d="M306.64 403.06L349.6 403.06" />
+            <path className="cls-14" d="M314.48 396.26L394.37 396.26" />
             <path
               className="cls-14"
               d="M290.87 306.55l67.45.22a27.32 27.32 0 0119.29 8.08l13.16 13.6"
@@ -769,11 +901,11 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <path
               d="M127.16 572.27l4.56 4.56a11.07 11.07 0 010 15.65l-8.28 8.25"
-              strokeWidth={7}
+              strokeWidth="7px"
               stroke="#fff"
               fill="none"
             />
-            <path className="cls-11" d="M130.19 594.01l-19.4 19.41" />
+            <path className="cls-11" d="M130.19 594.01L110.79 613.42" />
             <path
               className="cls-11"
               d="M111.83 518.21l19.89 19.89a11.07 11.07 0 010 15.65l-1.53 1.53"
@@ -785,7 +917,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-29"
+              className="cls-35"
               d="M72 597.92l10.31-10.31a19.63 19.63 0 0127.77 0l10 10"
               transform="translate(0 38.73)"
             />
@@ -795,7 +927,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-29"
+              className="cls-35"
               d="M179.54 490.39l-5.73 5.73a27.79 27.79 0 00-8.14 19.65v5.45"
               transform="translate(0 38.73)"
             />
@@ -804,9 +936,9 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M184 486l-10.17 10.17a27.79 27.79 0 00-8.14 19.65v12.77"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M10.87 144.81l8.47 8.46" />
+            <path className="cls-14" d="M10.87 144.81L19.34 153.27" />
             <path
-              className="cls-26"
+              className="cls-32"
               d="M332 357.53h-7.8a28.37 28.37 0 00-20.08 8.32l-12.48 12.47"
               transform="translate(0 38.73)"
             />
@@ -815,11 +947,11 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M334.84 357.53h-10.67a28.37 28.37 0 00-20.08 8.32l-14.69 14.68"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M301.71 396.26h28.25" />
-            <path className="cls-29" d="M162.84 679.09l11.42 11.42" />
-            <path className="cls-14" d="M160.97 677.21l15.27 15.28" />
+            <path className="cls-14" d="M301.71 396.26L329.96 396.26" />
+            <path className="cls-35" d="M162.84 679.09L174.26 690.51" />
+            <path className="cls-14" d="M160.97 677.21L176.24 692.49" />
             <path
-              className="cls-27"
+              className="cls-33"
               d="M677.5 470.63h5.79a10.52 10.52 0 0110.52 10.51v11.68"
               transform="translate(0 38.73)"
             />
@@ -828,10 +960,12 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M677.5 470.63h5.79a10.52 10.52 0 0110.52 10.51v29.07"
               transform="translate(0 38.73)"
             />
-            <path className="cls-30" d="M255.1 365.7l14.48 14.49M252.96 368.38l14.31 14.31" />
-            <path className="cls-14" d="M247.03 362.45l23.77 23.77M249.1 359.71l23.14 23.14" />
+            <path className="cls-36" d="M255.1 365.7L269.58 380.19" />
+            <path className="cls-36" d="M252.96 368.38L267.27 382.69" />
+            <path className="cls-14" d="M247.03 362.45L270.8 386.22" />
+            <path className="cls-14" d="M249.1 359.71L272.24 382.85" />
             <path
-              className="cls-26"
+              className="cls-32"
               d="M352.91 333.51v16a14.83 14.83 0 0014.83 14.83h12"
               transform="translate(0 38.73)"
             />
@@ -840,9 +974,9 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M352.91 327.25v22.25a14.83 14.83 0 0014.83 14.83h18.77"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M344.52 403.06h36.9" />
+            <path className="cls-14" d="M344.52 403.06L381.42 403.06" />
             <path
-              className="cls-29"
+              className="cls-35"
               d="M599.57 569.28v-18.72a14.17 14.17 0 0114.17-14.18h9.12"
               transform="translate(0 38.73)"
             />
@@ -857,7 +991,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-29"
+              className="cls-35"
               d="M150 54.22h-3c-9 0-12.39-10-12.39-14.69v-2.88"
               transform="translate(0 38.73)"
             />
@@ -866,48 +1000,48 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M157.45 54.22H147c-9 0-12.39-10-12.39-14.69V34.9"
               transform="translate(0 38.73)"
             />
-            <path className="cls-14" d="M134.58 97.63V75.38" />
+            <path className="cls-14" d="M134.58 97.63L134.58 75.38" />
             <path
-              className="cls-25"
+              className="cls-31"
               d="M134.58 0v4.24a26.11 26.11 0 007.63 18.44l21.64 21.63a33.82 33.82 0 0023.91 9.91h6.6"
               transform="translate(0 38.73)"
             />
             <path
               d="M134.58 4.24a26.11 26.11 0 007.63 18.44l21.64 21.63a33.82 33.82 0 0023.91 9.91H205"
               transform="translate(0 38.73)"
-              stroke="url(#linear-gradient-10)"
-              strokeWidth={1.4}
+              stroke="url(#linear-gradient-16)"
+              strokeWidth="1.4px"
               fill="none"
             />
-            <path className="cls-14" d="M166.65 92.95h33.14" />
-            <path className="cls-25" d="M131.18 69.32V50.97" />
+            <path className="cls-14" d="M166.65 92.95L199.79 92.95" />
+            <path className="cls-31" d="M131.18 69.32L131.18 50.97" />
             <path
-              stroke="url(#linear-gradient-11)"
-              strokeWidth={1.4}
+              stroke="url(#linear-gradient-17)"
+              strokeWidth="1.4px"
               fill="none"
-              d="M132.01 77.67V42.63"
+              d="M132.01 77.67L132.01 42.63"
             />
             <path
-              className="cls-25"
+              className="cls-31"
               d="M127.31 12.59l3.87 3.86c4.66 4.67 10.2 11.61 10.2 20.51v5.69"
               transform="translate(0 38.73)"
             />
             <path
               d="M124.07 10.47l7.11 7.1c4.66 4.67 10.2 11.61 10.2 20.51v7.11"
               transform="translate(0 38.73)"
-              stroke="url(#linear-gradient-12)"
-              strokeWidth={1.4}
+              stroke="url(#linear-gradient-18)"
+              strokeWidth="1.4px"
               fill="none"
             />
             <path
               d="M131.18 38.07c0-5.65-2.25-14.45-6.25-18.45l-5.51-5.48"
               transform="translate(0 38.73)"
-              stroke="url(#linear-gradient-13)"
-              strokeWidth={1.4}
+              stroke="url(#linear-gradient-19)"
+              strokeWidth="1.4px"
               fill="none"
             />
             <path
-              className="cls-27"
+              className="cls-33"
               d="M430.45 350.18L416.67 364a17.8 17.8 0 01-12.59 5.21H398"
               transform="translate(0 38.73)"
             />
@@ -916,10 +1050,10 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M454.2 326.43L416.67 364a17.8 17.8 0 01-12.59 5.21h-12"
               transform="translate(0 38.73)"
             />
-            <path className="cls-27" d="M415.58 412.47l23.58-23.57" />
-            <path className="cls-11" d="M410.12 417.93l32.35-32.35" />
-            <path className="cls-27" d="M404.08 407.91h37.37" />
-            <path className="cls-11" d="M400.29 407.91h44.34" />
+            <path className="cls-33" d="M415.58 412.47L439.16 388.9" />
+            <path className="cls-11" d="M410.12 417.93L442.47 385.58" />
+            <path className="cls-33" d="M404.08 407.91L441.45 407.91" />
+            <path className="cls-11" d="M400.29 407.91L444.63 407.91" />
             <path
               className="cls-11"
               d="M454.2 326.43L416.67 364a17.8 17.8 0 01-12.59 5.21"
@@ -927,15 +1061,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
           </g>
           <g id="Blobs">
-            <circle className="cls-35" cx={529.63} cy={435.92} r={1.7} />
-            <circle className="cls-35" cx={507.4} cy={413.7} r={1.7} />
-            <circle className="cls-35" cx={638.53} cy={342.57} r={1.7} />
-            <circle className="cls-35" cx={568.28} cy={396.26} r={1.7} />
-            <circle className="cls-35" cx={595.8} cy={347.04} r={1.7} />
-            <circle className="cls-35" cx={539.48} cy={445.77} r={1.7} />
-            <circle className="cls-35" cx={554.59} cy={460.88} r={1.7} />
-            <circle className="cls-35" cx={593.09} cy={499.38} r={1.7} />
-            <circle className="cls-35" cx={607.75} cy={514.04} r={1.7} />
+            <circle className="cls-41" cx={529.63} cy={435.92} r={1.7} />
+            <circle className="cls-41" cx={507.4} cy={413.7} r={1.7} />
+            <circle className="cls-41" cx={638.53} cy={342.57} r={1.7} />
+            <circle className="cls-41" cx={568.28} cy={396.26} r={1.7} />
+            <circle className="cls-41" cx={595.8} cy={347.04} r={1.7} />
+            <circle className="cls-41" cx={539.48} cy={445.77} r={1.7} />
+            <circle className="cls-41" cx={554.59} cy={460.88} r={1.7} />
+            <circle className="cls-41" cx={593.09} cy={499.38} r={1.7} />
+            <circle className="cls-41" cx={607.75} cy={514.04} r={1.7} />
             <circle className="cls-6" cx={503.98} cy={417.12} r={1.7} />
             <circle className="cls-6" cx={472.38} cy={355.67} r={1.7} />
             <circle className="cls-6" cx={479.59} cy={333.24} r={1.7} />
@@ -952,14 +1086,14 @@ const RailZoneMap = ({ parking, partial, full }) => {
             <circle className="cls-6" cx={551.17} cy={464.31} r={1.7} />
             <circle className="cls-6" cx={589.66} cy={502.81} r={1.7} />
             <circle className="cls-6" cx={594.72} cy={702.97} r={1.7} />
-            <circle className="cls-35" cx={599.57} cy={702.97} r={1.7} />
+            <circle className="cls-41" cx={599.57} cy={702.97} r={1.7} />
             <circle className="cls-6" cx={501.31} cy={595.38} r={1.7} />
             <circle className="cls-6" cx={516.34} cy={610.42} r={1.7} />
             <circle className="cls-6" cx={531.38} cy={625.45} r={1.7} />
             <circle className="cls-6" cx={548.98} cy={643.05} r={1.7} />
             <circle className="cls-6" cx={564.85} cy={658.93} r={1.7} />
             <circle className="cls-6" cx={594.72} cy={722.84} r={1.7} />
-            <circle className="cls-35" cx={599.57} cy={722.84} r={1.7} />
+            <circle className="cls-41" cx={599.57} cy={722.84} r={1.7} />
             <circle className="cls-6" cx={549.49} cy={532.67} r={1.7} />
             <circle className="cls-6" cx={527.14} cy={510.4} r={1.7} />
             <circle className="cls-6" cx={506.16} cy={489.42} r={1.7} />
@@ -970,20 +1104,20 @@ const RailZoneMap = ({ parking, partial, full }) => {
             <circle className="cls-6" cx={478.03} cy={562.71} r={1.7} />
             <circle className="cls-6" cx={478.03} cy={490.47} r={1.7} />
             <circle className="cls-6" cx={478.03} cy={476.3} r={1.7} />
-            <circle className="cls-35" cx={626.37} cy={521.01} r={1.7} />
+            <circle className="cls-41" cx={626.37} cy={521.01} r={1.7} />
             <circle className="cls-6" cx={693.81} cy={548.95} r={1.7} />
             <circle className="cls-6" cx={669} cy={476.37} r={1.7} />
             <circle className="cls-6" cx={669} cy={414.25} r={1.7} />
             <circle className="cls-6" cx={669} cy={432.49} r={1.7} />
-            <circle className="cls-35" cx={647.21} cy={521.01} r={1.7} />
-            <circle className="cls-35" cx={671.06} cy={575.12} r={1.7} />
-            <circle className="cls-35" cx={640.28} cy={575.12} r={1.7} />
-            <circle className="cls-35" cx={613.74} cy={575.12} r={1.7} />
-            <circle className="cls-35" cx={583.57} cy={559.98} r={1.7} />
-            <circle className="cls-35" cx={599.57} cy={635.43} r={1.7} />
-            <circle className="cls-35" cx={599.57} cy={660.49} r={1.7} />
-            <circle className="cls-35" cx={773.65} cy={569.51} r={1.7} />
-            <circle className="cls-35" cx={777.06} cy={598.73} r={1.7} />
+            <circle className="cls-41" cx={647.21} cy={521.01} r={1.7} />
+            <circle className="cls-41" cx={671.06} cy={575.12} r={1.7} />
+            <circle className="cls-41" cx={640.28} cy={575.12} r={1.7} />
+            <circle className="cls-41" cx={613.74} cy={575.12} r={1.7} />
+            <circle className="cls-41" cx={583.57} cy={559.98} r={1.7} />
+            <circle className="cls-41" cx={599.57} cy={635.43} r={1.7} />
+            <circle className="cls-41" cx={599.57} cy={660.49} r={1.7} />
+            <circle className="cls-41" cx={773.65} cy={569.51} r={1.7} />
+            <circle className="cls-41" cx={777.06} cy={598.73} r={1.7} />
             <circle className="cls-6" cx={462.47} cy={445.73} r={1.7} />
             <circle className="cls-6" cx={472.49} cy={455.75} r={1.7} />
             <circle className="cls-6" cx={449.58} cy={378.48} r={1.7} />
@@ -1001,15 +1135,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
             <circle className="cls-6" cx={357.75} cy={168.66} r={1.7} />
             <circle className="cls-6" cx={357.75} cy={154.49} r={1.7} />
             <circle className="cls-6" cx={357.75} cy={140.31} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={239.53} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={225.35} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={197.01} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={182.83} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={168.66} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={154.49} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={140.31} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={239.53} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={225.35} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={197.01} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={182.83} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={168.66} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={154.49} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={140.31} r={1.7} />
             <circle className="cls-6" cx={357.75} cy={126.14} r={1.7} />
-            <circle className="cls-35" cx={352.91} cy={126.14} r={1.7} />
+            <circle className="cls-41" cx={352.91} cy={126.14} r={1.7} />
             <circle className="cls-6" cx={273.26} cy={400.35} r={1.7} />
             <circle className="cls-6" cx={292.29} cy={431.91} r={1.7} />
             <circle className="cls-6" cx={220.28} cy={347.36} r={1.7} />
@@ -1043,42 +1177,42 @@ const RailZoneMap = ({ parking, partial, full }) => {
             <circle className="cls-6" cx={175.91} cy={539.61} r={1.7} />
             <circle className="cls-6" cx={73.85} cy={641.67} r={1.7} />
             <circle className="cls-6" cx={78.19} cy={646.01} r={1.7} />
-            <circle className="cls-35" cx={70.43} cy={638.24} r={1.7} />
-            <circle className="cls-35" cx={162.27} cy={700.37} r={1.56} />
-            <circle className="cls-35" cx={165.67} cy={700.37} r={1.56} />
-            <circle className="cls-35" cx={59.4} cy={649.26} r={1.7} />
-            <circle className="cls-35" cx={47.23} cy={661.44} r={1.7} />
-            <circle className="cls-35" cx={26.03} cy={584.05} r={1.7} />
-            <circle className="cls-35" cx={26.03} cy={546.64} r={1.7} />
-            <circle className="cls-35" cx={26.03} cy={449.92} r={1.7} />
-            <circle className="cls-35" cx={26.03} cy={343.38} r={1.7} />
-            <circle className="cls-35" cx={36.95} cy={671.71} r={1.7} />
+            <circle className="cls-41" cx={70.43} cy={638.24} r={1.7} />
+            <circle className="cls-41" cx={162.27} cy={700.37} r={1.56} />
+            <circle className="cls-41" cx={165.67} cy={700.37} r={1.56} />
+            <circle className="cls-41" cx={59.4} cy={649.26} r={1.7} />
+            <circle className="cls-41" cx={47.23} cy={661.44} r={1.7} />
+            <circle className="cls-41" cx={26.03} cy={584.05} r={1.7} />
+            <circle className="cls-41" cx={26.03} cy={546.64} r={1.7} />
+            <circle className="cls-41" cx={26.03} cy={449.92} r={1.7} />
+            <circle className="cls-41" cx={26.03} cy={343.38} r={1.7} />
+            <circle className="cls-41" cx={36.95} cy={671.71} r={1.7} />
             <circle className="cls-6" cx={50.65} cy={664.86} r={1.7} />
             <circle className="cls-6" cx={40.38} cy={675.14} r={1.7} />
-            <circle className="cls-35" cx={175.15} cy={295.38} r={1.7} />
-            <circle className="cls-35" cx={226.11} cy={341.53} r={1.7} />
+            <circle className="cls-41" cx={175.15} cy={295.38} r={1.7} />
+            <circle className="cls-41" cx={226.11} cy={341.53} r={1.7} />
             <circle className="cls-6" cx={67.17} cy={657.03} r={1.56} />
             <circle className="cls-6" cx={62.83} cy={652.69} r={1.7} />
-            <circle className="cls-35" cx={451.79} cy={434.77} r={1.54} />
+            <circle className="cls-41" cx={451.79} cy={434.77} r={1.54} />
             <path
               className="cls-6"
               d="M451.79 394.8a1.24 1.24 0 11-1.24 1.24 1.24 1.24 0 011.24-1.24m0-.6a1.84 1.84 0 101.85 1.84 1.84 1.84 0 00-1.85-1.84z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={594.72} cy={635.49} r={1.66} />
+            <circle className="cls-41" cx={594.72} cy={635.49} r={1.66} />
             <path
               className="cls-6"
               d="M594.72 595.41a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={613.74} cy={579.96} r={1.66} />
+            <circle className="cls-41" cx={613.74} cy={579.96} r={1.66} />
             <path
               className="cls-6"
               d="M613.74 539.89a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M580.14 526.33a1.66 1.66 0 111.66-1.66 1.66 1.66 0 01-1.66 1.66z"
               transform="translate(0 38.73)"
             />
@@ -1087,26 +1221,26 @@ const RailZoneMap = ({ parking, partial, full }) => {
               d="M580.14 523.33a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={640.28} cy={579.96} r={1.66} />
+            <circle className="cls-41" cx={640.28} cy={579.96} r={1.66} />
             <path
               className="cls-6"
               d="M640.28 539.89a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={671.06} cy={579.96} r={1.66} />
+            <circle className="cls-41" cx={671.06} cy={579.96} r={1.66} />
             <path
               className="cls-6"
               d="M671.06 539.89a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={594.72} cy={660.48} r={1.66} />
+            <circle className="cls-41" cx={594.72} cy={660.48} r={1.66} />
             <path
               className="cls-6"
               d="M594.72 620.41a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2zM110.47 207.32a1.66 1.66 0 111.66-1.66 1.66 1.66 0 01-1.66 1.66z"
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M110.47 204.33a1.34 1.34 0 11-1.34 1.33 1.34 1.34 0 011.34-1.33m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1116,7 +1250,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M100.44 194.3a1.34 1.34 0 11-1.33 1.34 1.34 1.34 0 011.33-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1126,7 +1260,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M90.42 184.28a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1136,7 +1270,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M80.4 174.26a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1146,19 +1280,19 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M70.38 164.24a1.34 1.34 0 11-1.38 1.34 1.34 1.34 0 011.34-1.34m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={59.49} cy={193.43} r={1.7} />
-            <circle className="cls-35" cx={33.59} cy={167.52} r={1.7} />
+            <circle className="cls-41" cx={59.49} cy={193.43} r={1.7} />
+            <circle className="cls-41" cx={33.59} cy={167.52} r={1.7} />
             <path
               className="cls-6"
               d="M44.46 141.32a1.66 1.66 0 111.66-1.66 1.66 1.66 0 01-1.66 1.66z"
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M44.46 138.32a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1168,7 +1302,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M618.62 282.59a1.34 1.34 0 11-1.34 1.33 1.34 1.34 0 011.34-1.33m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1178,13 +1312,13 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M209.92 374.76a1.34 1.34 0 11-1.34 1.34 1.34 1.34 0 011.34-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
             <circle className="cls-6" cx={552.91} cy={529.25} r={1.66} />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M552.91 489.17a1.34 1.34 0 11-1.33 1.34 1.34 1.34 0 011.33-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
@@ -1194,23 +1328,23 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M530.57 466.91a1.34 1.34 0 11-1.34 1.33 1.34 1.34 0 011.34-1.33m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
             <circle className="cls-6" cx={509.59} cy={486} r={1.66} />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M509.59 445.93a1.34 1.34 0 11-1.34 1.33 1.34 1.34 0 011.34-1.33m0-.65a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
             <circle className="cls-6" cx={475.91} cy={452.33} r={1.66} />
             <path
-              className="cls-35"
+              className="cls-41"
               d="M475.91 412.25a1.34 1.34 0 11-1.33 1.34 1.35 1.35 0 011.33-1.34m0-.64a2 2 0 102 2 2 2 0 00-2-2z"
               transform="translate(0 38.73)"
             />
-            <circle className="cls-35" cx={131.18} cy={143.06} r={1.7} />
+            <circle className="cls-41" cx={131.18} cy={143.06} r={1.7} />
             <circle className="cls-6" cx={604.32} cy={517.46} r={1.7} />
             <circle className="cls-6" cx={626.37} cy={525.85} r={1.7} />
             <circle className="cls-6" cx={647.21} cy={525.85} r={1.7} />
@@ -1551,12 +1685,13 @@ const RailZoneMap = ({ parking, partial, full }) => {
           <g id="Pointers">
             <path
               stroke="#221e20"
-              strokeWidth={0.35}
+              strokeWidth=".35px"
               strokeLinecap="round"
               fill="none"
-              d="M166.77 447.16v8.09"
+              d="M166.77 447.16L166.77 455.25"
             />
-            <path className="cls-37" d="M258.9 379.79h21.88M461.58 434.77h-8.09" />
+            <path className="cls-43" d="M258.9 379.79L280.78 379.79" />
+            <path className="cls-43" d="M461.58 434.77L453.49 434.77" />
           </g>
           <g id="Yardley_Wood" data-name="Yardley Wood">
             <path
@@ -1565,14 +1700,14 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M416.12 462.09h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.58h-1.24zm1.24 2.2h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M424.78 467.64a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1582,7 +1717,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M424.24 466.51a1.25 1.25 0 01-.55-2.38l.11-.06.06.43h-.06a.85.85 0 101.27.85v-.08h.41v.1a1.24 1.24 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .41.32.44.55h.75v.1c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.25h.05a.27.27 0 01.26.26.19.19 0 01-.21.18h-.23m-1.92-3.1a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -1596,7 +1731,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-2" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M445 513.07a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1606,7 +1741,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M444.49 512a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.84.84 0 00.43 1.57.87.87 0 00.84-.72v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.31.31 0 01-.35-.24l-.32-.85h-1.41l-.12-.79a5.55 5.55 0 01-.1-.68.4.4 0 01.4-.41c.36 0 .4.32.43.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26h.05a.27.27 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.09a.42.42 0 01-.42-.42.42.42 0 01.83 0 .41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -1619,15 +1754,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M535.76 264.1H538c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.59.59 0 00-.66-.63H537z"
               transform="translate(0 38.73)"
               id="Parking-2"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-3" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M531 269.48a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1637,7 +1772,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M530.45 268.36a1.26 1.26 0 01-.55-2.39l.12-.06.05.43h-.05a.83.83 0 00-.41.73.84.84 0 001.68.12v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.32.32 0 01-.35-.24l-.32-.85h-1.38l-.12-.79a4.15 4.15 0 01-.09-.68.4.4 0 01.39-.41c.36 0 .4.32.44.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.27.26.19.19 0 01-.21.18h-.23m-1.83-2.99a.42.42 0 010-.84.42.42 0 110 .84"
                 transform="translate(0 38.73)"
               />
@@ -1650,15 +1785,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M256.2 640.29h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1V645h-1.26zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-3"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M253.92 642.54a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -1676,15 +1811,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M140.87 595.05h2.25c.89 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-4"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-4" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M135.16 600.67a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1694,7 +1829,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M134.62 599.55a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.84.84 0 101.26.85v-.08h.41v.1a1.26 1.26 0 01-1.25 1.12m2-.31a.33.33 0 01-.36-.24l-.31-.85h-1.42l-.12-.8a6.19 6.19 0 01-.09-.67.4.4 0 01.4-.41c.35 0 .4.32.43.55h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.09a.42.42 0 010-.84.42.42 0 01.42.42.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -1708,7 +1843,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-2" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M80.24 568.24a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -1727,7 +1862,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-5" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M503.75 624.4a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1737,7 +1872,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M503.21 623.27a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.83.83 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.73v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.41l-.13-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.4-.41c.36 0 .4.32.43.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26h.05a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.92-3.1a.42.42 0 11.41-.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -1757,15 +1892,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M206.48 205.23h2.25c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1V210h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-5"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-3" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M203.38 207.64a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -1784,7 +1919,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-4" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M429.81 305.9a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -1803,7 +1938,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-6" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M602.8 318.16a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1813,7 +1948,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M602.25 317a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.86.86 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.12m2-.31a.31.31 0 01-.35-.24l-.32-.86h-1.43l-.12-.79a5.31 5.31 0 01-.1-.67.4.4 0 01.4-.41c.36 0 .4.32.43.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.46 1.26h.05a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.41.41 0 01-.42-.41.42.42 0 01.42-.42.41.41 0 01.41.42.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -1827,7 +1962,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-7" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M556.5 666.6a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1837,7 +1972,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M556 665.47a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.11-.05.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.43l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26a.28.28 0 01.26.27c0 .09-.06.18-.21.18h-.1m-1.92-3.1a.42.42 0 11.41-.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -1850,15 +1985,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M486.21 494.64h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-6"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-8" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M494.87 500.2a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1868,7 +2003,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M494.33 499.07a1.26 1.26 0 01-.55-2.39l.11-.05.06.43h-.06a.84.84 0 101.27.84v-.07h.41v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.34.34 0 01-.36-.25l-.32-.85h-1.41l-.12-.79c-.08-.54-.09-.61-.09-.67a.4.4 0 01.39-.42c.36 0 .41.32.44.56h.75v.09c0 .41-.31.41-.49.41H495v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -1881,15 +2016,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M415.9 490.94h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.26zm1.24 2.21h.86c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-7"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-9" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M424.56 496.5a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1899,7 +2034,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M424 495.37a1.25 1.25 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.11-.05.06.43h-.05a.84.84 0 00-.42.72.84.84 0 001.68.13v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.33.33 0 01-.36-.24l-.31-.86H424l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .41.32.44.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26h.05a.29.29 0 01.26.27.19.19 0 01-.21.18h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 01.42.41.41.41 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -1912,15 +2047,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M87.62 119.61h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.25zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-8"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-10" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M81.92 125a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1930,7 +2065,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M81.38 123.89a1.26 1.26 0 01-1.27-1.26 1.29 1.29 0 01.71-1.13h.12v.43a.85.85 0 101.27.85v-.08h.4v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.24l-.32-.86h-1.38l-.12-.79a4 4 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .4.33.44.56h.75v.09c0 .41-.31.41-.5.41H82v.19h1l.47 1.26a.29.29 0 01.27.27.19.19 0 01-.21.18h-.13m-1.92-3.1a.42.42 0 010-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -1950,15 +2085,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M646.6 560h2.25c.89 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.59h-1.25zm1.23 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-9"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-5" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M644.26 562.3a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -1976,15 +2111,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M677.37 554.56h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.58h-1.24zm1.24 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-10"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-11" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M672 559.93a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -1994,7 +2129,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M671.45 558.81a1.26 1.26 0 01-.55-2.39l.12-.06.05.43h-.05a.83.83 0 00-.41.72.84.84 0 001.68.13v-.08h.41v.1a1.26 1.26 0 01-1.25 1.12m2-.31a.32.32 0 01-.35-.24l-.32-.86h-1.38l-.12-.79a4 4 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .4.32.44.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.27.26.19.19 0 01-.21.18h-.23m-1.92-3.1a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -2007,15 +2142,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M311.92 170.82h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.58h-1.24zm1.24 2.2h.84c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-11"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-12" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M321.37 176.37a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2025,7 +2160,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M320.82 175.25a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.84.84 0 00.43 1.57.87.87 0 00.84-.72V174h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.31.31 0 01-.35-.24l-.32-.85h-1.41l-.12-.79a5.55 5.55 0 01-.1-.68.4.4 0 01.4-.41c.36 0 .4.32.43.55h.76v.09c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26a.28.28 0 01.26.26.19.19 0 01-.21.18h-.22m-1.92-3.09a.42.42 0 01-.42-.42.42.42 0 01.83 0 .41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -2039,7 +2174,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-6" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M319.39 414.19a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2064,15 +2199,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M148.32 277.41h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-12"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-7" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M160 279.93a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2090,15 +2225,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M591.8 492.21h2.25c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1V497h-1.25zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63H593z"
               transform="translate(0 38.73)"
               id="Parking-13"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-8" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M603.51 494.59a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2117,7 +2252,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-13" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M460.17 562.51a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2127,7 +2262,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M459.63 561.38a1.25 1.25 0 01-.56-2.38l.12-.06.05.43h-.05a.85.85 0 101.27.85v-.08h.4v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.24L461 560h-1.41l-.12-.79a4 4 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .4.32.44.55h.75v.1c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.27.26.19.19 0 01-.21.18h-.23m-1.92-3.1a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -2140,15 +2275,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M317.61 279.87h2.25c.89 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-14"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-9" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M315.3 282.25a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2166,15 +2301,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M120.08 145.19h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-15"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-10" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M117.62 147.57a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2192,15 +2327,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M644.83 255.7h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-16"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-11" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M642.81 258.12a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2218,15 +2353,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M266.76 197.55H269c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.59h-1.23zm1.23 2.2h.83c.39 0 .67-.15.67-.59a.59.59 0 00-.67-.62H268z"
               transform="translate(0 38.73)"
               id="Parking-17"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-14" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M275.39 203.11a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2236,7 +2371,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M274.85 202a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.83.83 0 00-.42.72.85.85 0 00.85.84.87.87 0 00.84-.72v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.33.33 0 01-.36-.24l-.31-.85h-1.38l-.13-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.4-.41c.36 0 .4.32.43.56h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26h.05a.28.28 0 01.26.26.19.19 0 01-.21.18h-.22m-1.84-3.05a.41.41 0 01-.41-.42.41.41 0 01.41-.41.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -2249,15 +2384,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M546.42 249.57h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-18"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-12" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M544.13 251.85a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2275,15 +2410,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M483.55 680.19h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-19"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-13" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M495.24 682.71a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2301,15 +2436,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M511 701.76h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58H511zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-20"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-14" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M523.61 704.29a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2328,7 +2463,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-15" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M110.7 423.41a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2346,15 +2481,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M182.92 458.15h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.84c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-21"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-16" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M180.84 460.57a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2373,7 +2508,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-17" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M490.12 408a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2391,15 +2526,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M115.65 44.47h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-22"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-18" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M127 47.09a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2418,7 +2553,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-15" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M430.05 442.5a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2428,7 +2563,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M429.5 441.37a1.26 1.26 0 01-1.26-1.26A1.28 1.28 0 01429 439l.12-.05.05.43h-.05a.84.84 0 00-.42.72.85.85 0 001.69.13v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.46 1.26h.05a.27.27 0 01.26.27c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 110-.83.42.42 0 01.42.41.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -2441,15 +2576,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M497.41 483.87h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-23"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-19" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M509.24 486.4a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2474,15 +2609,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M290.09 319.33h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.39 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-24"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-20" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M287.58 321.7a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2507,15 +2642,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M77.62 107h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.25zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-25"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-21" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M75 109.24a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2533,15 +2668,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M439.07 477.42h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-26"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-16" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M447.73 483a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2551,7 +2686,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M447.18 481.85a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13h.11l.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.86.86 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.46 1.26h.05a.28.28 0 01.26.27c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 11.41-.41.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -2564,15 +2699,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M31.39 169.14h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.26zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-27"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-17" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M39.91 174.5a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2582,7 +2717,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M39.36 173.37a1.26 1.26 0 01-.55-2.39l.11-.06.06.44a.83.83 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.73v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.32.32 0 01-.35-.25l-.32-.85h-1.43l-.12-.79a6 6 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.75v.09c0 .41-.31.41-.5.41H40v.2h1l.47 1.26h.05a.28.28 0 01.26.27c0 .08-.06.17-.21.17h-.22M39.47 170a.42.42 0 110-.83.42.42 0 010 .83"
                 transform="translate(0 38.73)"
               />
@@ -2595,15 +2730,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M426.37 185.08h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-28"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-18" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M435.6 190.66a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2613,7 +2748,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M435.06 189.53a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.06a.84.84 0 00-.41.72.84.84 0 001.68.12v-.07h.41v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85H435l-.12-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.39-.41c.36 0 .41.32.44.56h.75v.09c0 .41-.31.41-.49.41h-.18v.2h1l.47 1.26h.05a.28.28 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.1a.41.41 0 01-.41-.42.41.41 0 01.41-.41.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -2626,15 +2761,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M309.07 421.82h2.26c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-29"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-22" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M306.25 424.22a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2652,15 +2787,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M171 313.11h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58H171zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-30"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-23" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M182.63 315.64a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2678,15 +2813,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M358.47 31.83h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.17h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-31"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-19" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M353.1 37.09a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2696,7 +2831,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M352.56 36a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.06a.85.85 0 101.27.85v-.08h.41v.1a1.25 1.25 0 01-1.24 1.15m2-.31a.33.33 0 01-.36-.24l-.32-.86h-1.38l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .41.32.44.55h.75v.09c0 .4-.31.4-.49.4h-.19v.2h1l.47 1.26h.05a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.1a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -2709,15 +2844,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M290.48 83.84h2.25c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.58h-1.23zm1.23 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-32"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-20" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M299.11 89.39a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2727,7 +2862,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M298.57 88.27a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.84.84 0 00.43 1.57.87.87 0 00.84-.72v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.33.33 0 01-.36-.24l-.31-.85h-1.41l-.13-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.4-.41c.36 0 .4.32.43.55h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.09a.42.42 0 010-.84.42.42 0 01.42.42.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -2740,15 +2875,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M798.13 495.79h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-33"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-24" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M795.79 498.14a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2766,15 +2901,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M228.59 401.12h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-34"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-21" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M223.48 406.57a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2784,7 +2919,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M222.93 405.45a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.84.84 0 00.43 1.57.86.86 0 00.84-.72v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.31.31 0 01-.35-.24l-.32-.85h-1.41l-.12-.79a5.55 5.55 0 01-.1-.68.4.4 0 01.4-.41c.36 0 .4.32.43.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.46 1.26a.26.26 0 01.26.26c0 .09-.06.18-.21.18H225m-2-3.03a.42.42 0 11.42-.42.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -2797,15 +2932,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M280.29 545.9h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-35"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-25" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M277.78 548.27a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2824,7 +2959,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-26" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M665.79 279.43a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2843,7 +2978,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-22" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M370.74 278.65a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2853,7 +2988,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M370.2 277.52a1.26 1.26 0 01-.56-2.39l.12-.06.05.43h-.05a.84.84 0 00-.41.72.84.84 0 001.68.12v-.07h.4v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.25l-.32-.85h-1.41l-.12-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.39-.41c.36 0 .4.32.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.27.27.19.19 0 01-.21.17h-.23m-1.92-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -2866,15 +3001,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M184.07 101.83h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-36"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-27" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M182.16 104.21a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2892,15 +3027,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M494.51 474.16h2.25c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.59h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-37"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-28" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M506.2 476.68a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2918,11 +3053,11 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M190.3 421.19h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.26zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-38"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
           </g>
           <g id="Oakengates">
@@ -2933,7 +3068,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-23" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M95.94 136.38a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -2943,7 +3078,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M95.4 135.26a1.26 1.26 0 01-1.26-1.26 1.24 1.24 0 01.71-1.12l.11-.06.06.43h-.06a.85.85 0 101.27.85v-.08h.41v.1a1.25 1.25 0 01-1.24 1.12m2-.31a.33.33 0 01-.36-.24l-.32-.86h-1.38l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .41.32.44.55h.75v.09c0 .4-.31.4-.5.4H96v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.1a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -2956,15 +3091,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M717.61 331h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-39"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-29" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M715.58 333.42a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -2982,15 +3117,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M266.25 467.93h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.58h-1.23zm1.23 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-40"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-30" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M264.22 470.34a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3008,15 +3143,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M784.43 572.78h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.58h-1.24zm1.24 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-41"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-31" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M782.41 575.19a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3034,15 +3169,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M539 445.9h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.58H539zm1.24 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-42"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-32" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M550.67 448.42a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3060,15 +3195,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M127.57 610.84h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-43"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-24" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M122.7 616.35a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3078,7 +3213,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M122.15 615.23a1.26 1.26 0 01-.55-2.39l.12-.06v.43a.83.83 0 00-.41.73.84.84 0 001.68.12V614h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.32.32 0 01-.35-.24l-.32-.85h-1.38l-.1-.81a5.55 5.55 0 01-.1-.68.4.4 0 01.4-.41c.36 0 .4.32.43.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.09a.42.42 0 11.42-.42.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -3091,15 +3226,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M181.41 435.5h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-44"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-25" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M176.3 441a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3109,7 +3244,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M175.76 439.82a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.11-.05.06.43a.84.84 0 00-.42.72.84.84 0 001.68.13v-.08h.36v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.38l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .41.32.44.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26h.13a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -3129,11 +3264,11 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M818.49 526h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-45"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
           </g>
           <g id="Longbridge">
@@ -3143,15 +3278,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M260.33 477.63h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.59h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.6a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-46"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-33" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M258.76 480.05a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3169,15 +3304,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M489.83 138.32h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-47"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-34" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M486.53 140.8a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3195,15 +3330,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M420.7 163.66h2.3c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.58h-1.3zm1.24 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-48"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-35" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M433.34 166.25a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3222,7 +3357,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-36" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M36.18 551.87a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3240,15 +3375,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M76 641.73h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59H76zm1.24 2.21H78c.38 0 .66-.16.66-.6a.58.58 0 00-.66-.62h-.8z"
               transform="translate(0 38.73)"
               id="Parking-49"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-26" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M71.21 647.31a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3258,7 +3393,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M70.66 646.18a1.26 1.26 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13h.12v.43a.84.84 0 00-.42.72.85.85 0 001.69.13V645h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.38l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56H72v.1c0 .4-.31.4-.5.4h-.2v.2h1l.47 1.25a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 110-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -3271,15 +3406,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M730.11 519.56h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.59.59 0 00-.66-.63h-.84z"
               transform="translate(0 38.73)"
               id="Parking-50"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-37" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M727.77 521.91a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3297,15 +3432,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M493.69 416.36H496a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-51"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-38" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M505.38 418.89a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3323,15 +3458,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M627.4 515.88h2.25c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.59h-1.25zm1.23 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-52"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-27" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M622 521.25a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3341,7 +3476,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M621.48 520.13a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.84.84 0 101.26.85v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.33.33 0 01-.36-.24l-.31-.85h-1.42l-.12-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.4-.41c.35 0 .4.32.43.55h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.09a.42.42 0 010-.84.42.42 0 01.42.42.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -3354,15 +3489,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M215.7 337.37h2.3c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.3zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-53"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-28" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M224.33 342.93a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3372,7 +3507,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M223.79 341.81a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.12m2-.31a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.4.4 0 01.4-.41c.36 0 .4.32.43.55h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26h.08a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.92-3.1a.41.41 0 01-.42-.41.42.42 0 01.42-.42.42.42 0 01.41.42.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -3385,15 +3520,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M297.17 127h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-54"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-29" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M305.81 132.54a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3403,7 +3538,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M305.27 131.41a1.26 1.26 0 01-.55-2.39l.11-.05.06.43h-.06a.84.84 0 101.27.84v-.07h.41v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.34.34 0 01-.36-.25l-.32-.85h-1.41l-.12-.79a6.57 6.57 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .41.32.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26h.05a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -3416,15 +3551,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M298.09 445.9h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.59.59 0 00-.66-.63h-.84z"
               transform="translate(0 38.73)"
               id="Parking-55"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-30" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M292.47 451.33a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3434,7 +3569,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M291.93 450.2a1.26 1.26 0 01-.55-2.39l.11-.05.06.43h-.06a.85.85 0 101.27.85v-.08h.41v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.33.33 0 01-.36-.24l-.32-.86h-1.41l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .41.32.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26h.05a.29.29 0 01.26.27.19.19 0 01-.21.18h-.1m-2-3.06a.42.42 0 010-.83.42.42 0 01.42.41.41.41 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -3447,15 +3582,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M83 491.72h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58H83zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-56"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-39" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M94.74 494.13a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3473,15 +3608,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M637.81 507.12h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-57"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-40" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M649.5 509.64a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3500,7 +3635,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-41" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M392.12 312.52a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3519,7 +3654,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-42" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M75.46 658.2a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3537,15 +3672,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M479.57 602.81h2.26c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-58"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-43" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M491.27 605.33a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3563,15 +3698,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M296.2 98.49h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.26zm1.24 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-59"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-31" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M304.84 104.05a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3581,7 +3716,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M304.3 102.92a1.26 1.26 0 01-.55-2.39l.11-.06.06.44h-.05a.83.83 0 00-.42.72.84.84 0 001.68.12v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.42l-.12-.79c-.08-.54-.09-.61-.09-.67a.4.4 0 01.39-.42c.36 0 .41.32.44.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26h.05a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -3594,15 +3729,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M619.86 554.56h2.25c.89 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.58h-1.23zm1.23 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-60"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-32" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M614.48 559.93a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3612,7 +3747,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M613.94 558.81a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.12m2-.31a.33.33 0 01-.36-.24l-.31-.86h-1.41l-.13-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.4-.41c.35 0 .4.32.43.55h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18H616m-2-3.04a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -3625,15 +3760,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M61 519.25h2.2c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1V524H61zm1.23 2.21H63c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-61"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-33" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M69.58 524.81a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3643,7 +3778,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M69 523.69a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.84.84 0 00.43 1.57.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.3 1.15m2-.31a.31.31 0 01-.35-.24l-.32-.85H69l-.12-.8a5.31 5.31 0 01-.1-.67.4.4 0 01.4-.41c.36 0 .4.32.43.55h.76v.09c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.92-3.09a.42.42 0 110-.84.42.42 0 01.41.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -3657,7 +3792,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-34" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M408.43 217.48a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3667,7 +3802,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M407.88 216.35a1.26 1.26 0 01-.55-2.39l.11-.05.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.73v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.32.32 0 01-.35-.25l-.32-.85h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26h.05a.28.28 0 01.26.27c0 .08-.06.17-.21.17h-.22m-1.83-3a.42.42 0 110-.83.42.42 0 010 .83"
                 transform="translate(0 38.73)"
               />
@@ -3680,15 +3815,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M609.17 444.65h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-62"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-35" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M604 450a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3698,7 +3833,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M603.46 448.87a1.26 1.26 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13l.12-.05.05.43h-.05a.83.83 0 00-.41.72.84.84 0 001.68.13v-.08h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.32.32 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a4 4 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .4.33.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.19h1l.47 1.26a.27.27 0 01.27.26.19.19 0 01-.21.18h-.23m-1.92-3.1a.42.42 0 010-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -3711,15 +3846,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M425.52 448.72h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.24zm1.24 2.2h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-63"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-36" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M434.18 454.27a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3729,7 +3864,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M433.64 453.14a1.25 1.25 0 01-.56-2.38l.12-.06.06.43h-.06a.85.85 0 101.27.85v-.08h.4v.1a1.24 1.24 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .41.32.44.55h.83v.1c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.25a.27.27 0 01.27.26.19.19 0 01-.21.18h-.23m-1.92-3.1a.41.41 0 01-.41-.41.41.41 0 01.41-.42.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -3742,15 +3877,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M159.12 472.13h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-64"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-37" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M154 477.58a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3760,7 +3895,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M153.46 476.45a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.09-.06.05.43H153a.84.84 0 00-.42.72.85.85 0 001.69.13v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.46 1.26a.27.27 0 01.26.27c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 110-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -3773,15 +3908,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M124.35 620.32h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.59h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.84z"
               transform="translate(0 38.73)"
               id="Parking-65"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-38" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M119 625.8a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3791,7 +3926,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M118.49 624.67a1.26 1.26 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13h.11l.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.1c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.25a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 110-.83.41.41 0 01.41.42.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -3805,7 +3940,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-39" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M520.74 322.26a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3815,7 +3950,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M520.19 321.13a1.25 1.25 0 01-.55-2.38l.11-.06.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.86.86 0 00.76-.69v-.08h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.4.4 0 01.4-.41c.36 0 .4.32.43.55h.75v.1c0 .4-.31.4-.5.4h-.18v.2h1l.46 1.25a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.41.41 0 01-.42-.41.42.42 0 01.42-.42.41.41 0 01.41.42.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -3828,15 +3963,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M528.2 235h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.25zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-66"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-40" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M523.26 240.45a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3846,7 +3981,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M522.72 239.32a1.26 1.26 0 01-1.27-1.26 1.29 1.29 0 01.71-1.13l.12-.05.05.43h-.05a.85.85 0 101.27.85v-.08h.4v.1a1.24 1.24 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .4.33.44.56h.75v.1c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.25a.27.27 0 01.27.26.19.19 0 01-.21.18h-.23m-1.92-3.1a.42.42 0 010-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -3859,15 +3994,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M305.5 400.44h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.58h-1.25zm1.23 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-67"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-44" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M303.42 402.85a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3886,7 +4021,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-41" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M522.34 297.05a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3896,7 +4031,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M521.79 295.92a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13h.11l.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.76v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.18h-.22m-1.92-3.1a.42.42 0 11.41-.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -3909,15 +4044,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M427.2 521.17h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.26zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-68"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-42" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M435.86 526.73a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3927,7 +4062,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M435.32 525.6a1.26 1.26 0 01-.55-2.39l.11-.06.06.44h-.06a.84.84 0 00-.41.72.84.84 0 001.68.12v-.07h.41v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.34.34 0 01-.36-.25l-.32-.85h-1.41l-.12-.79c-.08-.54-.09-.61-.09-.67a.4.4 0 01.39-.42c.36 0 .41.32.44.56h.75v.15c0 .41-.31.41-.49.41H436v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -3940,11 +4075,11 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M174.62 298.7h2.25c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-69"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
           </g>
           <g id="Duddeston">
@@ -3955,7 +4090,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-45" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M495.55 345.3a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -3973,15 +4108,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M110.39 536.06h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-70"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-43" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M119.07 541.62a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -3991,7 +4126,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M118.52 540.49a1.26 1.26 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13l.12-.05v.43a.83.83 0 00-.41.72.84.84 0 001.68.13v-.08h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.32.32 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.1c0 .4-.31.4-.5.4h-.18v.19h1l.47 1.26a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 110-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -4004,15 +4139,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M519 510.62h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58H519zm1.24 2.21h.76c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-71"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-46" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M530.66 513.14a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4030,15 +4165,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M490.64 588.46h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-72"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-44" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M499.3 594a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4048,7 +4183,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M498.76 592.89a1.26 1.26 0 01-.55-2.39h.11l.06.43h-.05a.84.84 0 00-.42.72.84.84 0 001.68.12v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.38l-.12-.79c-.08-.54-.09-.61-.09-.67a.4.4 0 01.39-.42c.36 0 .41.32.44.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -4068,15 +4203,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M155.69 387.47h2.25c.89 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.58h-1.23zm1.23 2.2h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-73"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-45" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M164.82 393a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4086,7 +4221,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M164.27 391.9a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.84.84 0 00.43 1.57.87.87 0 00.84-.72v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.31a.31.31 0 01-.35-.24l-.32-.85h-1.41l-.12-.79a5.55 5.55 0 01-.1-.68.4.4 0 01.4-.41c.36 0 .4.32.43.55h.75v.09c0 .4-.31.4-.5.4h-.18v.2h1l.47 1.26h.05a.27.27 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.09a.42.42 0 01-.42-.42.42.42 0 01.83 0 .41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -4100,7 +4235,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-46" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M708.23 441.34a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4110,7 +4245,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M707.69 440.21a1.25 1.25 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13l.11-.05.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72V439h.42v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.33.33 0 01-.36-.24l-.31-.86h-1.41l-.13-.79a6.19 6.19 0 01-.09-.67.41.41 0 01.4-.42c.35 0 .4.33.43.56h.72v.1c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.25a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -4123,15 +4258,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M720.93 461.13h2.26c.88 0 1.72.4 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-74"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-47" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M718.56 463.68a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4156,15 +4291,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M128.35 263.51h2.26c.88 0 1.71.4 1.71 1.53s-.67 1.63-1.71 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-75"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-47" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M137 269.07a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4174,7 +4309,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M136.45 267.94a1.26 1.26 0 01-.56-2.39l.12-.06.06.43h-.06a.84.84 0 00-.41.72.84.84 0 001.68.12v-.07h.4v.1a1.25 1.25 0 01-1.24 1.11m2-.3a.33.33 0 01-.35-.25l-.32-.85h-1.41l-.12-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.39-.41c.36 0 .41.32.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26a.28.28 0 01.27.27.19.19 0 01-.21.17h-.23m-1.92-3.1a.41.41 0 01-.41-.42.41.41 0 01.41-.41.41.41 0 01.42.41.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -4187,15 +4322,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M83.78 630.25H86c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1V635h-1.22zm1.22 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62H85z"
               transform="translate(0 38.73)"
               id="Parking-76"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-48" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M81.5 632.51a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4213,15 +4348,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M640.83 343h2.26c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-77"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-49" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M638.36 345.2a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4239,15 +4374,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M60.31 199.2h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.58h-1.25zm1.23 2.2h.84c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-78"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-48" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M69.25 204.51a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4257,7 +4392,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M68.71 203.38a1.25 1.25 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.11-.05.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.4v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.42l-.13-.79a6.19 6.19 0 01-.09-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56H70v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.18h-.22m-1.8-3.04a.42.42 0 110-.83.42.42 0 01.41.41.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -4271,7 +4406,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-50" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M644 596.69a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4289,15 +4424,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M537.77 277.75H540c.89 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.58h-1.23zM539 280h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.62H539z"
               transform="translate(0 38.73)"
               id="Parking-79"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-49" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M533.11 283.15a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4307,7 +4442,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M532.57 282a1.25 1.25 0 01-.55-2.38l.11-.06.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.4.4 0 01.4-.41c.36 0 .4.32.43.55h.76v.1c0 .4-.32.4-.5.4h-.18v.2h1l.47 1.26a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.92-3.1a.41.41 0 01-.42-.41.42.42 0 11.83 0 .41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -4327,15 +4462,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M306.26 113.16h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-80"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-50" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M314.9 118.72a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4345,7 +4480,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M314.36 117.59a1.25 1.25 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13h.11l.06.43h-.06a.85.85 0 101.27.85v-.08h.41v.1a1.24 1.24 0 01-1.24 1.11m2-.3a.33.33 0 01-.36-.24l-.32-.86h-1.38l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .41.33.44.56h.75v.1c0 .4-.31.4-.49.4H315v.19h1l.47 1.26h.05a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -4358,15 +4493,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M637.05 491.88h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-81"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-51" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M648.72 494.43a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4391,15 +4526,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M115 496.24h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.6H115zm1.24 2.2h.76c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-82"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-52" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M126.64 498.76a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4418,7 +4553,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-51" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M292.72 440.73a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4428,7 +4563,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M292.17 439.6a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13h.11l.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.76v.1c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26h.05a.28.28 0 01.26.27c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 11.41-.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -4436,7 +4571,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
           </g>
           <g id="Bordesley">
             <path
-              className="cls-40"
+              className="cls-46"
               d="M466 393.06h1.35a2.57 2.57 0 011.34.28 1 1 0 01.45 1 1.15 1.15 0 01-.22.73 1 1 0 01-.66.37 1.75 1.75 0 01.53.19.9.9 0 01.37.38 1.28 1.28 0 01.14.63 1.32 1.32 0 01-.44 1.05 1.83 1.83 0 01-1.2.37H466zm.62 2.13h.85a1.19 1.19 0 00.81-.21.79.79 0 00.22-.61.65.65 0 00-.27-.59 1.56 1.56 0 00-.85-.18h-.76zm0 .52v1.81h.93a1.15 1.15 0 00.85-.25 1 1 0 00.24-.68.84.84 0 00-.25-.64 1.28 1.28 0 00-.89-.24zM473.29 396.17a2.13 2.13 0 01-.45 1.45 1.53 1.53 0 01-1.21.51 1.6 1.6 0 01-.84-.23 1.52 1.52 0 01-.57-.67 2.41 2.41 0 01-.21-1.06 2.06 2.06 0 01.44-1.43 1.49 1.49 0 011.2-.51 1.61 1.61 0 01.85.23 1.5 1.5 0 01.58.66 2.4 2.4 0 01.21 1.05zm-2.65 0a2 2 0 00.24 1.06.82.82 0 00.76.39.84.84 0 00.77-.39 1.91 1.91 0 00.25-1.06 1.84 1.84 0 00-.25-1 1 1 0 00-1.54 0 2 2 0 00-.23 1zM475.83 394.23h.21a.64.64 0 01.2 0l-.07.56h-.38a.89.89 0 00-.5.15 1.17 1.17 0 00-.38.44 1.41 1.41 0 00-.14.67v2h-.61v-3.75h.49l.07.68a1.86 1.86 0 01.44-.53 1 1 0 01.67-.22zM478 398.13a1.26 1.26 0 01-1-.49 2.22 2.22 0 01-.4-1.45 2.25 2.25 0 01.4-1.46 1.3 1.3 0 011.05-.5 1.2 1.2 0 01.66.17 1.13 1.13 0 01.42.39h.05v-.27-1.78h.61v5.32h-.49l-.09-.51a1.27 1.27 0 01-.42.41 1.21 1.21 0 01-.79.17zm.11-.51a.86.86 0 00.77-.33 1.73 1.73 0 00.22-1v-.12a2.23 2.23 0 00-.21-1.07.81.81 0 00-.78-.37.74.74 0 00-.69.39 2.16 2.16 0 00-.23 1.06 2 2 0 00.23 1.05.77.77 0 00.66.39zM482.12 394.23a1.51 1.51 0 01.78.21 1.43 1.43 0 01.51.6 2 2 0 01.18.89v.37h-2.41a1.5 1.5 0 00.3 1 1 1 0 00.8.33 2.64 2.64 0 00.6-.06 3.34 3.34 0 00.55-.2v.54a2.7 2.7 0 01-.54.19 2.93 2.93 0 01-.63.06 1.77 1.77 0 01-.9-.22 1.47 1.47 0 01-.59-.64 2.28 2.28 0 01-.22-1.06 2.64 2.64 0 01.19-1.06 1.63 1.63 0 01.55-.68 1.45 1.45 0 01.83-.27zm0 .51a.78.78 0 00-.65.28 1.38 1.38 0 00-.28.79H483a1.43 1.43 0 00-.21-.77.72.72 0 00-.67-.3zM486.75 397a1 1 0 01-.38.83 1.75 1.75 0 01-1 .28 2.49 2.49 0 01-.65-.07 2.17 2.17 0 01-.47-.17v-.56a5.58 5.58 0 00.52.21 2.1 2.1 0 00.61.09 1 1 0 00.62-.15.47.47 0 00.19-.4.46.46 0 00-.07-.26 1 1 0 00-.26-.22 3.58 3.58 0 00-.54-.25 5.07 5.07 0 01-.57-.28 1 1 0 01-.37-.34 1 1 0 01.23-1.24 1.64 1.64 0 011-.26 2.35 2.35 0 01.6.08 2.55 2.55 0 01.53.18l-.2.49a3.75 3.75 0 00-.47-.17 1.73 1.73 0 00-.5-.07.93.93 0 00-.52.12.37.37 0 00-.19.33.4.4 0 00.09.27.67.67 0 00.27.21c.13.07.31.15.53.24a3.85 3.85 0 01.57.27 1 1 0 01.36.34.87.87 0 01.07.5zM488.17 398.06h-.61v-5.32h.61zM490.61 394.23a1.52 1.52 0 01.79.21 1.43 1.43 0 01.51.6 2.21 2.21 0 01.17.89v.37h-2.4a1.5 1.5 0 00.3 1 1 1 0 00.8.33 2.64 2.64 0 00.6-.06 3 3 0 00.54-.2v.54a2.42 2.42 0 01-.53.19 3 3 0 01-.64.06 1.73 1.73 0 01-.89-.22 1.55 1.55 0 01-.6-.64 2.41 2.41 0 01-.21-1.06 2.64 2.64 0 01.19-1.06 1.63 1.63 0 01.55-.68 1.44 1.44 0 01.82-.27zm0 .51a.77.77 0 00-.64.28 1.38 1.38 0 00-.28.79h1.76a1.28 1.28 0 00-.21-.77.7.7 0 00-.63-.3zM492.25 394.31h.66l.75 2.13c.06.19.12.37.17.54a3.36 3.36 0 01.12.48 4 4 0 01.12-.46c.05-.19.1-.38.17-.57l.71-2.12h.66l-1.52 4.26a2.24 2.24 0 01-.49.85 1.07 1.07 0 01-.81.32H492.31v-.49h.39a.69.69 0 00.49-.18 1.26 1.26 0 00.29-.48l.17-.5z"
               transform="translate(0 38.73)"
             />
@@ -4448,15 +4583,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M286.37 141.66h2.26c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.59h-1.24zm1.24 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-83"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-52" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M295 147.22a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4466,7 +4601,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M294.47 146.09a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.83.83 0 00-.42.72.86.86 0 00.85.85.88.88 0 00.84-.73v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.41l-.13-.79a6.48 6.48 0 01-.09-.68.4.4 0 01.4-.41c.35 0 .4.32.43.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26h.05a.28.28 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.1a.41.41 0 01-.41-.42.41.41 0 01.41-.41.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -4480,7 +4615,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-53" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M314.63 159.93a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4490,7 +4625,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M314.09 158.81a1.26 1.26 0 01-.55-2.39l.11-.06.06.43a.84.84 0 101.26.85v-.08h.41v.1a1.25 1.25 0 01-1.24 1.12m2-.31a.33.33 0 01-.36-.24l-.31-.85H314l-.12-.8a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.41c.36 0 .41.32.44.55h.75v.09c0 .4-.31.4-.49.4h-.18v.2h1l.47 1.26h.05a.27.27 0 01.26.26.19.19 0 01-.21.18h-.22m-1.93-3.09a.42.42 0 010-.84.42.42 0 01.42.42.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -4503,15 +4638,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M493.39 198h2.25c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-84"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-54" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M488 203.23a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4521,7 +4656,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M487.47 202.1a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.12-.05v.43a.83.83 0 00-.41.72.84.84 0 001.68.13v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.32.32 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.27.27.2.2 0 01-.22.18h-.22m-1.92-3.1a.42.42 0 110-.83.42.42 0 01.42.41.42.42 0 01-.42.42"
                 transform="translate(0 38.73)"
               />
@@ -4534,15 +4669,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M160.73 481.86H163c.89 0 1.72.4 1.72 1.53S164 485 163 485h-1v1.59h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.6a.59.59 0 00-.67-.62H162z"
               transform="translate(0 38.73)"
               id="Parking-85"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-55" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M155.61 487.31a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4552,7 +4687,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M155.07 486.18a1.25 1.25 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.11-.05.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72V485h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86H155l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.32.43.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26h.05a.29.29 0 01.26.27.19.19 0 01-.21.18h-.22m-1.92-3.1a.42.42 0 11.41-.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -4565,15 +4700,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M419.2 338.82h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.26zm1.24 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-86"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-53" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M415.62 341.15a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4591,15 +4726,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M371.85 407.57h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.59h-1.23zm1.23 2.2h.84c.38 0 .66-.15.66-.59a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-87"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-54" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M384.27 409.86a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4618,7 +4753,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-55" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M416.62 388.62a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4636,15 +4771,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M592.51 415.34h2.25c.88 0 1.72.4 1.72 1.53s-.68 1.63-1.72 1.63h-1v1.59h-1.23zm1.23 2.2h.83c.39 0 .67-.15.67-.59a.59.59 0 00-.67-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-88"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-56" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M591 417.62a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4669,7 +4804,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-56" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M77.56 214.79a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4679,7 +4814,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M77 213.66a1.26 1.26 0 01-.55-2.39l.12-.05v.43a.84.84 0 101.27.84v-.07h.41v.1a1.26 1.26 0 01-1.25 1.14m2-.3a.33.33 0 01-.35-.25l-.32-.85H77l-.12-.79a4 4 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .4.32.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.27.27.19.19 0 01-.21.17H79m-1.92-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -4692,11 +4827,11 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M295.93 183.8h2.25c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-89"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
           </g>
           <g id="Bermuda_Park" data-name="Bermuda Park">
@@ -4706,15 +4841,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M605.89 372.67h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.24zm1.24 2.21h.87c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-90"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-57" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M614.53 378.23a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4724,7 +4859,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M614 377.1a1.26 1.26 0 01-1.27-1.26 1.29 1.29 0 01.71-1.13h.12l.05.43h-.05a.85.85 0 101.27.85v-.08h.4v.1a1.25 1.25 0 01-1.23 1.09m2-.3a.33.33 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a4 4 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .4.33.44.56h.75v.09c0 .41-.31.41-.5.41h-.18v.19h1l.47 1.26a.29.29 0 01.27.27.19.19 0 01-.21.18H616m-1.92-3.1a.42.42 0 010-.83.42.42 0 01.42.42.41.41 0 01-.42.41"
                 transform="translate(0 38.73)"
               />
@@ -4737,15 +4872,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M565.29 472.57h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.84c.38 0 .66-.16.66-.59a.59.59 0 00-.66-.63h-.84z"
               transform="translate(0 38.73)"
               id="Parking-91"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-57" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M570 482a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4763,15 +4898,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M620 390.88h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.59H620zm1.23 2.21h.84c.38 0 .66-.16.66-.6a.58.58 0 00-.66-.62h-.84z"
               transform="translate(0 38.73)"
               id="Parking-92"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-58" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M628.64 396.44a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4781,7 +4916,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M628.1 395.31a1.26 1.26 0 01-.55-2.39l.11-.06.06.43h-.05a.83.83 0 00-.42.72.86.86 0 00.85.85.87.87 0 00.84-.73v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.32.32 0 01-.35-.25l-.32-.85h-1.41l-.12-.79a5.55 5.55 0 01-.1-.68.4.4 0 01.4-.41c.36 0 .4.32.43.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.92-3.1a.42.42 0 01-.42-.42.42.42 0 01.83 0 .41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -4795,7 +4930,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Full_Step_Free_Access-58" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M635 621.8a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4813,15 +4948,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M230.58 497.62h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-93"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-59" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M225.07 503.13a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4831,7 +4966,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M224.53 502a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13l.11-.05.06.43h-.05a.84.84 0 00-.42.72.84.84 0 001.68.13v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.42l-.12-.79a6.19 6.19 0 01-.09-.67.4.4 0 01.39-.42c.36 0 .41.32.44.56h.76v.09c0 .41-.32.41-.5.41h-.18v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.93-3.1a.42.42 0 010-.83.42.42 0 110 .83"
                 transform="translate(0 38.73)"
               />
@@ -4844,15 +4979,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M687.05 296.75h2.25c.89 0 1.72.41 1.72 1.53s-.67 1.64-1.72 1.64h-1v1.58h-1.24zm1.24 2.21h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-94"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-60" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M681.55 302a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4862,7 +4997,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M681 300.84a1.26 1.26 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13l.11-.05.06.43a.84.84 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86H681l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.19h1l.47 1.26h.05a.28.28 0 01.26.27c0 .09-.06.18-.21.18H683m-1.92-3.1a.42.42 0 110-.83.41.41 0 01.41.42.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -4876,7 +5011,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
             />
             <g id="Part_Step_Free_Access-61" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M486.88 336.27a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4886,7 +5021,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M486.33 335.14a1.26 1.26 0 01-1.26-1.26 1.29 1.29 0 01.71-1.13l.11-.05.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.86.86 0 00.84-.72v-.08h.41v.1a1.25 1.25 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.1c0 .4-.31.4-.5.4H487v.2h1l.46 1.25a.26.26 0 01.26.26c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 11.41-.41.41.41 0 01-.41.41"
                 transform="translate(0 38.73)"
               />
@@ -4899,15 +5034,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M146.47 673.46h2.25c.89 0 1.72.4 1.72 1.53s-.67 1.63-1.72 1.63h-1v1.58h-1.24zm1.24 2.2h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.62h-.83z"
               transform="translate(0 38.73)"
               id="Parking-95"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-59" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M158.46 675.8a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4925,15 +5060,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M262.5 516h2.25c.88 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.25zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-96"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-60" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M259.42 518.42a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />
@@ -4951,15 +5086,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M40.34 188.82h2.26a1.5 1.5 0 011.71 1.53c0 1.18-.67 1.64-1.71 1.64h-1v1.58h-1.26zm1.24 2.18h.83c.38 0 .66-.16.66-.59a.58.58 0 00-.66-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-97"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Part_Step_Free_Access-62" data-name="Part Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M48.85 194.18a3 3 0 113-3 3 3 0 01-3 3z"
                 transform="translate(0 38.73)"
               />
@@ -4969,7 +5104,7 @@ const RailZoneMap = ({ parking, partial, full }) => {
                 transform="translate(0 38.73)"
               />
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M48.31 193.05a1.26 1.26 0 01-.55-2.39l.11-.06.06.44a.83.83 0 00-.42.72.85.85 0 00.85.85.87.87 0 00.84-.73v-.07h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.34.34 0 01-.36-.25l-.31-.85h-1.43l-.13-.79c-.08-.54-.09-.61-.09-.67a.4.4 0 01.4-.42c.36 0 .4.32.43.56h.76v.09c0 .41-.32.41-.5.41H49v.2h1l.47 1.26a.29.29 0 01.26.27.19.19 0 01-.21.17h-.22m-1.92-3.1a.42.42 0 11.41-.42.41.41 0 01-.41.42"
                 transform="translate(0 38.73)"
               />
@@ -4989,15 +5124,15 @@ const RailZoneMap = ({ parking, partial, full }) => {
               transform="translate(0 38.73)"
             />
             <path
+              className="parking-icon cls-44"
               d="M492.65 464h2.25c.89 0 1.72.41 1.72 1.53s-.68 1.64-1.72 1.64h-1v1.58h-1.23zm1.23 2.21h.83c.39 0 .67-.16.67-.59a.59.59 0 00-.67-.63h-.83z"
               transform="translate(0 38.73)"
               id="Parking-98"
               data-name="Parking"
-              className="parking-icon cls-38"
             />
             <g id="Full_Step_Free_Access-61" data-name="Full Step Free Access">
               <path
-                className="cls-39"
+                className="cls-45"
                 d="M504.34 466.57a3 3 0 11-3-3 3 3 0 013 3"
                 transform="translate(0 38.73)"
               />

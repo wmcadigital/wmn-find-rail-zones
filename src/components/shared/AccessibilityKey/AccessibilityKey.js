@@ -27,7 +27,7 @@ const AccessibilityKey = ({ mapView }) => {
   );
 
   return mapView ? (
-    <div class={s.mapKeyContainer}>
+    <div className={s.mapKeyContainer}>
       {!showKey ? (
         <Button
           btnClass={`wmnds-btn--primary ${s.showKeyBtn}`}
