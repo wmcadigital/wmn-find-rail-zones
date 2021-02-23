@@ -92,7 +92,7 @@ const useMapControls = () => {
 
   // Removes a specific station highlight on the map
   const resetMapStation = (station, selectedStations) => {
-    if (mapRef?.current) {
+    if (mapRef?.current && mapState.mapView) {
       const svg = mapRef.current.ViewerDOM; // Find svg node
       // Find related group in svg map
       if (station && station.stationName) {
@@ -119,7 +119,7 @@ const useMapControls = () => {
   };
   // Clear all map highlights
   const resetMap = (selectedStations) => {
-    if (mapRef) {
+    if (mapRef?.current && mapState.mapView) {
       const svg = mapRef.current.ViewerDOM;
       // clear map highlights
       selectedStations.forEach((station) => {
