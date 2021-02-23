@@ -23,7 +23,7 @@ const useMapControls = () => {
   );
 
   useEffect(() => {
-    if (mapRef?.current) {
+    if (mapRef?.current && mapState.mapView) {
       const fitZoneToViewer = (zone, offset) => {
         const svg = mapRef.current.ViewerDOM; // Find svg node
         const zoneNode = svg.querySelector(`#Zone_${zone}`); // Find relevant zone node
@@ -61,20 +61,24 @@ const useMapControls = () => {
 
       const zones = mapState.highlightedZones;
 
+      let mounted = true;
+
       const zoneName =
         Object.keys(zones)
           .reverse()
           .find((item) => zones[item] === true) || null;
       const resizeMap = () => {
-        if (zoneName) {
-          const zoneToHighlight = zoneName.replace('zone', '');
-          if (zoneToHighlight && zoneToHighlight <= '5') {
-            fitZoneToViewer(zoneToHighlight, 50);
+        if (mounted) {
+          if (zoneName) {
+            const zoneToHighlight = zoneName.replace('zone', '');
+            if (zoneToHighlight && zoneToHighlight <= '5') {
+              fitZoneToViewer(zoneToHighlight, 50);
+            } else {
+              fitZoneToViewer(7, 0);
+            }
           } else {
             fitZoneToViewer(7, 0);
           }
-        } else {
-          fitZoneToViewer(7, 0);
         }
       };
 
@@ -85,10 +89,11 @@ const useMapControls = () => {
       });
       // Cleanup: remove eventListener
       return () => {
+        mounted = false;
         window.removeEventListener('resize', resizeMap);
       };
     }
-  }, [mapRef, zoomSelection, mapState.highlightedZones]);
+  }, [mapRef, zoomSelection, mapState.highlightedZones, mapState.mapView]);
 
   // Removes a specific station highlight on the map
   const resetMapStation = (station, selectedStations) => {
