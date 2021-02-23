@@ -21,7 +21,7 @@ const ListView = () => {
   ]);
 
   const toggleAccordions = (open) => {
-    let newState = accordions.map((accordion) => {
+    const newState = accordions.map((accordion) => {
       // make sure all accordions do the right thing
       open ? (accordion.open = true) : (accordion.open = false);
       return accordion;
@@ -83,7 +83,7 @@ const ListView = () => {
             const accordionId = `${accordion.name.toLowerCase().replace(' ', '')}-${i}`;
             // Update accordion state on click
             const handleClick = () => {
-              let newState = accordions;
+              const newState = accordions;
               newState[i].open = !accordions[i].open;
               setAccordions([...newState]);
             };

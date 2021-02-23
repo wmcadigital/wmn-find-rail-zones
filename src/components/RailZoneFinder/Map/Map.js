@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useRef } from 'react';
+import { MapContext } from 'globalState';
 import RailZoneMap from './RailZoneMap';
 import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 
 import s from './Map.module.scss';
-
-import { MapContext } from 'globalState';
 
 const Map = () => {
   const [, mapDispatch] = useContext(MapContext);
