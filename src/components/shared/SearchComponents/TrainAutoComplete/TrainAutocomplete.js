@@ -27,10 +27,10 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
   const filteredResults = results.filter(
     (station) => !autoCompleteState.selectedStations.some((s) => s.id === station.crsCode)
   );
-  const updateQuery = (query, queryId) => {
+  const updateQuery = (query, qId) => {
     autoCompleteDispatch({
       type: 'UPDATE_QUERY',
-      queryId: queryId,
+      queryId: qId,
       payload: query,
     });
   };

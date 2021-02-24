@@ -9,7 +9,11 @@ import s from './Icon.module.scss';
 
 const Icon = ({ className, iconName, size, color, title }) => {
   return (
-    <svg className={`${className} ${color && s[color]}`} width={`${size}px`} height={`${size}px`}>
+    <svg
+      className={`${className} ${(color && s[color]) || ''}`}
+      width={`${size}px`}
+      height={`${size}px`}
+    >
       {title && <title>{title}</title>}
       <use xlinkHref={`#wmnds-${iconName}`} href={`#wmnds-${iconName}`} />
     </svg>

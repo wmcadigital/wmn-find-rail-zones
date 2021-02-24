@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // Imported components
 import CloseButton from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
-import useMapControls from '../../../../../customHooks/useMapControls';
+import useMapControls from '../../../RailZoneFinder/Map/customHooks/useMapControls';
 
 const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryId }) => {
   const selectedServiceRef = useRef(null);
@@ -36,11 +36,7 @@ const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryI
 SelectedServiceHeader.propTypes = {
   autoCompleteState: PropTypes.objectOf(PropTypes.any).isRequired,
   autoCompleteDispatch: PropTypes.func.isRequired,
-  to: PropTypes.bool,
-};
-
-SelectedServiceHeader.defaultProps = {
-  to: false,
+  queryId: PropTypes.number.isRequired,
 };
 
 export default SelectedServiceHeader;

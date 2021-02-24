@@ -2,7 +2,7 @@ import { useContext, useEffect, useLayoutEffect } from 'react';
 // import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 // Import contexts
 import { AutoCompleteContext, MapContext } from 'globalState';
-import s from './Map.module.scss';
+import s from '../Map.module.scss';
 
 const useMapMethods = () => {
   const [mapState, mapDispatch] = useContext(MapContext);
@@ -11,23 +11,23 @@ const useMapMethods = () => {
 
   useEffect(() => {
     // Check if map and mapcontainer refs exist
-    if (mapRef?.current && mapContainer?.current) {
-      let mounted = true;
+    let mounted = true;
 
-      // Get map container dimensions and assign them to the svg map whidth/height
-      const updateWidthHeight = () => {
-        if (mounted) {
-          const containerSize = mapContainer.current.getBoundingClientRect();
-          // Add map size to context state
-          mapDispatch({
-            type: 'UPDATE_MAP_SIZE',
-            payload: {
-              width: containerSize.width,
-              height: containerSize.height,
-            },
-          });
-        }
-      };
+    // Get map container dimensions and assign them to the svg map whidth/height
+    const updateWidthHeight = () => {
+      if (mounted) {
+        const containerSize = mapContainer.current.getBoundingClientRect();
+        // Add map size to context state
+        mapDispatch({
+          type: 'UPDATE_MAP_SIZE',
+          payload: {
+            width: containerSize.width,
+            height: containerSize.height,
+          },
+        });
+      }
+    };
+    if (mapRef?.current && mapContainer?.current) {
       // Run map resize on initial render
       updateWidthHeight();
 
@@ -35,27 +35,26 @@ const useMapMethods = () => {
       window.addEventListener('resize', () => {
         updateWidthHeight();
       });
-      // Cleanup: remove eventListener
-      return () => {
-        mounted = false;
-        window.removeEventListener('resize', updateWidthHeight);
-      };
     }
+    // Cleanup: remove eventListener
+    return () => {
+      mounted = false;
+      window.removeEventListener('resize', updateWidthHeight);
+    };
   }, [mapRef, mapContainer, mapDispatch]);
 
   useLayoutEffect(() => {
     // Function for hightlighting stations on the svg map
     const drawMapHighlights = (station) => {
       const svg = mapRef.current.ViewerDOM;
-
       // Find station element by name or id
       const group =
         svg.querySelector(`[data-name="${station.stationName}"]`) ||
         svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
-      // Find parking icon for that station if there is one
-      const parkingIcon = group.querySelector(`.parking-icon`);
 
       if (group && !group.querySelector(`.${s.textBg}`)) {
+        // Find parking icon for that station if there is one
+        const parkingIcon = group.querySelector(`.parking-icon`);
         // If the group element exists get its svg coordinates
         const gCoords = group.getBBox();
         // Create a new rectangle element

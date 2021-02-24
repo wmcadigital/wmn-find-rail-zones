@@ -10,7 +10,7 @@ const AccessIcon = ({ type, size, className, iconClassName }) => {
       className={`${s.accessIcon} ${type === 'full' ? s.fullAccess : s.partAccess} ${className}`}
       style={{ fontSize: `${size}px` }}
     >
-      <Icon iconName="general-disabled" className={iconClassName} />
+      <Icon iconName="general-disabled" className={iconClassName || ''} />
     </div>
   );
 };

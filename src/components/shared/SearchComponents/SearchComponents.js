@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
-import Button from '../../Button/Button';
-import Result from '../../../RailZoneFinder/Result';
-import TrainAutoComplete from '../TrayComponents/TrainAutoComplete/TrainAutocomplete';
+// Import context
 import { AutoCompleteContext } from 'globalState';
-import s from './TrayComponents.module.scss';
-import useMapControls from '../../../../customHooks/useMapControls';
+// Import components
+import Button from '../Button/Button';
+import Result from '../Result/Result';
+import TrainAutoComplete from './TrainAutoComplete/TrainAutocomplete';
+import s from './SearchComponents.module.scss';
+// Import custom hook
+import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
 const TrayComponents = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
@@ -33,12 +36,6 @@ const TrayComponents = () => {
         <div className="wmnds-m-b-md">
           <TrainAutoComplete label="To:" id="autocomplete_to" queryId={1} />
         </div>
-        <Button
-          btnClass={`wmnds-btn--primary wmnds-m-b-lg ${s.addBtn}`}
-          iconRight="general-expand"
-          text="Add another station"
-          onClick={addStation}
-        />
         {selectedStations.length > 2 && (
           <div className="wmnds-p-b-md">
             <div className={`wmnds-inset-text wmnds-m-b-sm wmnds-p-r-none ${s.addStation}`}>
@@ -50,16 +47,16 @@ const TrayComponents = () => {
                   queryId={i + 2}
                 />
               ))}
-              <div className="wmnds-text-align-right">
-                <Button
-                  btnClass="wmnds-btn--link"
-                  text="+ Add another station"
-                  onClick={addStation}
-                />
-              </div>
             </div>
           </div>
         )}
+        <Button
+          btnClass={`wmnds-btn--primary wmnds-m-b-lg ${s.addBtn}`}
+          iconRight="general-expand"
+          text="Add another station"
+          onClick={addStation}
+          disabled={selectedStations.length >= 12}
+        />
       </div>
       <Result />
     </>

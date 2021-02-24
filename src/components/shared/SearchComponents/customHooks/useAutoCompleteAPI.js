@@ -1,7 +1,8 @@
 import { useEffect, useContext, useState, useRef, useCallback } from 'react';
-import railData from '../../../../RailZoneFinder/RailData.json';
 // Import contexts
 import { AutoCompleteContext, MapContext } from 'globalState';
+// Import json data
+import railData from '../../../RailZoneFinder/RailData.json';
 
 const useAutoCompleteAPI = (queryId) => {
   // State variables
@@ -28,10 +29,13 @@ const useAutoCompleteAPI = (queryId) => {
         const result = railData.railStationAccess.filter(
           (service) => service.crsCode === selectedService.id
         )[0];
+        if (!result.railZone) {
+          result.railZone = 7; // if there is no zone assign '7' (Out of county)
+        }
         // Set data to add to context state
         payload = {
           id: result.crsCode,
-          queryId: queryId,
+          queryId,
           ...result,
         };
       }
@@ -45,7 +49,7 @@ const useAutoCompleteAPI = (queryId) => {
         // Update the map state to highlight zones which have selected stations in them
         mapDispatch({
           type: 'UPDATE_ZONE_HIGHLIGHT',
-          payload: { [`zone${payload.railZone || 7}`]: true }, // if there is no zone assign '7' (Out of county)
+          payload: { [`zone${payload.railZone}`]: true },
         });
       }
 

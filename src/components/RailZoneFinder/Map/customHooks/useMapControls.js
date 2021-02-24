@@ -12,6 +12,7 @@ const useMapControls = () => {
   const zoomInCenter = () => mapRef.current.zoomOnViewerCenter(1.2);
   const zoomOutCenter = () => mapRef.current.zoomOnViewerCenter(0.9);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const zoomSelection = useCallback(
     debounce((coords) => {
       const { x, y, width, height } = coords;
@@ -22,8 +23,10 @@ const useMapControls = () => {
     [mapRef]
   );
 
+  // eslint-disable-next-line consistent-return
   useEffect(() => {
-    if (mapRef?.current) {
+    let mounted = true;
+    if (mapRef?.current && mapState.mapView) {
       const fitZoneToViewer = (zone, offset) => {
         const svg = mapRef.current.ViewerDOM; // Find svg node
         const zoneNode = svg.querySelector(`#Zone_${zone}`); // Find relevant zone node
@@ -66,15 +69,17 @@ const useMapControls = () => {
           .reverse()
           .find((item) => zones[item] === true) || null;
       const resizeMap = () => {
-        if (zoneName) {
-          const zoneToHighlight = zoneName.replace('zone', '');
-          if (zoneToHighlight && zoneToHighlight <= '5') {
-            fitZoneToViewer(zoneToHighlight, 50);
+        if (mounted) {
+          if (zoneName) {
+            const zoneToHighlight = zoneName.replace('zone', '');
+            if (zoneToHighlight && zoneToHighlight <= '5') {
+              fitZoneToViewer(zoneToHighlight, 50);
+            } else {
+              fitZoneToViewer(7, 0);
+            }
           } else {
             fitZoneToViewer(7, 0);
           }
-        } else {
-          fitZoneToViewer(7, 0);
         }
       };
 
@@ -85,10 +90,11 @@ const useMapControls = () => {
       });
       // Cleanup: remove eventListener
       return () => {
+        mounted = false;
         window.removeEventListener('resize', resizeMap);
       };
     }
-  }, [mapRef, zoomSelection, mapState.highlightedZones]);
+  }, [mapRef, zoomSelection, mapState.highlightedZones, mapState.mapView]);
 
   // Removes a specific station highlight on the map
   const resetMapStation = (station, selectedStations) => {
