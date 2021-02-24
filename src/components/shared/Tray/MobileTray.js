@@ -9,9 +9,13 @@ const MobileTray = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className={`${s.tray} ${open ? s.trayIsOpen : ''}`}>
-      <div className={`${s.drawerHandle} wmnds-col-1`} onClick={() => setOpen(!open)}>
+      <button
+        type="button"
+        className={`${s.drawerHandle} wmnds-col-1`}
+        onClick={() => setOpen(!open)}
+      >
         <p>Swipe tray up</p>
-      </div>
+      </button>
       <div className={`${s.swipeTrayWrapper} wmnds-p-md`}>
         <TrayComponents />
       </div>

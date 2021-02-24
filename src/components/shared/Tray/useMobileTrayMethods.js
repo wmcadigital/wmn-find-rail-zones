@@ -1,6 +1,4 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
-// Import contexts
-import { AutoCompleteContext } from 'globalState';
 // Import customHooks
 import useWindowHeightWidth from 'customHooks/useWindowHeightWidth';
 
