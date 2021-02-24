@@ -2,7 +2,7 @@ import { useContext, useEffect, useLayoutEffect } from 'react';
 // import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 // Import contexts
 import { AutoCompleteContext, MapContext } from 'globalState';
-import s from './Map.module.scss';
+import s from '../Map.module.scss';
 
 const useMapMethods = () => {
   const [mapState, mapDispatch] = useContext(MapContext);

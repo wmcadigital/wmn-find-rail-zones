@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // Imported components
 import CloseButton from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
-import useMapControls from '../../../../../customHooks/useMapControls';
+import useMapControls from '../../../RailZoneFinder/Map/customHooks/useMapControls';
 
 const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryId }) => {
   const selectedServiceRef = useRef(null);

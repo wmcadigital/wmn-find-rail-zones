@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 // Import contexts
 import { AutoCompleteContext } from 'globalState';
 // Import components
-import Icon from '../shared/Icon/Icon';
-import AccessIcon from '../shared/Icon/AccessIcon';
+import Icon from '../Icon/Icon';
+import AccessIcon from '../Icon/AccessIcon';
 // Import styles
 import s from './Result.module.scss';
 

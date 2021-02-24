@@ -5,7 +5,7 @@ import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 import Accordion from '../../shared/Accordion/Accordion';
-import TrayComponents from '../../shared/Tray/TrayComponents/TrayComponents';
+import TrayComponents from '../../shared/SearchComponents/SearchComponents';
 import s from './ListView.module.scss';
 
 import railData from '../RailData.json';

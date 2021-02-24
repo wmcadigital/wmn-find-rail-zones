@@ -2,7 +2,7 @@ import { useEffect, useContext, useState, useRef, useCallback } from 'react';
 // Import contexts
 import { AutoCompleteContext, MapContext } from 'globalState';
 // Import json data
-import railData from '../../../../RailZoneFinder/RailData.json';
+import railData from '../../../RailZoneFinder/RailData.json';
 
 const useAutoCompleteAPI = (queryId) => {
   // State variables
