@@ -109,8 +109,7 @@ const useMapControls = () => {
         if (group) {
           if (
             (full && station.stepFreeAccess === 'full') ||
-            (partial &&
-              (station.stepFreeAccess === 'partial' || station.stepFreeAccess === 'full')) ||
+            (partial && station.stepFreeAccess === 'partial') ||
             (parking && station.parking)
           ) {
             group.classList.add(s.showStation);
