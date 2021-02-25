@@ -57,6 +57,12 @@ $duration: 0.75s;
   }
 }
 
+.hideStations {
+  & > g:not(.showStation):not(.selectedStation) {
+    display: none;
+  }
+}
+
 @keyframes fade {
   0% {
     opacity: 0;

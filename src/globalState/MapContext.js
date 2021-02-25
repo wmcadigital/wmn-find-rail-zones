@@ -23,6 +23,11 @@ export const MapContextProvider = (props) => {
       zone6: false,
       zone7: false,
     },
+    accessVisibility: {
+      full: false,
+      partial: false,
+      parking: false,
+    },
   };
 
   // Set up a reducer so we can change state based on centralised logic here
@@ -73,6 +78,14 @@ export const MapContextProvider = (props) => {
         return {
           ...state,
           highlightedZones: { ...initialState.highlightedZones },
+        };
+      }
+
+      // Update highlighted zone on map
+      case 'TOGGLE_ACCESS_VISIBILITY': {
+        return {
+          ...state,
+          accessVisibility: { ...action.payload },
         };
       }
 

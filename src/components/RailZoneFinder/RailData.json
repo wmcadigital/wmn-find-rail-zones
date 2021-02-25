@@ -31,7 +31,7 @@
       "stationName": "Aston",
       "railZone": 2,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "ATH",
@@ -235,7 +235,7 @@
       "stationName": "Coventry Arena",
       "railZone": 5,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "CRA",
@@ -661,7 +661,7 @@
       "stationName": "Spring Road",
       "railZone": 3,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "STA",
@@ -739,7 +739,7 @@
       "crsCode": "TLK",
       "stationName": "The Lakes",
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "THL",
