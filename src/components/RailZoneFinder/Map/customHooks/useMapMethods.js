@@ -53,6 +53,7 @@ const useMapMethods = () => {
         svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
 
       if (group && !group.querySelector(`.${s.textBg}`)) {
+        group.classList.add(s.selectedStation);
         // Find parking icon for that station if there is one
         const parkingIcon = group.querySelector(`.parking-icon`);
         // If the group element exists get its svg coordinates

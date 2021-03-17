@@ -9,7 +9,7 @@ const InputCheckbox = ({ name, children, handleChange, checked, classes }) => {
 
   return (
     <div className={`wmnds-fe-group ${classes}`}>
-      <label className="wmnds-fe-checkboxes__container">
+      <label className="wmnds-fe-checkboxes__container wmnds-m-none">
         {children}
         <input
           defaultChecked={checked}

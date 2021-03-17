@@ -3,6 +3,8 @@ import { ALIGN_COVER, ALIGN_CENTER } from 'react-svg-pan-zoom';
 import debounce from 'lodash/debounce';
 // Import contexts
 import { MapContext } from 'globalState';
+import s from '../Map.module.scss';
+import railData from '../../RailData.json';
 
 const useMapControls = () => {
   const [mapState, mapDispatch] = useContext(MapContext);
@@ -96,6 +98,29 @@ const useMapControls = () => {
     }
   }, [mapRef, zoomSelection, mapState.highlightedZones, mapState.mapView]);
 
+  useEffect(() => {
+    const { full, partial, parking } = mapState.accessVisibility;
+    if (mapRef?.current) {
+      const svg = mapRef.current.ViewerDOM; // Find svg node
+      railData.railStationAccess.forEach((station) => {
+        const group =
+          svg.querySelector(`[data-name="${station.stationName}"]`) ||
+          svg.querySelector(`#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`);
+        if (group) {
+          if (
+            (full && station.stepFreeAccess === 'full') ||
+            (partial && station.stepFreeAccess === 'partial') ||
+            (parking && station.parking)
+          ) {
+            group.classList.add(s.showStation);
+          } else {
+            group.classList.remove(s.showStation);
+          }
+        }
+      });
+    }
+  }, [mapRef, mapState.accessVisibility]);
+
   // Removes a specific station highlight on the map
   const resetMapStation = (station, selectedStations) => {
     if (mapRef?.current && mapState.mapView) {
@@ -109,6 +134,9 @@ const useMapControls = () => {
 
         // If group is found remove text background from svg map
         if (svgGroup) {
+          // remove selected class
+          svgGroup.classList.remove(s.selectedStation);
+          // remove background from text
           svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
         }
       }
@@ -132,6 +160,8 @@ const useMapControls = () => {
         const textBg = svg.querySelector(`#${station.id}_text_bg`);
         const parkingIconBg = svg.querySelector(`#${station.id}_parking_bg`);
         if (textBg) {
+          // remove selected class
+          textBg.parentNode.classList.remove(s.selectedStation);
           // remove background from text
           textBg.parentNode.removeChild(textBg);
         }
