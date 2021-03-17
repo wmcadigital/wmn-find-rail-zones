@@ -1,5 +1,6 @@
 // IE 11 support
 import 'react-app-polyfill/stable';
+import './assets/js/polyfills/polyfill-includes';
 // React
 import React from 'react';
 import ReactDOM from 'react-dom';
