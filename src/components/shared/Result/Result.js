@@ -42,14 +42,17 @@ const Result = () => {
       {stations.map(({ id, stationName, railZone }) => (
         <p key={id}>
           {stationName} is{' '}
-          {railZone ? (
+          {railZone < 6 && (
             <>
               in <strong>Zone {railZone}</strong>
             </>
-          ) : (
-            <strong>Out of County</strong>
           )}
-          .
+          {railZone === 6 && (
+            <>
+              in <strong>nTrain Zone 5</strong>
+            </>
+          )}
+          {railZone === 7 && <strong>Out of County</strong>}.
         </p>
       ))}
       {fullAccessStations.length > 0 && (
