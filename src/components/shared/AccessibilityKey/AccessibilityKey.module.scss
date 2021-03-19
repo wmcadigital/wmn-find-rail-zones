@@ -39,6 +39,19 @@
   text-align: right;
 }
 
+.keyHeader {
+  flex-wrap: nowrap;
+
+  & > h3 {
+    text-align: left;
+  }
+
+  & > .hideKeyBtn {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+}
+
 @media (min-width: $breakpoint-md) and (min-height: $breakpoint-sm) {
   .mapKeyContainer {
     position: sticky;
