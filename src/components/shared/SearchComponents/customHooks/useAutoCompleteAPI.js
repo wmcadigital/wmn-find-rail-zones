@@ -1,11 +1,13 @@
 import { useEffect, useContext, useState, useRef, useCallback } from 'react';
-import railData from '../../../../RailZoneFinder/RailData.json';
 // Import contexts
-import { AutoCompleteContext } from 'globalState';
+import { AutoCompleteContext, MapContext } from 'globalState';
+// Import json data
+import railData from '../../../RailZoneFinder/RailData.json';
 
 const useAutoCompleteAPI = (queryId) => {
   // State variables
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext); // Get the dispatch of autocomplete
+  const [, mapDispatch] = useContext(MapContext); // Get the dispatch of autocomplete
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false); // Set loading state for spinner
   const [errorInfo, setErrorInfo] = useState(); // Placeholder to set error messaging
@@ -27,10 +29,13 @@ const useAutoCompleteAPI = (queryId) => {
         const result = railData.railStationAccess.filter(
           (service) => service.crsCode === selectedService.id
         )[0];
+        if (!result.railZone) {
+          result.railZone = 7; // if there is no zone assign '7' (Out of county)
+        }
         // Set data to add to context state
         payload = {
           id: result.crsCode,
-          queryId: queryId,
+          queryId,
           ...result,
         };
       }
@@ -40,6 +45,11 @@ const useAutoCompleteAPI = (queryId) => {
         autoCompleteDispatch({
           type: 'UPDATE_SELECTED_STATION',
           payload,
+        });
+        // Update the map state to highlight zones which have selected stations in them
+        mapDispatch({
+          type: 'UPDATE_ZONE_HIGHLIGHT',
+          payload: { [`zone${payload.railZone}`]: true },
         });
       }
 
@@ -52,7 +62,7 @@ const useAutoCompleteAPI = (queryId) => {
         });
       }
     },
-    [selectedService.id, autoCompleteDispatch, queryId] // [autoCompleteDispatch, selectedService.id]
+    [selectedService.id, autoCompleteDispatch, mapDispatch, queryId] // [autoCompleteDispatch, selectedService.id]
   );
 
   // Take main function out of useEffect, so it can be called elsewhere to retry the search

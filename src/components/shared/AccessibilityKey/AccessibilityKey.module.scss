@@ -1,0 +1,62 @@
+// Refer to https://create-react-app.dev/docs/adding-a-css-modules-stylesheet
+// On how to use scss modules with React
+
+// Import WMN Design System scss for use in this scss file
+// Tilde (~) represents the root folder(src)
+@import '~assets/wmnds/vars';
+@import '~assets/wmnds/mixins';
+
+.keyIcon {
+  display: flex;
+  text-align: left;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: $size-md;
+  }
+}
+
+.showKeyBtn {
+  white-space: nowrap;
+
+  svg {
+    float: none;
+    transform: rotate(-90deg);
+  }
+}
+
+.mapKey {
+  &.accessMenu {
+    border: 1px solid rgba($black, 0.1);
+    border-radius: 5px;
+  }
+}
+
+.mapKeyContainer {
+  position: absolute;
+  right: $size-md;
+  bottom: $size-md;
+  text-align: right;
+}
+
+@media (min-width: $breakpoint-md) and (min-height: $breakpoint-sm) {
+  .mapKeyContainer {
+    position: sticky;
+  }
+
+  .showKeyBtn,
+  .mapKey.accessMenu {
+    position: absolute;
+    right: $size-sm;
+    bottom: $size-sm;
+  }
+}
+
+.hideKeyBtn {
+  margin-left: $size-md;
+
+  svg {
+    transform: rotate(90deg);
+    fill: get-color(secondary);
+  }
+}

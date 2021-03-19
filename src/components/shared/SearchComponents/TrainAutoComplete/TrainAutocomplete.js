@@ -27,10 +27,10 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
   const filteredResults = results.filter(
     (station) => !autoCompleteState.selectedStations.some((s) => s.id === station.crsCode)
   );
-  const updateQueryTest = (query, queryId) => {
+  const updateQuery = (query, qId) => {
     autoCompleteDispatch({
-      type: 'UPDATE_QUERY_TEST',
-      queryId: queryId,
+      type: 'UPDATE_QUERY',
+      queryId: qId,
       payload: query,
     });
   };
@@ -68,7 +68,7 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
               autoComplete="off"
               className="wmnds-fe-input wmnds-autocomplete__input wmnds-col-1"
               value={trainQuery || ''}
-              onChange={(e) => updateQueryTest(e.target.value, queryId)}
+              onChange={(e) => updateQuery(e.target.value, queryId)}
               aria-label="Search for a station"
               debounceTimeout={600}
               onKeyDown={(e) => handleKeyDown(e)}

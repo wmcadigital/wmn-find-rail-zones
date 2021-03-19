@@ -25,8 +25,6 @@ export const AutoCompleteProvider = (props) => {
 
   // Set intial state
   const initialState = {
-    mapRef: null,
-    mapView: true,
     queries: [getSearchParam('query0') || '', getSearchParam('query1') || '', ...additionalQueries],
     // // The selected service is used to store details when a user has clicked an autocomplete
     selectedStations: [
@@ -45,20 +43,9 @@ export const AutoCompleteProvider = (props) => {
     // Update the query to what the user has typed
     switch (action.type) {
       case 'UPDATE_QUERY': {
-        setSearchParam(`query${action.queryId}`, action.query);
-
-        let newState = state.queries;
-        newState[action.queryId] = action.query;
-
-        return {
-          ...state,
-          queries: [...newState],
-        };
-      }
-      case 'UPDATE_QUERY_TEST': {
         setSearchParam(`query${action.queryId}`, action.payload);
 
-        let newState = state.queries;
+        const newState = state.queries;
         newState[action.queryId] = action.payload;
 
         return {
@@ -72,7 +59,7 @@ export const AutoCompleteProvider = (props) => {
         const item = `selectedStation${queryId}`;
         setSearchParam(item, id); // Set URL
 
-        let newState = state.selectedStations;
+        const newState = state.selectedStations;
         newState[queryId] = action.payload;
 
         return {
@@ -90,60 +77,11 @@ export const AutoCompleteProvider = (props) => {
         };
       }
 
-      // Update view
-      case 'UPDATE_VIEW': {
-        return {
-          ...state,
-          mapView: action.payload,
-        };
-      }
-
-      // Update view
-      case 'ADD_MAP': {
-        return {
-          ...state,
-          mapRef: action.payload,
-        };
-      }
-
       // Used to cancel selected service/station etc. This is mainly used when using from/to stations
       case 'RESET_SELECTED_ITEM': {
         const { queryId } = action.payload;
-        // If action.payload ('to') exists in payload then make sure we set the correct field
         const item = `selectedStation${queryId}`;
         const query = `query${queryId}`;
-        const station = state.selectedStations[queryId];
-
-        if (state.mapView && state.mapRef) {
-          const svg = state.mapRef.current.ViewerDOM;
-          // Find related group in svg map
-          if (station && station.stationName) {
-            const svgGroup =
-              svg.querySelector(`[data-name="${station.stationName}"]`) ||
-              svg.querySelector(
-                `#${station.stationName.replace(' ', '_').replace(/[^\w-]+/g, '')}`
-              );
-
-            // If group found remove text background from svg map
-            if (svgGroup) {
-              svgGroup.removeChild(svgGroup.querySelector(`#${station.id}_text_bg`));
-
-              // Find related zone in svg map
-              const inThisZone = state.selectedStations.filter(
-                (item) => item.railZone === station.railZone
-              );
-
-              // If this is the only one of thiszone in selected stations then remove the highlight class from svg map
-              if (inThisZone.length < 2) {
-                const zone = svg.querySelector(`#Zone_${station.railZone}`);
-
-                if (zone) {
-                  zone.classList.remove(...zone.classList);
-                }
-              }
-            }
-          }
-        }
 
         // Delete correct things from URL
         delSearchParam(item);
@@ -151,14 +89,18 @@ export const AutoCompleteProvider = (props) => {
 
         // Update queries array in state
         let newQueries = state.queries;
-        let newSelectedStations = state.selectedStations;
+        const newSelectedStations = state.selectedStations;
 
         newQueries[queryId] = '';
-        newSelectedStations[queryId] = { id: null };
+        if (queryId + 1 === state.selectedStations.length && queryId > 1) {
+          newSelectedStations.pop();
+        } else {
+          newSelectedStations[queryId] = { id: null };
+        }
 
-        // function to remove the last array value if it's empty (and not our inital 2 default values)
+        // function to remove the last array value if it's empty (and not our initial 2 default values)
         const removeLastValues = (array) => {
-          let newArray = array;
+          const newArray = array;
           const lastItem = newArray[newArray.length - 1];
           const valueToRemove =
             typeof lastItem === 'object' ? lastItem.id === null : lastItem === '';
@@ -170,8 +112,6 @@ export const AutoCompleteProvider = (props) => {
         };
 
         newQueries = removeLastValues(newQueries);
-        newSelectedStations = removeLastValues(newSelectedStations);
-
         // Update state with deleted/cancelled service/item
         return {
           ...state,
@@ -182,26 +122,11 @@ export const AutoCompleteProvider = (props) => {
 
       // Used to reset everything
       case 'RESET_SELECTED_SERVICES':
-        if (state.mapView && state.mapRef) {
-          const svg = state.mapRef.current.ViewerDOM;
-          // clear map highlights
-          state.selectedStations.forEach((station) => {
-            const textBg = svg.querySelector(`#${station.id}_text_bg`);
-            const zone = svg.querySelector(`#Zone_${station.railZone}`);
-            if (textBg) {
-              textBg.parentNode.removeChild(textBg);
-            }
-            if (zone) {
-              zone.classList.remove(...zone.classList);
-            }
-          });
-        }
         getAllSearchParams().forEach((param) => {
           delSearchParam(param.name);
         });
         return {
           mapRef: state.mapRef,
-          mapView: state.mapView,
           queries: initialState.queries,
           selectedStations: initialState.selectedStations,
         };

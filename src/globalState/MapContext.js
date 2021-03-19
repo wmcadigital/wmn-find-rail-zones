@@ -10,11 +10,28 @@ export const MapContextProvider = (props) => {
     mapRef: null,
     mapContainer: null,
     mapView: true,
+    mapSize: {
+      width: 500,
+      height: 500,
+    },
+    highlightedZones: {
+      zone1: false,
+      zone2: false,
+      zone3: false,
+      zone4: false,
+      zone5: false,
+      zone6: false,
+      zone7: false,
+    },
+    accessVisibility: {
+      full: false,
+      partial: false,
+      parking: false,
+    },
   };
 
   // Set up a reducer so we can change state based on centralised logic here
   const reducer = (state, action) => {
-    // Update the query to what the user has typed
     switch (action.type) {
       // Update view
       case 'UPDATE_VIEW': {
@@ -24,11 +41,51 @@ export const MapContextProvider = (props) => {
         };
       }
 
-      // Update view
+      // Add map ref
       case 'ADD_MAP': {
         return {
           ...state,
           mapRef: action.payload,
+        };
+      }
+
+      // Add map container ref
+      case 'ADD_MAP_CONTAINER': {
+        return {
+          ...state,
+          mapContainer: action.payload,
+        };
+      }
+
+      // Update map size
+      case 'UPDATE_MAP_SIZE': {
+        return {
+          ...state,
+          mapSize: action.payload,
+        };
+      }
+
+      // Update highlighted zone on map
+      case 'UPDATE_ZONE_HIGHLIGHT': {
+        return {
+          ...state,
+          highlightedZones: { ...state.highlightedZones, ...action.payload },
+        };
+      }
+
+      // Update highlighted zone on map
+      case 'CLEAR_HIGHLIGHTED_ZONES': {
+        return {
+          ...state,
+          highlightedZones: { ...initialState.highlightedZones },
+        };
+      }
+
+      // Update highlighted zone on map
+      case 'TOGGLE_ACCESS_VISIBILITY': {
+        return {
+          ...state,
+          accessVisibility: { ...action.payload },
         };
       }
 

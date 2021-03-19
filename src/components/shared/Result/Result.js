@@ -1,36 +1,46 @@
 import React, { useContext } from 'react';
-import Icon from '../shared/Icon/Icon';
-import AccessIcon from '../shared/Icon/AccessIcon';
-import s from './Result.module.scss';
+// Import contexts
 import { AutoCompleteContext } from 'globalState';
+// Import components
+import Icon from '../Icon/Icon';
+import AccessIcon from '../Icon/AccessIcon';
+// Import styles
+import s from './Result.module.scss';
 
 const Result = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
 
+  // Get selected stations that have an id
   const stations = selectedStations.filter((item) => item.id !== null);
 
+  // Get stations with full access from selected stations
   const fullAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'full')
     .map((item) => item.stationName);
+  // Get stations with partial access from selected stations
   const partAccessStations = stations
     .filter((item) => item.stepFreeAccess === 'partial')
     .map((item) => item.stationName);
+  // Get stations with parking from selected stations
   const parkingStations = stations.filter((item) => item.parking).map((item) => item.stationName);
+  // Function to change arrays into readable sentence
   const arrayToSentence = (array) => {
+    let sentence;
     if (array.length > 2) {
-      return `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;
+      sentence = `${array.slice(0, array.length - 1).join(', ')} and ${array.slice(-1)}`;
     } else if (array.length === 2) {
-      return `${array[0]} and ${array[1]}`;
+      sentence = `${array[0]} and ${array[1]}`;
     } else {
-      return array[0];
+      [sentence] = array;
     }
+    return sentence;
   };
 
   return (
     <div>
-      {stations.map(({ stationName, railZone }, i) => (
-        <p key={i}>
+      {stations.map(({ id, stationName, railZone }) => (
+        <p key={id}>
           {stationName} is{' '}
           {railZone ? (
             <>

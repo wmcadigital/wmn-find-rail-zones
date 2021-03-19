@@ -7,18 +7,13 @@ import s from './CloseButton.module.scss';
 const CloseButton = ({ onClick }) => {
   return (
     <button type="button" className={s.closeButton} onClick={onClick}>
-      <Icon iconName="general-cross" className={`general-cross ${s.closeIcon}`} />
+      <Icon iconName="general-cross" className={`general-cross ${s.closeIcon}`} title="Close" />
     </button>
   );
 };
 
 CloseButton.propTypes = {
   onClick: PropTypes.func.isRequired,
-  isFloated: PropTypes.bool,
-};
-
-CloseButton.defaultProps = {
-  isFloated: false,
 };
 
 export default CloseButton;

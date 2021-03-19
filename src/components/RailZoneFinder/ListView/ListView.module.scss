@@ -1,0 +1,37 @@
+// Refer to https://create-react-app.dev/docs/adding-a-css-modules-stylesheet
+// On how to use scss modules with React
+
+// Import WMN Design System scss for use in this scss file
+// Tilde (~) represents the root folder(src)
+@import '~assets/wmnds/vars';
+@import '~assets/wmnds/mixins';
+
+.keyCol {
+  align-self: flex-start;
+
+  @media screen and (max-width: $breakpoint-md - 1) {
+    margin-bottom: $size-md;
+    order: -1;
+  }
+}
+
+.trayComponents {
+  @media screen and (max-width: $breakpoint-md - 1) {
+    margin-right: -$size-sm;
+    margin-left: -$size-sm;
+  }
+}
+
+.accordionListItem {
+  display: flex;
+}
+
+// Hides screen reader only text
+.srOnly {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

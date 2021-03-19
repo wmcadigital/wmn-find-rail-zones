@@ -5,7 +5,7 @@
       "stationName": "Acocks Green",
       "railZone": 3,
       "parking": true,
-      "stepFreeAccess": "partial"
+      "stepFreeAccess": "full"
     },
     {
       "crsCode": "ADD",
@@ -17,8 +17,8 @@
     {
       "crsCode": "ALB",
       "stationName": "Albrighton",
-      "parking": false,
-      "stepFreeAccess": null
+      "parking": true,
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "ALV",
@@ -31,7 +31,7 @@
       "stationName": "Aston",
       "railZone": 2,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "ATH",
@@ -43,7 +43,7 @@
       "crsCode": "BTG",
       "stationName": "Barnt Green",
       "parking": true,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "BER",
@@ -68,7 +68,7 @@
       "crsCode": "BEP",
       "stationName": "Bermuda Park",
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "BSC",
@@ -95,7 +95,7 @@
       "stationName": "Birmingham Moor Street",
       "railZone": 1,
       "parking": false,
-      "stepFreeAccess": null
+      "stepFreeAccess": "null"
     },
     {
       "crsCode": "BHM",
@@ -129,21 +129,21 @@
       "stationName": "Bloxwich",
       "railZone": 5,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "BWN",
       "stationName": "Bloxwich North",
       "railZone": 5,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "BBS",
       "stationName": "Bordesley",
-      "railZone": 1,
+      "railZone": 2,
       "parking": false,
-      "stepFreeAccess": false
+      "stepFreeAccess": null
     },
     {
       "crsCode": "BRV",
@@ -177,14 +177,14 @@
       "stationName": "Cannock",
       "railZone": 6,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "CRD",
       "stationName": "Chester Road",
       "railZone": 3,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "CLV",
@@ -215,7 +215,7 @@
       "stationName": "Coseley",
       "railZone": 5,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "COS",
@@ -235,7 +235,7 @@
       "stationName": "Coventry Arena",
       "railZone": 5,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "CRA",
@@ -282,13 +282,13 @@
       "stationName": "Earlswood",
       "railZone": 5,
       "parking": true,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "ERD",
       "stationName": "Erdington",
       "railZone": 3,
-      "parking": true,
+      "parking": false,
       "stepFreeAccess": "partial"
     },
     {
@@ -343,7 +343,7 @@
       "stationName": "Hamstead",
       "railZone": 3,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "HBY",
@@ -355,14 +355,14 @@
       "crsCode": "HTN",
       "stationName": "Hatton",
       "parking": true,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "HNF",
       "stationName": "Hednesford",
       "railZone": 6,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "HNL",
@@ -413,7 +413,7 @@
       "stationName": "Landywood",
       "railZone": 6,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "LGG",
@@ -426,7 +426,7 @@
       "crsCode": "LPW",
       "stationName": "Lapworth",
       "parking": true,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "LEH",
@@ -548,7 +548,7 @@
       "stationName": "Perry Barr",
       "railZone": 2,
       "parking": false,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "PSW",
@@ -567,7 +567,7 @@
       "stationName": "Rowley Regis",
       "railZone": 3,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "RUG",
@@ -580,14 +580,14 @@
       "stationName": "Rugeley Town",
       "railZone": 6,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "RGL",
       "stationName": "Rugeley Trent Valley",
       "railZone": 6,
       "parking": true,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "SAD",
@@ -601,7 +601,7 @@
       "stationName": "Selly Oak",
       "railZone": 2,
       "parking": true,
-      "stepFreeAccess": "partial"
+      "stepFreeAccess": "full"
     },
     {
       "crsCode": "SEN",
@@ -620,7 +620,7 @@
       "stationName": "Shirley",
       "railZone": 4,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "SHR",
@@ -661,7 +661,7 @@
       "stationName": "Spring Road",
       "railZone": 3,
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "STA",
@@ -714,7 +714,7 @@
       "stationName": "Tame Bridge Parkway",
       "railZone": 4,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "TAM",
@@ -739,7 +739,7 @@
       "crsCode": "TLK",
       "stationName": "The Lakes",
       "parking": false,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "THL",
@@ -780,7 +780,7 @@
       "crsCode": "WRW",
       "stationName": "Warwick",
       "parking": true,
-      "stepFreeAccess": null
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "WRP",
@@ -805,7 +805,7 @@
       "stationName": "Whitlocks End",
       "railZone": 4,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "WMR",
@@ -875,7 +875,7 @@
       "stationName": "Wylde Green",
       "railZone": 4,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     },
     {
       "crsCode": "WYT",
@@ -889,7 +889,7 @@
       "stationName": "Yardley Wood",
       "railZone": 3,
       "parking": true,
-      "stepFreeAccess": "full"
+      "stepFreeAccess": "partial"
     }
   ]
 }

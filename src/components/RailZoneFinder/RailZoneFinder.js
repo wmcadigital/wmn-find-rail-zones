@@ -1,22 +1,23 @@
 import React, { useContext } from 'react';
+import { MapContext } from 'globalState';
 // Rail zone svg component
 import Button from '../shared/Button/Button';
-import MapView from '../RailZoneFinder/MapView/MapView';
-import ListView from '../RailZoneFinder/ListView/ListView';
+import MapView from './MapView/MapView';
+import ListView from './ListView/ListView';
 import s from './RailZoneFinder.module.scss';
-import { AutoCompleteContext } from 'globalState';
 
 function RailZoneFinder() {
-  const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
-  const { mapView } = autoCompleteState;
+  const [mapState, mapDispatch] = useContext(MapContext);
+  const { mapView } = mapState;
+  // Toggle between map and list view
   const setMapView = () => {
-    autoCompleteDispatch({
+    mapDispatch({
       type: 'UPDATE_VIEW',
       payload: !mapView,
     });
   };
   return (
-    <div className="wmnds-p-b-lg">
+    <>
       <div className="wmnds-container">
         <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
           <div className="wmnds-col-auto">
@@ -31,18 +32,20 @@ function RailZoneFinder() {
             />
           </div>
         </div>
-        <div>
-          <p>
-            Train stations across the West Midlands are in five zones. The zones you can travel
-            between is based on your ticket.
-          </p>
-          <p>
-            You can travel to a station outside the five rail zones with an Out of County ticket.
-          </p>
+        <div className="wmnds-grid">
+          <div className="wmnds-col-md-3-4">
+            <p>
+              Train stations across the West Midlands are in five zones. The zones you can travel
+              between is based on your ticket.
+            </p>
+            <p>
+              You can travel to a station outside the five rail zones with an Out of County ticket.
+            </p>
+          </div>
         </div>
       </div>
-      {autoCompleteState.mapView ? <MapView /> : <ListView />}
-    </div>
+      {mapState.mapView ? <MapView /> : <ListView />}
+    </>
   );
 }
 

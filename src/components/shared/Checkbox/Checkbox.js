@@ -9,7 +9,7 @@ const InputCheckbox = ({ name, children, handleChange, checked, classes }) => {
 
   return (
     <div className={`wmnds-fe-group ${classes}`}>
-      <label className="wmnds-fe-checkboxes__container">
+      <label className="wmnds-fe-checkboxes__container wmnds-m-none">
         {children}
         <input
           defaultChecked={checked}
@@ -28,7 +28,6 @@ const InputCheckbox = ({ name, children, handleChange, checked, classes }) => {
 
 InputCheckbox.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  fieldValidation: PropTypes.func,
   handleChange: PropTypes.func,
   checked: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
@@ -38,7 +37,6 @@ InputCheckbox.propTypes = {
 InputCheckbox.defaultProps = {
   children: null,
   handleChange: null,
-  fieldValidation: null,
   classes: null,
 };
 
