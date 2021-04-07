@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from '../../shared/Button/Button';
 import Radio from '../../shared/Radios/Radio/Radio';
 import SearchComponents from '../../shared/SearchComponents/SearchComponents';
-import s from '../RailZoneFinder.module.scss';
+import s from './QuestionView.module.scss';
 
 const QuestionView = () => {
   const [radioValue, setRadioValue] = useState(null);
@@ -12,10 +12,11 @@ const QuestionView = () => {
     setRadioValue(e.target.value);
     setError(false);
   };
-  const handleContinue = (e) => {
+  const handleContinue = () => {
     if (!radioValue) {
-      e.preventDefault();
       setError(true);
+    } else {
+      window.location.href = `https://find-a-ticket.wmnetwork.co.uk/?railZones=${radioValue}`;
     }
   };
   return (
@@ -29,14 +30,14 @@ const QuestionView = () => {
           <div className="wmnds-grid wmnds-grid--spacing-md-2-md wmnds-m-b-lg">
             <div className="wmnds-col-1 wmnds-col-md-1-2">
               <Button
-                btnClass="wmnds-btn--link"
+                btnClass={`wmnds-btn--link ${s.btnLinkIconLeft}`}
                 text="View rail zones on a map"
                 iconLeft="general-location-pin"
               />
             </div>
             <div className="wmnds-col-1 wmnds-col-md-1-2">
               <Button
-                btnClass="wmnds-btn--link"
+                btnClass={`wmnds-btn--link ${s.btnLinkIconLeft}`}
                 text="View rail zones in a list"
                 iconLeft="general-list"
               />
@@ -45,8 +46,8 @@ const QuestionView = () => {
           <div className="wmnds-fe-group wmnds-m-b-md">
             <fieldset className="wmnds-fe-fieldset">
               <legend className="wmnds-fe-fieldset__legend">
-                <h2 className="wmnds-fe-question">Select your rail zones</h2>
-                <p className={s.hint}>Based on the stations you&rsquo;ve told us about</p>
+                <h2 className="wmnds-fe-question wmnds-m-b-md">Select your rail zones</h2>
+                <p>Based on the stations you&rsquo;ve told us about</p>
               </legend>
               <div
                 className={`wmnds-fe-radios wmnds-fe-radios--inline${
@@ -90,13 +91,7 @@ const QuestionView = () => {
             * Estimate based on ticket duration, travel time and seat type. <br />
             Price shown is for a Monthly Direct Debit Peak Standard class ticket.
           </p>
-          <a
-            href={`https://find-a-ticket.wmnetwork.co.uk/?railZones=${radioValue}`}
-            onClick={handleContinue}
-            className={`wmnds-btn ${!radioValue ? 'wmnds-btn--disabled' : ''}`}
-          >
-            Continue
-          </a>
+          <Button onClick={handleContinue} className="wmnds-btn" text="Continue" />
         </div>
       </div>
     </div>
