@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
-
+import React, { useState, useContext } from 'react';
+import { FormContext } from 'globalState';
 import Button from '../../shared/Button/Button';
 import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 import Accordion from '../../shared/Accordion/Accordion';
-import TrayComponents from '../../shared/SearchComponents/SearchComponents';
+import SearchComponents from '../../shared/SearchComponents/SearchComponents';
 import s from './ListView.module.scss';
 
 import railData from '../RailData.json';
 
 const ListView = () => {
+  const [formState, formDispatch] = useContext(FormContext);
+  const changeView = () => {
+    formDispatch({ type: 'UPDATE_VIEW', payload: true });
+    window.scrollTo(0, 0);
+  };
   const [accordions, setAccordions] = useState([
     { name: 'Zone 1', open: false },
     { name: 'Zone 2', open: false },
@@ -39,7 +44,10 @@ const ListView = () => {
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
           <div className={`bg-white wmnds-p-md ${s.trayComponents}`}>
-            <TrayComponents />
+            <SearchComponents />
+            {formState.questionMode && (
+              <Button text="Continue" iconRight="general-chevron-right" onClick={changeView} />
+            )}
           </div>
         </div>
       </div>

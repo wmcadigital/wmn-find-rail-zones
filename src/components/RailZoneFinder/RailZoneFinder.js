@@ -1,15 +1,12 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { MapContext } from 'globalState';
 // Rail zone svg component
 import Button from '../shared/Button/Button';
 import MapView from './MapView/MapView';
 import ListView from './ListView/ListView';
 import s from './RailZoneFinder.module.scss';
-import QuestionView from './QuestionView/QuestionView';
 
 function RailZoneFinder() {
-  const [questionView] = useState(true);
-
   const [mapState, mapDispatch] = useContext(MapContext);
   const { mapView } = mapState;
   // Toggle between map and list view
@@ -21,40 +18,35 @@ function RailZoneFinder() {
   };
 
   return (
-    <div className="wmnds-container">
-      {questionView ? (
-        <QuestionView />
-      ) : (
-        <>
-          <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
-            <div className="wmnds-col-auto">
-              <h1>Find my rail zones</h1>
-            </div>
-            <div className="wmnds-col-auto">
-              <Button
-                text={mapView ? 'List view' : 'Map view'}
-                btnClass="wmnds-btn--secondary"
-                iconRight="general-chevron-right"
-                onClick={() => setMapView(!mapView)}
-              />
-            </div>
+    <>
+      <div className="wmnds-container">
+        <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
+          <div className="wmnds-col-auto">
+            <h1>Find my rail zones</h1>
           </div>
-          <div className="wmnds-grid">
-            <div className="wmnds-col-md-3-4">
-              <p>
-                Train stations across the West Midlands are in five zones. The zones you can travel
-                between is based on your ticket.
-              </p>
-              <p>
-                You can travel to a station outside the five rail zones with an Out of County
-                ticket.
-              </p>
-            </div>
+          <div className="wmnds-col-auto">
+            <Button
+              text={mapView ? 'List view' : 'Map view'}
+              btnClass="wmnds-btn--secondary"
+              iconRight="general-chevron-right"
+              onClick={() => setMapView(!mapView)}
+            />
           </div>
-          {mapState.mapView ? <MapView /> : <ListView />}
-        </>
-      )}
-    </div>
+        </div>
+        <div className="wmnds-grid">
+          <div className="wmnds-col-md-3-4">
+            <p>
+              Train stations across the West Midlands are in five zones. The zones you can travel
+              between is based on your ticket.
+            </p>
+            <p>
+              You can travel to a station outside the five rail zones with an Out of County ticket.
+            </p>
+          </div>
+        </div>
+      </div>
+      {mapState.mapView ? <MapView /> : <ListView />}
+    </>
   );
 }
 
