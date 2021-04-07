@@ -26,7 +26,7 @@ const QuestionView = () => {
           <h2 className="wmnds-fe-question">Which train stations will you use?</h2>
           <p>Train stations in the West Midlands are in zones.</p>
           <p>You can choose which zones your train ticket will cover.</p>
-          <SearchComponents />
+          <SearchComponents showHeader={false} />
           <div className="wmnds-grid wmnds-grid--spacing-md-2-md wmnds-m-b-lg">
             <div className="wmnds-col-1 wmnds-col-md-1-2">
               <Button

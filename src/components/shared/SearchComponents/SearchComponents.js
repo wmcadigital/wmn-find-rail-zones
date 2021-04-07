@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 // Import context
 import { AutoCompleteContext } from 'globalState';
 // Import components
@@ -9,7 +10,7 @@ import s from './SearchComponents.module.scss';
 // Import custom hook
 import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
-const TrayComponents = () => {
+const SearchComponents = ({ showHeader }) => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
   const { resetMap } = useMapControls();
@@ -25,10 +26,16 @@ const TrayComponents = () => {
 
   return (
     <>
-      <div className={`${s.trayHeader}`}>
-        <Button btnClass="wmnds-btn--link wmnds-m-l-md" text="Clear search" onClick={resetSearch} />
-        <h2 className="h3">Enter your stations</h2>
-      </div>
+      {showHeader && (
+        <div className={`${s.trayHeader}`}>
+          <Button
+            btnClass="wmnds-btn--link wmnds-m-l-md"
+            text="Clear search"
+            onClick={resetSearch}
+          />
+          <h2 className="h3">Enter your stations</h2>
+        </div>
+      )}
       <div className={`${s.traySearchContainer}`}>
         <div className="wmnds-m-b-md">
           <TrainAutoComplete label="From:" id="autocomplete_from" queryId={0} />
@@ -63,4 +70,12 @@ const TrayComponents = () => {
   );
 };
 
-export default TrayComponents;
+SearchComponents.propTypes = {
+  showHeader: PropTypes.bool,
+};
+
+SearchComponents.defaultProps = {
+  showHeader: true,
+};
+
+export default SearchComponents;
