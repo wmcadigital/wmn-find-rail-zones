@@ -1,11 +1,11 @@
 import React from 'react';
 import ContextProvider from 'globalState/ContextProvider';
-import RailZoneFinderView from '../RailZoneFinder/RailZoneFinderView';
+import RailZoneFinder from '../RailZoneFinder/RailZoneFinder';
 
 function App() {
   return (
     <ContextProvider>
-      <RailZoneFinderView />
+      <RailZoneFinder />
     </ContextProvider>
   );
 }
