@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 // Import contexts
-import { AutoCompleteContext, FormContext } from 'globalState';
+import { AutoCompleteContext } from 'globalState';
 // Import components
 import Icon from '../Icon/Icon';
 import AccessIcon from '../Icon/AccessIcon';
@@ -9,7 +9,6 @@ import s from './Result.module.scss';
 
 const Result = () => {
   const [autoCompleteState] = useContext(AutoCompleteContext);
-  const [formState] = useContext(FormContext);
   const { selectedStations } = autoCompleteState;
 
   // Get selected stations that have an id
@@ -38,26 +37,10 @@ const Result = () => {
     return sentence;
   };
 
-  const ticketZone = () => {
-    const zones = [...stations.map((stn) => stn.railZone)];
-    const min = Math.min(...zones);
-    const max = Math.max(...zones);
-
-    let ticketType;
-    if (min === 1 && max < 5) {
-      ticketType = '1 to 4';
-    } else if (min >= 2 && max < 5) {
-      ticketType = '2 to 5';
-    } else {
-      ticketType = '1 to 5';
-    }
-    return ticketType;
-  };
-
   return (
     <div>
       {stations.length > 0 && (
-        <div className={`wmnds-m-b-lg ${formState.questionView ? 'wmnds-inset-text' : ''}`}>
+        <div className="wmnds-m-b-lg">
           {stations.map(({ id, stationName, railZone }, i) => (
             <p
               key={id}
@@ -77,57 +60,37 @@ const Result = () => {
               {railZone === 7 && <strong>Out of County</strong>}.
             </p>
           ))}
-          {stations.length > 1 && (
-            <>
-              <p className={ticketZone() !== '2 to 5' ? 'wmnds-m-b-none' : ''}>
-                To travel between these stations, you&rsquo;ll need a{' '}
-                <strong>zone {ticketZone()}</strong> ticket.
-              </p>
-              {ticketZone() === '2 to 5' && (
-                <p className="wmnds-m-b-none">
-                  If you need to travel through Birmingham City Centre, you will need a{' '}
-                  <strong>zone 1 to 4</strong> ticket.
-                </p>
-              )}
-            </>
-          )}
         </div>
       )}
-      {!formState.questionView && (
-        <>
-          {fullAccessStations.length > 0 && (
-            <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
-              <div className="wmnds-col-auto">
-                <AccessIcon type="full" />
-              </div>
-              <div className="wmnds-col-auto">
-                <p>Full step-free access is available at {arrayToSentence(fullAccessStations)}.</p>
-              </div>
-            </div>
-          )}
-          {partAccessStations.length > 0 && (
-            <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
-              <div className="wmnds-col-auto">
-                <AccessIcon type="part" />
-              </div>
-              <div className="wmnds-col-auto">
-                <p>
-                  Partial step-free access is available at {arrayToSentence(partAccessStations)}.
-                </p>
-              </div>
-            </div>
-          )}
-          {parkingStations.length > 0 && (
-            <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
-              <div className="wmnds-col-auto">
-                <Icon iconName="general-parking" size={20} color="cta" />
-              </div>
-              <div className="wmnds-col-auto">
-                <p>Parking is available at {arrayToSentence(parkingStations)}.</p>
-              </div>
-            </div>
-          )}
-        </>
+      {fullAccessStations.length > 0 && (
+        <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
+          <div className="wmnds-col-auto">
+            <AccessIcon type="full" />
+          </div>
+          <div className="wmnds-col-auto">
+            <p>Full step-free access is available at {arrayToSentence(fullAccessStations)}.</p>
+          </div>
+        </div>
+      )}
+      {partAccessStations.length > 0 && (
+        <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
+          <div className="wmnds-col-auto">
+            <AccessIcon type="part" />
+          </div>
+          <div className="wmnds-col-auto">
+            <p>Partial step-free access is available at {arrayToSentence(partAccessStations)}.</p>
+          </div>
+        </div>
+      )}
+      {parkingStations.length > 0 && (
+        <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
+          <div className="wmnds-col-auto">
+            <Icon iconName="general-parking" size={20} color="cta" />
+          </div>
+          <div className="wmnds-col-auto">
+            <p>Parking is available at {arrayToSentence(parkingStations)}.</p>
+          </div>
+        </div>
       )}
     </div>
   );

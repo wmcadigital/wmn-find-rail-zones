@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MapContext, FormContext } from 'globalState';
+import { MapContext, AutoCompleteContext } from 'globalState';
 // Rail zone svg component
 import Button from '../shared/Button/Button';
 import MapView from './MapView/MapView';
@@ -7,7 +7,7 @@ import ListView from './ListView/ListView';
 import s from './RailZoneFinder.module.scss';
 
 function RailZoneFinder() {
-  const [formState] = useContext(FormContext);
+  const [autoCompleteState] = useContext(AutoCompleteContext);
   const [mapState, mapDispatch] = useContext(MapContext);
   const { mapView } = mapState;
   // Toggle between map and list view
@@ -21,7 +21,7 @@ function RailZoneFinder() {
   return (
     <>
       <div className="wmnds-container">
-        {formState.questionMode && (
+        {autoCompleteState.questionMode && (
           <div className="wmnds-m-b-lg">
             <a href="https://find-a-ticket.wmnetwork.co.uk" className="wmnds-btn wmnds-btn--link">
               &lt; Back to ticket finder

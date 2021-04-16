@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 // Import context
-import { AutoCompleteContext, FormContext } from 'globalState';
+import { AutoCompleteContext } from 'globalState';
 // Import components
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
@@ -11,9 +10,8 @@ import s from './SearchComponents.module.scss';
 // Import custom hook
 import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
-const SearchComponents = ({ showHeader }) => {
+const SearchComponents = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
-  const [formState] = useContext(FormContext);
   const { selectedStations } = autoCompleteState;
   const { resetMap } = useMapControls();
 
@@ -26,23 +24,26 @@ const SearchComponents = ({ showHeader }) => {
     autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
   };
 
-  const stationIds = [...selectedStations.map((stn) => stn.id)];
+  const selectedStationIds = [...selectedStations.map((stn) => stn.id)];
+  let linkParams = '';
+  selectedStationIds.forEach((id, i) => {
+    if (id) {
+      linkParams += `${i === 0 ? '?' : '&'}selectedStation${i}=${id}`;
+    }
+  });
 
+  // Show continue button if:
+  // - ticket search mode is true
+  // - more than one station is selected
   const continueBtn =
-    formState.questionMode && autoCompleteState.selectedStations.filter((stn) => stn.id).length > 1;
+    autoCompleteState.questionMode && selectedStations.filter((stn) => stn.id).length > 1;
 
   return (
     <>
-      {showHeader && (
-        <div className={`${s.trayHeader}`}>
-          <Button
-            btnClass="wmnds-btn--link wmnds-m-l-md"
-            text="Clear search"
-            onClick={resetSearch}
-          />
-          <h2 className="h3">Enter your stations</h2>
-        </div>
-      )}
+      <div className={`${s.trayHeader}`}>
+        <Button btnClass="wmnds-btn--link wmnds-m-l-md" text="Clear search" onClick={resetSearch} />
+        <h2 className="h3">Enter your stations</h2>
+      </div>
       <div className={`${s.traySearchContainer}`}>
         <div className="wmnds-m-b-md">
           <TrainAutoComplete label="From:" id="autocomplete_from" queryId={0} />
@@ -75,7 +76,7 @@ const SearchComponents = ({ showHeader }) => {
       <Result />
       {continueBtn && (
         <a
-          href={`https://find-a-ticket.wmnetwork.co.uk/?stations=${stationIds.join('+')}`}
+          href={`https://find-a-ticket.wmnetwork.co.uk/${linkParams}`}
           className="wmnds-btn wmnds-btn--icon wmnds-col-1 wmnds-col-sm-auto"
         >
           Continue
@@ -87,14 +88,6 @@ const SearchComponents = ({ showHeader }) => {
       )}
     </>
   );
-};
-
-SearchComponents.propTypes = {
-  showHeader: PropTypes.bool,
-};
-
-SearchComponents.defaultProps = {
-  showHeader: true,
 };
 
 export default SearchComponents;
