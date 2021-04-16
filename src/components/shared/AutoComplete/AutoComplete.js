@@ -36,7 +36,7 @@ const SearchComponents = () => {
   // - ticket search mode is true
   // - more than one station is selected
   const continueBtn =
-    autoCompleteState.questionMode && selectedStations.filter((stn) => stn.id).length > 1;
+    autoCompleteState.ticketMode && selectedStations.filter((stn) => stn.id).length > 1;
 
   return (
     <>
