@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MapContext, AutoCompleteContext } from 'globalState';
 // Rail zone svg component
 import Button from '../shared/Button/Button';
+import Icon from '../shared/Icon/Icon';
 import Breadcrumbs from '../shared/Breadcrumbs/Breadcrumbs';
 import MapView from './MapView/MapView';
 import ListView from './ListView/ListView';
@@ -23,9 +24,12 @@ function RailZoneFinder() {
     <>
       <div className="wmnds-container">
         {autoCompleteState.ticketMode ? (
-          <div className="wmnds-m-b-lg wmnds-m-t-lg">
-            <a href="https://find-a-ticket.wmnetwork.co.uk" className="wmnds-btn wmnds-btn--link">
-              &lt; Back to ticket finder
+          <div className="wmnds-m-b-lg wmnds-m-t-md">
+            <a
+              href="https://find-a-ticket.wmnetwork.co.uk"
+              className={`wmnds-btn wmnds-btn--link ${s.backLink}`}
+            >
+              <Icon iconName="general-chevron-right" /> Back to ticket finder
             </a>
           </div>
         ) : (
