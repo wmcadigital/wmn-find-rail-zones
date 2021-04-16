@@ -10,7 +10,7 @@ import s from './AutoComplete.module.scss';
 // Import custom hook
 import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
-const SearchComponents = () => {
+const AutoComplete = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
   const { resetMap } = useMapControls();
@@ -90,4 +90,4 @@ const SearchComponents = () => {
   );
 };
 
-export default SearchComponents;
+export default AutoComplete;

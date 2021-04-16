@@ -4,7 +4,7 @@ import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 import Accordion from '../../shared/Accordion/Accordion';
-import SearchComponents from '../../shared/AutoComplete/AutoComplete';
+import AutoComplete from '../../shared/AutoComplete/AutoComplete';
 import s from './ListView.module.scss';
 
 import railData from '../RailData.json';
@@ -38,7 +38,7 @@ const ListView = () => {
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
           <div className={`bg-white wmnds-p-md ${s.trayComponents}`}>
-            <SearchComponents />
+            <AutoComplete />
           </div>
         </div>
       </div>
