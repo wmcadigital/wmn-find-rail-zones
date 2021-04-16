@@ -24,8 +24,10 @@ const AutoComplete = () => {
     autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
   };
 
+  // Spread ids of selected stations into an array
   const selectedStationIds = [...selectedStations.map((stn) => stn.id)];
   let linkParams = '';
+  // Loop through station ids and append a selected station id param to string
   selectedStationIds.forEach((id, i) => {
     if (id) {
       linkParams += `${i === 0 ? '?' : '&'}selectedStation${i}=${id}`;
@@ -76,7 +78,7 @@ const AutoComplete = () => {
       <Result />
       {continueBtn && (
         <a
-          href={`https://find-a-ticket.wmnetwork.co.uk/${linkParams}`}
+          href={`https://deploy-preview-27--wmn-find-a-ticket.netlify.app/${linkParams}`}
           className="wmnds-btn wmnds-btn--icon wmnds-col-1 wmnds-col-sm-auto"
         >
           Continue
