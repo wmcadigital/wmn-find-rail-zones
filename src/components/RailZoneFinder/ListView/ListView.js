@@ -4,7 +4,7 @@ import AccessIcon from '../../shared/Icon/AccessIcon';
 import Icon from '../../shared/Icon/Icon';
 import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 import Accordion from '../../shared/Accordion/Accordion';
-import SearchComponents from '../../shared/SearchComponents/SearchComponents';
+import SearchComponents from '../../shared/AutoComplete/AutoComplete';
 import s from './ListView.module.scss';
 
 import railData from '../RailData.json';

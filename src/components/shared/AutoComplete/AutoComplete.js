@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Result from '../Result/Result';
 import TrainAutoComplete from './TrainAutoComplete/TrainAutocomplete';
-import s from './SearchComponents.module.scss';
+import s from './AutoComplete.module.scss';
 // Import custom hook
 import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
