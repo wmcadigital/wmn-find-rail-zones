@@ -3,13 +3,14 @@ import React, { useContext } from 'react';
 import { AutoCompleteContext } from 'globalState';
 // Import components
 import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 import Result from '../Result/Result';
 import TrainAutoComplete from './TrainAutoComplete/TrainAutocomplete';
-import s from './SearchComponents.module.scss';
+import s from './AutoComplete.module.scss';
 // Import custom hook
 import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
-const TrayComponents = () => {
+const AutoComplete = () => {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
   const { resetMap } = useMapControls();
@@ -22,6 +23,22 @@ const TrayComponents = () => {
     resetMap(selectedStations);
     autoCompleteDispatch({ type: 'RESET_SELECTED_SERVICES' });
   };
+
+  // Spread ids of selected stations into an array
+  const selectedStationIds = [...selectedStations.map((stn) => stn.id)];
+  let linkParams = '';
+  // Loop through station ids and append a selected station id param to string
+  selectedStationIds.forEach((id, i) => {
+    if (id) {
+      linkParams += `${i === 0 ? '?' : '&'}selectedStation${i}=${id}`;
+    }
+  });
+
+  // Show continue button if:
+  // - ticket search mode is true
+  // - more than one station is selected
+  const continueBtn =
+    autoCompleteState.ticketMode && selectedStations.filter((stn) => stn.id).length > 1;
 
   return (
     <>
@@ -59,8 +76,20 @@ const TrayComponents = () => {
         />
       </div>
       <Result />
+      {continueBtn && (
+        <a
+          href={`https://find-a-ticket.wmnetwork.co.uk/${linkParams}`}
+          className="wmnds-btn wmnds-btn--icon wmnds-col-1 wmnds-col-sm-auto"
+        >
+          Continue
+          <Icon
+            className="wmnds-btn__icon wmnds-btn__icon--right"
+            iconName="general-chevron-right"
+          />
+        </a>
+      )}
     </>
   );
 };
 
-export default TrayComponents;
+export default AutoComplete;

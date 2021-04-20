@@ -39,22 +39,29 @@ const Result = () => {
 
   return (
     <div>
-      {stations.map(({ id, stationName, railZone }) => (
-        <p key={id}>
-          {stationName} is{' '}
-          {railZone < 6 && (
-            <>
-              in <strong>Zone {railZone}</strong>
-            </>
-          )}
-          {railZone === 6 && (
-            <>
-              in <strong>nTrain Zone 5</strong>
-            </>
-          )}
-          {railZone === 7 && <strong>Out of County</strong>}.
-        </p>
-      ))}
+      {stations.length > 0 && (
+        <div className="wmnds-m-b-lg">
+          {stations.map(({ id, stationName, railZone }, i) => (
+            <p
+              key={id}
+              className={stations.length === i + 1 && stations.length === 1 ? 'wmnds-m-b-none' : ''}
+            >
+              {stationName} is{' '}
+              {railZone < 6 && (
+                <>
+                  in <strong>Zone {railZone}</strong>
+                </>
+              )}
+              {railZone === 6 && (
+                <>
+                  in <strong>nTrain Zone 5</strong>
+                </>
+              )}
+              {railZone === 7 && <strong>Out of County</strong>}.
+            </p>
+          ))}
+        </div>
+      )}
       {fullAccessStations.length > 0 && (
         <div className={`${s.nowrap} wmnds-grid wmnds-grid--spacing-2-sm`}>
           <div className="wmnds-col-auto">

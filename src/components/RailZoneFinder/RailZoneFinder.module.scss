@@ -21,3 +21,14 @@
     white-space: nowrap;
   }
 }
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    margin-right: $size-xsm;
+    transform: rotate(180deg);
+    fill: currentColor;
+  }
+}
