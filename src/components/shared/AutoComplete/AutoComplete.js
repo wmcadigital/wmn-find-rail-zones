@@ -78,7 +78,7 @@ const AutoComplete = () => {
       <Result />
       {continueBtn && (
         <a
-          href={`https://deploy-preview-27--wmn-find-a-ticket.netlify.app/${linkParams}`}
+          href={`https://find-a-ticket.wmnetwork.co.uk/${linkParams}`}
           className="wmnds-btn wmnds-btn--icon wmnds-col-1 wmnds-col-sm-auto"
         >
           Continue
