@@ -87,7 +87,7 @@ const AccessibilityKey = ({ mapView }) => {
         />
       ) : (
         <div className={`wmnds-p-md bg-white ${s.accessMenu} ${s.mapKey}`}>
-          <div className="wmnds-grid wmnds-grid--justify-between">
+          <div className={`wmnds-grid wmnds-grid--justify-between ${s.keyHeader}`}>
             <h3 className="wmnds-col-auto">Show parking and accessibility</h3>
             <div className="wmnds-col-auto">
               <Button

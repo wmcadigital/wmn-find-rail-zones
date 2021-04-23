@@ -1,4 +1,6 @@
 import React, { useReducer, createContext } from 'react';
+// Import Helper functions
+import { getSearchParam, setSearchParam } from 'globalState/helpers/URLSearchParams'; // (used to sync state with URL)
 
 export const MapContext = createContext(); // Create context
 
@@ -9,7 +11,7 @@ export const MapContextProvider = (props) => {
   const initialState = {
     mapRef: null,
     mapContainer: null,
-    mapView: true,
+    mapView: getSearchParam('mapView') !== 'false',
     mapSize: {
       width: 500,
       height: 500,
@@ -35,6 +37,7 @@ export const MapContextProvider = (props) => {
     switch (action.type) {
       // Update view
       case 'UPDATE_VIEW': {
+        setSearchParam('mapView', action.payload);
         return {
           ...state,
           mapView: action.payload,
