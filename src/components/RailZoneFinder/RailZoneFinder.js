@@ -26,7 +26,7 @@ function RailZoneFinder() {
         {autoCompleteState.ticketMode ? (
           <div className="wmnds-m-b-lg wmnds-m-t-md">
             <a
-              href="https://deploy-preview-34--wmn-find-a-ticket.netlify.app/"
+              href="https://deploy-preview-34--wmn-find-a-ticket.netlify.app/?proceed"
               className={`wmnds-btn wmnds-btn--link ${s.backLink}`}
             >
               <Icon iconName="general-chevron-right" /> Back to ticket finder
