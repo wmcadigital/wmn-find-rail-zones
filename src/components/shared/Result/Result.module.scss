@@ -10,3 +10,7 @@
   align-items: flex-start;
   flex-wrap: nowrap;
 }
+
+.bgSecondary {
+  background-color: get-color(secondary, 70);
+}
