@@ -6,11 +6,29 @@
 @import '~assets/wmnds/vars';
 @import '~assets/wmnds/mixins';
 
-.nowrap {
+.text {
+  display: inline-flex;
+  min-height: 35px;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
+
+  strong {
+    display: block;
+  }
 }
 
-.bgSecondary {
-  background-color: get-color(secondary, 70);
+.radioContainer {
+  flex-wrap: wrap;
+}
+
+.insetText {
+  display: none;
+  flex: 0 0 100%;
+}
+
+.radio {
+  &:checked + .insetText {
+    display: block;
+  }
 }

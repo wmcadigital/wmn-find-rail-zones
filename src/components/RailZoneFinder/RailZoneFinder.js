@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
-import { MapContext } from 'globalState';
+import { MapContext, AutoCompleteContext } from 'globalState';
 // Rail zone svg component
 import Button from '../shared/Button/Button';
+import Icon from '../shared/Icon/Icon';
+import Breadcrumbs from '../shared/Breadcrumbs/Breadcrumbs';
 import MapView from './MapView/MapView';
 import ListView from './ListView/ListView';
 import s from './RailZoneFinder.module.scss';
 
 function RailZoneFinder() {
+  const [autoCompleteState] = useContext(AutoCompleteContext);
   const [mapState, mapDispatch] = useContext(MapContext);
   const { mapView } = mapState;
   // Toggle between map and list view
@@ -16,9 +19,22 @@ function RailZoneFinder() {
       payload: !mapView,
     });
   };
+
   return (
     <>
       <div className="wmnds-container">
+        {autoCompleteState.ticketMode ? (
+          <div className="wmnds-m-b-lg wmnds-m-t-md">
+            <a
+              href="https://find-a-ticket.wmnetwork.co.uk/"
+              className={`wmnds-btn wmnds-btn--link ${s.backLink}`}
+            >
+              <Icon iconName="general-chevron-right" /> Back to ticket finder
+            </a>
+          </div>
+        ) : (
+          <Breadcrumbs />
+        )}
         <div className={`wmnds-grid wmnds-grid--justify-between ${s.mainHeading}`}>
           <div className="wmnds-col-auto">
             <h1>Find my rail zones</h1>

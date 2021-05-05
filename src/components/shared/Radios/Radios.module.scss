@@ -3,14 +3,9 @@
 
 // Import WMN Design System scss for use in this scss file
 // Tilde (~) represents the root folder(src)
-@import '~assets/wmnds/vars';
-@import '~assets/wmnds/mixins';
+@import '../../../assets/wmnds/vars';
+@import '../../../assets/wmnds/mixins';
 
-.nowrap {
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-
-.bgSecondary {
-  background-color: get-color(secondary, 70);
+.hint {
+  margin-top: -$size-xsm;
 }
