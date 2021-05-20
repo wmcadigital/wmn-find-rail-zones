@@ -124,12 +124,13 @@ export const AutoCompleteProvider = (props) => {
       // Used to reset everything
       case 'RESET_SELECTED_SERVICES':
         getAllSearchParams().forEach((param) => {
-          delSearchParam(param.name);
+          if (param.name !== 'ticketSearch') {
+            delSearchParam(param.name);
+          }
         });
         return {
+          ...initialState,
           mapRef: state.mapRef,
-          queries: initialState.queries,
-          selectedStations: initialState.selectedStations,
         };
       // Default should return intial state if error
       default:
