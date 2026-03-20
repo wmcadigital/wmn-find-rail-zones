@@ -251,6 +251,13 @@
       "stepFreeAccess": "partial"
     },
     {
+      "crsCode": "DAS",
+      "stationName": "Darlaston",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
       "crsCode": "DDG",
       "stationName": "Dorridge",
       "railZone": 5,
@@ -259,7 +266,7 @@
     },
     {
       "crsCode": "DTW",
-      "stationName": "Droitwich",
+      "stationName": "Droitwich Spa",
       "parking": true,
       "stepFreeAccess": "partial"
     },
@@ -397,9 +404,16 @@
     },
     {
       "crsCode": "KID",
-      "stationName": "Kiddeminster",
+      "stationName": "Kidderminster",
       "parking": true,
-      "stepFreeAccess": "partial"
+      "stepFreeAccess": "full"
+    },
+    {
+      "crsCode": "KIH",
+      "stationName": "Kings Heath",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
     },
     {
       "crsCode": "KNN",
@@ -493,6 +507,13 @@
       "stepFreeAccess": "full"
     },
     {
+      "crsCode": "MOV",
+      "stationName": "Moseley Village",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
+    },
+    {
       "crsCode": "NBR",
       "stationName": "Narborough",
       "parking": true,
@@ -549,6 +570,13 @@
       "railZone": 2,
       "parking": false,
       "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "PIR",
+      "stationName": "Pineapple Road",
+      "railZone": 3,
+      "parking": true,
+      "stepFreeAccess": "full"
     },
     {
       "crsCode": "PSW",
@@ -813,6 +841,13 @@
       "railZone": 4,
       "parking": true,
       "stepFreeAccess": "partial"
+    },
+    {
+      "crsCode": "WIA",
+      "stationName": "Willenhall",
+      "railZone": 5,
+      "parking": true,
+      "stepFreeAccess": "full"
     },
     {
       "crsCode": "WMC",
