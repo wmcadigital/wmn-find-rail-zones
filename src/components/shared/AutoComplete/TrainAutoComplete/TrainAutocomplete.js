@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useRef, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { DebounceInput } from 'react-debounce-input'; // https://www.npmjs.com/package/react-debounce-input
@@ -13,7 +14,7 @@ import { SelectedServiceHeader } from '../SelectedServiceHeader/SelectedServiceH
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
-export function TrainAutoComplete({ id, label, queryId }) {
+export function TrainAutoComplete({ id, label = null, queryId }) {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
   const resultsList = useRef(null);
@@ -106,15 +107,11 @@ export function TrainAutoComplete({ id, label, queryId }) {
 }
 
 // PropTypes
+// eslint-disable-next-line react/require-default-props
 TrainAutoComplete.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   queryId: PropTypes.number.isRequired,
-};
-
-// Default props
-TrainAutoComplete.defaultProps = {
-  label: null,
 };
 
 export default TrainAutoComplete;

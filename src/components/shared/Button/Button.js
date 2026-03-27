@@ -1,19 +1,20 @@
+/* eslint-disable react/require-default-props */
 // Import packages
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from 'components/shared/Icon/Icon';
 
 export function Button({
-  btnClass,
-  disabled,
-  iconLeft,
-  iconRight,
-  isActive,
-  isFetching,
-  onClick,
-  text,
-  title,
-  type,
+  btnClass = '',
+  disabled = false,
+  iconLeft = null,
+  iconRight = null,
+  isActive = false,
+  isFetching = false,
+  onClick = null,
+  text = '',
+  title = null,
+  type = 'button',
 }) {
   return (
     // eslint-disable-next-line react/button-has-type
@@ -64,19 +65,6 @@ Button.propTypes = {
   text: PropTypes.string, // text inside button
   type: PropTypes.string, // button type, by default it is type="button"
   title: PropTypes.string, // title on the button
-};
-
-Button.defaultProps = {
-  btnClass: '',
-  disabled: false,
-  iconLeft: null,
-  iconRight: null,
-  isActive: false,
-  isFetching: false,
-  onClick: null,
-  text: '',
-  title: null,
-  type: 'button',
 };
 
 export default Button;
