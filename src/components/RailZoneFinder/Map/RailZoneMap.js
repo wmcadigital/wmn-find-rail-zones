@@ -12,8 +12,6 @@ export function RailZoneMap() {
   const { mapSize } = mapState;
   const { zone1, zone2, zone3, zone4, zone5, zone6 } = mapState.highlightedZones;
 
-  console.log(mapState);
-
   useEffect(() => {
     if (Viewer.current) {
       mapDispatch({
