@@ -78,7 +78,7 @@ export function AutoComplete() {
       <Result />
       {continueBtn && (
         <a
-          href={`https://find-a-ticket.wmnetwork.co.uk/${linkParams}`}
+          href={`https://ticketsearch.tfwm.org.uk/#/${linkParams}`}
           className="wmnds-btn wmnds-btn--icon wmnds-col-1 wmnds-col-sm-auto"
         >
           Continue

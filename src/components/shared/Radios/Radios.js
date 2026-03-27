@@ -8,7 +8,7 @@ import s from './Radios.module.scss';
 
 const { sanitize } = dompurify;
 
-const Radios = ({ name, hint, question, error, radios, onChange }) => {
+function Radios({ name, hint, question, error, radios, onChange }) {
   return (
     <div className="wmnds-fe-group wmnds-m-b-md">
       <fieldset className="wmnds-fe-fieldset">
@@ -41,7 +41,7 @@ const Radios = ({ name, hint, question, error, radios, onChange }) => {
       </fieldset>
     </div>
   );
-};
+}
 
 Radios.propTypes = {
   name: PropTypes.string.isRequired,

@@ -10,15 +10,28 @@ $duration: 0.75s;
 
 .textBg {
   animation: fade $duration ease-out forwards;
+  shape-rendering: crispEdges;
 
-  & + path {
+  &+path {
     fill: $white;
     stroke: $white;
     stroke-width: 0.25;
+    shape-rendering: crispEdges;
+    paint-order: stroke;
+  }
+
+  g {
+    path {
+      fill: $white;
+      stroke: $white;
+      stroke-width: 0.25;
+      shape-rendering: crispEdges;
+      paint-order: stroke;
+    }
   }
 
   // Change the airport icon to white if it is a child of selected station
-  & ~ [id='Airport'] {
+  &~[id='Airport'] {
     fill: $white;
   }
 }
@@ -36,14 +49,14 @@ $duration: 0.75s;
     margin: $size-md;
   }
 
-  // CSS hack to make the map container square
+  // CSS aspect ratio to match SVG viewBox (822.5:757.6 ≈ 1.086:1)
   &::before {
     content: '';
     display: block;
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 100%;
+    padding-top: 92.04%; // 757.6 / 822.5
   }
 }
 
@@ -54,6 +67,9 @@ $duration: 0.75s;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .zoneSelected {
@@ -62,8 +78,30 @@ $duration: 0.75s;
   }
 }
 
+.zoneSelected[data-name='Zone 5'] > g > g > path {
+  fill: get-color(secondary, 70);
+}
+
+.zoneSelected[data-name='WMN nTrain Zone 5'] > g:nth-child(3) > path:nth-child(1) {
+  fill: get-color(text);
+}
+
+.selectedStation {
+  text {
+    fill: $white !important;
+  }
+
+  text tspan {
+    fill: $white !important;
+  }
+
+  > g:not([id]) path {
+    fill: $white !important;
+  }
+}
+
 .hideStations {
-  & > g:not(.showStation):not(.selectedStation) {
+  &>g:not(.showStation):not(.selectedStation) {
     display: none;
   }
 }

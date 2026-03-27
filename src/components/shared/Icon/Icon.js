@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Icon.module.scss';
@@ -6,7 +7,7 @@ import s from './Icon.module.scss';
 // So we Ajax the SVG in with a snippet at the bottom of public/index.html
 
 // Icons can be found at: https://designsystem.wmnetwork.co.uk/styles/icons/
-export function Icon({ className, iconName, size, color, title }) {
+export function Icon({ className = null, iconName, size = 20, color = null, title = null }) {
   return (
     <svg
       className={`${className} ${(color && s[color]) || ''}`}
@@ -19,19 +20,13 @@ export function Icon({ className, iconName, size, color, title }) {
   );
 }
 
+// eslint-disable-next-line react/require-default-props
 Icon.propTypes = {
   iconName: PropTypes.string.isRequired,
   title: PropTypes.string,
   className: PropTypes.string,
   size: PropTypes.number,
   color: PropTypes.oneOf(['cta', 'primary']),
-};
-
-Icon.defaultProps = {
-  className: null,
-  title: null,
-  size: 20,
-  color: null,
 };
 
 export default Icon;
