@@ -78,7 +78,7 @@ $duration: 0.75s;
   }
 }
 
-.zoneSelected[data-name='Zone 5'] > g > g > path {
+.zoneSelected[data-name='Zone 5'] path:nth-child(2) {
   fill: get-color(secondary, 70);
 }
 
