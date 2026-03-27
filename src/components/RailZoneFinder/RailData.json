@@ -412,7 +412,7 @@
       "crsCode": "KIH",
       "stationName": "Kings Heath",
       "railZone": 3,
-      "parking": true,
+      "parking": false,
       "stepFreeAccess": "full"
     },
     {
@@ -510,7 +510,7 @@
       "crsCode": "MOV",
       "stationName": "Moseley Village",
       "railZone": 3,
-      "parking": true,
+      "parking": false,
       "stepFreeAccess": "full"
     },
     {
@@ -575,7 +575,7 @@
       "crsCode": "PIR",
       "stationName": "Pineapple Road",
       "railZone": 3,
-      "parking": true,
+      "parking": false,
       "stepFreeAccess": "full"
     },
     {
